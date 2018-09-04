@@ -1,0 +1,966 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.1 相对地址与绝对地址 · go语言学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Junling Zheng <me@chengweiyang.cn>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="22列表.html" />
+    
+    
+    <link rel="prev" href="20html和css进阶.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://juejin.im/user/58fb6268a22b9d0065995827" target="_blank" class="custom-link">Zhengjunling's Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1/11html概述.html">
+            
+                <a href="../1/11html概述.html">
+            
+                    
+                    1. html和css入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1/11html概述.html">
+            
+                <a href="../1/11html概述.html">
+            
+                    
+                    1.1 html概述及html文档基本结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1/12html标签入门.html">
+            
+                <a href="../1/12html标签入门.html">
+            
+                    
+                    1.2 html标签入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1/13html布局入门.html">
+            
+                <a href="../1/13html布局入门.html">
+            
+                    
+                    1.3 html布局入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1/14css介绍.html">
+            
+                <a href="../1/14css介绍.html">
+            
+                    
+                    1.4 css介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../1/15css引入方式.html">
+            
+                <a href="../1/15css引入方式.html">
+            
+                    
+                    1.5 css引入方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../1/16css选择器.html">
+            
+                <a href="../1/16css选择器.html">
+            
+                    
+                    1.6 css选择器一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../1/17CSS元素属性.html">
+            
+                <a href="../1/17CSS元素属性.html">
+            
+                    
+                    1.7 CSS元素属性及盒子模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../1/18css文本属性.html">
+            
+                <a href="../1/18css文本属性.html">
+            
+                    
+                    1.8 css文本属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../1/19css布局演示.html">
+            
+                <a href="../1/19css布局演示.html">
+            
+                    
+                    1.9 css布局演示
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="20html和css进阶.html">
+            
+                <a href="20html和css进阶.html">
+            
+                    
+                    2. html和css进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="21相对地址与绝对地址.html">
+            
+                <a href="21相对地址与绝对地址.html">
+            
+                    
+                    2.1 相对地址与绝对地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="22列表.html">
+            
+                <a href="22列表.html">
+            
+                    
+                    2.2 列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="23表单.html">
+            
+                <a href="23表单.html">
+            
+                    
+                    2.3 表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="24表格.md">
+            
+                <span>
+            
+                    
+                    2.4 表格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="25css选择器二.md">
+            
+                <span>
+            
+                    
+                    2.5 css选择器二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="26css显示特性.md">
+            
+                <span>
+            
+                    
+                    2.6 css显示特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="27css元素溢出.md">
+            
+                <span>
+            
+                    
+                    2.7 css元素溢出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3/30html和css高级.md">
+            
+                <span>
+            
+                    
+                    3. html和css高级
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3/31定位.md">
+            
+                <span>
+            
+                    
+                    3.1 定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3/32CSS权重.md">
+            
+                <span>
+            
+                    
+                    3.2 CSS权重
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../3/33开发流程.md">
+            
+                <span>
+            
+                    
+                    3.3 开发流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4/40javascript入门及进阶.md">
+            
+                <span>
+            
+                    
+                    4. javascript入门及进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4/41JavaScript介绍.md">
+            
+                <span>
+            
+                    
+                    4.1 JavaScript介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4/42JavaScript嵌入页面的方式.md">
+            
+                <span>
+            
+                    
+                    4.2 JavaScript嵌入页面的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../4/43变量.md">
+            
+                <span>
+            
+                    
+                    4.3 变量、数据类型及基本语法规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../4/44函数.md">
+            
+                <span>
+            
+                    
+                    4.4 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../4/45获取元素方法.md">
+            
+                <span>
+            
+                    
+                    4.5 获取元素方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../4/46操作元素属性.md">
+            
+                <span>
+            
+                    
+                    4.6 操作元素属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../4/47事件属性及匿名函数.md">
+            
+                <span>
+            
+                    
+                    4.7 事件属性及匿名函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../4/48条件语句.md">
+            
+                <span>
+            
+                    
+                    4.8 条件语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../50javascript高级.md">
+            
+                <span>
+            
+                    
+                    5. javascript高级
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../51数组及操作方法.md">
+            
+                <span>
+            
+                    
+                    5.1 数组及操作方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../52循环语句.md">
+            
+                <span>
+            
+                    
+                    5.2 循环语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../53字符串处理方法.md">
+            
+                <span>
+            
+                    
+                    5.3 字符串处理方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../54定时器.md">
+            
+                <span>
+            
+                    
+                    5.4 定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../55调试程序的方法.md">
+            
+                <span>
+            
+                    
+                    5.5 调试程序的方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../56变量作用域.md">
+            
+                <span>
+            
+                    
+                    5.6 变量作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../57封闭函数.md">
+            
+                <span>
+            
+                    
+                    5.7 封闭函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../60jquery入门.md">
+            
+                <span>
+            
+                    
+                    6. jquery入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../61jquery介绍.md">
+            
+                <span>
+            
+                    
+                    6.1 jquery介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../62jquery文档加载完再执行.md">
+            
+                <span>
+            
+                    
+                    6.2 jquery文档加载完再执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../63jquery选择器.md">
+            
+                <span>
+            
+                    
+                    6.3 jquery选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../64jquery样式操作.md">
+            
+                <span>
+            
+                    
+                    6.4 jquery样式操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../65绑定click事件.md">
+            
+                <span>
+            
+                    
+                    6.5 绑定click事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../66jquery动画.md">
+            
+                <span>
+            
+                    
+                    6.6 jquery动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../70jquery进阶.md">
+            
+                <span>
+            
+                    
+                    7. jquery进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../71jquery特殊效果.md">
+            
+                <span>
+            
+                    
+                    7.1 jquery特殊效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../72jquery链式调用.md">
+            
+                <span>
+            
+                    
+                    7.2 jquery链式调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../73jquery属性操作.md">
+            
+                <span>
+            
+                    
+                    7.3 jquery属性操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../74jquery事件.md">
+            
+                <span>
+            
+                    
+                    7.4 jquery事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../75表单验证.md">
+            
+                <span>
+            
+                    
+                    7.5 表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.1 相对地址与绝对地址</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x76F8;&#x5BF9;&#x5730;&#x5740;&#x4E0E;&#x7EDD;&#x5BF9;&#x5730;&#x5740;"><b>1. </b>&#x76F8;&#x5BF9;&#x5730;&#x5740;&#x4E0E;&#x7EDD;&#x5BF9;&#x5730;&#x5740;</a></li></ul></div><a href="#&#x76F8;&#x5BF9;&#x5730;&#x5740;&#x4E0E;&#x7EDD;&#x5BF9;&#x5730;&#x5740;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x76F8;&#x5BF9;&#x5730;&#x5740;&#x4E0E;&#x7EDD;&#x5BF9;&#x5730;&#x5740;"><a name="&#x76F8;&#x5BF9;&#x5730;&#x5740;&#x4E0E;&#x7EDD;&#x5BF9;&#x5730;&#x5740;" class="anchor-navigation-ex-anchor" href="#&#x76F8;&#x5BF9;&#x5730;&#x5740;&#x4E0E;&#x7EDD;&#x5BF9;&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x76F8;&#x5BF9;&#x5730;&#x5740;&#x4E0E;&#x7EDD;&#x5BF9;&#x5730;&#x5740;</h1>
+<p>&#x7F51;&#x9875;&#x4E0A;&#x5F15;&#x5165;&#x6216;&#x94FE;&#x63A5;&#x5230;&#x5916;&#x90E8;&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x6587;&#x4EF6;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x5E38;&#x89C1;&#x5F15;&#x5165;&#x6216;&#x94FE;&#x63A5;&#x5916;&#x90E8;&#x6587;&#x4EF6;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;</p>
+<ol>
+<li><p>&#x5F15;&#x5165;&#x5916;&#x90E8;&#x56FE;&#x7247;</p>
+<pre><code> &lt;img src=&quot;images/001.jpg&quot; alt=&quot;&#x56FE;&#x7247;&quot; /&gt;
+</code></pre></li>
+<li><p>&#x94FE;&#x63A5;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x7F51;&#x9875;</p>
+<pre><code> &lt;a href=&quot;002.html&quot;&gt;&#x94FE;&#x63A5;&#x5230;&#x7F51;&#x9875;2&lt;/a&gt;
+</code></pre></li>
+<li><p>&#x5916;&#x94FE;&#x4E00;&#x4E2A;css&#x6587;&#x4EF6;</p>
+<pre><code> &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/main.css&quot; /&gt;
+</code></pre></li>
+<li><p>&#x5916;&#x94FE;&#x4E00;&#x4E2A;js&#x6587;&#x4EF6;</p>
+<pre><code> &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.js&quot;&gt;&lt;/script&gt;
+</code></pre></li>
+</ol>
+<p>&#x8FD9;&#x4E9B;&#x5730;&#x5740;&#x5206;&#x4E3A;&#x76F8;&#x5BF9;&#x5730;&#x5740;&#x548C;&#x7EDD;&#x5BF9;&#x5730;&#x5740;:</p>
+<p><strong>&#x76F8;&#x5BF9;&#x5730;&#x5740;</strong></p>
+<p>&#x76F8;&#x5BF9;&#x4E8E;&#x5F15;&#x7528;&#x6587;&#x4EF6;&#x672C;&#x8EAB;&#x53BB;&#x5B9A;&#x4F4D;&#x88AB;&#x5F15;&#x7528;&#x7684;&#x6587;&#x4EF6;&#x5730;&#x5740;&#xFF0C;&#x4EE5;&#x4E0A;&#x7684;&#x4F8B;&#x5B50;&#x90FD;&#x662F;&#x76F8;&#x5BF9;&#x5730;&#x5740;&#xFF0C;&#x76F8;&#x5BF9;&#x5730;&#x5740;&#x7684;&#x5B9A;&#x4E49;&#x6280;&#x5DE7;&#xFF1A;</p>
+<ul>
+<li><p>&#x201C; ./ &#x201D; &#x8868;&#x793A;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&#x201C;./pic.jpg&#x201D; &#x8868;&#x793A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;pic.jpg&#x7684;&#x56FE;&#x7247;&#xFF0C;&#x8FD9;&#x4E2A;&#x4F7F;&#x7528;&#x65F6;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x3002;</p>
+</li>
+<li><p>&#x201C; ../ &#x201D; &#x8868;&#x793A;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x4E0A;&#x4E00;&#x7EA7;&#x76EE;&#x5F55;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&#x201C;../images/pic.jpg&#x201D; &#x8868;&#x793A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x4E0A;&#x4E00;&#x7EA7;&#x76EE;&#x5F55;&#x4E0B;&#x7684;images&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x7684;pic.jpg&#x7684;&#x56FE;&#x7247;&#x3002;</p>
+</li>
+</ul>
+<p><strong>&#x7EDD;&#x5BF9;&#x5730;&#x5740;</strong>
+&#x76F8;&#x5BF9;&#x4E8E;&#x78C1;&#x76D8;&#x7684;&#x4F4D;&#x7F6E;&#x53BB;&#x5B9A;&#x4F4D;&#x6587;&#x4EF6;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;<code>&lt;img src=&quot;C:\course5\03day\images\001.jpg&quot; alt=&quot;&#x56FE;&#x7247;&quot; /&gt;</code> &#x7EDD;&#x5BF9;&#x5730;&#x5740;&#x5728;&#x6574;&#x4F53;&#x6587;&#x4EF6;&#x8FC1;&#x79FB;&#x65F6;&#x4F1A;&#x56E0;&#x4E3A;&#x78C1;&#x76D8;&#x548C;&#x9876;&#x5C42;&#x76EE;&#x5F55;&#x7684;&#x6539;&#x53D8;&#x800C;&#x627E;&#x4E0D;&#x5230;&#x6587;&#x4EF6;&#xFF0C;&#x76F8;&#x5BF9;&#x5730;&#x5740;&#x5C31;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="20html和css进阶.html" class="navigation navigation-prev " aria-label="Previous page: 2. html和css进阶">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="22列表.html" class="navigation navigation-next " aria-label="Next page: 2.2 列表">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.1 相对地址与绝对地址","level":"1.3.1","depth":2,"next":{"title":"2.2 列表","level":"1.3.2","depth":2,"path":"2/22列表.md","ref":"2/22列表.md","articles":[]},"previous":{"title":"2. html和css进阶","level":"1.3","depth":1,"path":"2/20html和css进阶.md","ref":"2/20html和css进阶.md","articles":[{"title":"2.1 相对地址与绝对地址","level":"1.3.1","depth":2,"path":"2/21相对地址与绝对地址.md","ref":"2/21相对地址与绝对地址.md","articles":[]},{"title":"2.2 列表","level":"1.3.2","depth":2,"path":"2/22列表.md","ref":"2/22列表.md","articles":[]},{"title":"2.3 表单","level":"1.3.3","depth":2,"path":"2/23表单.md","ref":"2/23表单.md","articles":[]},{"title":"2.4 表格","level":"1.3.4","depth":2,"path":"2/24表格.md","ref":"2/24表格.md","articles":[]},{"title":"2.5 css选择器二","level":"1.3.5","depth":2,"path":"2/25css选择器二.md","ref":"2/25css选择器二.md","articles":[]},{"title":"2.6 css显示特性","level":"1.3.6","depth":2,"path":"2/26css显示特性.md","ref":"2/26css显示特性.md","articles":[]},{"title":"2.7 css元素溢出","level":"1.3.7","depth":2,"path":"2/27css元素溢出.md","ref":"2/27css元素溢出.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"2/21相对地址与绝对地址.md","mtime":"2018-09-04T10:30:10.234Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-04T09:29:35.637Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
