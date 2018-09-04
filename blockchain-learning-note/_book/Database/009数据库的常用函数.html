@@ -1,0 +1,1300 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据库的常用函数 · go语言学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Junling Zheng <me@chengweiyang.cn>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="010视图.html" />
+    
+    
+    <link rel="prev" href="008表数据的查询.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://juejin.im/user/58fb6268a22b9d0065995827" target="_blank" class="custom-link">Zhengjunling's Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Go语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Go/001指针.html">
+            
+                <a href="../Go/001指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Go/002new.html">
+            
+                <a href="../Go/002new.html">
+            
+                    
+                    new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Go/003slice.html">
+            
+                <a href="../Go/003slice.html">
+            
+                    
+                    slice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Go/004map.html">
+            
+                <a href="../Go/004map.html">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Go/005结构体.html">
+            
+                <a href="../Go/005结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Go/006字符串.html">
+            
+                <a href="../Go/006字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../Go/007文件操作.html">
+            
+                <a href="../Go/007文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../Go/008并发编程.html">
+            
+                <a href="../Go/008并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../Go/009goroutine.html">
+            
+                <a href="../Go/009goroutine.html">
+            
+                    
+                    goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../Go/010channel.html">
+            
+                <a href="../Go/010channel.html">
+            
+                    
+                    channel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../Go/011生产者消费者.html">
+            
+                <a href="../Go/011生产者消费者.html">
+            
+                    
+                    生产者消费者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../Go/012定时器.html">
+            
+                <a href="../Go/012定时器.html">
+            
+                    
+                    定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../Go/013select.html">
+            
+                <a href="../Go/013select.html">
+            
+                    
+                    select
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="001Mysql介绍与安装.html">
+            
+                <a href="001Mysql介绍与安装.html">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="001Mysql介绍与安装.html">
+            
+                <a href="001Mysql介绍与安装.html">
+            
+                    
+                    Mysql介绍与安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="002Mysql断开与连接.html">
+            
+                <a href="002Mysql断开与连接.html">
+            
+                    
+                    Mysql断开与连接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="003数据库操作.html">
+            
+                <a href="003数据库操作.html">
+            
+                    
+                    数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="004数据库数据类型.html">
+            
+                <a href="004数据库数据类型.html">
+            
+                    
+                    数据库数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="005数据表基本操作.html">
+            
+                <a href="005数据表基本操作.html">
+            
+                    
+                    数据表基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="006表数据的增，删，改.html">
+            
+                <a href="006表数据的增，删，改.html">
+            
+                    
+                    表数据的增，删，改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="007表数据的准备.html">
+            
+                <a href="007表数据的准备.html">
+            
+                    
+                    表数据的准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="008表数据的查询.html">
+            
+                <a href="008表数据的查询.html">
+            
+                    
+                    表数据的查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.9" data-path="009数据库的常用函数.html">
+            
+                <a href="009数据库的常用函数.html">
+            
+                    
+                    数据库的常用函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="010视图.html">
+            
+                <a href="010视图.html">
+            
+                    
+                    视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="011数据完整性约束.html">
+            
+                <a href="011数据完整性约束.html">
+            
+                    
+                    数据完整性约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="012Go操作MysSql.html">
+            
+                <a href="012Go操作MysSql.html">
+            
+                    
+                    Go操作MysSql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="013附录.html">
+            
+                <a href="013附录.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="014练习.html">
+            
+                <a href="014练习.html">
+            
+                    
+                    练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Linux/001Linux操作系统介绍.html">
+            
+                <a href="../Linux/001Linux操作系统介绍.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Linux/001Linux操作系统介绍.html">
+            
+                <a href="../Linux/001Linux操作系统介绍.html">
+            
+                    
+                    Linux操作系统介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Linux/002文件系统.html">
+            
+                <a href="../Linux/002文件系统.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Linux/003命令概述与使用方法.html">
+            
+                <a href="../Linux/003命令概述与使用方法.html">
+            
+                    
+                    命令概述与使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Linux/004常用命令.html">
+            
+                <a href="../Linux/004常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Linux/005远程操作.html">
+            
+                <a href="../Linux/005远程操作.html">
+            
+                    
+                    远程操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../HTML/README.md">
+            
+                <span>
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../HTML/001六种选择器类型.md">
+            
+                <span>
+            
+                    
+                    六种选择器类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../HTML/002相对地址和绝对地址.md">
+            
+                <span>
+            
+                    
+                    相对地址和绝对地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../HTML/003列表.md">
+            
+                <span>
+            
+                    
+                    列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../HTML/004表单.md">
+            
+                <span>
+            
+                    
+                    表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../HTML/005表格.md">
+            
+                <span>
+            
+                    
+                    表格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../HTML/006css显示特性.md">
+            
+                <span>
+            
+                    
+                    css显示特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../HTML/007搜索框实现.md">
+            
+                <span>
+            
+                    
+                    搜索框实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../HTML/008布局.md">
+            
+                <span>
+            
+                    
+                    布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../HTML/009权重.md">
+            
+                <span>
+            
+                    
+                    权重
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../HTML/010前端开发流程.md">
+            
+                <span>
+            
+                    
+                    前端开发流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../JavaScript/001JavaScript介绍.md">
+            
+                <span>
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../JavaScript/002JavaScript嵌入页面的方式.md">
+            
+                <span>
+            
+                    
+                    JavaScript嵌入页面的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../JavaScript/003变量数据类型及基本语法.md">
+            
+                <span>
+            
+                    
+                    变量数据类型及基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../JavaScript/004函数.md">
+            
+                <span>
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../JavaScript/005获取元素方法.md">
+            
+                <span>
+            
+                    
+                    获取元素方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../JavaScript/006操作元素.md">
+            
+                <span>
+            
+                    
+                    操作元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../JavaScript/007点击按钮改变元素.md">
+            
+                <span>
+            
+                    
+                    点击按钮改变元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../BlockChain/001区块链记账原理.html">
+            
+                <a href="../BlockChain/001区块链记账原理.html">
+            
+                    
+                    区块链
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../BlockChain/001区块链记账原理.html">
+            
+                <a href="../BlockChain/001区块链记账原理.html">
+            
+                    
+                    区块链记账原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../BlockChain/002比特币所有权及隐私问题.html">
+            
+                <a href="../BlockChain/002比特币所有权及隐私问题.html">
+            
+                    
+                    比特币所有权及隐私问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../BlockChain/003比特币如何挖矿.html">
+            
+                <a href="../BlockChain/003比特币如何挖矿.html">
+            
+                    
+                    比特币如何挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../BlockChain/004拜占庭将军.html">
+            
+                <a href="../BlockChain/004拜占庭将军.html">
+            
+                    
+                    拜占庭将军
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../MAC/001Mac设置环境变量.html">
+            
+                <a href="../MAC/001Mac设置环境变量.html">
+            
+                    
+                    MAC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../MAC/001Mac设置环境变量.html">
+            
+                <a href="../MAC/001Mac设置环境变量.html">
+            
+                    
+                    设置环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数据库的常用函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x6570;&#x5B66;&#x51FD;&#x6570;"><b>1. </b>&#x6570;&#x5B66;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#absx&#x51FD;&#x6570;"><b>1.1. </b>ABS(x)&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#floorx&#x51FD;&#x6570;"><b>1.2. </b>FLOOR(x)&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#ceilingx&#x51FD;&#x6570;"><b>1.3. </b>CEILING(x)&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#roundx&#x51FD;&#x6570;&#x548C;roundxy&#x51FD;&#x6570;"><b>1.4. </b>ROUND(x)&#x51FD;&#x6570;&#x548C;ROUND(x,y)&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#rand&#x51FD;&#x6570;"><b>1.5. </b>RAND()&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#pi&#x51FD;&#x6570;"><b>1.6. </b>PI()&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#truncatexy&#x51FD;&#x6570;"><b>1.7. </b>TRUNCATE(x,y)&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#sqrtx&#x51FD;&#x6570;"><b>1.8. </b>sqrt(x)&#x51FD;&#x6570;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;"><b>2. </b>&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#inserts1xlens2"><b>2.1. </b>INSERT(s1,x,len,s2)</a></li><li><span class="title-icon "></span><a href="#uppers&#x51FD;&#x6570;-&#x548C;-ucases&#x51FD;&#x6570;"><b>2.2. </b>UPPER(s)&#x51FD;&#x6570; &#x548C; UCASE(s)&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#lowers&#x51FD;&#x6570;-&#x548C;-lcases&#x51FD;&#x6570;"><b>2.3. </b>LOWER(s)&#x51FD;&#x6570; &#x548C; LCASE(s)&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#leftsn&#x51FD;&#x6570;-&#x548C;-rightsn-&#x51FD;&#x6570;"><b>2.4. </b>LEFT(s,n)&#x51FD;&#x6570; &#x548C; RIGHT(s,n) &#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#concats1s2&#x51FD;&#x6570;"><b>2.5. </b>CONCAT(s1,s2,...)&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#ltrims&#x3001;-rtrims&#x3001;-trims&#x51FD;&#x6570;"><b>2.6. </b>LTRIM(s)&#x3001; RTRIM(s)&#x3001; TRIM(s)&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#substringsnlen&#x51FD;&#x6570;"><b>2.7. </b>SUBSTRING(s,n,len)&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#reverses&#x51FD;&#x6570;"><b>2.8. </b>REVERSE(s)&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#fieldss1s2&#x51FD;&#x6570;"><b>2.9. </b>FIELD(s,s1,s2,&#x2026;)&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#locates1s&#x3001;positions1-in-s&#x548C;instrss1&#x51FD;&#x6570;"><b>2.10. </b>LOCATE(s1,s)&#x3001;POSITION(s1 IN s)&#x548C;INSTR(s,s1)&#x51FD;&#x6570;</a></li></ul><li><span class="title-icon "></span><a href="#&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x51FD;&#x6570;"><b>3. </b>&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#curdate&#x548C;currentdate&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65E5;&#x671F;"><b>3.1. </b>CURDATE()&#x548C;CURRENT_DATE()&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65E5;&#x671F;</a></li><li><span class="title-icon "></span><a href="#curtime&#x51FD;&#x6570;&#x548C;currenttime&#x51FD;&#x6570;"><b>3.2. </b>CURTIME()&#x51FD;&#x6570;&#x548C;CURRENT_TIME()&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#now&#x51FD;&#x6570;"><b>3.3. </b>NOW()&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#datediffd1d2&#x51FD;&#x6570;"><b>3.4. </b>DATEDIFF(d1,d2)&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#adddatedn&#x51FD;&#x6570;"><b>3.5. </b>ADDDATE(d,n)&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#adddatedinterval-expr-type&#x51FD;&#x6570;"><b>3.6. </b>ADDDATE(d,INTERVAL expr type)&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#subdatedn&#x51FD;&#x6570;"><b>3.7. </b>SUBDATE(d,n)&#x51FD;&#x6570;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x51FD;&#x6570;"><b>4. </b>&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;&#x51FD;&#x6570;"><b>5. </b>&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;mysql&#x7248;&#x672C;&#x53F7;&#x3001;&#x8FDE;&#x63A5;&#x6570;&#x548C;&#x6570;&#x636E;&#x5E93;&#x540D;&#x7684;&#x51FD;&#x6570;"><b>5.1. </b>&#x83B7;&#x53D6;MySQL&#x7248;&#x672C;&#x53F7;&#x3001;&#x8FDE;&#x63A5;&#x6570;&#x548C;&#x6570;&#x636E;&#x5E93;&#x540D;&#x7684;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x7528;&#x6237;&#x540D;&#x7684;&#x51FD;&#x6570;"><b>5.2. </b>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x540D;&#x7684;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x548C;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;&#x7684;&#x51FD;&#x6570;"><b>5.3. </b>&#x83B7;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x548C;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;&#x7684;&#x51FD;&#x6570;</a></li></ul><li><span class="title-icon "></span><a href="#&#x52A0;&#x5BC6;&#x51FD;&#x6570;"><b>6. </b>&#x52A0;&#x5BC6;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#&#x52A0;&#x5BC6;&#x51FD;&#x6570;md5str"><b>6.1. </b>&#x52A0;&#x5BC6;&#x51FD;&#x6570;MD5(str)</a></li><li><span class="title-icon "></span><a href="#&#x52A0;&#x5BC6;&#x51FD;&#x6570;shastr"><b>6.2. </b>&#x52A0;&#x5BC6;&#x51FD;&#x6570;SHA(str)</a></li></ul><li><span class="title-icon "></span><a href="#&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x51FD;&#x6570;"><b>7. </b>&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#&#x683C;&#x5F0F;&#x5316;&#x51FD;&#x6570;formatxn"><b>7.1. </b>&#x683C;&#x5F0F;&#x5316;&#x51FD;&#x6570;FORMAT(x,n)</a></li><li><span class="title-icon "></span><a href="#&#x6539;&#x53D8;&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x51FD;&#x6570;"><b>7.2. </b>&#x6539;&#x53D8;&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x6539;&#x53D8;&#x5B57;&#x6BB5;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x51FD;&#x6570;"><b>7.3. </b>&#x6539;&#x53D8;&#x5B57;&#x6BB5;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x51FD;&#x6570;</a></li></ul></ul></div><a href="#&#x6570;&#x5B66;&#x51FD;&#x6570;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><blockquote>
+<pre><code>MySQL&#x51FD;&#x6570;&#x662F;MySQL&#x6570;&#x636E;&#x5E93;&#x63D0;&#x4F9B;&#x7684;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#x3002;&#x8FD9;&#x4E9B;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x7528;&#x6237;&#x66F4;&#x52A0;&#x65B9;&#x4FBF;&#x5730;&#x5904;&#x7406;&#x8868;&#x4E2D;&#x7684;&#x6570;&#x636E;
+</code></pre></blockquote>
+<p><img src="../images/&#x6570;&#x636E;&#x5E93;&#x5E38;&#x7528;&#x51FD;&#x6570;.png" alt=""></p>
+<h1 id="&#x6570;&#x5B66;&#x51FD;&#x6570;"><a name="&#x6570;&#x5B66;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x5B66;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6570;&#x5B66;&#x51FD;&#x6570;</h1>
+<blockquote>
+<pre><code>&#x6570;&#x5B66;&#x51FD;&#x6570;&#x662F;MySQL&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x4E00;&#x7C7B;&#x51FD;&#x6570;&#x3002;&#x5176;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x6570;&#x5B57;&#xFF0C;&#x5305;&#x62EC;&#x6574;&#x578B;&#x548C;&#x6D6E;&#x70B9;&#x6570;&#x7B49;&#x7B49;&#x3002;
+</code></pre></blockquote>
+<p><img src="../images/&#x6570;&#x5B66;&#x51FD;&#x6570;.png" alt=""></p>
+<h2 id="absx&#x51FD;&#x6570;"><a name="absx&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#absx&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. ABS(x)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   ABS(x)&#x51FD;&#x6570;&#x7528;&#x4E8E;&#x6C42;&#x7EDD;&#x5BF9;&#x503C;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x6C42;10&#x3001;-10&#x7684;&#x7EDD;&#x5BF9;&#x503C;</p>
+<p><code>select abs(10), abs(-10);</code></p>
+<h2 id="floorx&#x51FD;&#x6570;"><a name="floorx&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#floorx&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. FLOOR(x)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   FLOOR(x)&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;x&#x7684;&#x6574;&#x6570;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x6C42;&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E; 1.5 &#x548C; -1.5 &#x7684;&#x6574;&#x6570;</p>
+<p><code>select floor(1.5), floor(-1.5);</code></p>
+<h2 id="ceilingx&#x51FD;&#x6570;"><a name="ceilingx&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#ceilingx&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. CEILING(x)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   CEILING(x)&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;x&#x7684;&#x6574;&#x6570;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x8FD4;&#x56DE;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;1.5&#x548C; -1.5&#x7684;&#x6574;&#x6570;
+<code>select ceiling(1.5), ceiling(-1.5);</code></p>
+<h2 id="roundx&#x51FD;&#x6570;&#x548C;roundxy&#x51FD;&#x6570;"><a name="roundx&#x51FD;&#x6570;&#x548C;roundxy&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#roundx&#x51FD;&#x6570;&#x548C;roundxy&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. ROUND(x)&#x51FD;&#x6570;&#x548C;ROUND(x,y)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   ROUND(x)&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x79BB;x&#x6700;&#x8FD1;&#x7684;&#x6574;&#x6570;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5BF9;x&#x8FDB;&#x884C;&#x56DB;&#x820D;&#x4E94;&#x5165;&#x5904;&#x7406;&#xFF1B;ROUND(x,y)&#x51FD;&#x6570;&#x8FD4;&#x56DE;x&#x4FDD;&#x7559;&#x5230;&#x5C0F;&#x6570;&#x70B9;&#x540E;y&#x4F4D;&#x7684;&#x503C;&#xFF0C;&#x622A;&#x65AD;&#x65F6;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x56DB;&#x820D;&#x4E94;&#x5165;&#x5904;&#x7406;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;1&#xFF1A; &#x8FD4;&#x56DE; &#x63A5;&#x8FD1;123.456&#x7684;&#x6574;&#x6570;&#xFF08;&#x56DB;&#x820D;&#x4E94;&#x5165;&#x5904;&#x7406;&#xFF09;
+<code>select  round(123.456);</code></p>
+<p>&#x4F8B;2&#xFF1A; &#x5C06;123.456&#x4FDD;&#x7559;2&#x4F4D;&#x5C0F;&#x6570;&#x7684;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;
+<code>select  round(123.456,2);</code></p>
+<h2 id="rand&#x51FD;&#x6570;"><a name="rand&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#rand&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. RAND()&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   RAND()&#x51FD;&#x6570;&#x662F;&#x8FD4;&#x56DE;0~1&#x7684;&#x968F;&#x673A;&#x6570;&#x3002;&#x4F46;&#x662F;RAND()&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x662F;&#x5B8C;&#x5168;&#x968F;&#x673A;&#x7684;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;1&#xFF1A;&#x751F;&#x6210;3&#x4E2A;0~1&#x4E4B;&#x95F4;&#x7684;&#x968F;&#x673A;&#x6570;
+<code>select rand() , rand() , rand();</code>
+&#x4F8B;2&#xFF1A;&#x751F;&#x6210;3&#x4E2A;0&#x5230;100&#x968F;&#x673A;&#x6574;&#x6570;</p>
+<pre><code>select round(rand()*100) ,floor(rand()*100) , ceiling(rand()*100);
+</code></pre><p>&#x4F8B;3&#xFF1A;&#x751F;&#x6210;3&#x4E2A;60~100&#x7684;&#x968F;&#x673A;&#x6574;&#x6570;</p>
+<pre><code>select round(rand()*40)+60 ,floor(rand()*40)+60 , ceiling(rand()*40)+60;
+</code></pre><h2 id="pi&#x51FD;&#x6570;"><a name="pi&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#pi&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. PI()&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   PI()&#x51FD;&#x6570;&#x7528;&#x4E8E;&#x8FD4;&#x56DE;&#x5706;&#x5468;&#x7387;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x6C42;&#x534A;&#x5F84;&#x4E3A;10&#x7684;&#x5706;&#x7684;&#x5468;&#x957F;&#x548C;&#x9762;&#x79EF;(&#x7ED3;&#x679C;&#x4FDD;&#x7559;&#x4E24;&#x4F4D;&#x5C0F;&#x6570;)
+<code>select  round(2*pi()*10,2) &#x5468;&#x957F;, round(pi()*10*10,2) &#x9762;&#x79EF;;</code></p>
+<h2 id="truncatexy&#x51FD;&#x6570;"><a name="truncatexy&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#truncatexy&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. TRUNCATE(x,y)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   TRUNCATE(x,y)&#x51FD;&#x6570;&#x8FD4;&#x56DE;x&#x4FDD;&#x7559;&#x5230;&#x5C0F;&#x6570;&#x70B9;&#x540E;y&#x4F4D;&#x7684;&#x503C;&#xFF08;&#x4E0D;&#x56DB;&#x820D;&#x4E94;&#x5165;&#xFF09;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x67E5;&#x770B;&#x5706;&#x5468;&#x7387;&#x5C0F;&#x6570;&#x70B9;6&#x4F4D;&#x7684;&#x503C;&#x3002;</p>
+<p><code>select  truncate(pi(),6);</code></p>
+<h2 id="sqrtx&#x51FD;&#x6570;"><a name="sqrtx&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#sqrtx&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. sqrt(x)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   SQRT(x)&#x51FD;&#x6570;&#x7528;&#x4E8E;&#x6C42;&#x5E73;&#x65B9;&#x6839;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x6C42;16&#x548C;25&#x7684;&#x5E73;&#x65B9;&#x6839;&#x3002;</p>
+<p><code>select  sqrt(16), sqrt(25);</code></p>
+<h1 id="&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;"><a name="&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;</h1>
+<blockquote>
+<p>   &#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;&#x662F;MySQL&#x4E2D;&#x6700;&#x5E38;&#x7528;&#x7684;&#x4E00;&#x7C7B;&#x51FD;&#x6570;&#x3002;&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x8868;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x4E32;</p>
+</blockquote>
+<p><img src="../images/&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;.png" alt=""></p>
+<h2 id="inserts1xlens2"><a name="inserts1xlens2" class="anchor-navigation-ex-anchor" href="#inserts1xlens2"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. INSERT(s1,x,len,s2)</h2>
+<blockquote>
+<p>   INSERT(s1,x,len,s2)&#x51FD;&#x6570;&#x5C06;&#x5B57;&#x7B26;&#x4E32;s1&#x4E2D;x&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x957F;&#x5EA6;&#x4E3A;len&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7528;&#x5B57;&#x7B26;&#x4E32;s2&#x66FF;&#x6362;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A; &#x5C06;&#x5B57;&#x7B26;&#x4E32; &#x2018;abcdefg&#x2019; &#x4E2D;&#x7684; &#x2018;cd&#x2019; &#x66FF;&#x6362;&#x4E3A; &#x2018;xx&#x2019;;</p>
+<p><code>select insert(&apos;abcdefg&apos;,3,2,&apos;xx&apos;);</code></p>
+<h2 id="uppers&#x51FD;&#x6570;-&#x548C;-ucases&#x51FD;&#x6570;"><a name="uppers&#x51FD;&#x6570;-&#x548C;-ucases&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#uppers&#x51FD;&#x6570;-&#x548C;-ucases&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. UPPER(s)&#x51FD;&#x6570; &#x548C; UCASE(s)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   UPPER(s)&#x51FD;&#x6570;&#x548C;UCASE(s)&#x51FD;&#x6570;&#x5C06;&#x5B57;&#x7B26;&#x4E32;s&#x7684;&#x6240;&#x6709;&#x5B57;&#x6BCD;&#x53D8;&#x6210;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A; &#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x2019;abcdefg&#x2019; &#x8F6C;&#x4E3A; &#x5927;&#x5199;</p>
+<p><code>select upper(&apos;abcdefg&apos;),ucase(&apos;abcdefg&apos;);</code></p>
+<h2 id="lowers&#x51FD;&#x6570;-&#x548C;-lcases&#x51FD;&#x6570;"><a name="lowers&#x51FD;&#x6570;-&#x548C;-lcases&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#lowers&#x51FD;&#x6570;-&#x548C;-lcases&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. LOWER(s)&#x51FD;&#x6570; &#x548C; LCASE(s)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   LOWER(s)&#x51FD;&#x6570;&#x548C;&#x548C; LCASE(s)&#x51FD;&#x6570;&#x5C06;&#x5B57;&#x7B26;&#x4E32;s&#x7684;&#x6240;&#x6709;&#x5B57;&#x6BCD;&#x53D8;&#x6210;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x2019;ABCDEFG&#x2019;&#x8F6C;&#x4E3A;&#x5C0F;&#x5199;</p>
+<p><code>select lower(&apos;ABCDEFG&apos;),lcase(&apos;ABCDEFG&apos;);</code></p>
+<h2 id="leftsn&#x51FD;&#x6570;-&#x548C;-rightsn-&#x51FD;&#x6570;"><a name="leftsn&#x51FD;&#x6570;-&#x548C;-rightsn-&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#leftsn&#x51FD;&#x6570;-&#x548C;-rightsn-&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4. LEFT(s,n)&#x51FD;&#x6570; &#x548C; RIGHT(s,n) &#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   LEFT(s,n)&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;s&#x7684;&#x524D;n&#x4E2A;&#x5B57;&#x7B26;RIGHT(s,n)&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;s&#x7684;&#x6700;&#x540E;&#x7684;n&#x4E2A;&#x5B57;&#x7B26;</p>
+</blockquote>
+<p>&#x4F8B;1&#xFF1A;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32; &#x2018;abcdefg&#x2019; &#x7684;&#x524D;4&#x4E2A;&#x5B57;&#x7B26;</p>
+<p><code>select left(&apos;abcdefg&apos;,4);</code></p>
+<p>&#x4F8B;2&#xFF1A;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32; &#x2018;abcdefg&#x2019; &#x7684;&#x540E;4&#x4E2A;&#x5B57;&#x7B26;</p>
+<p><code>select right(&apos;abcdefg&apos;,4);</code></p>
+<h2 id="concats1s2&#x51FD;&#x6570;"><a name="concats1s2&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#concats1s2&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5. CONCAT(s1,s2,...)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   CONCAT(s1,s2,...)&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;s1 &#x3001;s2 ... &#x62FC;&#x63A5;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32; &#x2018;abc&#x2019; &#x548C; &#x2018;def&#x2019;  &#x548C; &#x2018;ghi&#x2019;&#x62FC;&#x63A5;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;</p>
+<p><code>select concat(&apos;abc&apos;,&apos;def&apos;,&apos;ghi&apos;);</code></p>
+<h2 id="ltrims&#x3001;-rtrims&#x3001;-trims&#x51FD;&#x6570;"><a name="ltrims&#x3001;-rtrims&#x3001;-trims&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#ltrims&#x3001;-rtrims&#x3001;-trims&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.6. LTRIM(s)&#x3001; RTRIM(s)&#x3001; TRIM(s)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   LTRIM(s)&#x51FD;&#x6570;&#x5C06;&#x53BB;&#x6389;&#x5B57;&#x7B26;&#x4E32;s&#x5F00;&#x59CB;&#x5904;&#x7684;&#x7A7A;&#x683C;&#x3002;
+   RTRIM(s)&#x51FD;&#x6570;&#x5C06;&#x53BB;&#x6389;&#x5B57;&#x7B26;&#x4E32;s&#x7ED3;&#x5C3E;&#x5904;&#x7684;&#x7A7A;&#x683C;&#x3002;
+   TRIM(s)&#x51FD;&#x6570;&#x5C06;&#x53BB;&#x6389;&#x5B57;&#x7B26;&#x4E32;s&#x5F00;&#x59CB;&#x548C;&#x7ED3;&#x5C3E;&#x5904;&#x7684;&#x7A7A;&#x683C;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;1&#xFF1A; &#x53BB;&#x6389;&#x5B57;&#x7B26;&#x4E32; tom &#x5F00;&#x59CB;&#x5904;&#x7684;&#x7A7A;&#x683C;</p>
+<p><code>select concat(&apos;+&apos;,ltrim(&apos; tom &apos;),&apos;+&apos;);</code></p>
+<p>&#x4F8B;2&#xFF1A; &#x53BB;&#x6389;&#x5B57;&#x7B26;&#x4E32; tom &#x7ED3;&#x5C3E;&#x5904;&#x7684;&#x7A7A;&#x683C;</p>
+<p><code>select concat(&apos;+&apos;,rtrim(&apos; tom &apos;),&apos;+&apos;);</code></p>
+<p>&#x4F8B;3&#xFF1A;&#x53BB;&#x6389;&#x5B57;&#x7B26;&#x4E32; tom &#x5F00;&#x59CB;&#x548C;&#x7ED3;&#x5C3E;&#x5904;&#x7684;&#x7A7A;&#x683C;</p>
+<p><code>select concat(&apos;+&apos;,trim(&apos; tom &apos;),&apos;+&apos;);</code></p>
+<h2 id="substringsnlen&#x51FD;&#x6570;"><a name="substringsnlen&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#substringsnlen&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.7. SUBSTRING(s,n,len)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   SUBSTRING(s,n,len)&#x51FD;&#x6570;&#x4ECE;&#x5B57;&#x7B26;&#x4E32;s&#x7684;&#x7B2C;n&#x4E2A;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x83B7;&#x53D6;&#x957F;&#x5EA6;&#x4E3A;len&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x4ECE;&#x5B57;&#x7B26;&#x4E32;&#x2019;abcdefg&#x2019;&#x4E2D;&#x7684;&#x7B2C;3&#x4E2A;&#x4F4D;&#x7F6E;&#x8D77;&#x622A;&#x53D6;4&#x4E2A;&#x5B57;&#x7B26;</p>
+<p><code>select substring(&apos;abcdefg&apos;,3,4);</code></p>
+<h2 id="reverses&#x51FD;&#x6570;"><a name="reverses&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#reverses&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.8. REVERSE(s)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   REVERSE(s)&#x51FD;&#x6570;&#x5C06;&#x5B57;&#x7B26;&#x4E32;s&#x7684;&#x987A;&#x5E8F;&#x53CD;&#x8FC7;&#x6765;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x2019;abcdefg&#x2019; &#x53CD;&#x8F6C;</p>
+<p><code>select reverse(&apos;abcdefg&apos;);</code></p>
+<h2 id="fieldss1s2&#x51FD;&#x6570;"><a name="fieldss1s2&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#fieldss1s2&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.9. FIELD(s,s1,s2,&#x2026;)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   FIELD(s,s1,s2,&#x2026;)&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0E;&#x5B57;&#x7B26;&#x4E32;s&#x5339;&#x914D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0E;&#x5B57;&#x7B26;&#x4E32; tom  &#x4E00;&#x6837;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4F4D;&#x7F6E;</p>
+<p><code>select field(&apos;tom&apos;,&apos;tomcate&apos;,&apos;tom2&apos;,&apos;tom&apos;,&apos;tom&apos;);</code></p>
+<h2 id="locates1s&#x3001;positions1-in-s&#x548C;instrss1&#x51FD;&#x6570;"><a name="locates1s&#x3001;positions1-in-s&#x548C;instrss1&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#locates1s&#x3001;positions1-in-s&#x548C;instrss1&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.10. LOCATE(s1,s)&#x3001;POSITION(s1 IN s)&#x548C;INSTR(s,s1)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   &#x5728;MySQL&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;LOCATE(s1,s)&#x3001;POSITION(s1 IN s)&#x548C;INSTR(s,s1)&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#x76F8;&#x5339;&#x914D;&#x7684;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#x3002;&#x8FD9;3&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x2019;me&#x2019;&#x5728;&#x2019;you love me . he love me&#x2019;&#x4E2D;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p><code>select locate(&apos;me&apos;,&apos;you love me . he love me&apos;)</code></p>
+<p><code>select position(&apos;me&apos; in &apos;you love me . he love me&apos;);</code></p>
+<p><code>select instr(&apos;you love me .he love me&apos; , &apos;me&apos;);</code></p>
+<h1 id="&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x51FD;&#x6570;"><a name="&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x51FD;&#x6570;</h1>
+<blockquote>
+<p>   &#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x51FD;&#x6570;&#x662F;MySQL&#x4E2D;&#x53E6;&#x4E00;&#x6700;&#x5E38;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002;&#x5176;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5BF9;&#x8868;&#x4E2D;&#x7684;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x6570;&#x636E;&#x7684;&#x5904;&#x7406;&#x3002;</p>
+</blockquote>
+<h2 id="curdate&#x548C;currentdate&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65E5;&#x671F;"><a name="curdate&#x548C;currentdate&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65E5;&#x671F;" class="anchor-navigation-ex-anchor" href="#curdate&#x548C;currentdate&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65E5;&#x671F;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. CURDATE()&#x548C;CURRENT_DATE()&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65E5;&#x671F;</h2>
+<blockquote>
+<p>   CURDATE()&#x548C;CURRENT_DATE()&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65E5;&#x671F;</p>
+</blockquote>
+<p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65E5;&#x671F;</p>
+<p><code>select curdate(),current_date();</code></p>
+<h2 id="curtime&#x51FD;&#x6570;&#x548C;currenttime&#x51FD;&#x6570;"><a name="curtime&#x51FD;&#x6570;&#x548C;currenttime&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#curtime&#x51FD;&#x6570;&#x548C;currenttime&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. CURTIME()&#x51FD;&#x6570;&#x548C;CURRENT_TIME()&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   CURTIME()&#x548C;CURRENT_TIME()&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65F6;&#x95F4;</p>
+</blockquote>
+<p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65F6;&#x95F4;</p>
+<p><code>select curtime(),current_time();</code></p>
+<h2 id="now&#x51FD;&#x6570;"><a name="now&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#now&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. NOW()&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   NOW()&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x3002;&#x8FD8;&#x6709;URRENT_TIMESTAMP()&#x51FD;&#x6570;&#x3001;LOCALTIME()&#x51FD;&#x6570;&#x3001;SYSDATE()&#x51FD;&#x6570;&#x548C;LOCALTIMESTAMP()&#x51FD;&#x6570;&#x4E5F;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;</p>
+<pre><code>select now(),current_timestamp(),localtime(),sysdate(),localtimestamp();
+</code></pre><h2 id="datediffd1d2&#x51FD;&#x6570;"><a name="datediffd1d2&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#datediffd1d2&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. DATEDIFF(d1,d2)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   DATEDIFF(d1,d2)&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x65E5;&#x671F;d1&#x4E0E;d2&#x4E4B;&#x95F4;&#x76F8;&#x9694;&#x7684;&#x5929;&#x6570;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x8BA1;&#x7B97;2018&#x5E74;8&#x6708;8&#x65E5;&#x5230;2019&#x5E74;8&#x6708;8&#x65E5;&#x76F8;&#x9694;&#x7684;&#x5929;&#x6570;&#x3002;</p>
+<p><code>select datediff(&apos;2019-08-08&apos;,&apos;2018-08-08&apos;);</code></p>
+<h2 id="adddatedn&#x51FD;&#x6570;"><a name="adddatedn&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#adddatedn&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3.5. ADDDATE(d,n)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   ADDDATE(d,n)&#x7528;&#x4E8E;&#x8FD4;&#x56DE;&#x8D77;&#x59CB;&#x65E5;&#x671F;d&#x52A0;&#x4E0A;n&#x5929;&#x7684;&#x65E5;&#x671F;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x6C42;2018&#x5E74;8&#x6708;31&#x65E5;&#x8FC7;7&#x5929;&#x540E;&#x7684;&#x65E5;&#x671F;</p>
+<p><code>select adddate(&apos;2018-08-31&apos;,7);</code></p>
+<h2 id="adddatedinterval-expr-type&#x51FD;&#x6570;"><a name="adddatedinterval-expr-type&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#adddatedinterval-expr-type&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3.6. ADDDATE(d,INTERVAL expr type)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   ADDDATE(d,INTERVAL expr type)&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x8D77;&#x59CB;&#x65E5;&#x671F;d&#x52A0;&#x4E0A;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x6BB5;&#x540E;&#x7684;&#x65E5;&#x671F;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x6C42;2018&#x5E74;8&#x6708;1&#x65E5;&#x8FC7;1&#x5E74;3&#x4E2A;&#x6708;&#x540E;&#x7684;&#x65E5;&#x5B50;</p>
+<pre><code>select adddate(&apos;2018-08-01&apos;,interval &apos;1 3&apos; year_month);
+</code></pre><h2 id="subdatedn&#x51FD;&#x6570;"><a name="subdatedn&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#subdatedn&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3.7. SUBDATE(d,n)&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   SUBDATE(d,n)&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x8D77;&#x59CB;&#x65E5;&#x671F;d&#x51CF;&#x53BB;n&#x5929;&#x7684;&#x65E5;&#x671F;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x6C42;2018&#x5E74;1&#x6708;31&#x65E5; &#x51CF;&#x53BB;60&#x5929;&#x7684;&#x65E5;&#x671F;</p>
+<p><code>select subdate(&apos;2018-01-31&apos;,60);</code></p>
+<h1 id="&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x51FD;&#x6570;"><a name="&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x6761;&#x4EF6;&#x5224;&#x65AD;&#x51FD;&#x6570;</h1>
+<blockquote>
+<p>   &#x6761;&#x4EF6;&#x51FD;&#x6570;&#x7528;&#x6765;&#x5728;SQL&#x8BED;&#x53E5;&#x4E2D;&#x8FDB;&#x884C;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x3002;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x6761;&#x4EF6;&#xFF0C;&#x6267;&#x884C;&#x4E0D;&#x540C;&#x7684;SQL&#x8BED;&#x53E5;&#x3002;MySQL&#x652F;&#x6301;&#x7684;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x51FD;&#x6570;&#x53CA;&#x4F5C;&#x7528;</p>
+</blockquote>
+<p><img src="../images/&#x6761;&#x4EF6;&#x5224;&#x65AD;.png" alt="">
+&#x4F8B;1&#xFF1A;&#x67E5;&#x770B;&#x6709;&#x5956;&#x91D1;&#x548C;&#x65E0;&#x5956;&#x91D1;&#x7684;&#x4EBA;&#x5458;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x663E;&#x793A;&#x6709;&#x5956;&#x91D1;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x663E;&#x793A;&#x65E0;&#x5956;&#x91D1;</p>
+<pre><code>select heroId,heroName, if(commission,&apos;&#x6709;&#x5956;&#x91D1;&apos;,&apos;&#x65E0;&#x5956;&#x91D1;&apos;)&#x5956;&#x91D1; from hero;
+</code></pre><p><img src="../images/&#x6709;&#x65E0;&#x5956;&#x91D1;.png" alt=""></p>
+<p>&#x4F8B;2&#xFF1A;&#x67E5;&#x770B;&#x6709;&#x5956;&#x91D1;&#x548C;&#x65E0;&#x5956;&#x91D1;&#x7684;&#x4EBA;&#x5458;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x663E;&#x793A;&#x5956;&#x91D1;&#x6570;&#x91CF;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x663E;&#x793A;0</p>
+<pre><code>select heroId,heroName, ifnull(commission,0) &#x5956;&#x91D1; from hero;
+</code></pre><p><img src="../images/ifnull.png" alt=""></p>
+<p>&#x4F8B;3&#xFF1A;&#x5982;&#x679C;&#x5DE5;&#x8D44;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;10000&#x4EE5;&#x4E0A;&#x5219;&#x8F93;&#x51FA;very good&#xFF0C;&#x5DE5;&#x8D44;&#x5728;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;5000&#x5230;1000&#x4E4B;&#x95F4;&#x8F93;&#x51FA;good&#xFF0C;&#x5176;&#x4F59;&#x4EBA;&#x5458;&#x8F93;&#x51FA;soso&#x3002;</p>
+<pre><code>select heroId,heroName, case when salary &gt;= 10000 then &apos;very good&apos; when salary &gt;=5000 and salary &lt;10000 then &apos;good&apos; else &apos;soso&apos; end as &#x80FD;&#x529B; from hero;
+</code></pre><h1 id="&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;&#x51FD;&#x6570;"><a name="&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x7CFB;&#x7EDF;&#x4FE1;&#x606F;&#x51FD;&#x6570;</h1>
+<blockquote>
+<p>   &#x7CFB;&#x7EDF;&#x4FE1;&#x606F;&#x51FD;&#x6570;&#x7528;&#x6765;&#x67E5;&#x8BE2;MySQL&#x6570;&#x636E;&#x5E93;&#x7684;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;&#x3002;</p>
+</blockquote>
+<h2 id="&#x83B7;&#x53D6;mysql&#x7248;&#x672C;&#x53F7;&#x3001;&#x8FDE;&#x63A5;&#x6570;&#x548C;&#x6570;&#x636E;&#x5E93;&#x540D;&#x7684;&#x51FD;&#x6570;"><a name="&#x83B7;&#x53D6;mysql&#x7248;&#x672C;&#x53F7;&#x3001;&#x8FDE;&#x63A5;&#x6570;&#x548C;&#x6570;&#x636E;&#x5E93;&#x540D;&#x7684;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;mysql&#x7248;&#x672C;&#x53F7;&#x3001;&#x8FDE;&#x63A5;&#x6570;&#x548C;&#x6570;&#x636E;&#x5E93;&#x540D;&#x7684;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1. &#x83B7;&#x53D6;MySQL&#x7248;&#x672C;&#x53F7;&#x3001;&#x8FDE;&#x63A5;&#x6570;&#x548C;&#x6570;&#x636E;&#x5E93;&#x540D;&#x7684;&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   VERSION()&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF1B;CONNECTION_ID()&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8FDE;&#x63A5;&#x6570;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5230;&#x73B0;&#x5728;&#x4E3A;&#x6B62;MySQL&#x670D;&#x52A1;&#x7684;&#x8FDE;&#x63A5;&#x6B21;&#x6570;&#xFF1B;DATABASE()&#x548C;SCHEMA()&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x540D;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;1&#xFF1A;&#x67E5;&#x770B;&#x5F53;&#x524D;mysql&#x7248;&#x672C;&#x53F7;&#x3001;&#x8FDE;&#x63A5;&#x6B21;&#x6570;</p>
+<p><code>select version(), connection_id();</code></p>
+<p>&#x4F8B;2&#xFF1A;&#x67E5;&#x770B;&#x4F7F;&#x7528;&#x7684;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x7684;&#x540D;&#x79F0;</p>
+<p><code>select database(),schema();</code></p>
+<h2 id="&#x83B7;&#x53D6;&#x7528;&#x6237;&#x540D;&#x7684;&#x51FD;&#x6570;"><a name="&#x83B7;&#x53D6;&#x7528;&#x6237;&#x540D;&#x7684;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x7528;&#x6237;&#x540D;&#x7684;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2. &#x83B7;&#x53D6;&#x7528;&#x6237;&#x540D;&#x7684;&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   USER()&#x3001;SYSTEM_USER()&#x3001;SESSION_USER()&#x3001;CURRENT_USER()&#x548C;CURRENT_USER&#x8FD9;&#x51E0;&#x4E2A;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x540D;&#x79F0;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7528;&#x6237;&#x540D;</p>
+<pre><code>select user(),system_user(),session_user(),current_user(),current_user;
+</code></pre><p><img src="../images/userroot.png" alt=""></p>
+<p><mark>&#x6CE8;&#xFF1A;USER()&#x3001;SYSTEM_USER()&#x3001;SESSION_USER()&#x663E;&#x793A;&#x7684;&#x662F;&#x5F53;&#x524D;&#x767B;&#x9646;&#x7684;&#x7528;&#x6237;&#x540D;&#x4E0E;&#x5B83;&#x5BF9;&#x5E94;&#x7684;host&#xFF1B;CURRENT_USER()&#x548C;CURRENT_USER&#x663E;&#x793A;&#x5F53;&#x524D;&#x767B;&#x9646;&#x7528;&#x6237;&#x5BF9;&#x5E94;&#x5728;user&#x8868;&#x4E2D;&#x7684;&#x54EA;&#x4E00;&#x4E2A;</mark></p>
+<p><img src="../images/user.png" alt=""></p>
+<h2 id="&#x83B7;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x548C;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;&#x7684;&#x51FD;&#x6570;"><a name="&#x83B7;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x548C;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;&#x7684;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x548C;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;&#x7684;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>5.3. &#x83B7;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x548C;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;&#x7684;&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   CHARSET(str)&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;str&#x7684;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x96C6;&#x5C31;&#x662F;&#x7CFB;&#x7EDF;&#x7684;&#x9ED8;&#x8BA4;&#x5B57;&#x7B26;&#x96C6;&#xFF1B;COLLATION(str)&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;str&#x7684;&#x5B57;&#x7B26;&#x6392;&#x5217;&#x65B9;&#x5F0F;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5B57;&#x7B26;&#x96C6;&#x548C;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;</p>
+<p><code>select charset(&apos;localhost&apos;),collation(&apos;root&apos;);</code></p>
+<p><img src="../images/charset.png" alt=""></p>
+<h1 id="&#x52A0;&#x5BC6;&#x51FD;&#x6570;"><a name="&#x52A0;&#x5BC6;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x52A0;&#x5BC6;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x52A0;&#x5BC6;&#x51FD;&#x6570;</h1>
+<blockquote>
+<p>   &#x52A0;&#x5BC6;&#x51FD;&#x6570;&#x662F;MySQL&#x4E2D;&#x7528;&#x6765;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#x7684;&#x51FD;&#x6570;&#x3002;&#x56E0;&#x4E3A;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x6709;&#x4E9B;&#x5F88;&#x654F;&#x611F;&#x7684;&#x4FE1;&#x606F;&#x4E0D;&#x5E0C;&#x671B;&#x88AB;&#x5176;&#x4ED6;&#x4EBA;&#x770B;&#x5230;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x52A0;&#x5BC6;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x4F7F;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x53D8;&#x6210;&#x770B;&#x4F3C;&#x4E71;&#x7801;&#x7684;&#x6570;&#x636E;&#x3002; </p>
+</blockquote>
+<h2 id="&#x52A0;&#x5BC6;&#x51FD;&#x6570;md5str"><a name="&#x52A0;&#x5BC6;&#x51FD;&#x6570;md5str" class="anchor-navigation-ex-anchor" href="#&#x52A0;&#x5BC6;&#x51FD;&#x6570;md5str"><i class="fa fa-link" aria-hidden="true"></i></a>6.1. &#x52A0;&#x5BC6;&#x51FD;&#x6570;MD5(str)</h2>
+<blockquote>
+<p>   MD5(str)&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5BF9;&#x5B57;&#x7B26;&#x4E32;str&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#x3002;MD5(str)&#x51FD;&#x6570;&#x4E3B;&#x8981;&#x5BF9;&#x666E;&#x901A;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x7528;md5&#x52A0;&#x5BC6;&#x65B9;&#x5F0F;&#x7ED9;&#x5B57;&#x7B26;&#x4E32;&#x52A0;&#x5BC6;</p>
+<p><code>select md5(&apos;123456&apos;);</code></p>
+<h2 id="&#x52A0;&#x5BC6;&#x51FD;&#x6570;shastr"><a name="&#x52A0;&#x5BC6;&#x51FD;&#x6570;shastr" class="anchor-navigation-ex-anchor" href="#&#x52A0;&#x5BC6;&#x51FD;&#x6570;shastr"><i class="fa fa-link" aria-hidden="true"></i></a>6.2. &#x52A0;&#x5BC6;&#x51FD;&#x6570;SHA(str)</h2>
+<p>&#x4F8B;&#xFF1A;&#x7528;sha&#x52A0;&#x5BC6;&#x65B9;&#x5F0F;&#x7ED9;&#x5B57;&#x7B26;&#x4E32;&#x52A0;&#x5BC6;</p>
+<p><code>select sha(&apos;123456&apos;);</code></p>
+<h1 id="&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x51FD;&#x6570;"><a name="&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>7. &#x5176;&#x4ED6;&#x5E38;&#x7528;&#x51FD;&#x6570;</h1>
+<h2 id="&#x683C;&#x5F0F;&#x5316;&#x51FD;&#x6570;formatxn"><a name="&#x683C;&#x5F0F;&#x5316;&#x51FD;&#x6570;formatxn" class="anchor-navigation-ex-anchor" href="#&#x683C;&#x5F0F;&#x5316;&#x51FD;&#x6570;formatxn"><i class="fa fa-link" aria-hidden="true"></i></a>7.1. &#x683C;&#x5F0F;&#x5316;&#x51FD;&#x6570;FORMAT(x,n)</h2>
+<blockquote>
+<p>   FORMAT(x,n)&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x5B57;x&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x5316;&#xFF0C;&#x5C06;x&#x4FDD;&#x7559;&#x5230;&#x5C0F;&#x6570;&#x70B9;&#x540E;n&#x4F4D;&#x3002;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x56DB;&#x820D;&#x4E94;&#x5165;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x67E5;&#x770B;&#x5706;&#x5468;&#x7387;pi&#x5C0F;&#x6570;&#x70B9;&#x540E;3&#x4F4D;</p>
+<p><code>select format( pi() ,3);</code></p>
+<h2 id="&#x6539;&#x53D8;&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x51FD;&#x6570;"><a name="&#x6539;&#x53D8;&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x6539;&#x53D8;&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>7.2. &#x6539;&#x53D8;&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   CONVERT(s USING cs)&#x51FD;&#x6570;&#x5C06;&#x5B57;&#x7B26;&#x4E32;s&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x53D8;&#x6210;cs&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x5C06;&#x5B57;&#x7B26;&#x4E32;zhangtao&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x53D8;&#x4E3A;gbk&#x683C;&#x5F0F;</p>
+<p><code>select charset(&apos;zhangtao&apos;), charset( convert(&apos;zhangtao&apos; using gbk));</code></p>
+<h2 id="&#x6539;&#x53D8;&#x5B57;&#x6BB5;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x51FD;&#x6570;"><a name="&#x6539;&#x53D8;&#x5B57;&#x6BB5;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x6539;&#x53D8;&#x5B57;&#x6BB5;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>7.3. &#x6539;&#x53D8;&#x5B57;&#x6BB5;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x51FD;&#x6570;</h2>
+<blockquote>
+<p>   CAST(x AS type)&#x548C;CONVERT(x,type)&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x5C06;x&#x53D8;&#x6210;type&#x7C7B;&#x578B;&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x53EA;&#x5BF9;BINARY&#x3001;CHAR&#x3001;DATETIME&#x3001;TIME&#x3001;SIGNED INTEGER&#x3001;UNSIGNED INTEGER&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x8D77;&#x4F5C;&#x7528;&#x3002;&#x4F46;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x53EA;&#x662F;&#x6539;&#x53D8;&#x4E86;&#x8F93;&#x51FA;&#x503C;&#x5F97;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x6539;&#x53D8;&#x8868;&#x4E2D;&#x5B57;&#x6BB5;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#xFF1A;&#x5C06;&#x5F53;&#x671F;&#x7684;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;times&#xFF0C;&#x53D8;&#x4E3A;date&#x7C7B;&#x578B;&#x548C;time&#x7C7B;&#x578B;&#x3002;</p>
+<pre><code>select now(), cast(now() as date), convert(now(),time) ;
+</code></pre>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="008表数据的查询.html" class="navigation navigation-prev " aria-label="Previous page: 表数据的查询">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="010视图.html" class="navigation navigation-next " aria-label="Next page: 视图">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据库的常用函数","level":"1.3.9","depth":2,"next":{"title":"视图","level":"1.3.10","depth":2,"path":"Database/010视图.md","ref":"Database/010视图.md","articles":[]},"previous":{"title":"表数据的查询","level":"1.3.8","depth":2,"path":"Database/008表数据的查询.md","ref":"Database/008表数据的查询.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"Database/009数据库的常用函数.md","mtime":"2018-08-30T11:46:14.728Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-04T08:54:27.797Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

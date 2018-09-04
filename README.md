@@ -6,7 +6,8 @@
 [![Stars](https://img.shields.io/github/forks/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
 [![Forks](https://img.shields.io/github/issues/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
 
-![golang](Library/Import/blockchain-learning-note/images/logo_golang.png)[Golang](Library/Import/blockchain-learning-note/SUMMARY.md)
+
+![golang](Library/Import/blockchain-learning-note/images/logo_golang.png)[Golang](Library/Import/blockchain-learning-note/Go/SUMMARY.md)
 
 ![](Library/Import/blockchain-learning-note/images/logo_database.png)[Database](Library/Import/blockchain-learning-note/SUMMARY.md)
 

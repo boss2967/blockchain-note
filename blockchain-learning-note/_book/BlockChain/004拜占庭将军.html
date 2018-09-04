@@ -1,0 +1,1079 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>拜占庭将军 · go语言学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Junling Zheng <me@chengweiyang.cn>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../MAC/001Mac设置环境变量.html" />
+    
+    
+    <link rel="prev" href="003比特币如何挖矿.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://juejin.im/user/58fb6268a22b9d0065995827" target="_blank" class="custom-link">Zhengjunling's Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Go语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Go/001指针.html">
+            
+                <a href="../Go/001指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Go/002new.html">
+            
+                <a href="../Go/002new.html">
+            
+                    
+                    new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Go/003slice.html">
+            
+                <a href="../Go/003slice.html">
+            
+                    
+                    slice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Go/004map.html">
+            
+                <a href="../Go/004map.html">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Go/005结构体.html">
+            
+                <a href="../Go/005结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Go/006字符串.html">
+            
+                <a href="../Go/006字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../Go/007文件操作.html">
+            
+                <a href="../Go/007文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../Go/008并发编程.html">
+            
+                <a href="../Go/008并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../Go/009goroutine.html">
+            
+                <a href="../Go/009goroutine.html">
+            
+                    
+                    goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../Go/010channel.html">
+            
+                <a href="../Go/010channel.html">
+            
+                    
+                    channel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../Go/011生产者消费者.html">
+            
+                <a href="../Go/011生产者消费者.html">
+            
+                    
+                    生产者消费者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../Go/012定时器.html">
+            
+                <a href="../Go/012定时器.html">
+            
+                    
+                    定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../Go/013select.html">
+            
+                <a href="../Go/013select.html">
+            
+                    
+                    select
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Database/001Mysql介绍与安装.html">
+            
+                <a href="../Database/001Mysql介绍与安装.html">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Database/001Mysql介绍与安装.html">
+            
+                <a href="../Database/001Mysql介绍与安装.html">
+            
+                    
+                    Mysql介绍与安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Database/002Mysql断开与连接.html">
+            
+                <a href="../Database/002Mysql断开与连接.html">
+            
+                    
+                    Mysql断开与连接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Database/003数据库操作.html">
+            
+                <a href="../Database/003数据库操作.html">
+            
+                    
+                    数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Database/004数据库数据类型.html">
+            
+                <a href="../Database/004数据库数据类型.html">
+            
+                    
+                    数据库数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Database/005数据表基本操作.html">
+            
+                <a href="../Database/005数据表基本操作.html">
+            
+                    
+                    数据表基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Database/006表数据的增，删，改.html">
+            
+                <a href="../Database/006表数据的增，删，改.html">
+            
+                    
+                    表数据的增，删，改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../Database/007表数据的准备.html">
+            
+                <a href="../Database/007表数据的准备.html">
+            
+                    
+                    表数据的准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../Database/008表数据的查询.html">
+            
+                <a href="../Database/008表数据的查询.html">
+            
+                    
+                    表数据的查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../Database/009数据库的常用函数.html">
+            
+                <a href="../Database/009数据库的常用函数.html">
+            
+                    
+                    数据库的常用函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../Database/010视图.html">
+            
+                <a href="../Database/010视图.html">
+            
+                    
+                    视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../Database/011数据完整性约束.html">
+            
+                <a href="../Database/011数据完整性约束.html">
+            
+                    
+                    数据完整性约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../Database/012Go操作MysSql.html">
+            
+                <a href="../Database/012Go操作MysSql.html">
+            
+                    
+                    Go操作MysSql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../Database/013附录.html">
+            
+                <a href="../Database/013附录.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../Database/014练习.html">
+            
+                <a href="../Database/014练习.html">
+            
+                    
+                    练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Linux/001Linux操作系统介绍.html">
+            
+                <a href="../Linux/001Linux操作系统介绍.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Linux/001Linux操作系统介绍.html">
+            
+                <a href="../Linux/001Linux操作系统介绍.html">
+            
+                    
+                    Linux操作系统介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Linux/002文件系统.html">
+            
+                <a href="../Linux/002文件系统.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Linux/003命令概述与使用方法.html">
+            
+                <a href="../Linux/003命令概述与使用方法.html">
+            
+                    
+                    命令概述与使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Linux/004常用命令.html">
+            
+                <a href="../Linux/004常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Linux/005远程操作.html">
+            
+                <a href="../Linux/005远程操作.html">
+            
+                    
+                    远程操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../HTML/README.md">
+            
+                <span>
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../HTML/001六种选择器类型.md">
+            
+                <span>
+            
+                    
+                    六种选择器类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../HTML/002相对地址和绝对地址.md">
+            
+                <span>
+            
+                    
+                    相对地址和绝对地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../HTML/003列表.md">
+            
+                <span>
+            
+                    
+                    列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../HTML/004表单.md">
+            
+                <span>
+            
+                    
+                    表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../HTML/005表格.md">
+            
+                <span>
+            
+                    
+                    表格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../HTML/006css显示特性.md">
+            
+                <span>
+            
+                    
+                    css显示特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../HTML/007搜索框实现.md">
+            
+                <span>
+            
+                    
+                    搜索框实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../HTML/008布局.md">
+            
+                <span>
+            
+                    
+                    布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../HTML/009权重.md">
+            
+                <span>
+            
+                    
+                    权重
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../HTML/010前端开发流程.md">
+            
+                <span>
+            
+                    
+                    前端开发流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../JavaScript/001JavaScript介绍.md">
+            
+                <span>
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../JavaScript/002JavaScript嵌入页面的方式.md">
+            
+                <span>
+            
+                    
+                    JavaScript嵌入页面的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../JavaScript/003变量数据类型及基本语法.md">
+            
+                <span>
+            
+                    
+                    变量数据类型及基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../JavaScript/004函数.md">
+            
+                <span>
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../JavaScript/005获取元素方法.md">
+            
+                <span>
+            
+                    
+                    获取元素方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../JavaScript/006操作元素.md">
+            
+                <span>
+            
+                    
+                    操作元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../JavaScript/007点击按钮改变元素.md">
+            
+                <span>
+            
+                    
+                    点击按钮改变元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="001区块链记账原理.html">
+            
+                <a href="001区块链记账原理.html">
+            
+                    
+                    区块链
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="001区块链记账原理.html">
+            
+                <a href="001区块链记账原理.html">
+            
+                    
+                    区块链记账原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="002比特币所有权及隐私问题.html">
+            
+                <a href="002比特币所有权及隐私问题.html">
+            
+                    
+                    比特币所有权及隐私问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="003比特币如何挖矿.html">
+            
+                <a href="003比特币如何挖矿.html">
+            
+                    
+                    比特币如何挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.4" data-path="004拜占庭将军.html">
+            
+                <a href="004拜占庭将军.html">
+            
+                    
+                    拜占庭将军
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../MAC/001Mac设置环境变量.html">
+            
+                <a href="../MAC/001Mac设置环境变量.html">
+            
+                    
+                    MAC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../MAC/001Mac设置环境变量.html">
+            
+                <a href="../MAC/001Mac设置环境变量.html">
+            
+                    
+                    设置环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >拜占庭将军</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;"><b>1. </b>&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4EC0;&#x4E48;&#x662F;&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;&#x95EE;&#x9898;"><b>1.1. </b>&#x4EC0;&#x4E48;&#x662F;&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;&#x95EE;&#x9898;</a></li><li><span class="title-icon "></span><a href="#&#x95EE;&#x9898;&#x5206;&#x6790;"><b>1.2. </b>&#x95EE;&#x9898;&#x5206;&#x6790;</a></li><li><span class="title-icon "></span><a href="#&#x4E2D;&#x672C;&#x806A;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;"><b>1.3. </b>&#x4E2D;&#x672C;&#x806A;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li><li><span class="title-icon "></span><a href="#&#x7ECF;&#x6D4E;&#x5B66;&#x5206;&#x6790;"><b>1.4. </b>&#x7ECF;&#x6D4E;&#x5B66;&#x5206;&#x6790;</a></li></ul></ul></div><a href="#&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;"><a name="&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;" class="anchor-navigation-ex-anchor" href="#&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;</h1>
+<h2 id="&#x4EC0;&#x4E48;&#x662F;&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;&#x95EE;&#x9898;"><a name="&#x4EC0;&#x4E48;&#x662F;&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#&#x4EC0;&#x4E48;&#x662F;&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x4EC0;&#x4E48;&#x662F;&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;&#x95EE;&#x9898;</h2>
+<p>&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&#x201C;&#x62DC;&#x5360;&#x5EAD;&#x5BB9;&#x9519;&#x201D;&#x3001;&#x201C;&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;&#x95EE;&#x9898;&#x201D;&#x3002;
+&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;&#x95EE;&#x9898;&#x662F;Leslie Lamport&#xFF08;2013&#x5E74;&#x7684;&#x56FE;&#x7075;&#x8BB2;&#x5F97;&#x4E3B;&#xFF09;&#x7528;&#x6765;&#x4E3A;&#x63CF;&#x8FF0;<strong>&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x4E00;&#x81F4;&#x6027;&#x95EE;&#x9898;</strong>&#xFF08;Distributed Consensus&#xFF09;&#x5728;&#x8BBA;&#x6587;&#x4E2D;&#x62BD;&#x8C61;&#x51FA;&#x6765;&#x4E00;&#x4E2A;&#x8457;&#x540D;&#x7684;&#x4F8B;&#x5B50;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x5927;&#x610F;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<p><em>&#x62DC;&#x5360;&#x5EAD;&#x5E1D;&#x56FD;&#x60F3;&#x8981;&#x8FDB;&#x653B;&#x4E00;&#x4E2A;&#x5F3A;&#x5927;&#x7684;&#x654C;&#x4EBA;&#xFF0C;&#x4E3A;&#x6B64;&#x6D3E;&#x51FA;&#x4E86;10&#x652F;&#x519B;&#x961F;&#x53BB;&#x5305;&#x56F4;&#x8FD9;&#x4E2A;&#x654C;&#x4EBA;&#x3002;&#x8FD9;&#x4E2A;&#x654C;&#x4EBA;&#x867D;&#x4E0D;&#x6BD4;&#x62DC;&#x5360;&#x5EAD;&#x5E1D;&#x56FD;&#xFF0C;&#x4F46;&#x4E5F;&#x8DB3;&#x4EE5;&#x62B5;&#x5FA1;5&#x652F;&#x5E38;&#x89C4;&#x62DC;&#x5360;&#x5EAD;&#x519B;&#x961F;&#x7684;&#x540C;&#x65F6;&#x88AD;&#x51FB;&#x3002;&#x8FD9;10&#x652F;&#x519B;&#x961F;&#x5728;&#x5206;&#x5F00;&#x7684;&#x5305;&#x56F4;&#x72B6;&#x6001;&#x4E0B;&#x540C;&#x65F6;&#x653B;&#x51FB;&#x3002;&#x4ED6;&#x4EEC;&#x4EFB;&#x4E00;&#x652F;&#x519B;&#x961F;&#x5355;&#x72EC;&#x8FDB;&#x653B;&#x90FD;&#x6BEB;&#x65E0;&#x80DC;&#x7B97;&#xFF0C;&#x9664;&#x975E;&#x6709;&#x81F3;&#x5C11;6&#x652F;&#x519B;&#x961F;&#xFF08;&#x4E00;&#x534A;&#x4EE5;&#x4E0A;&#xFF09;&#x540C;&#x65F6;&#x88AD;&#x51FB;&#x624D;&#x80FD;&#x653B;&#x4E0B;&#x654C;&#x56FD;&#x3002;&#x4ED6;&#x4EEC;&#x5206;&#x6563;&#x5728;&#x654C;&#x56FD;&#x7684;&#x56DB;&#x5468;&#xFF0C;&#x4F9D;&#x9760;&#x901A;&#x4FE1;&#x5175;&#x9A91;&#x9A6C;&#x76F8;&#x4E92;&#x901A;&#x4FE1;&#x6765;&#x534F;&#x5546;&#x8FDB;&#x653B;&#x610F;&#x5411;&#x53CA;&#x8FDB;&#x653B;&#x65F6;&#x95F4;&#x3002;&#x56F0;&#x6270;&#x8FD9;&#x4E9B;&#x5C06;&#x519B;&#x7684;&#x95EE;&#x9898;&#x662F;&#xFF0C;&#x4ED6;&#x4EEC;&#x4E0D;&#x786E;&#x5B9A;&#x4ED6;&#x4EEC;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x53DB;&#x5F92;&#xFF0C;&#x53DB;&#x5F92;&#x53EF;&#x80FD;&#x64C5;&#x81EA;&#x53D8;&#x66F4;&#x8FDB;&#x653B;&#x610F;&#x5411;&#x6216;&#x8005;&#x8FDB;&#x653B;&#x65F6;&#x95F4;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x72B6;&#x6001;&#x4E0B;&#xFF0C;&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;&#x4EEC;&#x624D;&#x80FD;&#x4FDD;&#x8BC1;&#x6709;&#x591A;&#x4E8E;6&#x652F;&#x519B;&#x961F;&#x5728;&#x540C;&#x4E00;&#x65F6;&#x95F4;&#x4E00;&#x8D77;&#x53D1;&#x8D77;&#x8FDB;&#x653B;&#xFF0C;&#x4ECE;&#x800C;&#x8D62;&#x53D6;&#x6218;&#x6597;&#xFF1F;</em></p>
+<blockquote>
+<p>   &#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;&#x95EE;&#x9898;&#x4E2D;&#x5E76;&#x4E0D;&#x53BB;&#x8003;&#x8651;&#x901A;&#x4FE1;&#x5175;&#x662F;&#x5426;&#x4F1A;&#x88AB;&#x622A;&#x83B7;&#x6216;&#x65E0;&#x6CD5;&#x4F20;&#x8FBE;&#x4FE1;&#x606F;&#x7B49;&#x95EE;&#x9898;&#xFF0C;&#x5373;&#x6D88;&#x606F;&#x4F20;&#x9012;&#x7684;&#x4FE1;&#x9053;&#x7EDD;&#x65E0;&#x95EE;&#x9898;&#x3002;Lamport&#x5DF2;&#x7ECF;&#x8BC1;&#x660E;&#x4E86;&#x5728;&#x6D88;&#x606F;&#x53EF;&#x80FD;&#x4E22;&#x5931;&#x7684;&#x4E0D;&#x53EF;&#x9760;&#x4FE1;&#x9053;&#x4E0A;&#x8BD5;&#x56FE;&#x901A;&#x8FC7;&#x6D88;&#x606F;&#x4F20;&#x9012;&#x7684;&#x65B9;&#x5F0F;&#x8FBE;&#x5230;&#x4E00;&#x81F4;&#x6027;&#x662F;&#x4E0D;&#x53EF;&#x80FD;&#x7684;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5728;&#x7814;&#x7A76;&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;&#x95EE;&#x9898;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5DF2;&#x7ECF;&#x5047;&#x5B9A;&#x4E86;&#x4FE1;&#x9053;&#x662F;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x7684;.</p>
+</blockquote>
+<h2 id="&#x95EE;&#x9898;&#x5206;&#x6790;"><a name="&#x95EE;&#x9898;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#&#x95EE;&#x9898;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x95EE;&#x9898;&#x5206;&#x6790;</h2>
+<p>&#x5355;&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x8BF4;&#x660E;&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x7406;&#x89E3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x7684;&#x590D;&#x6742;&#x6027;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x7B80;&#x5355;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li><p>&#x5148;&#x770B;&#x5728;&#x6CA1;&#x6709;&#x53DB;&#x5F92;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5047;&#x5982;&#x4E00;&#x4E2A;&#x5C06;&#x519B;A&#x63D0;&#x4E00;&#x4E2A;&#x8FDB;&#x653B;&#x63D0;&#x8BAE;&#xFF08;&#x5982;&#xFF1A;&#x660E;&#x65E5;&#x4E0B;&#x5348;1&#x70B9;&#x8FDB;&#x653B;&#xFF0C;&#x4F60;&#x613F;&#x610F;&#x52A0;&#x5165;&#x5417;&#xFF1F;&#xFF09;&#x7531;&#x901A;&#x4FE1;&#x5175;&#x901A;&#x4FE1;&#x5206;&#x522B;&#x544A;&#x8BC9;&#x5176;&#x4ED6;&#x7684;&#x5C06;&#x519B;&#xFF0C;&#x5982;&#x679C;&#x5E78;&#x8FD0;&#x4E2D;&#x7684;&#x5E78;&#x8FD0;&#xFF0C;&#x4ED6;&#x6536;&#x5230;&#x4E86;&#x5176;&#x4ED6;6&#x4F4D;&#x5C06;&#x519B;&#x4EE5;&#x4E0A;&#x7684;&#x540C;&#x610F;&#xFF0C;&#x53D1;&#x8D77;&#x8FDB;&#x653B;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x5E78;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x5C06;&#x519B;&#x4E5F;&#x5728;&#x6B64;&#x65F6;&#x53D1;&#x51FA;&#x4E0D;&#x540C;&#x7684;&#x8FDB;&#x653B;&#x63D0;&#x8BAE;&#xFF08;&#x5982;&#xFF1A;&#x660E;&#x65E5;&#x4E0B;&#x5348;2&#x70B9;&#x3001;3&#x70B9;&#x8FDB;&#x653B;&#xFF0C;&#x4F60;&#x613F;&#x610F;&#x52A0;&#x5165;&#x5417;&#xFF1F;&#xFF09;&#xFF0C;&#x7531;&#x4E8E;&#x65F6;&#x95F4;&#x4E0A;&#x7684;&#x5DEE;&#x5F02;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x5C06;&#x519B;&#x6536;&#x5230;&#xFF08;&#x5E76;&#x8BA4;&#x53EF;&#xFF09;&#x7684;&#x8FDB;&#x653B;&#x63D0;&#x8BAE;&#x53EF;&#x80FD;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x8FD9;&#x662F;&#x53EF;&#x80FD;&#x51FA;&#x73B0;A&#x63D0;&#x8BAE;&#x6709;3&#x4E2A;&#x652F;&#x6301;&#x8005;&#xFF0C;B&#x63D0;&#x8BAE;&#x6709;4&#x4E2A;&#x652F;&#x6301;&#x8005;&#xFF0C;C&#x63D0;&#x8BAE;&#x6709;2&#x4E2A;&#x652F;&#x6301;&#x8005;&#x7B49;&#x7B49;&#x3002;</p>
+</li>
+<li><p>&#x518D;&#x52A0;&#x4E00;&#x70B9;&#x590D;&#x6742;&#x6027;&#xFF0C;&#x5728;&#x6709;&#x53DB;&#x5F92;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E00;&#x4E2A;&#x53DB;&#x5F92;&#x4F1A;&#x5411;&#x4E0D;&#x540C;&#x7684;&#x5C06;&#x519B;&#x53D1;&#x51FA;&#x4E0D;&#x540C;&#x7684;&#x8FDB;&#x653B;&#x63D0;&#x8BAE;&#xFF08;&#x901A;&#x77E5;A&#x660E;&#x65E5;&#x4E0B;&#x5348;1&#x70B9;&#x8FDB;&#x653B;&#xFF0C; &#x901A;&#x77E5;B&#x660E;&#x65E5;&#x4E0B;&#x5348;2&#x70B9;&#x8FDB;&#x653B;&#x7B49;&#x7B49;&#xFF09;&#xFF0C;&#x4E00;&#x4E2A;&#x53DB;&#x5F92;&#x4E5F;&#x4F1A;&#x53EF;&#x80FD;&#x540C;&#x610F;&#x591A;&#x4E2A;&#x8FDB;&#x653B;&#x63D0;&#x8BAE;&#xFF08;&#x5373;&#x540C;&#x610F;&#x4E0B;&#x5348;1&#x70B9;&#x8FDB;&#x653B;&#x53C8;&#x540C;&#x610F;&#x4E0B;&#x5348;2&#x70B9;&#x8FDB;&#x653B;&#xFF09;&#x3002;</p>
+<blockquote>
+<p>   &#x53DB;&#x5F92;&#x53D1;&#x9001;&#x524D;&#x540E;&#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x8FDB;&#x653B;&#x63D0;&#x8BAE;&#xFF0C;&#x88AB;&#x79F0;&#x4E3A;&#x201C;&#x62DC;&#x5360;&#x5EAD;&#x9519;&#x8BEF;&#x201D;&#xFF0C;&#x800C;&#x80FD;&#x591F;&#x5904;&#x7406;&#x62DC;&#x5360;&#x5EAD;&#x9519;&#x8BEF;&#x7684;&#x8FD9;&#x79CD;&#x5BB9;&#x9519;&#x6027;&#x79F0;&#x4E3A;&#x300C;Byzantine fault tolerance&#x300D;&#xFF0C;&#x7B80;&#x79F0;&#x4E3A;BFT&#x3002;</p>
+</blockquote>
+</li>
+</ol>
+<p>&#x76F8;&#x4FE1;&#x5927;&#x5BB6;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x660E;&#x767D;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x7684;&#x590D;&#x6742;&#x6027;&#x4E86;&#x3002;</p>
+<h2 id="&#x4E2D;&#x672C;&#x806A;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;"><a name="&#x4E2D;&#x672C;&#x806A;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;" class="anchor-navigation-ex-anchor" href="#&#x4E2D;&#x672C;&#x806A;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x4E2D;&#x672C;&#x806A;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;</h2>
+<p>&#x5728;&#x51FA;&#x73B0;&#x6BD4;&#x7279;&#x5E01;&#x4E4B;&#x524D;&#xFF0C;&#x89E3;&#x51B3;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x4E00;&#x81F4;&#x6027;&#x95EE;&#x9898;&#x4E3B;&#x8981;&#x662F;Lamport&#x63D0;&#x51FA;&#x7684;Paxos&#x7B97;&#x6CD5;&#x6216;&#x5176;&#x884D;&#x751F;&#x7B97;&#x6CD5;&#x3002;Paxos&#x7C7B;&#x7B97;&#x6CD5;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x7CFB;&#x7EDF;&#x7684;&#x6CA1;&#x6709;&#x4E0D;&#x8BDA;&#x5B9E;&#x7684;&#x8282;&#x70B9;&#xFF08;&#x4E0D;&#x4F1A;&#x53D1;&#x9001;&#x865A;&#x5047;&#x9519;&#x8BEF;&#x6D88;&#x606F;&#xFF0C;&#x4F46;&#x5141;&#x8BB8;&#x51FA;&#x73B0;&#x7F51;&#x7EDC;&#x4E0D;&#x901A;&#x6216;&#x5B95;&#x673A;&#x51FA;&#x73B0;&#x7684;&#x6D88;&#x606F;&#x5EF6;&#x8FDF;&#xFF09;&#x3002;</p>
+<p>&#x4E2D;&#x672C;&#x806A;&#x5728;&#x6BD4;&#x7279;&#x5E01;&#x4E2D;&#x521B;&#x9020;&#x6027;&#x7684;&#x5F15;&#x5165;&#x4E86;&#x201C;&#x5DE5;&#x4F5C;&#x91CF;&#x8BC1;&#x660E;&#xFF08;POW : Proof of Work&#xFF09;&#x201D;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6709;&#x5174;&#x8DA3;&#x53EF;&#x8FDB;&#x4E00;&#x6B65;&#x9605;&#x8BFB;&#x5DE5;&#x4F5C;&#x91CF;&#x8BC1;&#x660E;&#x3002;
+&#x901A;&#x8FC7;&#x5DE5;&#x4F5C;&#x91CF;&#x8BC1;&#x660E;&#x5C31;&#x589E;&#x52A0;&#x4E86;&#x53D1;&#x9001;&#x4FE1;&#x606F;&#x7684;&#x6210;&#x672C;&#xFF0C;&#x964D;&#x4F4E;&#x8282;&#x70B9;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x901F;&#x7387;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4EE5;&#x4FDD;&#x8BC1;&#x5728;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x8282;&#x70B9;(&#x6216;&#x662F;&#x5F88;&#x5C11;)&#x5728;&#x8FDB;&#x884C;&#x5E7F;&#x64AD;&#xFF0C;&#x540C;&#x65F6;&#x5728;&#x5E7F;&#x64AD;&#x65F6;&#x4F1A;&#x9644;&#x4E0A;&#x81EA;&#x5DF1;&#x7684;&#x7B7E;&#x540D;&#x3002;
+&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x5C31;&#x50CF;&#x4E00;&#x4F4D;&#x5C06;&#x519B;A&#x5728;&#x5411;&#x5176;&#x4ED6;&#x7684;&#x5C06;&#x519B;&#xFF08;B&#x3001;C&#x3001;D&#x2026;&#xFF09;&#x53D1;&#x8D77;&#x4E00;&#x4E2A;&#x8FDB;&#x653B;&#x63D0;&#x8BAE;&#x4E00;&#x6837;&#xFF0C;&#x5C06;&#x519B;B&#x3001;C&#x3001;D&#x2026;&#x770B;&#x5230;&#x5C06;&#x519B;A&#x7B7E;&#x8FC7;&#x540D;&#x7684;&#x8FDB;&#x653B;&#x63D0;&#x8BAE;&#x4E66;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x8BDA;&#x5B9E;&#x7684;&#x5C06;&#x519B;&#x5C31;&#x4F1A;&#x7ACB;&#x523B;&#x540C;&#x610F;&#x8FDB;&#x653B;&#x63D0;&#x8BAE;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x53D1;&#x8D77;&#x81EA;&#x5DF1;&#x65B0;&#x7684;&#x8FDB;&#x653B;&#x63D0;&#x8BAE;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x5C31;&#x662F;&#x6BD4;&#x7279;&#x5E01;&#x7F51;&#x7EDC;&#x4E2D;&#x662F;&#x5355;&#x4E2A;&#x533A;&#x5757;&#xFF08;&#x8D26;&#x672C;&#xFF09;&#x8FBE;&#x6210;&#x5171;&#x8BC6;&#x7684;&#x65B9;&#x6CD5;&#xFF08;&#x53D6;&#x5F97;&#x4E00;&#x81F4;&#x6027;&#xFF09;&#x3002;</p>
+<p>&#x7406;&#x89E3;&#x4E86;&#x5355;&#x4E2A;&#x533A;&#x5757;&#x53D6;&#x5F97;&#x4E00;&#x81F4;&#x6027;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x4E48;&#x6574;&#x4E2A;&#x533A;&#x5757;&#x94FE;&#xFF08;&#x603B;&#x8D26;&#x672C;&#xFF09;&#x5982;&#x679C;&#x8FBE;&#x6210;&#x4E00;&#x81F4;&#x4E5F;&#x597D;&#x7406;&#x89E3;&#x3002;
+&#x6211;&#x4EEC;&#x7A0D;&#x5FAE;&#x628A;&#x5C06;&#x519B;&#x95EE;&#x9898;&#x6539;&#x4E00;&#x4E0B;&#xFF1A;&#x5047;&#x8BBE;&#x653B;&#x4E0B;&#x4E00;&#x4E2A;&#x57CE;&#x5821;&#x9700;&#x8981;&#x591A;&#x6B21;&#x7684;&#x8FDB;&#x653B;&#xFF0C;&#x6BCF;&#x6B21;&#x8FDB;&#x653B;&#x7684;&#x63D0;&#x8BAE;&#x5FC5;&#x987B;&#x57FA;&#x4E8E;&#x4E4B;&#x524D;&#x6700;&#x591A;&#x6B21;&#x6570;&#x7684;&#x80DC;&#x5229;&#x8FDB;&#x653B;&#x4E0B;&#x63D0;&#x51FA;&#x7684;&#xFF08;&#x53EA;&#x6709;&#x8FD9;&#x6837;&#x654C;&#x65B9;&#x5DF2;&#x6709;&#x635F;&#x5931;&#x6700;&#x5927;&#xFF0C;&#x6211;&#x65B9;&#x8FDB;&#x653B;&#x80DC;&#x5229;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x5C31;&#x66F4;&#x5927;&#xFF09;&#xFF0C;&#x8FD9;&#x6837;&#x7EA6;&#x5B9A;&#x4E4B;&#x540E;&#xFF0C;&#x5C06;&#x519B;A&#x5728;&#x6536;&#x5230;&#x8FDB;&#x653B;&#x63D0;&#x8BAE;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x68C0;&#x67E5;&#x4E00;&#x4E0B;&#x8FD9;&#x4E2A;&#x63D0;&#x8BAE;&#x662F;&#x4E0D;&#x662F;&#x57FA;&#x4E8E;&#x6700;&#x591A;&#x7684;&#x80DC;&#x5229;&#x63D0;&#x51FA;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#xFF08;&#x57FA;&#x4E8E;&#x6700;&#x591A;&#x7684;&#x80DC;&#x5229;&#xFF09;&#x5C06;&#x519B;A&#x5C31;&#x4E0D;&#x4F1A;&#x540C;&#x610F;&#x8FD9;&#x6837;&#x7684;&#x63D0;&#x8BAE;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x7684;&#xFF0C;&#x5C06;&#x519B;A&#x5C31;&#x4F1A;&#x628A;&#x8FD9;&#x6B21;&#x63D0;&#x8BAE;&#x8BB0;&#x4E0B;&#x6765;&#x3002;</p>
+<p>&#x8FD9;&#x5C31;&#x662F;&#x6BD4;&#x7279;&#x5E01;&#x7F51;&#x7EDC;&#x6700;&#x957F;&#x94FE;&#x9009;&#x62E9;&#x3002;</p>
+<h2 id="&#x7ECF;&#x6D4E;&#x5B66;&#x5206;&#x6790;"><a name="&#x7ECF;&#x6D4E;&#x5B66;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#&#x7ECF;&#x6D4E;&#x5B66;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x7ECF;&#x6D4E;&#x5B66;&#x5206;&#x6790;</h2>
+<p>&#x4F5C;&#x91CF;&#x8BC1;&#x660E;&#x5176;&#x5B9E;&#x76F8;&#x5F53;&#x4E8E;&#x63D0;&#x9AD8;&#x4E86;&#x505A;&#x53DB;&#x5F92;&#xFF08;&#x53D1;&#x5E03;&#x865A;&#x5047;&#x533A;&#x5757;&#xFF09;&#x7684;&#x6210;&#x672C;&#xFF0C;&#x5728;&#x5DE5;&#x4F5C;&#x91CF;&#x8BC1;&#x660E;&#x4E0B;&#xFF0C;&#x53EA;&#x6709;&#x7B2C;&#x4E00;&#x4E2A;&#x5B8C;&#x6210;&#x8BC1;&#x660E;&#x7684;&#x8282;&#x70B9;&#x624D;&#x80FD;&#x5E7F;&#x64AD;&#x533A;&#x5757;&#xFF0C;&#x7ADE;&#x4E89;&#x96BE;&#x5EA6;&#x975E;&#x5E38;&#x5927;&#xFF0C;&#x9700;&#x8981;&#x5F88;&#x9AD8;&#x7684;&#x7B97;&#x529B;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6210;&#x529F;&#x5176;&#x7B97;&#x529B;&#x5C31;&#x767D;&#x767D;&#x7684;&#x8017;&#x8D39;&#x4E86;&#xFF08;&#x7B97;&#x529B;&#x662F;&#x9700;&#x8981;&#x6210;&#x672C;&#x7684;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x7B97;&#x529B;&#x4F5C;&#x4E3A;&#x8BDA;&#x5B9E;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x540C;&#x6837;&#x4E5F;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x5F88;&#x5927;&#x7684;&#x6536;&#x76CA;&#xFF08;&#x8FD9;&#x5C31;&#x662F;&#x77FF;&#x5DE5;&#x6240;&#x4F5C;&#x7684;&#x5DE5;&#x4F5C;&#xFF09;&#xFF0C;&#x8FD9;&#x4E5F;&#x5B9E;&#x9645;&#x5C31;&#x4E0D;&#x4F1A;&#x6709;&#x505A;&#x53DB;&#x5F92;&#x7684;&#x52A8;&#x673A;&#xFF0C;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x4E5F;&#x56E0;&#x6B64;&#x800C;&#x66F4;&#x7A33;&#x5B9A;&#x3002;</p>
+<p>&#x5F88;&#x591A;&#x4EBA;&#x6279;&#x8BC4;&#x5DE5;&#x4F5C;&#x91CF;&#x8BC1;&#x660E;&#x9020;&#x6210;&#x5DE8;&#x5927;&#x7684;&#x7535;&#x529B;&#x6D6A;&#x8D39;&#xFF0C;&#x4FC3;&#x4F7F;&#x4EBA;&#x4EEC;&#x53BB;&#x63A2;&#x7D22;&#x65B0;&#x7684;&#x89E3;&#x51B3;&#x4E00;&#x81F4;&#x6027;&#xFF08;&#x5171;&#x8BC6;&#xFF09;&#x95EE;&#x9898;&#x7684;&#x673A;&#x5236;&#xFF1A;&#x6743;&#x76CA;&#x8BC1;&#x660E;&#x673A;&#x5236;&#xFF08;POS: Proof of Stake&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x4EE3;&#x8868;&#x3002;&#x5728;&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;&#x95EE;&#x9898;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x770B;&#xFF0C;&#x5B83;&#x540C;&#x6837;&#x63D0;&#x9AD8;&#x4E86;&#x505A;&#x53DB;&#x5F92;&#x7684;&#x6210;&#x672C;&#xFF0C;&#x56E0;&#x4E3A;&#x8D26;&#x6237;&#x9700;&#x8981;&#x9996;&#x5148;&#x6301;&#x6709;&#x5927;&#x91CF;&#x4F59;&#x989D;&#x624D;&#x80FD;&#x6709;&#x66F4;&#x591A;&#x7684;&#x51E0;&#x7387;&#x5E7F;&#x64AD;&#x533A;&#x5757;&#xFF0C;POS&#x4E0D;&#x662F;&#x672C;&#x6587;&#x91CD;&#x70B9;&#xFF0C;&#x4EE5;&#x540E;&#x5728;&#x8BB2;&#x3002;</p>
+<blockquote>
+<p>   &#x5171;&#x8BC6;&#x7B97;&#x6CD5;&#x7684;&#x6838;&#x5FC3;&#x5C31;&#x662F;&#x89E3;&#x51B3;&#x62DC;&#x5360;&#x5EAD;&#x5C06;&#x519B;&#x95EE;&#x9898;&#xFF08;&#x5206;&#x5E03;&#x5F0F;&#x7F51;&#x7EDC;&#x4E00;&#x81F4;&#x6027;&#x95EE;&#x9898;&#xFF09;&#x3002;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="003比特币如何挖矿.html" class="navigation navigation-prev " aria-label="Previous page: 比特币如何挖矿">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../MAC/001Mac设置环境变量.html" class="navigation navigation-next " aria-label="Next page: MAC">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"拜占庭将军","level":"1.7.4","depth":2,"next":{"title":"MAC","level":"1.8","depth":1,"path":"MAC/001Mac设置环境变量.md","ref":"MAC/001Mac设置环境变量.md","articles":[{"title":"设置环境变量","level":"1.8.1","depth":2,"path":"MAC/001Mac设置环境变量.md","ref":"MAC/001Mac设置环境变量.md","articles":[]}]},"previous":{"title":"比特币如何挖矿","level":"1.7.3","depth":2,"path":"BlockChain/003比特币如何挖矿.md","ref":"BlockChain/003比特币如何挖矿.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"BlockChain/004拜占庭将军.md","mtime":"2018-08-30T13:27:01.400Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-04T08:54:27.797Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

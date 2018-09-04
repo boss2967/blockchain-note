@@ -1,0 +1,1066 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据库 · go语言学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Junling Zheng <me@chengweiyang.cn>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="001Mysql介绍与安装.html" />
+    
+    
+    <link rel="prev" href="../Go/013select.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://juejin.im/user/58fb6268a22b9d0065995827" target="_blank" class="custom-link">Zhengjunling's Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Go语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Go/001指针.html">
+            
+                <a href="../Go/001指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Go/002new.html">
+            
+                <a href="../Go/002new.html">
+            
+                    
+                    new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Go/003slice.html">
+            
+                <a href="../Go/003slice.html">
+            
+                    
+                    slice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Go/004map.html">
+            
+                <a href="../Go/004map.html">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Go/005结构体.html">
+            
+                <a href="../Go/005结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Go/006字符串.html">
+            
+                <a href="../Go/006字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../Go/007文件操作.html">
+            
+                <a href="../Go/007文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../Go/008并发编程.html">
+            
+                <a href="../Go/008并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../Go/009goroutine.html">
+            
+                <a href="../Go/009goroutine.html">
+            
+                    
+                    goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../Go/010channel.html">
+            
+                <a href="../Go/010channel.html">
+            
+                    
+                    channel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../Go/011生产者消费者.html">
+            
+                <a href="../Go/011生产者消费者.html">
+            
+                    
+                    生产者消费者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../Go/012定时器.html">
+            
+                <a href="../Go/012定时器.html">
+            
+                    
+                    定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../Go/013select.html">
+            
+                <a href="../Go/013select.html">
+            
+                    
+                    select
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="001Mysql介绍与安装.html">
+            
+                <a href="001Mysql介绍与安装.html">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="001Mysql介绍与安装.html">
+            
+                <a href="001Mysql介绍与安装.html">
+            
+                    
+                    Mysql介绍与安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="002Mysql断开与连接.html">
+            
+                <a href="002Mysql断开与连接.html">
+            
+                    
+                    Mysql断开与连接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="003数据库操作.html">
+            
+                <a href="003数据库操作.html">
+            
+                    
+                    数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="004数据库数据类型.html">
+            
+                <a href="004数据库数据类型.html">
+            
+                    
+                    数据库数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="005数据表基本操作.html">
+            
+                <a href="005数据表基本操作.html">
+            
+                    
+                    数据表基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="006表数据的增，删，改.html">
+            
+                <a href="006表数据的增，删，改.html">
+            
+                    
+                    表数据的增，删，改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="007表数据的准备.html">
+            
+                <a href="007表数据的准备.html">
+            
+                    
+                    表数据的准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="008表数据的查询.html">
+            
+                <a href="008表数据的查询.html">
+            
+                    
+                    表数据的查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="009数据库的常用函数.html">
+            
+                <a href="009数据库的常用函数.html">
+            
+                    
+                    数据库的常用函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="010视图.html">
+            
+                <a href="010视图.html">
+            
+                    
+                    视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="011数据完整性约束.html">
+            
+                <a href="011数据完整性约束.html">
+            
+                    
+                    数据完整性约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="012Go操作MysSql.html">
+            
+                <a href="012Go操作MysSql.html">
+            
+                    
+                    Go操作MysSql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="013附录.html">
+            
+                <a href="013附录.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="014练习.html">
+            
+                <a href="014练习.html">
+            
+                    
+                    练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Linux/001Linux操作系统介绍.html">
+            
+                <a href="../Linux/001Linux操作系统介绍.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Linux/001Linux操作系统介绍.html">
+            
+                <a href="../Linux/001Linux操作系统介绍.html">
+            
+                    
+                    Linux操作系统介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Linux/002文件系统.html">
+            
+                <a href="../Linux/002文件系统.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Linux/003命令概述与使用方法.html">
+            
+                <a href="../Linux/003命令概述与使用方法.html">
+            
+                    
+                    命令概述与使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Linux/004常用命令.html">
+            
+                <a href="../Linux/004常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Linux/005远程操作.html">
+            
+                <a href="../Linux/005远程操作.html">
+            
+                    
+                    远程操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../HTML/README.md">
+            
+                <span>
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../HTML/001六种选择器类型.md">
+            
+                <span>
+            
+                    
+                    六种选择器类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../HTML/002相对地址和绝对地址.md">
+            
+                <span>
+            
+                    
+                    相对地址和绝对地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../HTML/003列表.md">
+            
+                <span>
+            
+                    
+                    列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../HTML/004表单.md">
+            
+                <span>
+            
+                    
+                    表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../HTML/005表格.md">
+            
+                <span>
+            
+                    
+                    表格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../HTML/006css显示特性.md">
+            
+                <span>
+            
+                    
+                    css显示特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../HTML/007搜索框实现.md">
+            
+                <span>
+            
+                    
+                    搜索框实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../HTML/008布局.md">
+            
+                <span>
+            
+                    
+                    布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../HTML/009权重.md">
+            
+                <span>
+            
+                    
+                    权重
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../HTML/010前端开发流程.md">
+            
+                <span>
+            
+                    
+                    前端开发流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../JavaScript/001JavaScript介绍.md">
+            
+                <span>
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../JavaScript/002JavaScript嵌入页面的方式.md">
+            
+                <span>
+            
+                    
+                    JavaScript嵌入页面的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../JavaScript/003变量数据类型及基本语法.md">
+            
+                <span>
+            
+                    
+                    变量数据类型及基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../JavaScript/004函数.md">
+            
+                <span>
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../JavaScript/005获取元素方法.md">
+            
+                <span>
+            
+                    
+                    获取元素方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../JavaScript/006操作元素.md">
+            
+                <span>
+            
+                    
+                    操作元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../JavaScript/007点击按钮改变元素.md">
+            
+                <span>
+            
+                    
+                    点击按钮改变元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../BlockChain/001区块链记账原理.html">
+            
+                <a href="../BlockChain/001区块链记账原理.html">
+            
+                    
+                    区块链
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../BlockChain/001区块链记账原理.html">
+            
+                <a href="../BlockChain/001区块链记账原理.html">
+            
+                    
+                    区块链记账原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../BlockChain/002比特币所有权及隐私问题.html">
+            
+                <a href="../BlockChain/002比特币所有权及隐私问题.html">
+            
+                    
+                    比特币所有权及隐私问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../BlockChain/003比特币如何挖矿.html">
+            
+                <a href="../BlockChain/003比特币如何挖矿.html">
+            
+                    
+                    比特币如何挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../BlockChain/004拜占庭将军.html">
+            
+                <a href="../BlockChain/004拜占庭将军.html">
+            
+                    
+                    拜占庭将军
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../MAC/001Mac设置环境变量.html">
+            
+                <a href="../MAC/001Mac设置环境变量.html">
+            
+                    
+                    MAC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../MAC/001Mac设置环境变量.html">
+            
+                <a href="../MAC/001Mac设置环境变量.html">
+            
+                    
+                    设置环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数据库</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#mysql&#x4ECB;&#x7ECD;&#x4E0E;&#x5B89;&#x88C5;"><b>1. </b>Mysql&#x4ECB;&#x7ECD;&#x4E0E;&#x5B89;&#x88C5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E86;&#x89E3;mysql"><b>1.1. </b>&#x4E86;&#x89E3;MySQL</a></li><li><span class="title-icon "></span><a href="#mysql&#x670D;&#x52A1;&#x5668;&#x7684;&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;"><b>1.2. </b>MySQL&#x670D;&#x52A1;&#x5668;&#x7684;&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5148;&#x4E0B;&#x8F7D;"><b>1.2.1. </b>&#x5148;&#x4E0B;&#x8F7D;</a></li><li><span class="title-icon "></span><a href="#&#x8FDB;&#x5165;&#x7BA1;&#x7406;&#x5458;&#x6A21;&#x5F0F;"><b>1.2.2. </b>&#x8FDB;&#x5165;&#x7BA1;&#x7406;&#x5458;&#x6A21;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x8FDB;&#x5165;mysql"><b>1.2.3. </b>&#x8FDB;&#x5165;mysql</a></li><li><span class="title-icon "></span><a href="#&#x8BBE;&#x7F6E;mysql&#x7684;root&#x5BC6;&#x7801;&#x4E3A;123456"><b>1.2.4. </b>&#x8BBE;&#x7F6E;mysql&#x7684;root&#x5BC6;&#x7801;&#x4E3A;123456</a></li><li><span class="title-icon "></span><a href="#&#x9000;&#x51FA;mysql"><b>1.2.5. </b>&#x9000;&#x51FA;mysql</a></li><li><span class="title-icon "></span><a href="#&#x63A8;&#x51FA;root&#x6A21;&#x5F0F;"><b>1.2.6. </b>&#x63A8;&#x51FA;root&#x6A21;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x767B;&#x9646;mysql"><b>1.2.7. </b>&#x767B;&#x9646;mysql</a></li></ul></ul></ul></div><a href="#mysql&#x4ECB;&#x7ECD;&#x4E0E;&#x5B89;&#x88C5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mysql&#x4ECB;&#x7ECD;&#x4E0E;&#x5B89;&#x88C5;"><a name="mysql&#x4ECB;&#x7ECD;&#x4E0E;&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#mysql&#x4ECB;&#x7ECD;&#x4E0E;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>1. Mysql&#x4ECB;&#x7ECD;&#x4E0E;&#x5B89;&#x88C5;</h1>
+<h2 id="&#x4E86;&#x89E3;mysql"><a name="&#x4E86;&#x89E3;mysql" class="anchor-navigation-ex-anchor" href="#&#x4E86;&#x89E3;mysql"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x4E86;&#x89E3;MySQL</h2>
+<blockquote>
+<p>   MySQL&#x662F;&#x76EE;&#x524D;&#x6700;&#x4E3A;&#x6D41;&#x884C;&#x7684;<strong><mark>&#x5F00;&#x653E;&#x6E90;&#x7801;</mark></strong>&#x7684;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#xFF0C;&#x662F;&#x5B8C;&#x5168;&#x7F51;&#x7EDC;&#x5316;&#x7684;<strong><mark>&#x8DE8;&#x5E73;&#x53F0;</mark></strong>&#x7684;<strong><mark>&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;</mark></strong>&#x7CFB;&#x7EDF;&#xFF0C;&#x5B83;&#x662F;&#x7531;&#x745E;&#x5178;&#x7684;MySQL AB&#x516C;&#x53F8;&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x7531;MySQL&#x7684;&#x521D;&#x59CB;&#x5F00;&#x53D1;&#x4EBA;&#x5458;David Axmark&#x548C;Michael &quot;Monty&quot; Widenius&#x4E8E;1995&#x5E74;&#x5EFA;&#x7ACB;&#xFF0C;&#x76EE;&#x524D;&#x5C5E;&#x4E8E;Oracle&#x516C;&#x53F8;&#x3002;&#x5B83;&#x7684;&#x8C61;&#x5F81;&#x7B26;&#x53F7;&#x662F;&#x4E00;&#x53EA;&#x540D;&#x4E3A;Sakila&#x7684;&#x6D77;&#x8C5A;&#xFF0C;&#x4EE3;&#x8868;&#x7740;MySQL&#x6570;&#x636E;&#x5E93;&#x548C;&#x56E2;&#x961F;&#x7684;&#x901F;&#x5EA6;&#x3001;&#x80FD;&#x529B;&#x3001;&#x7CBE;&#x786E;&#x548C;&#x4F18;&#x79C0;&#x672C;&#x8D28;&#x3002;     MySQL&#x6570;&#x636E;&#x5E93;&#x53EF;&#x4EE5;&#x79F0;&#x5F97;&#x4E0A;&#x662F;<strong><mark>&#x76EE;&#x524D;&#x8FD0;&#x884C;&#x901F;&#x5EA6;&#x6700;&#x5FEB;</mark></strong>&#x7684;SQL&#x8BED;&#x8A00;&#x6570;&#x636E;&#x5E93;&#x3002;&#x9664;&#x4E86;&#x5177;&#x6709;&#x8BB8;&#x591A;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x5E93;&#x6240;&#x4E0D;&#x5177;&#x5907;&#x7684;&#x529F;&#x80FD;&#x548C;&#x9009;&#x62E9;&#x4E4B;&#x5916;&#xFF0C;MySQL&#x6570;&#x636E;&#x5E93;&#x8FD8;&#x662F;&#x4E00;&#x79CD;&#x5B8C;&#x5168;&#x514D;&#x8D39;&#x7684;&#x4EA7;&#x54C1;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4ECE;&#x7F51;&#x4E0A;&#x4E0B;&#x8F7D;&#x4F7F;&#x7528;&#xFF0C;&#x800C;&#x4E0D;&#x5FC5;&#x652F;&#x4ED8;&#x4EFB;&#x4F55;&#x8D39;&#x7528;&#x3002;</p>
+</blockquote>
+<h2 id="mysql&#x670D;&#x52A1;&#x5668;&#x7684;&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;"><a name="mysql&#x670D;&#x52A1;&#x5668;&#x7684;&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#mysql&#x670D;&#x52A1;&#x5668;&#x7684;&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. MySQL&#x670D;&#x52A1;&#x5668;&#x7684;&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;</h2>
+<h3 id="&#x5148;&#x4E0B;&#x8F7D;"><a name="&#x5148;&#x4E0B;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#&#x5148;&#x4E0B;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. &#x5148;&#x4E0B;&#x8F7D;</h3>
+<pre><code> sudo apt-get install mysql-server
+ sudo apt install mysql-client
+ sudo apt install libmysqlclient-dev
+</code></pre><h3 id="&#x8FDB;&#x5165;&#x7BA1;&#x7406;&#x5458;&#x6A21;&#x5F0F;"><a name="&#x8FDB;&#x5165;&#x7BA1;&#x7406;&#x5458;&#x6A21;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x8FDB;&#x5165;&#x7BA1;&#x7406;&#x5458;&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. &#x8FDB;&#x5165;&#x7BA1;&#x7406;&#x5458;&#x6A21;&#x5F0F;</h3>
+<p><code>su</code>(&#x8FD9;&#x4E00;&#x6B65;&#x4F1A;&#x8BA9;&#x4F60;&#x8F93;&#x5165;root&#x5BC6;&#x7801;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x6CA1;&#x6709;&#x5BC6;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;<code>sudo passwd</code>&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;)
+&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x8FDB;&#x5230;root&#x6A21;&#x5F0F;</p>
+<h3 id="&#x8FDB;&#x5165;mysql"><a name="&#x8FDB;&#x5165;mysql" class="anchor-navigation-ex-anchor" href="#&#x8FDB;&#x5165;mysql"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.3. &#x8FDB;&#x5165;mysql</h3>
+<p>&#x8F93;&#x5165;<code>mysql</code>&#x6307;&#x4EE4;&#xFF0C;&#x8FDB;&#x5165;mysql</p>
+<h3 id="&#x8BBE;&#x7F6E;mysql&#x7684;root&#x5BC6;&#x7801;&#x4E3A;123456"><a name="&#x8BBE;&#x7F6E;mysql&#x7684;root&#x5BC6;&#x7801;&#x4E3A;123456" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x7F6E;mysql&#x7684;root&#x5BC6;&#x7801;&#x4E3A;123456"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.4. &#x8BBE;&#x7F6E;mysql&#x7684;root&#x5BC6;&#x7801;&#x4E3A;123456</h3>
+<pre><code>update user set authentication_string=PASSWORD(&quot;123456&quot;) where User=&apos;root&apos;;
+</code></pre><h3 id="&#x9000;&#x51FA;mysql"><a name="&#x9000;&#x51FA;mysql" class="anchor-navigation-ex-anchor" href="#&#x9000;&#x51FA;mysql"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.5. &#x9000;&#x51FA;mysql</h3>
+<p><code>exit</code></p>
+<h3 id="&#x63A8;&#x51FA;root&#x6A21;&#x5F0F;"><a name="&#x63A8;&#x51FA;root&#x6A21;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x63A8;&#x51FA;root&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.6. &#x63A8;&#x51FA;root&#x6A21;&#x5F0F;</h3>
+<p><code>exit</code></p>
+<h3 id="&#x767B;&#x9646;mysql"><a name="&#x767B;&#x9646;mysql" class="anchor-navigation-ex-anchor" href="#&#x767B;&#x9646;mysql"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.7. &#x767B;&#x9646;mysql</h3>
+<pre><code>mysql -uroot -p123456
+</code></pre>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Go/013select.html" class="navigation navigation-prev " aria-label="Previous page: select">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="001Mysql介绍与安装.html" class="navigation navigation-next " aria-label="Next page: Mysql介绍与安装">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据库","level":"1.3","depth":1,"next":{"title":"Mysql介绍与安装","level":"1.3.1","depth":2,"path":"Database/001Mysql介绍与安装.md","ref":"Database/001Mysql介绍与安装.md","articles":[]},"previous":{"title":"select","level":"1.2.13","depth":2,"path":"Go/013select.md","ref":"Go/013select.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"Database/001Mysql介绍与安装.md","mtime":"2018-08-29T03:34:06.927Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-04T08:54:27.797Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
