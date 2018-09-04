@@ -1,0 +1,1284 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>channel · go语言学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Junling Zheng <me@chengweiyang.cn>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="011生产者消费者.html" />
+    
+    
+    <link rel="prev" href="009goroutine.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://juejin.im/user/58fb6268a22b9d0065995827" target="_blank" class="custom-link">Zhengjunling's Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Go语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="001指针.html">
+            
+                <a href="001指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="002new.html">
+            
+                <a href="002new.html">
+            
+                    
+                    new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="003slice.html">
+            
+                <a href="003slice.html">
+            
+                    
+                    slice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="004map.html">
+            
+                <a href="004map.html">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="005结构体.html">
+            
+                <a href="005结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="006字符串.html">
+            
+                <a href="006字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="007文件操作.html">
+            
+                <a href="007文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="008并发编程.html">
+            
+                <a href="008并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="009goroutine.html">
+            
+                <a href="009goroutine.html">
+            
+                    
+                    goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.10" data-path="010channel.html">
+            
+                <a href="010channel.html">
+            
+                    
+                    channel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="011生产者消费者.html">
+            
+                <a href="011生产者消费者.html">
+            
+                    
+                    生产者消费者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="012定时器.html">
+            
+                <a href="012定时器.html">
+            
+                    
+                    定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="013select.html">
+            
+                <a href="013select.html">
+            
+                    
+                    select
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Database/001Mysql介绍与安装.html">
+            
+                <a href="../Database/001Mysql介绍与安装.html">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Database/001Mysql介绍与安装.html">
+            
+                <a href="../Database/001Mysql介绍与安装.html">
+            
+                    
+                    Mysql介绍与安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Database/002Mysql断开与连接.html">
+            
+                <a href="../Database/002Mysql断开与连接.html">
+            
+                    
+                    Mysql断开与连接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Database/003数据库操作.html">
+            
+                <a href="../Database/003数据库操作.html">
+            
+                    
+                    数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Database/004数据库数据类型.html">
+            
+                <a href="../Database/004数据库数据类型.html">
+            
+                    
+                    数据库数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Database/005数据表基本操作.html">
+            
+                <a href="../Database/005数据表基本操作.html">
+            
+                    
+                    数据表基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Database/006表数据的增，删，改.html">
+            
+                <a href="../Database/006表数据的增，删，改.html">
+            
+                    
+                    表数据的增，删，改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../Database/007表数据的准备.html">
+            
+                <a href="../Database/007表数据的准备.html">
+            
+                    
+                    表数据的准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../Database/008表数据的查询.html">
+            
+                <a href="../Database/008表数据的查询.html">
+            
+                    
+                    表数据的查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../Database/009数据库的常用函数.html">
+            
+                <a href="../Database/009数据库的常用函数.html">
+            
+                    
+                    数据库的常用函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../Database/010视图.html">
+            
+                <a href="../Database/010视图.html">
+            
+                    
+                    视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../Database/011数据完整性约束.html">
+            
+                <a href="../Database/011数据完整性约束.html">
+            
+                    
+                    数据完整性约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../Database/012Go操作MysSql.html">
+            
+                <a href="../Database/012Go操作MysSql.html">
+            
+                    
+                    Go操作MysSql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../Database/013附录.html">
+            
+                <a href="../Database/013附录.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../Database/014练习.html">
+            
+                <a href="../Database/014练习.html">
+            
+                    
+                    练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Linux/001Linux操作系统介绍.html">
+            
+                <a href="../Linux/001Linux操作系统介绍.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Linux/001Linux操作系统介绍.html">
+            
+                <a href="../Linux/001Linux操作系统介绍.html">
+            
+                    
+                    Linux操作系统介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Linux/002文件系统.html">
+            
+                <a href="../Linux/002文件系统.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Linux/003命令概述与使用方法.html">
+            
+                <a href="../Linux/003命令概述与使用方法.html">
+            
+                    
+                    命令概述与使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Linux/004常用命令.html">
+            
+                <a href="../Linux/004常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Linux/005远程操作.html">
+            
+                <a href="../Linux/005远程操作.html">
+            
+                    
+                    远程操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../HTML/">
+            
+                <a href="../HTML/">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../HTML/001六种选择器类型.html">
+            
+                <a href="../HTML/001六种选择器类型.html">
+            
+                    
+                    六种选择器类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../HTML/002相对地址和绝对地址.html">
+            
+                <a href="../HTML/002相对地址和绝对地址.html">
+            
+                    
+                    相对地址和绝对地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../HTML/003列表.html">
+            
+                <a href="../HTML/003列表.html">
+            
+                    
+                    列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../HTML/004表单.html">
+            
+                <a href="../HTML/004表单.html">
+            
+                    
+                    表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../HTML/005表格.html">
+            
+                <a href="../HTML/005表格.html">
+            
+                    
+                    表格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../HTML/006css显示特性.html">
+            
+                <a href="../HTML/006css显示特性.html">
+            
+                    
+                    css显示特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../HTML/007搜索框实现.html">
+            
+                <a href="../HTML/007搜索框实现.html">
+            
+                    
+                    搜索框实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../HTML/008布局.html">
+            
+                <a href="../HTML/008布局.html">
+            
+                    
+                    布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../HTML/009权重.html">
+            
+                <a href="../HTML/009权重.html">
+            
+                    
+                    权重
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../HTML/010前端开发流程.html">
+            
+                <a href="../HTML/010前端开发流程.html">
+            
+                    
+                    前端开发流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../JavaScript/001JavaScript介绍.html">
+            
+                <a href="../JavaScript/001JavaScript介绍.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../JavaScript/002JavaScript嵌入页面的方式.html">
+            
+                <a href="../JavaScript/002JavaScript嵌入页面的方式.html">
+            
+                    
+                    JavaScript嵌入页面的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../JavaScript/003变量数据类型及基本语法.html">
+            
+                <a href="../JavaScript/003变量数据类型及基本语法.html">
+            
+                    
+                    变量数据类型及基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../JavaScript/004函数.html">
+            
+                <a href="../JavaScript/004函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../JavaScript/005获取元素方法.html">
+            
+                <a href="../JavaScript/005获取元素方法.html">
+            
+                    
+                    获取元素方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../JavaScript/006操作元素.html">
+            
+                <a href="../JavaScript/006操作元素.html">
+            
+                    
+                    操作元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../JavaScript/007点击按钮改变元素.html">
+            
+                <a href="../JavaScript/007点击按钮改变元素.html">
+            
+                    
+                    点击按钮改变元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../BlockChain/001区块链记账原理.html">
+            
+                <a href="../BlockChain/001区块链记账原理.html">
+            
+                    
+                    区块链
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../BlockChain/001区块链记账原理.html">
+            
+                <a href="../BlockChain/001区块链记账原理.html">
+            
+                    
+                    区块链记账原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../BlockChain/002比特币所有权及隐私问题.html">
+            
+                <a href="../BlockChain/002比特币所有权及隐私问题.html">
+            
+                    
+                    比特币所有权及隐私问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../BlockChain/003比特币如何挖矿.html">
+            
+                <a href="../BlockChain/003比特币如何挖矿.html">
+            
+                    
+                    比特币如何挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../BlockChain/004拜占庭将军.html">
+            
+                <a href="../BlockChain/004拜占庭将军.html">
+            
+                    
+                    拜占庭将军
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../MAC/001Mac设置环境变量.html">
+            
+                <a href="../MAC/001Mac设置环境变量.html">
+            
+                    
+                    MAC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../MAC/001Mac设置环境变量.html">
+            
+                <a href="../MAC/001Mac设置环境变量.html">
+            
+                    
+                    设置环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >channel</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x6982;&#x5FF5;"><b>1. </b>&#x6982;&#x5FF5;</a></li><li><span class="title-icon "></span><a href="#&#x5B9A;&#x4E49;channel&#x53D8;&#x91CF;"><b>2. </b>&#x5B9A;&#x4E49;channel&#x53D8;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#&#x65E0;&#x7F13;&#x51B2;&#x7684;channel"><b>3. </b>&#x65E0;&#x7F13;&#x51B2;&#x7684;channel</a></li><li><span class="title-icon "></span><a href="#&#x6709;&#x7F13;&#x51B2;&#x7684;channel"><b>4. </b>&#x6709;&#x7F13;&#x51B2;&#x7684;channel</a></li><li><span class="title-icon "></span><a href="#&#x5173;&#x95ED;channel"><b>5. </b>&#x5173;&#x95ED;channel</a></li><li><span class="title-icon "></span><a href="#&#x5355;&#x5411;channel&#x53CA;&#x5E94;&#x7528;"><b>6. </b>&#x5355;&#x5411;channel&#x53CA;&#x5E94;&#x7528;</a></li></ul></div><a href="#&#x6982;&#x5FF5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6982;&#x5FF5;"><a name="&#x6982;&#x5FF5;" class="anchor-navigation-ex-anchor" href="#&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6982;&#x5FF5;</h1>
+<blockquote>
+<p>channel&#x662F;Go&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x6838;&#x5FC3;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x770B;&#x6210;&#x7BA1;&#x9053;&#x3002;&#x5E76;&#x53D1;&#x6838;&#x5FC3;&#x5355;&#x5143;&#x901A;&#x8FC7;&#x5B83;&#x5C31;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x6216;&#x8005;&#x63A5;&#x6536;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x901A;&#x8BAF;&#xFF0C;&#x8FD9;&#x5728;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x53C8;&#x8FDB;&#x4E00;&#x6B65;&#x964D;&#x4F4E;&#x4E86;&#x7F16;&#x7A0B;&#x7684;&#x96BE;&#x5EA6;&#x3002;</p>
+</blockquote>
+<p>channel&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x6765;&#x89E3;&#x51B3;go&#x7A0B;&#x7684;&#x540C;&#x6B65;&#x95EE;&#x9898;&#x4EE5;&#x53CA;&#x534F;&#x7A0B;&#x4E4B;&#x95F4;&#x6570;&#x636E;&#x5171;&#x4EAB;&#xFF08;&#x6570;&#x636E;&#x4F20;&#x9012;&#xFF09;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<p>goroutine&#x8FD0;&#x884C;&#x5728;&#x76F8;&#x540C;&#x7684;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#xFF0C;&#x56E0;&#x6B64;&#x8BBF;&#x95EE;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x5FC5;&#x987B;&#x505A;&#x597D;&#x540C;&#x6B65;&#x3002;<mark>goroutine &#x5949;&#x884C;&#x901A;&#x8FC7;&#x901A;&#x4FE1;&#x6765;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x6765;&#x901A;&#x4FE1;&#x3002;</mark></p>
+<p>&#x5F15;&#x2F64;&#x7C7B;&#x578B; channel&#x53EF;&#x7528;&#x4E8E;&#x591A;&#x4E2A; goroutine &#x901A;&#x8BAF;&#x3002;&#x5176;&#x5185;&#x90E8;&#x5B9E;&#x73B0;&#x4E86;&#x540C;&#x6B65;&#xFF0C;&#x786E;&#x4FDD;&#x5E76;&#x53D1;&#x5B89;&#x5168;&#x3002;</p>
+<p><img src="../images/channel01.png" alt=""></p>
+<h1 id="&#x5B9A;&#x4E49;channel&#x53D8;&#x91CF;"><a name="&#x5B9A;&#x4E49;channel&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x5B9A;&#x4E49;channel&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x5B9A;&#x4E49;channel&#x53D8;&#x91CF;</h1>
+<ul>
+<li>&#x548C;map&#x7C7B;&#x4F3C;&#xFF0C;channel&#x4E5F;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;make&#x521B;&#x5EFA;&#x7684;&#x5E95;&#x5C42;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7684;&#x5F15;&#x7528;&#x3002;</li>
+<li>&#x5F53;&#x6211;&#x4EEC;&#x590D;&#x5236;&#x4E00;&#x4E2A;channel&#x6216;&#x7528;&#x4E8E;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x662F;&#x62F7;&#x8D1D;&#x4E86;&#x4E00;&#x4E2A;channel&#x5F15;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x8C03;&#x7528;&#x8005;&#x548C;&#x88AB;&#x8C03;&#x7528;&#x8005;&#x5C06;&#x5F15;&#x7528;&#x540C;&#x4E00;&#x4E2A;channel&#x5BF9;&#x8C61;&#x3002;&#x548C;&#x5176;&#x5B83;&#x7684;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x4E00;&#x6837;&#xFF0C;channel&#x7684;&#x96F6;&#x503C;&#x4E5F;&#x662F;nil&#x3002;</li>
+<li>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;channel&#x65F6;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x53D1;&#x9001;&#x5230;channel&#x7684;&#x503C;&#x7684;&#x7C7B;&#x578B;&#x3002;channel&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x7684;make()&#x51FD;&#x6570;&#x6765;&#x521B;&#x5EFA;&#xFF1A;</li>
+<li>chan&#x662F;&#x521B;&#x5EFA;channel&#x6240;&#x9700;&#x4F7F;&#x7528;&#x7684;&#x5173;&#x952E;&#x5B57;&#x3002;Type &#x4EE3;&#x8868;&#x6307;&#x5B9A;channel&#x6536;&#x53D1;&#x6570;&#x636E;&#x7684;&#x7C7B;&#x578B;&#x3002;</li>
+</ul>
+<pre><code>  make(chan Type)  //&#x7B49;&#x4EF7;&#x4E8E;make(chan Type, 0)
+  make(chan Type, capacity)
+</code></pre><ul>
+<li>&#x5F53;&#x6211;&#x4EEC;&#x590D;&#x5236;&#x4E00;&#x4E2A;channel&#x6216;&#x7528;&#x4E8E;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x662F;&#x62F7;&#x8D1D;&#x4E86;&#x4E00;&#x4E2A;channel&#x5F15;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x8C03;&#x7528;&#x8005;&#x548C;&#x88AB;&#x8C03;&#x7528;&#x8005;&#x5C06;&#x5F15;&#x7528;&#x540C;&#x4E00;&#x4E2A;channel&#x5BF9;&#x8C61;&#x3002;&#x548C;&#x5176;&#x5B83;&#x7684;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x4E00;&#x6837;&#xFF0C;channel&#x7684;&#x96F6;&#x503C;&#x4E5F;&#x662F;nil&#x3002;</li>
+<li>&#x5F53; &#x53C2;&#x6570;capacity= 0 &#x65F6;&#xFF0C;channel &#x662F;&#x65E0;&#x7F13;&#x51B2;&#x963B;&#x585E;&#x8BFB;&#x5199;&#x7684;&#xFF1B;&#x5F53;capacity &gt; 0 &#x65F6;&#xFF0C;channel &#x6709;&#x7F13;&#x51B2;&#x3001;&#x662F;&#x975E;&#x963B;&#x585E;&#x7684;&#xFF0C;&#x76F4;&#x5230;&#x5199;&#x6EE1; capacity&#x4E2A;&#x5143;&#x7D20;&#x624D;&#x963B;&#x585E;&#x5199;&#x5165;&#x3002;</li>
+<li>channel&#x975E;&#x5E38;&#x50CF;&#x751F;&#x6D3B;&#x4E2D;&#x7684;&#x7BA1;&#x9053;&#xFF0C;&#x4E00;&#x8FB9;&#x53EF;&#x4EE5;&#x5B58;&#x653E;&#x4E1C;&#x897F;&#xFF0C;&#x53E6;&#x4E00;&#x8FB9;&#x53EF;&#x4EE5;&#x53D6;&#x51FA;&#x4E1C;&#x897F;&#x3002;channel&#x901A;&#x8FC7;&#x64CD;&#x4F5C;&#x7B26; &lt;- &#x6765;&#x63A5;&#x6536;&#x548C;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x6570;&#x636E;&#x8BED;&#x6CD5;&#xFF1A;</li>
+</ul>
+<pre><code>    channel &lt;- value      //&#x53D1;&#x9001;value&#x5230;channel
+    &lt;-channel             //&#x63A5;&#x6536;&#x5E76;&#x5C06;&#x5176;&#x4E22;&#x5F03;
+    x := &lt;-channel        //&#x4ECE;channel&#x4E2D;&#x63A5;&#x6536;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x8D4B;&#x503C;&#x7ED9;x
+    x, ok := &lt;-channel    //&#x529F;&#x80FD;&#x540C;&#x4E0A;&#xFF0C;&#x540C;&#x65F6;&#x68C0;&#x67E5;&#x901A;&#x9053;&#x662F;&#x5426;&#x5DF2;&#x5173;&#x95ED;&#x6216;&#x8005;&#x662F;&#x5426;&#x4E3A;&#x7A7A;
+</code></pre><p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;channel&#x63A5;&#x6536;&#x548C;&#x53D1;&#x9001;&#x6570;&#x636E;&#x90FD;&#x662F;&#x963B;&#x585E;&#x7684;&#xFF0C;&#x9664;&#x975E;&#x53E6;&#x4E00;&#x7AEF;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x597D;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4F7F;&#x5F97;goroutine&#x540C;&#x6B65;&#x53D8;&#x7684;&#x66F4;&#x52A0;&#x7684;&#x7B80;&#x5355;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x663E;&#x5F0F;&#x7684;lock&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>func main() {
+    c := make(chan int)
+
+    go func() {
+        defer fmt.Println(&quot;&#x5B50;&#x534F;&#x7A0B;&#x7ED3;&#x675F;&quot;)
+
+        fmt.Println(&quot;&#x5B50;&#x534F;&#x7A0B;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x2026;&#x2026;&quot;)
+
+        c &lt;- 666 //666&#x53D1;&#x9001;&#x5230;c
+    }()
+
+    num := &lt;-c //&#x4ECE;c&#x4E2D;&#x63A5;&#x6536;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x8D4B;&#x503C;&#x7ED9;num
+
+    fmt.Println(&quot;num = &quot;, num)
+    fmt.Println(&quot;main&#x534F;&#x7A0B;&#x7ED3;&#x675F;&quot;)
+}
+</code></pre><p><img src="../images/channel02.png" alt=""></p>
+<h1 id="&#x65E0;&#x7F13;&#x51B2;&#x7684;channel"><a name="&#x65E0;&#x7F13;&#x51B2;&#x7684;channel" class="anchor-navigation-ex-anchor" href="#&#x65E0;&#x7F13;&#x51B2;&#x7684;channel"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x65E0;&#x7F13;&#x51B2;&#x7684;channel</h1>
+<blockquote>
+<p>   &#x65E0;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053;&#xFF08;unbuffered channel&#xFF09;&#x662F;&#x6307;&#x5728;&#x63A5;&#x6536;&#x524D;&#x6CA1;&#x6709;&#x80FD;&#x529B;&#x4FDD;&#x5B58;&#x4EFB;&#x4F55;&#x503C;&#x7684;&#x901A;&#x9053;&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x901A;&#x9053;&#x8981;&#x6C42;&#x53D1;&#x9001;goroutine&#x548C;&#x63A5;&#x6536;goroutine&#x540C;&#x65F6;&#x51C6;&#x5907;&#x597D;&#xFF0C;&#x624D;&#x80FD;&#x5B8C;&#x6210;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x64CD;&#x4F5C;&#x3002;&#x5426;&#x5219;&#xFF0C;&#x901A;&#x9053;&#x4F1A;&#x5BFC;&#x81F4;&#x5148;&#x6267;&#x884C;&#x53D1;&#x9001;&#x6216;&#x63A5;&#x6536;&#x64CD;&#x4F5C;&#x7684; goroutine &#x963B;&#x585E;&#x7B49;&#x5F85;&#x3002;</li>
+<li>&#x8FD9;&#x79CD;&#x5BF9;&#x901A;&#x9053;&#x8FDB;&#x884C;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x7684;&#x4EA4;&#x4E92;&#x884C;&#x4E3A;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x540C;&#x6B65;&#x7684;&#x3002;&#x5176;&#x4E2D;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x90FD;&#x65E0;&#x6CD5;&#x79BB;&#x5F00;&#x53E6;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x5355;&#x72EC;&#x5B58;&#x5728;&#x3002;</li>
+</ul>
+<p><strong>&#x963B;&#x585E;&#xFF1A;&#x7531;&#x4E8E;&#x67D0;&#x79CD;&#x539F;&#x56E0;&#x6570;&#x636E;&#x6CA1;&#x6709;&#x5230;&#x8FBE;&#xFF0C;&#x5F53;&#x524D;&#x534F;&#x7A0B;&#xFF08;&#x7EBF;&#x7A0B;&#xFF09;&#x6301;&#x7EED;&#x5904;&#x4E8E;&#x7B49;&#x5F85;&#x72B6;&#x6001;&#xFF0C;&#x76F4;&#x5230;&#x6761;&#x4EF6;&#x6EE1;&#x8DB3;&#xFF0C;&#x624D;&#x89E3;&#x9664;&#x963B;&#x585E;&#x3002;</strong></p>
+<p><strong>&#x540C;&#x6B65;&#xFF1A;&#x5728;&#x4E24;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x534F;&#x7A0B;&#xFF08;&#x7EBF;&#x7A0B;&#xFF09;&#x95F4;&#xFF0C;&#x4FDD;&#x6301;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x4E00;&#x81F4;&#x6027;&#x7684;&#x673A;&#x5236;&#x3002;</strong></p>
+<p><img src="../images/&#x65E0;&#x7F13;&#x51B2;channel.png" alt=""></p>
+<ul>
+<li>&#x5728;&#x7B2C; 1 &#x6B65;&#xFF0C;&#x4E24;&#x4E2A; goroutine &#x90FD;&#x5230;&#x8FBE;&#x901A;&#x9053;&#xFF0C;&#x4F46;&#x54EA;&#x4E2A;&#x90FD;&#x6CA1;&#x6709;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x53D1;&#x9001;&#x6216;&#x8005;&#x63A5;&#x6536;&#x3002;</li>
+<li>&#x5728;&#x7B2C; 2 &#x6B65;&#xFF0C;&#x5DE6;&#x4FA7;&#x7684; goroutine &#x5C06;&#x5B83;&#x7684;&#x624B;&#x4F38;&#x8FDB;&#x4E86;&#x901A;&#x9053;&#xFF0C;&#x8FD9;&#x6A21;&#x62DF;&#x4E86;&#x5411;&#x901A;&#x9053;&#x53D1;&#x9001;&#x6570;&#x636E;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x8FD9;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A; goroutine &#x4F1A;&#x5728;&#x901A;&#x9053;&#x4E2D;&#x88AB;&#x9501;&#x4F4F;&#xFF0C;&#x76F4;&#x5230;&#x4EA4;&#x6362;&#x5B8C;&#x6210;&#x3002;</li>
+<li>&#x5728;&#x7B2C; 3 &#x6B65;&#xFF0C;&#x53F3;&#x4FA7;&#x7684; goroutine &#x5C06;&#x5B83;&#x7684;&#x624B;&#x653E;&#x5165;&#x901A;&#x9053;&#xFF0C;&#x8FD9;&#x6A21;&#x62DF;&#x4E86;&#x4ECE;&#x901A;&#x9053;&#x91CC;&#x63A5;&#x6536;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x4E2A; goroutine &#x4E00;&#x6837;&#x4E5F;&#x4F1A;&#x5728;&#x901A;&#x9053;&#x4E2D;&#x88AB;&#x9501;&#x4F4F;&#xFF0C;&#x76F4;&#x5230;&#x4EA4;&#x6362;&#x5B8C;&#x6210;&#x3002;</li>
+<li>&#x5728;&#x7B2C; 4 &#x6B65;&#x548C;&#x7B2C; 5 &#x6B65;&#xFF0C;&#x8FDB;&#x884C;&#x4EA4;&#x6362;&#xFF0C;&#x5E76;&#x6700;&#x7EC8;&#xFF0C;&#x5728;&#x7B2C; 6 &#x6B65;&#xFF0C;&#x4E24;&#x4E2A; goroutine &#x90FD;&#x5C06;&#x5B83;&#x4EEC;&#x7684;&#x624B;&#x4ECE;&#x901A;&#x9053;&#x91CC;&#x62FF;&#x51FA;&#x6765;&#xFF0C;&#x8FD9;&#x6A21;&#x62DF;&#x4E86;&#x88AB;&#x9501;&#x4F4F;&#x7684; goroutine &#x5F97;&#x5230;&#x91CA;&#x653E;&#x3002;&#x4E24;&#x4E2A; goroutine &#x73B0;&#x5728;&#x90FD;&#x53EF;&#x4EE5;&#x53BB;&#x505A;&#x5176;&#x4ED6;&#x4E8B;&#x60C5;&#x4E86;&#x3002;</li>
+</ul>
+<p><strong>&#x65E0;&#x7F13;&#x51B2;&#x7684;channel&#x521B;&#x5EFA;&#x683C;&#x5F0F;&#xFF1A;</strong></p>
+<p><code>make(chan Type)   //&#x7B49;&#x4EF7;&#x4E8E;make(chan Type, 0)</code></p>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x7F13;&#x51B2;&#x533A;&#x5BB9;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x901A;&#x9053;&#x5C31;&#x662F;&#x540C;&#x6B65;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x4F1A;&#x963B;&#x585E;&#x5230;&#x53D1;&#x9001;&#x8005;&#x51C6;&#x5907;&#x597D;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x8005;&#x51C6;&#x5907;&#x597D;&#x63A5;&#x6536;&#x3002;
+&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>func main() {
+    c := make(chan int, 0) //&#x521B;&#x5EFA;&#x65E0;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053; c 
+
+    //&#x5185;&#x7F6E;&#x51FD;&#x6570; len &#x8FD4;&#x56DE;&#x672A;&#x88AB;&#x8BFB;&#x53D6;&#x7684;&#x7F13;&#x51B2;&#x5143;&#x7D20;&#x6570;&#x91CF;&#xFF0C;cap &#x8FD4;&#x56DE;&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;
+    fmt.Printf(&quot;len(c)=%d, cap(c)=%d\n&quot;, len(c), cap(c))
+
+    go func() {
+        defer fmt.Println(&quot;&#x5B50;&#x534F;&#x7A0B;&#x7ED3;&#x675F;&quot;)
+
+        for i := 0; i &lt; 3; i++ {
+            c &lt;- i
+            fmt.Printf(&quot;&#x5B50;&#x534F;&#x7A0B;&#x6B63;&#x5728;&#x8FD0;&#x884C;[%d]: len(c)=%d, cap(c)=%d\n&quot;, i, len(c), cap(c))
+        }
+    }()
+
+    time.Sleep(2 * time.Second) //&#x5EF6;&#x65F6;2s
+
+    for i := 0; i &lt; 3; i++ {
+        num := &lt;-c //&#x4ECE;c&#x4E2D;&#x63A5;&#x6536;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x8D4B;&#x503C;&#x7ED9;num
+        fmt.Println(&quot;num = &quot;, num)
+    }
+
+    fmt.Println(&quot;main&#x534F;&#x7A0B;&#x7ED3;&#x675F;&quot;)
+}
+</code></pre><p><img src="../images/channel03.png" alt=""></p>
+<h1 id="&#x6709;&#x7F13;&#x51B2;&#x7684;channel"><a name="&#x6709;&#x7F13;&#x51B2;&#x7684;channel" class="anchor-navigation-ex-anchor" href="#&#x6709;&#x7F13;&#x51B2;&#x7684;channel"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x6709;&#x7F13;&#x51B2;&#x7684;channel</h1>
+<blockquote>
+<p>   &#x6709;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053;&#xFF08;buffered channel&#xFF09;&#x662F;&#x4E00;&#x79CD;&#x5728;&#x88AB;&#x63A5;&#x6536;&#x524D;&#x80FD;&#x5B58;&#x50A8;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x503C;&#x7684;&#x901A;&#x9053;&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x901A;&#x9053;&#x5E76;&#x4E0D;&#x5F3A;&#x5236;&#x8981;&#x6C42; goroutine &#x4E4B;&#x95F4;&#x5FC5;&#x987B;&#x540C;&#x65F6;&#x5B8C;&#x6210;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x3002;&#x901A;&#x9053;&#x4F1A;&#x963B;&#x585E;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x52A8;&#x4F5C;&#x7684;&#x6761;&#x4EF6;&#x4E5F;&#x4E0D;&#x540C;&#x3002;</li>
+<li>&#x53EA;&#x6709;&#x901A;&#x9053;&#x4E2D;&#x6CA1;&#x6709;&#x8981;&#x63A5;&#x6536;&#x7684;&#x503C;&#x65F6;&#xFF0C;&#x63A5;&#x6536;&#x52A8;&#x4F5C;&#x624D;&#x4F1A;&#x963B;&#x585E;&#x3002;</li>
+<li>&#x53EA;&#x6709;&#x901A;&#x9053;&#x6CA1;&#x6709;&#x53EF;&#x7528;&#x7F13;&#x51B2;&#x533A;&#x5BB9;&#x7EB3;&#x88AB;&#x53D1;&#x9001;&#x7684;&#x503C;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x52A8;&#x4F5C;&#x624D;&#x4F1A;&#x963B;&#x585E;&#x3002;</li>
+</ul>
+<p>&#x8FD9;&#x5BFC;&#x81F4;&#x6709;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053;&#x548C;&#x65E0;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053;&#x4E4B;&#x95F4;&#x7684;&#x4E00;&#x4E2A;&#x5F88;&#x5927;&#x7684;&#x4E0D;&#x540C;&#xFF1A;&#x65E0;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053;&#x4FDD;&#x8BC1;&#x8FDB;&#x884C;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x7684; goroutine &#x4F1A;&#x5728;&#x540C;&#x4E00;&#x65F6;&#x95F4;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x4EA4;&#x6362;&#xFF1B;&#x6709;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053;&#x6CA1;&#x6709;&#x8FD9;&#x79CD;&#x4FDD;&#x8BC1;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x56FE;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="../images/&#x6709;&#x7F13;&#x51B2;channel.png" alt=""></p>
+<ul>
+<li>&#x5728;&#x7B2C; 1 &#x6B65;&#xFF0C;&#x53F3;&#x4FA7;&#x7684; goroutine &#x6B63;&#x5728;&#x4ECE;&#x901A;&#x9053;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x503C;&#x3002;</li>
+<li>&#x5728;&#x7B2C; 2 &#x6B65;&#xFF0C;&#x53F3;&#x4FA7;&#x7684;&#x8FD9;&#x4E2A; goroutine&#x72EC;&#x7ACB;&#x5B8C;&#x6210;&#x4E86;&#x63A5;&#x6536;&#x503C;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;&#x800C;&#x5DE6;&#x4FA7;&#x7684; goroutine &#x6B63;&#x5728;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x65B0;&#x503C;&#x5230;&#x901A;&#x9053;&#x91CC;&#x3002;</li>
+<li>&#x5728;&#x7B2C; 3 &#x6B65;&#xFF0C;&#x5DE6;&#x4FA7;&#x7684;goroutine &#x8FD8;&#x5728;&#x5411;&#x901A;&#x9053;&#x53D1;&#x9001;&#x65B0;&#x503C;&#xFF0C;&#x800C;&#x53F3;&#x4FA7;&#x7684; goroutine &#x6B63;&#x5728;&#x4ECE;&#x901A;&#x9053;&#x63A5;&#x6536;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x503C;&#x3002;&#x8FD9;&#x4E2A;&#x6B65;&#x9AA4;&#x91CC;&#x7684;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x65E2;&#x4E0D;&#x662F;&#x540C;&#x6B65;&#x7684;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x4E92;&#x76F8;&#x963B;&#x585E;&#x3002;</li>
+<li>&#x6700;&#x540E;&#xFF0C;&#x5728;&#x7B2C; 4 &#x6B65;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x90FD;&#x5B8C;&#x6210;&#xFF0C;&#x800C;&#x901A;&#x9053;&#x91CC;&#x8FD8;&#x6709;&#x51E0;&#x4E2A;&#x503C;&#xFF0C;&#x4E5F;&#x6709;&#x4E00;&#x4E9B;&#x7A7A;&#x95F4;&#x53EF;&#x4EE5;&#x5B58;&#x66F4;&#x591A;&#x7684;&#x503C;&#x3002;</li>
+</ul>
+<p><strong>&#x6709;&#x7F13;&#x51B2;&#x7684;channel&#x521B;&#x5EFA;&#x683C;&#x5F0F;&#xFF1A;</strong></p>
+<p><code>make(chan Type, capacity)</code></p>
+<p>&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x4E86;&#x4E00;&#x4E2A;&#x7F13;&#x51B2;&#x533A;&#x5BB9;&#x91CF;&#xFF0C;&#x901A;&#x9053;&#x5C31;&#x662F;&#x5F02;&#x6B65;&#x7684;&#x3002;&#x53EA;&#x8981;&#x7F13;&#x51B2;&#x533A;&#x6709;&#x672A;&#x4F7F;&#x7528;&#x7A7A;&#x95F4;&#x7528;&#x4E8E;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x6216;&#x8FD8;&#x5305;&#x542B;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4E48;&#x5176;&#x901A;&#x4FE1;&#x5C31;&#x4F1A;&#x65E0;&#x963B;&#x585E;&#x5730;&#x8FDB;&#x884C;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>func main() {
+    c := make(chan int, 3) //&#x5E26;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053;
+
+    //&#x5185;&#x7F6E;&#x51FD;&#x6570; len &#x8FD4;&#x56DE;&#x672A;&#x88AB;&#x8BFB;&#x53D6;&#x7684;&#x7F13;&#x51B2;&#x5143;&#x7D20;&#x6570;&#x91CF;&#xFF0C; cap &#x8FD4;&#x56DE;&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;
+    fmt.Printf(&quot;len(c)=%d, cap(c)=%d\n&quot;, len(c), cap(c))
+
+    go func() {
+        defer fmt.Println(&quot;&#x5B50;&#x534F;&#x7A0B;&#x7ED3;&#x675F;&quot;)
+
+        for i := 0; i &lt; 3; i++ {
+            c &lt;- i
+            fmt.Printf(&quot;&#x5B50;&#x534F;&#x7A0B;&#x6B63;&#x5728;&#x8FD0;&#x884C;[%d]: len(c)=%d, cap(c)=%d\n&quot;, i, len(c), cap(c))
+        }
+    }()
+
+    time.Sleep(2 * time.Second) //&#x5EF6;&#x65F6;2s
+    for i := 0; i &lt; 3; i++ {
+        num := &lt;-c //&#x4ECE;c&#x4E2D;&#x63A5;&#x6536;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x8D4B;&#x503C;&#x7ED9;num
+        fmt.Println(&quot;num = &quot;, num)
+    }
+    fmt.Println(&quot;main&#x534F;&#x7A0B;&#x7ED3;&#x675F;&quot;)
+}
+</code></pre><p><img src="../images/channel04.png" alt=""></p>
+<h1 id="&#x5173;&#x95ED;channel"><a name="&#x5173;&#x95ED;channel" class="anchor-navigation-ex-anchor" href="#&#x5173;&#x95ED;channel"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x5173;&#x95ED;channel</h1>
+<p>&#x5982;&#x679C;&#x53D1;&#x9001;&#x8005;&#x77E5;&#x9053;&#xFF0C;&#x6CA1;&#x6709;&#x66F4;&#x591A;&#x7684;&#x503C;&#x9700;&#x8981;&#x53D1;&#x9001;&#x5230;channel&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x8BA9;&#x63A5;&#x6536;&#x8005;&#x4E5F;&#x80FD;&#x53CA;&#x65F6;&#x77E5;&#x9053;&#x6CA1;&#x6709;&#x591A;&#x4F59;&#x7684;&#x503C;&#x53EF;&#x63A5;&#x6536;&#x5C06;&#x662F;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x63A5;&#x6536;&#x8005;&#x53EF;&#x4EE5;&#x505C;&#x6B62;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x63A5;&#x6536;&#x7B49;&#x5F85;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x7684;close&#x51FD;&#x6570;&#x6765;&#x5173;&#x95ED;channel&#x5B9E;&#x73B0;&#x3002;
+&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>func main() {
+    c := make(chan int)
+
+    go func() {
+        for i := 0; i &lt; 5; i++ {
+            c &lt;- i
+        }
+        //&#x628A; close(c) &#x6CE8;&#x91CA;&#x6389;&#xFF0C;&#x7A0B;&#x5E8F;&#x4F1A;&#x4E00;&#x76F4;&#x963B;&#x585E;&#x5728; if data, ok := &lt;-c; ok &#x90A3;&#x4E00;&#x884C;
+        close(c)
+    }()
+
+    for {
+        //ok&#x4E3A;true&#x8BF4;&#x660E;channel&#x6CA1;&#x6709;&#x5173;&#x95ED;&#xFF0C;&#x4E3A;false&#x8BF4;&#x660E;&#x7BA1;&#x9053;&#x5DF2;&#x7ECF;&#x5173;&#x95ED;
+        if data, ok := &lt;-c; ok {
+            fmt.Println(data)
+        } else {
+            break
+        }
+    }
+
+    fmt.Println(&quot;Finished&quot;)
+}
+</code></pre><p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;
+0
+1
+2
+3
+4
+Finished</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>channel&#x4E0D;&#x50CF;&#x6587;&#x4EF6;&#x4E00;&#x6837;&#x9700;&#x8981;&#x7ECF;&#x5E38;&#x53BB;&#x5173;&#x95ED;&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x4F60;&#x786E;&#x5B9E;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x53D1;&#x9001;&#x6570;&#x636E;&#x4E86;&#xFF0C;&#x6216;&#x8005;&#x4F60;&#x60F3;&#x663E;&#x5F0F;&#x7684;&#x7ED3;&#x675F;range&#x5FAA;&#x73AF;&#x4E4B;&#x7C7B;&#x7684;&#xFF0C;&#x624D;&#x53BB;&#x5173;&#x95ED;channel&#xFF1B;</li>
+<li>&#x5173;&#x95ED;channel&#x540E;&#xFF0C;&#x65E0;&#x6CD5;&#x5411;channel &#x518D;&#x53D1;&#x9001;&#x6570;&#x636E;(&#x5F15;&#x53D1; panic &#x9519;&#x8BEF;&#x540E;&#x5BFC;&#x81F4;&#x63A5;&#x6536;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#x96F6;&#x503C;)&#xFF1B;</li>
+<li>&#x5173;&#x95ED;channel&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x4ECE;channel&#x63A5;&#x6536;&#x6570;&#x636E;&#xFF1B;</li>
+<li>&#x5BF9;&#x4E8E;nil channel&#xFF0C;&#x65E0;&#x8BBA;&#x6536;&#x53D1;&#x90FD;&#x4F1A;&#x88AB;&#x963B;&#x585E;&#x3002;</li>
+</ul>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; range &#x6765;&#x8FED;&#x4EE3;&#x4E0D;&#x65AD;&#x64CD;&#x4F5C;channel&#xFF1A;</p>
+<pre><code>func main() {
+    c := make(chan int)
+
+    go func() {
+        for i := 0; i &lt; 5; i++ {
+            c &lt;- i
+        }
+        //&#x628A; close(c) &#x6CE8;&#x91CA;&#x6389;&#xFF0C;&#x7A0B;&#x5E8F;&#x4F1A;&#x4E00;&#x76F4;&#x963B;&#x585E;&#x5728; for data := range c &#x90A3;&#x4E00;&#x884C;
+        close(c)
+    }()
+
+    for data := range c {
+        fmt.Println(data)
+    }
+    fmt.Println(&quot;Finished&quot;)
+}
+</code></pre><h1 id="&#x5355;&#x5411;channel&#x53CA;&#x5E94;&#x7528;"><a name="&#x5355;&#x5411;channel&#x53CA;&#x5E94;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x5411;channel&#x53CA;&#x5E94;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x5355;&#x5411;channel&#x53CA;&#x5E94;&#x7528;</h1>
+<ul>
+<li>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x901A;&#x9053;channel&#x662F;&#x53CC;&#x5411;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#xFF0C;&#x65E2;&#x53EF;&#x4EE5;&#x5F80;&#x91CC;&#x9762;&#x53D1;&#x9001;&#x6570;&#x636E;&#x4E5F;&#x53EF;&#x4EE5;&#x540C;&#x91CC;&#x9762;&#x63A5;&#x6536;&#x6570;&#x636E;&#x3002;</li>
+<li>&#x4F46;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x89C1;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x4F20;&#x9012;&#x800C;&#x503C;&#x5E0C;&#x671B;&#x5BF9;&#x65B9;&#x662F;&#x5355;&#x5411;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x8981;&#x4E48;&#x53EA;&#x8BA9;&#x5B83;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x8981;&#x4E48;&#x53EA;&#x8BA9;&#x5B83;&#x63A5;&#x6536;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x901A;&#x9053;&#x7684;&#x65B9;&#x5411;&#x3002;</li>
+</ul>
+<p>&#x5355;&#x5411;channel&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>var ch1 chan int       // ch1&#x662F;&#x4E00;&#x4E2A;&#x6B63;&#x5E38;&#x7684;channel&#xFF0C;&#x662F;&#x53CC;&#x5411;&#x7684;
+var ch2 chan&lt;- float64 // ch2&#x662F;&#x5355;&#x5411;channel&#xFF0C;&#x53EA;&#x7528;&#x4E8E;&#x5199;float64&#x6570;&#x636E;
+var ch3 &lt;-chan int     // ch3&#x662F;&#x5355;&#x5411;channel&#xFF0C;&#x53EA;&#x7528;&#x4E8E;&#x8BFB;int&#x6570;&#x636E;
+</code></pre><ul>
+<li>chan&lt;- &#x8868;&#x793A;&#x6570;&#x636E;&#x8FDB;&#x5165;&#x7BA1;&#x9053;&#xFF0C;&#x8981;&#x628A;&#x6570;&#x636E;&#x5199;&#x8FDB;&#x7BA1;&#x9053;&#xFF0C;&#x5BF9;&#x4E8E;&#x8C03;&#x7528;&#x8005;&#x5C31;&#x662F;&#x8F93;&#x51FA;&#x3002;</li>
+<li>&lt;-chan &#x8868;&#x793A;&#x6570;&#x636E;&#x4ECE;&#x7BA1;&#x9053;&#x51FA;&#x6765;&#xFF0C;&#x5BF9;&#x4E8E;&#x8C03;&#x7528;&#x8005;&#x5C31;&#x662F;&#x5F97;&#x5230;&#x7BA1;&#x9053;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5F53;&#x7136;&#x5C31;&#x662F;&#x8F93;&#x5165;&#x3002;</li>
+</ul>
+<p>&#x53EF;&#x4EE5;&#x5C06; channel &#x9690;&#x5F0F;&#x8F6C;&#x6362;&#x4E3A;&#x5355;&#x5411;&#x961F;&#x5217;&#xFF0C;&#x53EA;&#x6536;&#x6216;&#x53EA;&#x53D1;&#xFF0C;&#x4E0D;&#x80FD;&#x5C06;&#x5355;&#x5411; channel &#x8F6C;&#x6362;&#x4E3A;&#x666E;&#x901A; channel&#xFF1A;</p>
+<pre><code>    c := make(chan int, 3)
+    var send chan&lt;- int = c // send-only
+    var recv &lt;-chan int = c // receive-only
+    send &lt;- 1
+    //&lt;-send //invalid operation: &lt;-send (receive from send-only type chan&lt;- int)
+    &lt;-recv
+    //recv &lt;- 2 //invalid operation: recv &lt;- 2 (send to receive-only type &lt;-chan int)
+
+    //&#x4E0D;&#x80FD;&#x5C06;&#x5355;&#x5411; channel &#x8F6C;&#x6362;&#x4E3A;&#x666E;&#x901A; channel
+    d1 := (chan int)(send) //cannot convert send (type chan&lt;- int) to type chan int
+    d2 := (chan int)(recv) //cannot convert recv (type &lt;-chan int) to type chan int
+</code></pre><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>//   chan&lt;- //&#x53EA;&#x5199;
+func counter(out chan&lt;- int) {
+    defer close(out)
+    for i := 0; i &lt; 5; i++ {
+        out &lt;- i //&#x5982;&#x679C;&#x5BF9;&#x65B9;&#x4E0D;&#x8BFB; &#x4F1A;&#x963B;&#x585E;
+    }
+}
+
+//   &lt;-chan //&#x53EA;&#x8BFB;
+func printer(in &lt;-chan int) {
+    for num := range in {
+        fmt.Println(num)
+    }
+}
+
+func main() {
+    c := make(chan int) //   chan   //&#x8BFB;&#x5199;
+
+    go counter(c) //&#x751F;&#x4EA7;&#x8005;
+    printer(c)    //&#x6D88;&#x8D39;&#x8005;
+
+    fmt.Println(&quot;done&quot;)
+}
+</code></pre>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="009goroutine.html" class="navigation navigation-prev " aria-label="Previous page: goroutine">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="011生产者消费者.html" class="navigation navigation-next " aria-label="Next page: 生产者消费者">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"channel","level":"1.2.10","depth":2,"next":{"title":"生产者消费者","level":"1.2.11","depth":2,"path":"Go/011生产者消费者.md","ref":"Go/011生产者消费者.md","articles":[]},"previous":{"title":"goroutine","level":"1.2.9","depth":2,"path":"Go/009goroutine.md","ref":"Go/009goroutine.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"Go/010channel.md","mtime":"2018-09-03T08:59:32.656Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-03T12:11:43.256Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
