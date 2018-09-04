@@ -1,0 +1,525 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>goroutine · go语言学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Junling Zheng <me@chengweiyang.cn>">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="010channel.html" />
+    
+    
+    <link rel="prev" href="008并发编程.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://juejin.im/user/58fb6268a22b9d0065995827" target="_blank" class="custom-link">Zhengjunling's Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Go语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="001指针.html">
+            
+                <a href="001指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="002new.html">
+            
+                <a href="002new.html">
+            
+                    
+                    new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="003slice.html">
+            
+                <a href="003slice.html">
+            
+                    
+                    slice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="004map.html">
+            
+                <a href="004map.html">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="005结构体.html">
+            
+                <a href="005结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="006字符串.html">
+            
+                <a href="006字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="007文件操作.html">
+            
+                <a href="007文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="008并发编程.html">
+            
+                <a href="008并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.9" data-path="009goroutine.html">
+            
+                <a href="009goroutine.html">
+            
+                    
+                    goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="010channel.html">
+            
+                <a href="010channel.html">
+            
+                    
+                    channel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="011生产者消费者.html">
+            
+                <a href="011生产者消费者.html">
+            
+                    
+                    生产者消费者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="012定时器.html">
+            
+                <a href="012定时器.html">
+            
+                    
+                    定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="013select.html">
+            
+                <a href="013select.html">
+            
+                    
+                    select
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >goroutine</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x4EC0;&#x4E48;&#x662F;goroutine"><b>1. </b>&#x4EC0;&#x4E48;&#x662F;Goroutine</a></li><li><span class="title-icon "></span><a href="#goroutine&#x7684;&#x521B;&#x5EFA;"><b>2. </b>Goroutine&#x7684;&#x521B;&#x5EFA;</a></li><ul><li><span class="title-icon "></span><a href="#goroutine&#x7279;&#x6027;"><b>2.1. </b>Goroutine&#x7279;&#x6027;</a></li><li><span class="title-icon "></span><a href="#runtime&#x5305;"><b>2.2. </b>runtime&#x5305;</a></li><ul><li><span class="title-icon "></span><a href="#gosched"><b>2.2.1. </b>Gosched</a></li><li><span class="title-icon "></span><a href="#goexit"><b>2.2.2. </b>Goexit</a></li><li><span class="title-icon "></span><a href="#gomaxprocs"><b>2.2.3. </b>GOMAXPROCS</a></li></ul></ul></ul></div><a href="#&#x4EC0;&#x4E48;&#x662F;goroutine" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4EC0;&#x4E48;&#x662F;goroutine"><a name="&#x4EC0;&#x4E48;&#x662F;goroutine" class="anchor-navigation-ex-anchor" href="#&#x4EC0;&#x4E48;&#x662F;goroutine"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4EC0;&#x4E48;&#x662F;Goroutine</h1>
+<p>goroutine&#x662F;Go&#x8BED;&#x8A00;&#x5E76;&#x884C;&#x8BBE;&#x8BA1;&#x7684;&#x6838;&#x5FC3;&#xFF0C;&#x6709;&#x4EBA;&#x79F0;&#x4E4B;&#x4E3A;go&#x7A0B;&#x3002; goroutine&#x8BF4;&#x5230;&#x5E95;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x534F;&#x7A0B;&#xFF0C;&#x5B83;&#x6BD4;&#x7EBF;&#x7A0B;&#x66F4;&#x5C0F;&#xFF0C;&#x5341;&#x51E0;&#x4E2A;goroutine&#x53EF;&#x80FD;&#x4F53;&#x73B0;&#x5728;&#x5E95;&#x5C42;&#x5C31;&#x662F;&#x4E94;&#x516D;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;Go&#x8BED;&#x8A00;&#x5185;&#x90E8;&#x5E2E;&#x4F60;&#x5B9E;&#x73B0;&#x4E86;&#x8FD9;&#x4E9B;goroutine&#x4E4B;&#x95F4;&#x7684;&#x5185;&#x5B58;&#x5171;&#x4EAB;&#x3002;&#x6267;&#x884C;goroutine&#x53EA;&#x9700;&#x6781;&#x5C11;&#x7684;&#x6808;&#x5185;&#x5B58;(&#x5927;&#x6982;&#x662F;4~5KB)&#xFF0C;&#x5F53;&#x7136;&#x4F1A;&#x6839;&#x636E;&#x76F8;&#x5E94;&#x7684;&#x6570;&#x636E;&#x4F38;&#x7F29;&#x3002;&#x4E5F;&#x6B63;&#x56E0;&#x4E3A;&#x5982;&#x6B64;&#xFF0C;&#x53EF;&#x540C;&#x65F6;&#x8FD0;&#x884C;&#x6210;&#x5343;&#x4E0A;&#x4E07;&#x4E2A;&#x5E76;&#x53D1;&#x4EFB;&#x52A1;&#x3002;goroutine&#x6BD4;thread&#x66F4;&#x6613;&#x7528;&#x3001;&#x66F4;&#x9AD8;&#x6548;&#x3001;&#x66F4;&#x8F7B;&#x4FBF;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x8BA1;&#x7B97;&#x673A;&#x8DD1;&#x51E0;&#x5341;&#x4E2A;&#x7EBF;&#x7A0B;&#x5C31;&#x6709;&#x70B9;&#x8D1F;&#x8F7D;&#x8FC7;&#x5927;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x540C;&#x6837;&#x7684;&#x673A;&#x5668;&#x5374;&#x53EF;&#x4EE5;&#x8F7B;&#x677E;&#x5730;&#x8BA9;&#x6210;&#x767E;&#x4E0A;&#x5343;&#x4E2A;goroutine&#x8FDB;&#x884C;&#x8D44;&#x6E90;&#x7ADE;&#x4E89;&#x3002;</p>
+<h1 id="goroutine&#x7684;&#x521B;&#x5EFA;"><a name="goroutine&#x7684;&#x521B;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#goroutine&#x7684;&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>2. Goroutine&#x7684;&#x521B;&#x5EFA;</h1>
+<p>&#x53EA;&#x9700;&#x5728;&#x51FD;&#x6570;&#x8C03;&#x2F64;&#x8BED;&#x53E5;&#x524D;&#x6DFB;&#x52A0; go &#x5173;&#x952E;&#x5B57;&#xFF0C;&#x5C31;&#x53EF;&#x521B;&#x5EFA;&#x5E76;&#x53D1;&#x6267;&#x2F8F;&#x5355;&#x5143;&#x3002;&#x5F00;&#x53D1;&#x2F08;&#x5458;&#x65E0;&#x9700;&#x4E86;&#x89E3;&#x4EFB;&#x4F55;&#x6267;&#x2F8F;&#x7EC6;&#x8282;&#xFF0C;&#x8C03;&#x5EA6;&#x5668;&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x5176;&#x5B89;&#x6392;&#x5230;&#x5408;&#x9002;&#x7684;&#x7CFB;&#x7EDF;&#x7EBF;&#x7A0B;&#x4E0A;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x5728;&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x60F3;&#x5C06;&#x4E00;&#x4E2A;&#x8FC7;&#x7A0B;&#x5207;&#x5206;&#x6210;&#x51E0;&#x5757;&#xFF0C;&#x7136;&#x540E;&#x8BA9;&#x6BCF;&#x4E2A;goroutine&#x5404;&#x81EA;&#x8D1F;&#x8D23;&#x4E00;&#x5757;&#x5DE5;&#x4F5C;&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x65F6;&#xFF0C;&#x4E3B;&#x51FD;&#x6570;&#x5728;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;goroutine&#x4E2D;&#x8FD0;&#x884C;&#xFF0C;&#x6211;&#x4EEC;&#x53EB;&#x5B83;main goroutine&#x3002;&#x65B0;&#x7684;goroutine&#x4F1A;&#x7528;go&#x8BED;&#x53E5;&#x6765;&#x521B;&#x5EFA;&#x3002;&#x800C;go&#x8BED;&#x8A00;&#x7684;&#x5E76;&#x53D1;&#x8BBE;&#x8BA1;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5F88;&#x8F7B;&#x677E;&#x5C31;&#x53EF;&#x4EE5;&#x8FBE;&#x6210;&#x8FD9;&#x4E00;&#x76EE;&#x7684;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>func newTask() {
+    i := 0
+    for {
+        i++
+        fmt.Printf(&quot;new goroutine: i = %d\n&quot;, i)
+        time.Sleep(1*time.Second) //&#x5EF6;&#x65F6;1s
+    }
+}
+
+func main() {
+    //&#x521B;&#x5EFA;&#x4E00;&#x4E2A; goroutine&#xFF0C;&#x542F;&#x52A8;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;
+    go newTask()
+    i := 0
+    //main goroutine &#x5FAA;&#x73AF;&#x6253;&#x5370;
+    for {
+        i++
+        fmt.Printf(&quot;main goroutine: i = %d\n&quot;, i)
+        time.Sleep(1 * time.Second) //&#x5EF6;&#x65F6;1s
+    }
+}
+</code></pre><p><img src="../images/go02.png" alt=""></p>
+<h2 id="goroutine&#x7279;&#x6027;"><a name="goroutine&#x7279;&#x6027;" class="anchor-navigation-ex-anchor" href="#goroutine&#x7279;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. Goroutine&#x7279;&#x6027;</h2>
+<p>&#x4E3B;goroutine&#x9000;&#x51FA;&#x540E;&#xFF0C;&#x5176;&#x5B83;&#x7684;&#x5DE5;&#x4F5C;goroutine&#x4E5F;&#x4F1A;&#x81EA;&#x52A8;&#x9000;&#x51FA;&#xFF1A;</p>
+<pre><code>func newTask() {
+    i := 0
+    for {
+        i++
+        fmt.Printf(&quot;new goroutine: i = %d\n&quot;, i)
+        time.Sleep(1 * time.Second) //&#x5EF6;&#x65F6;1s
+    }
+}
+
+func main() {
+    //&#x521B;&#x5EFA;&#x4E00;&#x4E2A; goroutine&#xFF0C;&#x542F;&#x52A8;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;
+    go newTask()
+
+    fmt.Println(&quot;main goroutine exit&quot;)
+}
+</code></pre><p><img src="../images/go01.png" alt=""></p>
+<h2 id="runtime&#x5305;"><a name="runtime&#x5305;" class="anchor-navigation-ex-anchor" href="#runtime&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. runtime&#x5305;</h2>
+<h3 id="gosched"><a name="gosched" class="anchor-navigation-ex-anchor" href="#gosched"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.1. Gosched</h3>
+<p>runtime.Gosched() &#xFF08;go schedule&#xFF09;&#x7528;&#x4E8E;&#x8BA9;&#x51FA;CPU&#x65F6;&#x95F4;&#x7247;&#xFF0C;&#x8BA9;&#x51FA;&#x5F53;&#x524D;goroutine&#x7684;&#x6267;&#x884C;&#x6743;&#x9650;&#xFF0C;&#x8C03;&#x5EA6;&#x5668;&#x5B89;&#x6392;&#x5176;&#x4ED6;&#x7B49;&#x5F85;&#x7684;&#x4EFB;&#x52A1;&#x8FD0;&#x884C;&#xFF0C;&#x5E76;&#x5728;&#x4E0B;&#x6B21;&#x518D;&#x83B7;&#x5F97;cpu&#x65F6;&#x95F4;&#x8F6E;&#x7247;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4ECE;&#x8BE5;&#x51FA;&#x8BA9;cpu&#x7684;&#x4F4D;&#x7F6E;&#x6062;&#x590D;&#x6267;&#x884C;&#x3002;
+&#x6709;&#x70B9;&#x50CF;&#x8DD1;&#x63A5;&#x529B;&#x8D5B;&#xFF0C;A&#x8DD1;&#x4E86;&#x4E00;&#x4F1A;&#x78B0;&#x5230;&#x4EE3;&#x7801;runtime.Gosched() &#x5C31;&#x628A;&#x63A5;&#x529B;&#x68D2;&#x4EA4;&#x7ED9;B&#x4E86;&#xFF0C;A&#x6B47;&#x7740;&#x4E86;&#xFF0C;B&#x7EE7;&#x7EED;&#x8DD1;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>func main() {
+    //&#x521B;&#x5EFA;&#x4E00;&#x4E2A;goroutine
+    go func(s string) {
+        for i := 0; i &lt; 2; i++ {
+            fmt.Println(s)
+        }
+    }(&quot;world&quot;)
+
+    for i := 0; i &lt; 2; i++ {
+        runtime.Gosched()  //import &quot;runtime&quot; &#x5305;
+        /*
+            &#x5C4F;&#x853D;runtime.Gosched()&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;
+                hello
+                hello
+
+            &#x6CA1;&#x6709;runtime.Gosched()&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;
+                world
+                world
+                hello
+                hello
+        */
+        fmt.Println(&quot;hello&quot;)
+    }
+}
+</code></pre><p>&#x4EE5;&#x4E0A;&#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x4E3B;&#x534F;&#x7A0B;&#x8FDB;&#x5165;main()&#x51FD;&#x6570;&#xFF0C;&#x8FDB;&#x884C;&#x4EE3;&#x7801;&#x7684;&#x6267;&#x884C;&#x3002;&#x5F53;&#x6267;&#x884C;&#x5230;go func()&#x533F;&#x540D;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x534F;&#x7A0B;&#xFF0C;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x533F;&#x540D;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4E3B;&#x534F;&#x7A0B;&#x7EE7;&#x7EED;&#x5411;&#x4E0B;&#x6267;&#x884C;&#xFF0C;&#x6267;&#x884C;&#x5230;runtime.Gosched( )&#x65F6;&#x4F1A;&#x6682;&#x505C;&#x5411;&#x4E0B;&#x6267;&#x884C;&#xFF0C;&#x76F4;&#x5230;&#x5176;&#x5B83;&#x534F;&#x7A0B;&#x6267;&#x884C;&#x5B8C;&#x540E;&#xFF0C;&#x518D;&#x56DE;&#x5230;&#x8BE5;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E3B;&#x534F;&#x7A0B;&#x7EE7;&#x7EED;&#x5411;&#x4E0B;&#x6267;&#x884C;&#x3002;</p>
+<h3 id="goexit"><a name="goexit" class="anchor-navigation-ex-anchor" href="#goexit"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.2. Goexit</h3>
+<p>&#x8C03;&#x7528; runtime.Goexit() &#x5C06;&#x7ACB;&#x5373;&#x7EC8;&#x6B62;&#x5F53;&#x524D; goroutine &#x6267;&#x2F8F;&#xFF0C;&#x8C03;&#x5EA6;&#x5668;&#x786E;&#x4FDD;&#x6240;&#x6709;&#x5DF2;&#x6CE8;&#x518C; defer&#x5EF6;&#x8FDF;&#x8C03;&#x7528;&#x88AB;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>func main() {
+    go func() {
+        defer fmt.Println(&quot;A.defer&quot;)
+
+        func() {
+            defer fmt.Println(&quot;B.defer&quot;)
+            runtime.Goexit() // &#x7EC8;&#x6B62;&#x5F53;&#x524D; goroutine, import &quot;runtime&quot;
+            fmt.Println(&quot;B&quot;) // &#x4E0D;&#x4F1A;&#x6267;&#x884C;
+        }()
+
+        fmt.Println(&quot;A&quot;) // &#x4E0D;&#x4F1A;&#x6267;&#x884C;
+    }()     //&#x4E0D;&#x8981;&#x5FD8;&#x8BB0;()
+
+    //&#x6B7B;&#x5FAA;&#x73AF;&#xFF0C;&#x76EE;&#x7684;&#x4E0D;&#x8BA9;&#x4E3B;goroutine&#x7ED3;&#x675F;
+    for {
+    }
+}
+</code></pre><p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;B.defer A.defer</p>
+<h3 id="gomaxprocs"><a name="gomaxprocs" class="anchor-navigation-ex-anchor" href="#gomaxprocs"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.3. GOMAXPROCS</h3>
+<p>&#x8C03;&#x7528; runtime.GOMAXPROCS() &#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x53EF;&#x4EE5;&#x5E76;&#x884C;&#x8BA1;&#x7B97;&#x7684;CPU&#x6838;&#x6570;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E4B;&#x524D;&#x7684;&#x503C;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>func main() {
+//n := runtime.GOMAXPROCS(1)     // &#x7B2C;&#x4E00;&#x6B21; &#x6D4B;&#x8BD5;
+//&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;111111111111111111110000000000000000000011111...
+
+n := runtime.GOMAXPROCS(2)         // &#x7B2C;&#x4E8C;&#x6B21; &#x6D4B;&#x8BD5;
+//&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF1A;010101010101010101011001100101011010010100110...
+    fmt.Printf(&quot;n = %d\n&quot;, n)
+
+    for {
+        go fmt.Print(0)
+        fmt.Print(1)
+    }
+}
+</code></pre><p>&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x6267;&#x884C;runtime.GOMAXPROCS(1) &#x65F6;&#xFF0C;&#x6700;&#x591A;&#x540C;&#x65F6;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;goroutine&#x88AB;&#x6267;&#x884C;&#x3002;&#x6240;&#x4EE5;&#x4F1A;&#x6253;&#x5370;&#x5F88;&#x591A;1&#x3002;&#x8FC7;&#x4E86;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x540E;&#xFF0C;GO&#x8C03;&#x5EA6;&#x5668;&#x4F1A;&#x5C06;&#x5176;&#x7F6E;&#x4E3A;&#x4F11;&#x7720;&#xFF0C;&#x5E76;&#x5524;&#x9192;&#x53E6;&#x4E00;&#x4E2A;goroutine&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x5F00;&#x59CB;&#x6253;&#x5370;&#x5F88;&#x591A;0&#x4E86;&#xFF0C;&#x5728;&#x6253;&#x5370;&#x7684;&#x65F6;&#x5019;&#xFF0C;goroutine&#x662F;&#x88AB;&#x8C03;&#x5EA6;&#x5230;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7EBF;&#x7A0B;&#x4E0A;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x7B2C;&#x4E8C;&#x6B21;&#x6267;&#x884C;runtime.GOMAXPROCS(2) &#x65F6;&#xFF0C; &#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x4E86;&#x4E24;&#x4E2A;CPU&#xFF0C;&#x6240;&#x4EE5;&#x4E24;&#x4E2A;goroutine&#x53EF;&#x4EE5;&#x4E00;&#x8D77;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x4EE5;&#x540C;&#x6837;&#x7684;&#x9891;&#x7387;&#x4EA4;&#x66FF;&#x6253;&#x5370;0&#x548C;1&#x3002;</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="008并发编程.html" class="navigation navigation-prev " aria-label="Previous page: 并发编程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="010channel.html" class="navigation navigation-next " aria-label="Next page: channel">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"goroutine","level":"1.2.9","depth":2,"next":{"title":"channel","level":"1.2.10","depth":2,"path":"010channel.md","ref":"010channel.md","articles":[]},"previous":{"title":"并发编程","level":"1.2.8","depth":2,"path":"008并发编程.md","ref":"008并发编程.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"009goroutine.md","mtime":"2018-09-03T07:35:40.830Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-04T06:09:31.482Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
