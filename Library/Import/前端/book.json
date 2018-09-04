@@ -1,0 +1,57 @@
+{
+    "author": "Junling Zheng <me@chengweiyang.cn>",
+    "description": "记录go语言学习过程中的各种",
+    "language" : "zh-hans",
+    "extension": null,
+    "generator": "site",
+    "links": {
+        "sharing": {
+            "all": null,
+            "facebook": null,
+            "google": null,
+            "twitter": null,
+            "weibo": null
+        },
+        "sidebar": {
+            "Zhengjunling's Blog": "https://juejin.im/user/58fb6268a22b9d0065995827"
+        }
+    },
+    "output": null,
+    "pdf": {
+        "fontSize": 12,
+        "footerTemplate": null,
+        "headerTemplate": null,
+        "margin": {
+            "bottom": 36,
+            "left": 62,
+            "right": 62,
+            "top": 36
+        },
+        "pageNumbers": false,
+        "paperSize": "a4"
+    },
+	"plugins": [
+		"-search"
+		,"-disqus"
+		,"github"
+		,"anchor-navigation-ex"
+		,"toggle-chapters"
+	],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "introducetogitbook"
+        },
+	"github": {
+            "url": "https://github.com/Coder-zheng"
+        }
+    }, 
+    "title": "go语言学习笔记",
+    "variables": {},
+    "styles": {
+    "website": "styles/website.css",
+    "ebook": "styles/ebook.css",
+    "pdf": "styles/pdf.css",
+    "mobi": "styles/mobi.css",
+    "epub": "styles/epub.css"
+    }
+}
