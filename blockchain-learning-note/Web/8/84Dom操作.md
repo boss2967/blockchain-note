@@ -1,0 +1,143 @@
+# Dom操作
+Dom操作也叫做元素节点操作，它指的是改变html的标签结构，它有两种情况：
+
+1. 移动现有标签的位置
+2. 将新创建的标签插入到现有的标签中
+
+##创建新标签
+
+```
+var $div = $('<div>');//创建一个空的div
+var $div2 = $('<div>这是一个div元素</div>')；
+```
+
+## 移动或插入标签
+1. append(当前元素里面的后面要放另一个元素) appendTo(当前元素要放到另外元素里面的后面) 
+2. perpend(当前元素里面的前面要放另一个元素)
+perpendTo(当前元素要放到另外元素里面的前面)
+3. after(当前元素外面的后面要放另一个元素)
+insertAfter(当前元素要放到另外元素外面的后面)
+4. before(当前元素外面的前面要放另一个元素)
+insertBefore(当前元素要放到另外元素外面的前面)
+
+## 删除标签
+`$(#div01).remove();`
+
+## 练习 
+
+**Todolist**
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>todolist</title>
+	<style type="text/css">
+		.list_con {
+			width: 600px;
+			margin: 50px auto 0;
+		}
+
+		.inputtxt {
+			width: 550px;
+			height: 30px;
+			border: 1px solid #ccc;
+			padding: 0px;
+			text-indent: 10px;
+		}
+
+		.inputbtn {
+			width: 40px;
+			height: 32px;
+			padding: 0px;
+			border: 1px solid #ccc;
+		}
+
+		.list {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			margin-top: 20px;
+		}
+
+		.list li {
+			height: 40px;
+			line-height: 40px;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.list li span {
+			float: left;
+		}
+
+		.list li a {
+			float: right;
+			text-decoration: none;
+			margin: 0 10px;
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			var $list = $('#list');
+			var $btn = $('#btn1');
+			var $text = $('#txt1');
+			$btn.click(function () {
+				if ($text.val() == '') {
+					alert('内容不能为空！')
+					return
+				}
+				$list.append('<li><span>' + $text.val() + '</span><a href="javascript:;" class="up"> ↑' +
+					'</a><a href="javascript:;" class="down"> ↓ </a><a href="javascript:;"' +
+					'class="del">删除</a></li>')
+				$text.val('');
+			})
+			$list.delegate('a', 'click', function () {
+				if ($(this).prop('class') == 'del') {
+					$(this).parent().remove();
+				}
+				if ($(this).prop('class') == 'up') {
+					if ($(this).parent().prev().length == 0) {
+						alert('已经是最前面了！');
+						return
+					}
+					$(this).parent().insertBefore($(this).parent().prev());
+				}
+				if ($(this).prop('class') == 'down') {
+					if ($(this).parent().next().length == 0) {
+						alert('已经是最后面了！');
+						return
+					}
+					$(this).parent().insertAfter($(this).parent().next());
+				}
+			})
+		})
+
+	</script>
+</head>
+
+<body>
+
+	<div class="list_con">
+		<h2>To do list</h2>
+		<input type="text" name="" id="txt1" class="inputtxt">
+		<input type="button" name="" value="增加" id="btn1" class="inputbtn">
+
+		<ul id="list" class="list">
+
+			<li><span>学习html</span><a href="javascript:;" class="up"> ↑ </a><a href="javascript:;" class="down"> ↓ </a><a href="javascript:;"
+				 class="del">删除</a></li>
+			<li><span>学习css</span><a href="javascript:;" class="up"> ↑ </a><a href="javascript:;" class="down"> ↓ </a><a href="javascript:;"
+				 class="del">删除</a></li>
+			<li><span>学习javascript</span><a href="javascript:;" class="up"> ↑ </a><a href="javascript:;" class="down"> ↓ </a><a href="javascript:;"
+				 class="del">删除</a></li>
+
+		</ul>
+
+	</div>
+</body>
+
+</html>
+```
