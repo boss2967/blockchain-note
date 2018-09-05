@@ -1,10 +1,10 @@
 # blockchain-note
 ## 区块链，go，js，kotlin学习[文章总览](blockchain-learning-note/SUMMARY.md)
 
-<!--[![License](https://img.shields.io/github/license/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
+[![License](https://img.shields.io/github/license/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
 [![Stars](https://img.shields.io/github/stars/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
 [![Stars](https://img.shields.io/github/forks/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
-[![Forks](https://img.shields.io/github/issues/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) -->
+[![Forks](https://img.shields.io/github/issues/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note)
 
 
 ![golang](blockchain-learning-note/images/logo_golang.png)[Golang](blockchain-learning-note/Go/SUMMARY.md)

@@ -9,13 +9,14 @@
         #pop{
             width: 100px;
             height: 100px;
-            background: gold
+            background: gold;
+            display: none;
         }
     </style>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script>
         $(function(){
-            $('btn01').click(function(){
+            $('#btn01').click(function(){
                 $('#pop').show();
             });
             $('#shutoff').click(function(){
@@ -25,7 +26,7 @@
             $(document).click(function(){
                 $('#pop').hide();
             })
-            $('pop').click(function(){
+            $('#pop').click(function(){
                 return false;
             })
         })
@@ -33,7 +34,7 @@
 </head>
 <body>  
     <input type="button" value="弹框" id="btn01">
-    <input type="button" value="弹框" id="shutoff">
+    <input type="button" value="关闭弹框" id="shutoff">
     <div display="none" id="pop">
         hahahah
     </div>
