@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #pop{
+            width: 100px;
+            height: 100px;
+            background: gold
+            
+        }
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $('btn01').click(function(){
+                $('#pop').show();
+            });
+            $('#shutoff').click(function(){
+                $('#pop').hide();
+            })
+            // 点击弹框其他地方，关闭弹框
+            $(document).click(function(){
+                $('#pop').hide();
+            })
+        })
+    </script>
+</head>
+<body>  
+    <input type="button" value="弹框" id="btn01">
+    <input type="button" value="弹框" id="shutoff">
+    <div display="none" id="pop">
+        hahahah
+    </div>
+</body>
+</html>
