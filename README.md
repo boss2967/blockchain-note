@@ -1,5 +1,6 @@
 # blockchain-note
 ## 区块链，go，js，kotlin学习[文章总览](blockchain-learning-note/SUMMARY.md)
+:rocket::fire::+1::helicopter::octocat::underage::no_bicycles::non-potable_water::do_not_litter::no_pedestrians::no_mobile_phones:
 
 
 [![License](https://img.shields.io/github/license/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
@@ -87,7 +88,7 @@
 ****
 
 
-:helicopter::helicopter::helicopter::helicopter::helicopter:
+
 
 # 请用金钱羞辱我！铁汁
 ![](blockchain-learning-note/images/wechat_pay.png)
