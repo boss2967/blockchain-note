@@ -1,6 +1,7 @@
 # blockchain-note
 ## 区块链，go，js，kotlin学习[文章总览](blockchain-learning-note/SUMMARY.md)
 
+
 [![License](https://img.shields.io/github/license/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
 [![Stars](https://img.shields.io/github/stars/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
 [![Stars](https://img.shields.io/github/forks/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
@@ -84,6 +85,9 @@
 	- [设置环境变量](blockchain-learning-note/MAC/001Mac设置环境变量.md)
 
 ****
+
+
+:helicopter::helicopter::helicopter::helicopter::helicopter:
 
 # 请用金钱羞辱我！铁汁
 ![](blockchain-learning-note/images/wechat_pay.png)
