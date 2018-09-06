@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>介绍 · go语言学习笔记</title>
+        <title>Go语言 · go语言学习笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -59,7 +59,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="./" />
+    <link rel="next" href="001指针.m" />
     
     
 
@@ -99,7 +99,7 @@
                 <a href="./">
             
                     
-                    介绍
+                    Go语言
             
                 </a>
             
@@ -107,12 +107,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="001指针.m">
             
-                <a href="./">
+                <span>
             
                     
-                    Go语言
+                    语法
             
                 </a>
             
@@ -212,7 +212,26 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.8" data-path="008并发编程.html">
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="008并发编程.html">
+            
+                <a href="008并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="008并发编程.html">
             
                 <a href="008并发编程.html">
             
@@ -225,7 +244,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.9" data-path="009goroutine.html">
+        <li class="chapter " data-level="1.3.2" data-path="009goroutine.html">
             
                 <a href="009goroutine.html">
             
@@ -238,7 +257,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.10" data-path="010channel.html">
+        <li class="chapter " data-level="1.3.3" data-path="010channel.html">
             
                 <a href="010channel.html">
             
@@ -251,7 +270,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.11" data-path="011生产者消费者.html">
+        <li class="chapter " data-level="1.3.4" data-path="011生产者消费者.html">
             
                 <a href="011生产者消费者.html">
             
@@ -264,7 +283,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.12" data-path="012定时器.html">
+        <li class="chapter " data-level="1.3.5" data-path="012定时器.html">
             
                 <a href="012定时器.html">
             
@@ -277,12 +296,96 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.13" data-path="013select.html">
+        <li class="chapter " data-level="1.3.6" data-path="013select.html">
             
                 <a href="013select.html">
             
                     
                     select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="014锁.html">
+            
+                <a href="014锁.html">
+            
+                    
+                    锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="015条件变量.html">
+            
+                <a href="015条件变量.html">
+            
+                    
+                    条件变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="0016网络编程.html">
+            
+                <a href="0016网络编程.html">
+            
+                    
+                    Go网络编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="0016网络编程.html">
+            
+                <a href="0016网络编程.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="0017Socket编程.html">
+            
+                <a href="0017Socket编程.html">
+            
+                    
+                    Socket编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="0018网络应用程序设计模式.html">
+            
+                <a href="0018网络应用程序设计模式.html">
+            
+                    
+                    网络应用程序设计模式
             
                 </a>
             
@@ -325,7 +428,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >介绍</a>
+        <a href="." >Go语言</a>
     </h1>
 </div>
 
@@ -350,7 +453,7 @@
             
                 
                 
-                <a href="./" class="navigation navigation-next navigation-unique" aria-label="Next page: Go语言">
+                <a href="001指针.m" class="navigation navigation-next navigation-unique" aria-label="Next page: 语法">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -361,7 +464,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"介绍","level":"1.1","depth":1,"next":{"title":"Go语言","level":"1.2","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"指针","level":"1.2.1","depth":2,"path":"001指针.md","ref":"001指针.md","articles":[]},{"title":"new","level":"1.2.2","depth":2,"path":"002new.md","ref":"002new.md","articles":[]},{"title":"slice","level":"1.2.3","depth":2,"path":"003slice.md","ref":"003slice.md","articles":[]},{"title":"map","level":"1.2.4","depth":2,"path":"004map.md","ref":"004map.md","articles":[]},{"title":"结构体","level":"1.2.5","depth":2,"path":"005结构体.md","ref":"005结构体.md","articles":[]},{"title":"字符串","level":"1.2.6","depth":2,"path":"006字符串.md","ref":"006字符串.md","articles":[]},{"title":"文件操作","level":"1.2.7","depth":2,"path":"007文件操作.md","ref":"007文件操作.md","articles":[]},{"title":"并发编程","level":"1.2.8","depth":2,"path":"008并发编程.md","ref":"008并发编程.md","articles":[]},{"title":"goroutine","level":"1.2.9","depth":2,"path":"009goroutine.md","ref":"009goroutine.md","articles":[]},{"title":"channel","level":"1.2.10","depth":2,"path":"010channel.md","ref":"010channel.md","articles":[]},{"title":"生产者消费者","level":"1.2.11","depth":2,"path":"011生产者消费者.md","ref":"011生产者消费者.md","articles":[]},{"title":"定时器","level":"1.2.12","depth":2,"path":"012定时器.md","ref":"012定时器.md","articles":[]},{"title":"select","level":"1.2.13","depth":2,"path":"013select.md","ref":"013select.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"README.md","mtime":"2018-09-04T06:06:41.574Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-04T06:09:31.482Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Go语言","level":"1.1","depth":1,"next":{"title":"语法","level":"1.2","depth":1,"path":"001指针.m","ref":"001指针.m","articles":[{"title":"指针","level":"1.2.1","depth":2,"path":"001指针.md","ref":"001指针.md","articles":[]},{"title":"new","level":"1.2.2","depth":2,"path":"002new.md","ref":"002new.md","articles":[]},{"title":"slice","level":"1.2.3","depth":2,"path":"003slice.md","ref":"003slice.md","articles":[]},{"title":"map","level":"1.2.4","depth":2,"path":"004map.md","ref":"004map.md","articles":[]},{"title":"结构体","level":"1.2.5","depth":2,"path":"005结构体.md","ref":"005结构体.md","articles":[]},{"title":"字符串","level":"1.2.6","depth":2,"path":"006字符串.md","ref":"006字符串.md","articles":[]},{"title":"文件操作","level":"1.2.7","depth":2,"path":"007文件操作.md","ref":"007文件操作.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"README.md","mtime":"2018-09-04T06:06:41.574Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-06T10:32:54.156Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
