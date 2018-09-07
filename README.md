@@ -1,25 +1,22 @@
 # blockchain-note
-## 区块链，go，js，kotlin学习[文章总览](blockchain-learning-note/SUMMARY.md)
-:rocket::fire::+1::helicopter::octocat::underage::no_bicycles::non-potable_water::do_not_litter::no_pedestrians::no_mobile_phones:
+## 区块链，Go，Js，Kotlin学习[OverView](blockchain-learning-note/SUMMARY.md)
+:rocket::fire::+1::helicopter::octocat::underage:
 
 
 [![License](https://img.shields.io/github/license/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
 [![Stars](https://img.shields.io/github/stars/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
-[![Stars](https://img.shields.io/github/forks/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
-[![Forks](https://img.shields.io/github/issues/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note)
+[![Forks](https://img.shields.io/github/forks/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
+[![Issues](https://img.shields.io/github/issues/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note)
+[![Author](https://img.shields.io/badge/Author-Zheng-black.svg?)](https://jitpack.io/#Coder-zheng/blockchain-note)
+[![Author](https://img.shields.io/badge/QQ-812397431-yellow.svg?)](https://jitpack.io/#Coder-zheng/blockchain-note)
 
-
-![golang](blockchain-learning-note/images/logo_golang.png)[Golang](blockchain-learning-note/Go/SUMMARY.md)
-
-![](blockchain-learning-note/images/logo_database.png)[Database](blockchain-learning-note/SUMMARY.md)
-
-![](blockchain-learning-note/images/logo_linux.png)[Linux](blockchain-learning-note/SUMMARY.md)
-
-![](blockchain-learning-note/images/logo_web.png)[Web](blockchain-learning-note/Web/SUMMARY.md)
-
-![](blockchain-learning-note/images/logo_blockchain.png)[Blockchain](blockchain-learning-note/SUMMARY.md)
-
-![](blockchain-learning-note/images/logo_mac.png)[MAC](blockchain-learning-note/SUMMARY.md)
+[<img src="blockchain-learning-note/images/logo_golang.png" width="80" height="80">](blockchain-learning-note/Go/SUMMARY.md)
+[Golang](blockchain-learning-note/Go/SUMMARY.md)
+[<img src="blockchain-learning-note/images/logo_database.png" width="80" height="80">](blockchain-learning-note/SUMMARY.md)[Database](blockchain-learning-note/SUMMARY.md)
+[<img src="blockchain-learning-note/images/logo_linux.png" width="80" height="80">](blockchain-learning-note/SUMMARY.md)[Linux](blockchain-learning-note/SUMMARY.md)
+[<img src="blockchain-learning-note/images/logo_web.png" width="80" height="80">](blockchain-learning-note/Web/SUMMARY.md)[Web](blockchain-learning-note/Web/SUMMARY.md)
+[<img src="blockchain-learning-note/images/logo_blockchain.png" width="80" height="80">](blockchain-learning-note/SUMMARY.md)[Blockchain](blockchain-learning-note/SUMMARY.md)
+[<img src="blockchain-learning-note/images/logo_mac.png" width="80" height="80">](blockchain-learning-note/SUMMARY.md)[MAC](blockchain-learning-note/SUMMARY.md)
 
 ****
 # 文章总览
