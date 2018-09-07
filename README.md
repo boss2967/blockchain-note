@@ -7,8 +7,8 @@
 [![Stars](https://img.shields.io/github/stars/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
 [![Forks](https://img.shields.io/github/forks/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note) 
 [![Issues](https://img.shields.io/github/issues/Coder-zheng/blockchain-note.svg)](https://jitpack.io/#Coder-zheng/blockchain-note)
-[![Author](https://img.shields.io/badge/Author-Zheng-black.svg?)](https://jitpack.io/#Coder-zheng/blockchain-note)
-[![Author](https://img.shields.io/badge/QQ-812397431-yellow.svg?)](https://jitpack.io/#Coder-zheng/blockchain-note)
+[![Author](https://img.shields.io/badge/Author-Zheng-black.svg?)](https://github.com/Coder-zheng)
+[![Author](https://img.shields.io/badge/QQ-812397431-yellow.svg?)](http://wpa.qq.com/msgrd?v=3&uin=812397431&site=qq&menu=yes)
 
 [<img src="blockchain-learning-note/images/logo_golang.png" width="80" height="80">](blockchain-learning-note/Go/SUMMARY.md)
 [Golang](blockchain-learning-note/Go/SUMMARY.md)
