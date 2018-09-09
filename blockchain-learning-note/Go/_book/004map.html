@@ -25,7 +25,15 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -534,7 +542,7 @@
 </ul>
 <h1 id="&#x521B;&#x5EFA;&#x3001;&#x521D;&#x59CB;&#x5316;map"><a name="&#x521B;&#x5EFA;&#x3001;&#x521D;&#x59CB;&#x5316;map" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x3001;&#x521D;&#x59CB;&#x5316;map"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x521B;&#x5EFA;&#x3001;&#x521D;&#x59CB;&#x5316;map</h1>
 <h2 id="&#x521B;&#x5EFA;map"><a name="&#x521B;&#x5EFA;map" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;map"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x521B;&#x5EFA;map</h2>
-<pre><code>var m1 map[int]string   //&#x53EA;&#x662F;&#x58F0;&#x660E;&#x4E00;&#x4E2A;map&#xFF0C;&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;, &#x4E3A;&#x7A7A;(nil)map
+<pre class="language-"><code>var m1 map[int]string   //&#x53EA;&#x662F;&#x58F0;&#x660E;&#x4E00;&#x4E2A;map&#xFF0C;&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;, &#x4E3A;&#x7A7A;(nil)map
 fmt.Println(m1 == nil)     //true
 //m1[1] = &quot;Luffy&quot;         //nil&#x7684;map&#x4E0D;&#x80FD;&#x4F7F;&#x7528;err, panic: assignment to entry in nil map
 
@@ -546,7 +554,7 @@ m4 := make(map[int]string, 10)     //&#x7B2C;2&#x4E2A;&#x53C2;&#x6570;&#x6307;&#
 fmt.Println(m4)                    //map[]
 </code></pre><h2 id="&#x521D;&#x59CB;&#x5316;map"><a name="&#x521D;&#x59CB;&#x5316;map" class="anchor-navigation-ex-anchor" href="#&#x521D;&#x59CB;&#x5316;map"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x521D;&#x59CB;&#x5316;map</h2>
 <p>&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x6307;&#x5B9A;&#x521D;&#x503C;&#xFF0C;&#x8981;&#x4FDD;&#x8BC1;key&#x4E0D;&#x91CD;&#x590D;&#x3002;</p>
-<pre><code>//1&#x3001;&#x5B9A;&#x4E49;&#x540C;&#x65F6;&#x521D;&#x59CB;&#x5316;
+<pre class="language-"><code>//1&#x3001;&#x5B9A;&#x4E49;&#x540C;&#x65F6;&#x521D;&#x59CB;&#x5316;
 var m1 map[int]string = map[int]string{1: &quot;Luffy&quot;, 2: &quot;Sanji&quot;}
 fmt.Println(m1) //map[1:Luffy 2:Sanji]
 
@@ -555,7 +563,7 @@ m2 := map[int]string{1: &quot;Luffy&quot;, 2: &quot;Sanji&quot;}
 fmt.Println(m2)
 </code></pre><h1 id="&#x5E38;&#x7528;&#x64CD;&#x4F5C;"><a name="&#x5E38;&#x7528;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x5E38;&#x7528;&#x64CD;&#x4F5C;</h1>
 <h2 id="&#x8D4B;&#x503C;"><a name="&#x8D4B;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x8D4B;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x8D4B;&#x503C;</h2>
-<pre><code>m1 := map[int]string{1: &quot;Luffy&quot;, 2: &quot;Sanji&quot;}
+<pre class="language-"><code>m1 := map[int]string{1: &quot;Luffy&quot;, 2: &quot;Sanji&quot;}
 m1[1] = &quot;Nami&quot;   //&#x4FEE;&#x6539;
 m1[3] = &quot;Zoro&quot;   //&#x8FFD;&#x52A0;&#xFF0C; go&#x5E95;&#x5C42;&#x4F1A;&#x81EA;&#x52A8;&#x4E3A;map&#x5206;&#x914D;&#x7A7A;&#x95F4;
 fmt.Println(m1)  //map[1:Nami 2:Sanji 3:Zoro]
@@ -569,7 +577,7 @@ fmt.Println(m2[0], m2[1])         //aaa bbb
 <blockquote>
 <p>   Map&#x7684;&#x8FED;&#x4EE3;&#x987A;&#x5E8F;&#x662F;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x540C;&#x7684;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x4E0D;&#x540C;&#x7684;&#x904D;&#x5386;&#x987A;&#x5E8F;&#x3002;&#x5728;&#x5B9E;&#x8DF5;&#x4E2D;&#xFF0C;&#x904D;&#x5386;&#x7684;&#x987A;&#x5E8F;&#x662F;&#x968F;&#x673A;&#x7684;&#xFF0C;&#x6BCF;&#x4E00;&#x6B21;&#x904D;&#x5386;&#x7684;&#x987A;&#x5E8F;&#x90FD;&#x4E0D;&#x76F8;&#x540C;&#x3002;&#x8FD9;&#x662F;&#x6545;&#x610F;&#x7684;&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x4F7F;&#x7528;&#x968F;&#x673A;&#x7684;&#x904D;&#x5386;&#x987A;&#x5E8F;&#x53EF;&#x4EE5;&#x5F3A;&#x5236;&#x8981;&#x6C42;&#x7A0B;&#x5E8F;&#x4E0D;&#x4F1A;&#x4F9D;&#x8D56;&#x5177;&#x4F53;&#x7684;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x3002;</p>
 </blockquote>
-<pre><code> m1 := map[int]string{1: &quot;Luffy&quot;, 2: &quot;Sanji&quot;}
+<pre class="language-"><code> m1 := map[int]string{1: &quot;Luffy&quot;, 2: &quot;Sanji&quot;}
 //&#x904D;&#x5386;1&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#x662F;key&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#x662F;value
     for k, v := range m1 {
         fmt.Printf(&quot;%d ----&gt; %s\n&quot;, k, v)
@@ -585,14 +593,14 @@ fmt.Println(m2[0], m2[1])         //aaa bbb
     }
 </code></pre><h2 id="&#x662F;&#x5426;&#x5B58;&#x5728;"><a name="&#x662F;&#x5426;&#x5B58;&#x5728;" class="anchor-navigation-ex-anchor" href="#&#x662F;&#x5426;&#x5B58;&#x5728;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. &#x662F;&#x5426;&#x5B58;&#x5728;</h2>
 <p>&#x5982;&#x679C;key&#x5B58;&#x5728;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#x8FD4;&#x56DE;value&#x7684;&#x503C;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#x4E3A; true&#x3002;</p>
-<pre><code>value, ok := m1[1]
+<pre class="language-"><code>value, ok := m1[1]
 fmt.Println(&quot;value = &quot;, value, &quot;, ok = &quot;, ok) //value =  mike , ok =  true
 </code></pre><p>&#x5982;&#x679C;key&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x7A7A;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;false&#x3002;</p>
-<pre><code>value2, has := m1[3]
+<pre class="language-"><code>value2, has := m1[3]
 fmt.Println(&quot;value2 = &quot;, value2, &quot;, has = &quot;, has) //value2 =   , has =  false
 </code></pre><h2 id="&#x5220;&#x9664;"><a name="&#x5220;&#x9664;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. &#x5220;&#x9664;</h2>
 <p>&#x4F7F;&#x7528;delete()&#x51FD;&#x6570;&#xFF0C;&#x6307;&#x5B9A;key&#x503C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x5220;&#x9664;map&#x4E2D;&#x7684;k-v&#x6620;&#x5C04;&#x3002;</p>
-<pre><code>    m1 := map[int]string{1: &quot;Luffy&quot;, 2: &quot;Sanji&quot;, 3: &quot;Zoro&quot;}
+<pre class="language-"><code>    m1 := map[int]string{1: &quot;Luffy&quot;, 2: &quot;Sanji&quot;, 3: &quot;Zoro&quot;}
 
     for k, v := range m1 {    //&#x904D;&#x5386;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#x662F;key&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#x662F;value
         fmt.Printf(&quot;%d ----&gt; %s\n&quot;, k, v)
@@ -609,7 +617,7 @@ fmt.Println(&quot;value2 = &quot;, value2, &quot;, has = &quot;, has) //value2 =
     //3 ----&gt; Zoro
 </code></pre><p>delete()&#x64CD;&#x4F5C;&#x662F;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x5373;&#x4F7F;&#x5143;&#x7D20;&#x4E0D;&#x5728;map&#x4E2D;&#x4E5F;&#x6CA1;&#x6709;&#x5173;&#x7CFB;&#xFF1B;&#x5982;&#x679C;&#x67E5;&#x627E;&#x5220;&#x9664;&#x5931;&#x8D25;&#x5C06;&#x8FD4;&#x56DE;value&#x7C7B;&#x578B;&#x5BF9;&#x5E94;&#x7684;&#x96F6;&#x503C;&#x3002;
 &#x5982;&#xFF1A;</p>
-<pre><code>delete(m1, 5)         //&#x5220;&#x9664;key&#x503C;&#x4E3A;5&#x7684;map
+<pre class="language-"><code>delete(m1, 5)         //&#x5220;&#x9664;key&#x503C;&#x4E3A;5&#x7684;map
 
     for k, v := range m1 {
         fmt.Printf(&quot;%d ----&gt; %s\n&quot;, k, v)
@@ -617,7 +625,7 @@ fmt.Println(&quot;value2 = &quot;, value2, &quot;, has = &quot;, has) //value2 =
     //1 ----&gt; Luffy
     //3 ----&gt; Zoro
 </code></pre><h1 id="map&#x505A;&#x51FD;&#x6570;&#x53C2;&#x6570;"><a name="map&#x505A;&#x51FD;&#x6570;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#map&#x505A;&#x51FD;&#x6570;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>4. map&#x505A;&#x51FD;&#x6570;&#x53C2;&#x6570;</h1>
-<pre><code>//&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x503C;
+<pre class="language-"><code>//&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x503C;
 
 func main() {
     m:=map[int]string{
@@ -641,7 +649,7 @@ func deleteMap(m map[int]string) {
     delete(m,1)
 }
 </code></pre><h1 id="&#x7EC3;&#x4E60;"><a name="&#x7EC3;&#x4E60;" class="anchor-navigation-ex-anchor" href="#&#x7EC3;&#x4E60;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x7EC3;&#x4E60;</h1>
-<pre><code>&#x5C01;&#x88C5; wcFunc() &#x51FD;&#x6570;&#x3002;&#x63A5;&#x6536;&#x4E00;&#x6BB5;&#x82F1;&#x6587;&#x5B57;&#x7B26;&#x4E32;str&#x3002;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;map&#xFF0C;&#x8BB0;&#x5F55;str&#x4E2D;&#x6BCF;&#x4E2A;&#x201C;&#x8BCD;&#x201D;&#x51FA;&#x73B0;&#x6B21;&#x6570;&#x7684;&#x3002;
+<pre class="language-"><code>&#x5C01;&#x88C5; wcFunc() &#x51FD;&#x6570;&#x3002;&#x63A5;&#x6536;&#x4E00;&#x6BB5;&#x82F1;&#x6587;&#x5B57;&#x7B26;&#x4E32;str&#x3002;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;map&#xFF0C;&#x8BB0;&#x5F55;str&#x4E2D;&#x6BCF;&#x4E2A;&#x201C;&#x8BCD;&#x201D;&#x51FA;&#x73B0;&#x6B21;&#x6570;&#x7684;&#x3002;
 &#x5982;&#xFF1A;&quot;I love my work and I love my family too&quot;
 &#x8F93;&#x51FA;&#xFF1A;
 family : 1
@@ -653,7 +661,7 @@ work : 1
 and : 1
 &#x63D0;&#x793A;&#xFF1A;&#x4F7F;&#x7528; strings.Fields() &#x51FD;&#x6570;&#x53EF;&#x63D0;&#x9AD8;&#x6548;&#x7387;&#x3002;
 </code></pre><h1 id="&#x7B54;&#x6848;"><a name="&#x7B54;&#x6848;" class="anchor-navigation-ex-anchor" href="#&#x7B54;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x7B54;&#x6848;</h1>
-<pre><code>
+<pre class="language-"><code>
 func main() {
     str:=&quot;I love my work and I love my family too&quot;
     m:=make(map[string]int)
@@ -708,7 +716,7 @@ func wcFunc(s string, m map[string]int) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"map","level":"1.2.4","depth":2,"next":{"title":"结构体","level":"1.2.5","depth":2,"path":"005结构体.md","ref":"005结构体.md","articles":[]},"previous":{"title":"slice","level":"1.2.3","depth":2,"path":"003slice.md","ref":"003slice.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"004map.md","mtime":"2018-09-02T13:30:46.747Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T03:23:07.829Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"map","level":"1.2.4","depth":2,"next":{"title":"结构体","level":"1.2.5","depth":2,"path":"005结构体.md","ref":"005结构体.md","articles":[]},"previous":{"title":"slice","level":"1.2.3","depth":2,"path":"003slice.md","ref":"003slice.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","emphasize","-highlight","prism","prism-themes","copy-code-button","splitter","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"shortName":"introducetogitbook"},"emphasize":{},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"004map.md","mtime":"2018-09-02T13:30:46.747Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T10:18:22.173Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -723,6 +731,14 @@ func wcFunc(s string, m map[string]int) {
     
         
         <script src="gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         

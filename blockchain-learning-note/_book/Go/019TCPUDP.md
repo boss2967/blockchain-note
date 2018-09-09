@@ -57,3 +57,201 @@ Client:“我能听到你，今天balabala…”
 4. 客户端发出段10，应答服务器的关闭连接请求。
 
 建立连接的过程是三次握手，而关闭连接通常需要4个段，服务器的应答和关闭连接请求通常不合并在一个段中，因为有连接半关闭的情况，这种情况下客户端关闭连接之后就不能再发送数据给服务器了，但是服务器还可以发送数据给客户端，直到服务器也关闭连接为止。
+
+# UDP
+
+在之前的案例中，我们一直使用的是TCP协议来编写Socket的客户端与服务端。其实也可以使用UDP协议来编写Socket的客户端与服务端。
+
+## UDP服务器
+
+由于UDP是“无连接”的，所以，服务器端不需要额外创建监听套接字，只需要指定好IP和port，然后监听该地址，等待客户端与之建立连接，即可通信。
+
+*	**创建监听地址：**
+
+	```
+	func ResolveUDPAddr(network, address string) (*UDPAddr, error) 
+	```
+
+*	**创建用户通信的socket：**
+
+	```
+	func ListenUDP(network string, laddr *UDPAddr) (*UDPConn, error) 
+	```
+
+*	**接收udp数据：**
+
+	```
+	func (c *UDPConn) ReadFromUDP(b []byte) (int, *UDPAddr, error)
+	```
+*	**写出数据到udp：**
+
+	```
+	func (c *UDPConn) WriteToUDP(b []byte, addr *UDPAddr) (int, error)
+	```
+
+服务端完整代码实现如下：
+
+```
+package main
+
+import (
+   "fmt"
+   "net"
+)
+
+func main() {
+   //创建监听的地址，并且指定udp协议
+   udp_addr, err := net.ResolveUDPAddr("udp", "127.0.0.1:8002")
+   if err != nil {
+      fmt.Println("ResolveUDPAddr err:", err)
+      return
+   }
+   conn, err := net.ListenUDP("udp", udp_addr)    //创建数据通信socket
+   if err != nil {
+      fmt.Println("ListenUDP err:", err)
+      return
+   }
+   defer conn.Close()
+
+   buf := make([]byte, 1024)
+   n, raddr, err := conn.ReadFromUDP(buf)        //接收客户端发送过来的数据，填充到切片buf中。
+   if err != nil {
+      return
+   }
+   fmt.Println("客户端发送：", string(buf[:n]))
+
+   _, err = conn.WriteToUDP([]byte("nice to see u in udp"), raddr) // 向客户端发送数据
+   if err != nil {
+      fmt.Println("WriteToUDP err:", err)
+      return
+   }
+}
+```
+## UDP客户端
+
+udp客户端的编写与TCP客户端的编写，基本上是一样的，只是将协议换成udp。注意只能使用小写。
+
+代码如下：
+
+```
+package main
+
+import (
+   "net"
+   "fmt"
+)
+
+func main() {
+   conn, err := net.Dial("udp", "127.0.0.1:8002") 
+   if err != nil {
+      fmt.Println("net.Dial err:", err)
+      return
+   }
+   defer conn.Close()
+
+   conn.Write([]byte("Hello! I'm client in UDP!"))
+
+   buf := make([]byte, 1024)
+   n, err1 := conn.Read(buf)
+   if err1 != nil {
+      return
+   }
+   fmt.Println("服务器发来：", string(buf[:n]))
+}
+```
+
+## 并发
+
+其实对于UDP而言，服务器不需要并发，只要循环处理客户端数据即可。客户端也等同于TCP通信并发的客户端。
+
+服务器：
+
+```
+package main
+
+import (
+   "net"
+   "fmt"
+)
+
+func main() {
+   // 创建 服务器 UDP 地址结构。指定 IP + port
+   laddr, err := net.ResolveUDPAddr("udp", "127.0.0.1:8003")
+   if err != nil {
+      fmt.Println("ResolveUDPAddr err:", err)
+      return
+   }
+   // 监听 客户端连接
+   conn, err := net.ListenUDP("udp", laddr)
+   if err != nil {
+      fmt.Println("net.ListenUDP err:", err)
+      return
+   }
+   defer conn.Close()
+
+   for {
+      buf := make([]byte, 1024)
+      n, raddr, err := conn.ReadFromUDP(buf)
+      if err != nil {
+         fmt.Println("conn.ReadFromUDP err:", err)
+         return
+      }
+      fmt.Printf("接收到客户端[%s]：%s", raddr, string(buf[:n]))
+
+      conn.WriteToUDP([]byte("I-AM-SERVER"), raddr) // 简单回写数据给客户端
+   }
+}
+```
+
+客户端：
+
+```
+package main
+
+import (
+   "net"
+   "os"
+   "fmt"
+)
+
+func main() {
+   conn, err := net.Dial("udp", "127.0.0.1:8003")
+   if err != nil {
+      fmt.Println("net.Dial err:", err)
+      return
+   }
+   defer conn.Close()
+   go func() {
+      str := make([]byte, 1024)
+      for {
+         n, err := os.Stdin.Read(str) //从键盘读取内容， 放在str
+         if err != nil {
+            fmt.Println("os.Stdin. err1 = ", err)
+            return
+         }
+         conn.Write(str[:n])       // 给服务器发送
+      }
+   }()
+   buf := make([]byte, 1024)
+   for {
+      n, err := conn.Read(buf)
+      if err != nil {
+         fmt.Println("conn.Read err:", err)
+         return
+      }
+      fmt.Println("服务器写来：", string(buf[:n]))
+   }
+}
+```
+
+## UDP与TCP的差异
+
+TCP				 | UDP
+------------- | -------------
+面向连接  		 | 面向无连接
+要求系统资源较多 | 要求系统资源较少
+TCP程序结构较复杂|UDP程序结构较简单
+使用流式		 |使用数据包式
+保证数据准确性	 |不保证数据准确性
+保证数据顺序	 |不保证数据顺序
+通讯速度较慢	 |通讯速度较快

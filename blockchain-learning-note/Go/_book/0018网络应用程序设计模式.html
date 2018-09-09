@@ -25,7 +25,15 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -552,19 +560,19 @@
 <p><strong>Server&#x7AEF;&#xFF1A;</strong></p>
 <ul>
 <li><p>Listen&#x51FD;&#x6570;&#xFF1A;</p>
-<pre><code>func Listen(network, address string) (Listener, error)
+<pre class="language-"><code>func Listen(network, address string) (Listener, error)
    network&#xFF1A;&#x9009;&#x7528;&#x7684;&#x534F;&#x8BAE;&#xFF1A;TCP&#x3001;UDP&#xFF0C;     &#x5982;&#xFF1A;&#x201C;tcp&#x201D;&#x6216; &#x201C;udp&#x201D;
    address&#xFF1A;IP&#x5730;&#x5740;+&#x7AEF;&#x53E3;&#x53F7;,             &#x5982;&#xFF1A;&#x201C;127.0.0.1:8000&#x201D;&#x6216; &#x201C;:8000&#x201D;
 </code></pre></li>
 <li><p>Listener &#x63A5;&#x53E3;&#xFF1A;</p>
-<pre><code>type Listener interface {
+<pre class="language-"><code>type Listener interface {
        Accept() (Conn, error)
        Close() error
        Addr() Addr
 }
 </code></pre></li>
 <li><p>Conn &#x63A5;&#x53E3;&#xFF1A;</p>
-<pre><code>type Conn interface {
+<pre class="language-"><code>type Conn interface {
    Read(b []byte) (n int, err error)
    Write(b []byte) (n int, err error)
    Close() error
@@ -578,7 +586,7 @@
 </ul>
 <p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
 <p>TCP&#x670D;&#x52A1;&#x5668;.go</p>
-<pre><code>package main
+<pre class="language-"><code>package main
 
 import (
    &quot;net&quot;
@@ -617,11 +625,11 @@ func main()  {
 <p><img src="images/listen.png" alt=""></p>
 <p>Client &#x7AEF;&#xFF1A;</p>
 <p>Dial&#x51FD;&#x6570;&#xFF1A;</p>
-<pre><code>func Dial(network, address string) (Conn, error)
+<pre class="language-"><code>func Dial(network, address string) (Conn, error)
         network&#xFF1A;&#x9009;&#x7528;&#x7684;&#x534F;&#x8BAE;&#xFF1A;TCP&#x3001;UDP&#xFF0C;&#x5982;&#xFF1A;&#x201C;tcp&#x201D;&#x6216; &#x201C;udp&#x201D;
         address&#xFF1A;&#x670D;&#x52A1;&#x5668;IP&#x5730;&#x5740;+&#x7AEF;&#x53E3;&#x53F7;, &#x5982;&#xFF1A;&#x201C;121.36.108.11:8000&#x201D;&#x6216; &#x201C;www.itcast.cn:8000&#x201D;
 </code></pre><p>Conn &#x63A5;&#x53E3;&#xFF1A;</p>
-<pre><code>type Conn interface {
+<pre class="language-"><code>type Conn interface {
     Read(b []byte) (n int, err error)
     Write(b []byte) (n int, err error)
     Close() error
@@ -631,7 +639,7 @@ func main()  {
     SetReadDeadline(t time.Time) error
     SetWriteDeadline(t time.Time) error
 }
-</code></pre><pre><code>package main
+</code></pre><pre class="language-"><code>package main
 
 import (
    &quot;net&quot;
@@ -659,7 +667,7 @@ func main() {
 <p>&#x73B0;&#x5728;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x4E86;&#x5BA2;&#x6237;&#x7AEF;&#x4E0E;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x901A;&#x4FE1;&#xFF0C;&#x4F46;&#x662F;&#x670D;&#x52A1;&#x7AEF;&#x53EA;&#x80FD;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x53D1;&#x9001;&#x8FC7;&#x6765;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x600E;&#x6837;&#x63A5;&#x6536;&#x591A;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x8FC7;&#x6765;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x9AD8;&#x6548;&#x7684;&#x5E76;&#x53D1;&#x670D;&#x52A1;&#x5668;&#x5462;&#xFF1F;</p>
 <p>Accept()&#x51FD;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x7B49;&#x5F85;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x94FE;&#x63A5;&#xFF0C;&#x5982;&#x679C;&#x5BA2;&#x6237;&#x7AEF;&#x6CA1;&#x6709;&#x94FE;&#x63A5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x963B;&#x585E;&#x3002;&#x5982;&#x679C;&#x6709;&#x5BA2;&#x6237;&#x7AEF;&#x94FE;&#x63A5;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;Socket&#x8D1F;&#x8D23;&#x4E0E;&#x5BA2;&#x6237;&#x7AEF;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6BCF;&#x6765;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x5C31;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;Socket&#x4E0E;&#x5176;&#x901A;&#x4FE1;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6B7B;&#x5FAA;&#x73AF;&#xFF0C;&#x5C06;Accept()&#x8C03;&#x7528;&#x8FC7;&#x7A0B;&#x5305;&#x88F9;&#x8D77;&#x6765;&#x3002;</p>
 <p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5B9E;&#x73B0;&#x5E76;&#x53D1;&#x5904;&#x7406;&#x591A;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x6570;&#x636E;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5C31;&#x9700;&#x8981;<mark>&#x9488;&#x5BF9;&#x6BCF;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#xFF0C;&#x5355;&#x72EC;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;Socket&#xFF0C;&#x5E76;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;goroutine&#x4E0E;&#x4E4B;&#x5B8C;&#x6210;&#x901A;&#x4FE1;&#x3002;</mark></p>
-<pre><code>//&#x76D1;&#x542C;
+<pre class="language-"><code>//&#x76D1;&#x542C;
     listener, err := net.Listen(&quot;tcp&quot;, &quot;127.0.0.1:8001&quot;)     // tcp &#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x5927;&#x5199;
     if err != nil {
             fmt.Println(&quot;err = &quot;, err)
@@ -677,7 +685,7 @@ func main() {
             go HandleConn(conn)
 }
 </code></pre><p>&#x5C06;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x6570;&#x636E;&#x5904;&#x7406;&#x5DE5;&#x4F5C;&#x5C01;&#x88C5;&#x5230;HandleConn&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x9700;&#x5C06;Accept()&#x8FD4;&#x56DE;&#x7684;Socket&#x4F20;&#x9012;&#x7ED9;&#x8BE5;&#x65B9;&#x6CD5;&#xFF0C;&#x53D8;&#x91CF;conn&#x7684;&#x7C7B;&#x578B;&#x4E3A;&#xFF1A;net.Conn&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;conn.RemoteAddr()&#x6765;&#x83B7;&#x53D6;&#x6210;&#x529F;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x7684;&#x5BA2;&#x6237;&#x7AEF;IP&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;&#x53F7;&#xFF1A;</p>
-<pre><code>Conn &#x63A5;&#x53E3;&#xFF1A;
+<pre class="language-"><code>Conn &#x63A5;&#x53E3;&#xFF1A;
 type Conn interface {
     Read(b []byte) (n int, err error)
     Write(b []byte) (n int, err error)
@@ -694,7 +702,7 @@ type Conn interface {
     fmt.Println(addr, &quot; conncet sucessful&quot;)
 </code></pre><p>&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x80FD;&#x6301;&#x7EED;&#x4E0D;&#x65AD;&#x7684;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x6B64;&#x63A5;&#x6536;&#x6570;&#x636E;&#x7684;&#x8FC7;&#x7A0B;&#x53EF;&#x4EE5;&#x653E;&#x5728;for&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x4E5F;&#x6301;&#x7EED;&#x4E0D;&#x65AD;&#x7684;&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x8FD4;&#x56DE;&#x5904;&#x7406;&#x540E;&#x7684;&#x6570;&#x636E;&#x3002;</p>
 <p>&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x9650;&#x5B9A;&#xFF0C;&#x5982;&#x679C;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x201C;exit&#x201D;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8868;&#x793A;&#x5BA2;&#x6237;&#x7AEF;&#x901A;&#x77E5;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x518D;&#x5411;&#x670D;&#x52A1;&#x7AEF;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x6B64;&#x65F6;&#x5E94;&#x8BE5;&#x7ED3;&#x675F;HandleConn&#x65B9;&#x6CD5;&#xFF0C;&#x540C;&#x65F6;&#x5173;&#x95ED;&#x4E0E;&#x8BE5;&#x5BA2;&#x6237;&#x7AEF;&#x5173;&#x8054;&#x7684;Socket&#x3002;</p>
-<pre><code>buf := make([]byte, 2048)     //&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5207;&#x7247;&#xFF0C;&#x5B58;&#x50A8;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;
+<pre class="language-"><code>buf := make([]byte, 2048)     //&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5207;&#x7247;&#xFF0C;&#x5B58;&#x50A8;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;
 
 for {
         //&#x8BFB;&#x53D6;&#x7528;&#x6237;&#x6570;&#x636E; 
@@ -716,7 +724,7 @@ for {
 <p>&#x5728;&#x5224;&#x65AD;&#x5BA2;&#x6237;&#x7AEF;&#x6570;&#x636E;&#x662F;&#x5426;&#x4E3A;&#x201C;exit&#x201D;&#x5B57;&#x7B26;&#x4E32;&#x65F6;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x4F1A;&#x81EA;&#x52A8;&#x7684;&#x591A;&#x53D1;&#x9001;2&#x4E2A;&#x5B57;&#x7B26;&#xFF1A;&#x201C;\r\n&#x201D;&#xFF08;&#x8FD9;&#x5728;windows&#x7CFB;&#x7EDF;&#x4E0B;&#x4EE3;&#x8868;&#x56DE;&#x8F66;&#x3001;&#x6362;&#x884C;&#xFF09;</p>
 <p>Server&#x4F7F;&#x7528;Write&#x65B9;&#x6CD5;&#x5C06;&#x6570;&#x636E;&#x5199;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x662F; []byte&#xFF0C;&#x9700;&#x4F7F;&#x7528;strings&#x5305;&#x4E0B;&#x7684;ToUpper&#x51FD;&#x6570;&#x6765;&#x5B8C;&#x6210;&#x5927;&#x5C0F;&#x5199;&#x8F6C;&#x6362;&#x3002;&#x8F6C;&#x6362;&#x7684;&#x5BF9;&#x8C61;&#x5373;&#x4E3A;string(buf[:n])
 &#x7EFC;&#x4E0A;&#xFF0C;HandleConn&#x65B9;&#x6CD5;&#x5B8C;&#x6574;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>/&#x5904;&#x7406;&#x7528;&#x6237;&#x8BF7;&#x6C42;
+<pre class="language-"><code>/&#x5904;&#x7406;&#x7528;&#x6237;&#x8BF7;&#x6C42;
 func HandleConn(conn net.Conn) {
 //&#x51FD;&#x6570;&#x8C03;&#x7528;&#x5B8C;&#x6BD5;&#xFF0C;&#x81EA;&#x52A8;&#x5173;&#x95ED;conn
 defer conn.Close()
@@ -752,7 +760,7 @@ defer conn.Close()
 <p>&#x4E3B;&#x534F;&#x7A0B;&#x5FAA;&#x73AF;&#x63A5;&#x6536;&#x670D;&#x52A1;&#x5668;&#x56DE;&#x53D1;&#x7684;&#x6570;&#x636E;&#xFF08;&#x8BE5;&#x6570;&#x636E;&#x5E94;&#x5DF2;&#x8F6C;&#x6362;&#x4E3A;&#x5927;&#x5199;&#xFF09;&#xFF0C;&#x5E76;&#x6253;&#x5370;&#x81F3;&#x5C4F;&#x5E55;&#xFF1B;&#x5B50;&#x534F;&#x7A0B;&#x5FAA;&#x73AF;&#x4ECE;&#x952E;&#x76D8;&#x8BFB;&#x53D6;&#x7528;&#x6237;&#x8F93;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x5199;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x3002;&#x8BFB;&#x53D6;&#x952E;&#x76D8;&#x8F93;&#x5165;&#x53EF;&#x4F7F;&#x7528; os.Stdin.Read(str)&#x3002;&#x5B9A;&#x4E49;&#x5207;&#x7247;str&#xFF0C;&#x5C06;&#x8BFB;&#x5230;&#x7684;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x81F3;str&#x4E2D;&#x3002;</p>
 <p>&#x8FD9;&#x6837;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x4E5F;&#x5B9E;&#x73B0;&#x4E86;&#x591A;&#x4EFB;&#x52A1;&#x3002;</p>
 <p><strong>&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;</strong></p>
-<pre><code>package main
+<pre class="language-"><code>package main
 
 import (
    &quot;net&quot;
@@ -825,7 +833,7 @@ func main() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"网络应用程序设计模式","level":"1.4.3","depth":2,"next":{"title":"TCPUDP","level":"1.4.4","depth":2,"path":"019TCPUDP.md","ref":"019TCPUDP.md","articles":[]},"previous":{"title":"Socket编程","level":"1.4.2","depth":2,"path":"0017Socket编程.md","ref":"0017Socket编程.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"0018网络应用程序设计模式.md","mtime":"2018-09-09T01:03:54.577Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T03:23:07.829Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"网络应用程序设计模式","level":"1.4.3","depth":2,"next":{"title":"TCPUDP","level":"1.4.4","depth":2,"path":"019TCPUDP.md","ref":"019TCPUDP.md","articles":[]},"previous":{"title":"Socket编程","level":"1.4.2","depth":2,"path":"0017Socket编程.md","ref":"0017Socket编程.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","emphasize","-highlight","prism","prism-themes","copy-code-button","splitter","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"shortName":"introducetogitbook"},"emphasize":{},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"0018网络应用程序设计模式.md","mtime":"2018-09-09T01:03:54.577Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T10:18:22.173Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -840,6 +848,14 @@ func main() {
     
         
         <script src="gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         

@@ -25,7 +25,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -990,9 +998,9 @@
 <li>&#x4E00;&#x4E2A;&#x5217;&#x540D;&#x5728;&#x590D;&#x5408;&#x4E3B;&#x952E;&#x4E2D;&#x53EA;&#x80FD;&#x51FA;&#x73B0;&#x4E00;&#x6B21;&#x3002;</li>
 </ul>
 <p>&#x4F8B;&#xFF1A;&#x5728;&#x521B;&#x5EFA;hero2&#x8868;&#x65F6;&#x5019;&#x5C06;heroId&#x8BBE;&#x7F6E;&#x4E3A;&#x4E3B;&#x952E;</p>
-<pre><code>create table hero2(heroId int auto_increment primary key, heroName varchar(30) ,job varchar(30));
+<pre class="language-"><code>create table hero2(heroId int auto_increment primary key, heroName varchar(30) ,job varchar(30));
 </code></pre><p>&#x4F8B;2&#xFF1A;&#x521B;&#x5EFA;hero3&#xFF0C;&#x5C06;heroId&#x3001;deptId&#x8BBE;&#x7F6E;&#x4E3A;&#x4E3B;&#x952E;</p>
-<pre><code>create table hero3(heroId int auto_increment , heroName varchar(30) ,job varchar(30),deptId int ,primary key(heroId,deptId));
+<pre class="language-"><code>create table hero3(heroId int auto_increment , heroName varchar(30) ,job varchar(30),deptId int ,primary key(heroId,deptId));
 </code></pre><h2 id="&#x5019;&#x9009;&#x952E;&#x7EA6;&#x675F;"><a name="&#x5019;&#x9009;&#x952E;&#x7EA6;&#x675F;" class="anchor-navigation-ex-anchor" href="#&#x5019;&#x9009;&#x952E;&#x7EA6;&#x675F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x5019;&#x9009;&#x952E;&#x7EA6;&#x675F;</h2>
 <blockquote>
 <p>   &#x5982;&#x679C;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x96C6;&#x80FD;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x5143;&#x7EC4;&#xFF0C;&#x4E14;&#x53C8;&#x4E0D;&#x542B;&#x6709;&#x591A;&#x4F59;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x96C6;&#x79F0;&#x4E3A;&#x5173;&#x7CFB;&#x7684;&#x5019;&#x9009;&#x952E;&#x3002;
@@ -1004,7 +1012,7 @@
 <li>&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x7EA6;&#x675F;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;PRIMARY KEY&#x7D22;&#x5F15;&#xFF0C;&#x800C;&#x5B9A;&#x4E49;&#x5019;&#x9009;&#x952E;&#x7EA6;&#x675F;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;UNIQUE&#x7D22;&#x5F15;</li>
 </ul>
 <p>&#x4F8B;&#xFF1A;&#x521B;&#x5EFA;&#x8868;hero4&#x65F6;&#xFF0C;&#x5C06;heroId&#x548C;deptId&#x5B57;&#x6BB5;&#x8BBE;&#x7F6E;&#x4E3A;&#x5019;&#x9009;&#x952E;&#x3002;</p>
-<pre><code>create table hero4(heroId int auto_increment unique, heroName varchar(30) ,job varchar(30), deptId int unique);
+<pre class="language-"><code>create table hero4(heroId int auto_increment unique, heroName varchar(30) ,job varchar(30), deptId int unique);
 </code></pre><h1 id="&#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;"><a name="&#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;</h1>
 <blockquote>
 <p>   &#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;&#x89C4;&#x5219;&#xFF08;Referential Integrity Rule&#xFF09;&#x5C31;&#x662F;&#x5B9A;&#x4E49;&#x5916;&#x7801;&#xFF08;&#x5916;&#x952E;&#xFF09;&#x548C;&#x4E3B;&#x7801;&#xFF08;&#x4E3B;&#x952E;&#xFF09;&#x4E4B;&#x95F4;&#x7684;&#x5F15;&#x7528;&#x89C4;&#x5219;&#xFF0C;&#x5B83;&#x662F;&#x5BF9;&#x5173;&#x7CFB;&#x95F4;&#x5F15;&#x7528;&#x6570;&#x636E;&#x7684;&#x4E00;&#x79CD;&#x9650;&#x5236;&#x3002;
@@ -1012,14 +1020,14 @@
 </blockquote>
 <p>&#x4F8B;&#xFF1A;&#x521B;&#x5EFA;hero5&#x8868;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;</p>
 <p>&#x51C6;&#x5907;&#x8868;&#x6570;&#x636E;</p>
-<pre><code>CREATE TABLE dept2 (
+<pre class="language-"><code>CREATE TABLE dept2 (
     deptId INT auto_increment PRIMARY KEY,
     deptName VARCHAR(30)
 );
 
 desc dept2;
 </code></pre><p>&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code>CREATE TABLE hero5 (
+<pre class="language-"><code>CREATE TABLE hero5 (
     heroId INT auto_increment,
     heroName VARCHAR (30),
     job VARCHAR (30),
@@ -1030,11 +1038,11 @@ desc dept2;
 </code></pre><p>&#x8BED;&#x53E5;&#x4E2D;&#x7684; RESTRICT&#x4EE3;&#x8868;&#x9650;&#x5236;&#x7B56;&#x7565;&#xFF0C;&#x5F53;&#x8981;&#x5220;&#x9664;&#x6216;&#x8005;&#x66F4;&#x65B0;&#x88AB;&#x53C2;&#x7167;&#x8868;&#x4E2D;&#x88AB;&#x53C2;&#x7167;&#x5217;&#x4E0A;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x5916;&#x952E;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x503C;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x62D2;&#x7EDD;&#x5BF9;&#x88AB;&#x53C2;&#x7167;&#x7684;&#x8868;&#x8FDB;&#x884C;&#x5220;&#x9664;&#x6216;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x3002;</p>
 <p>&#x6D4B;&#x8BD5;&#xFF1A;
 &#x5411;dept2&#x4E2D;&#x63D2;&#x5165;&#x6570;&#x636E;&#xFF1A;</p>
-<pre><code>INSERT INTO dept2 VALUES (10,&apos;&#x603B;&#x90E8;&apos;);
+<pre class="language-"><code>INSERT INTO dept2 VALUES (10,&apos;&#x603B;&#x90E8;&apos;);
 INSERT INTO dept2 VALUES (20,&apos;&#x533B;&#x7597;&#x90E8;&apos;);
 INSERT INTO dept2 VALUES (30,&apos;&#x6559;&#x80B2;&#x90E8;&apos;);
 </code></pre><p>&#x5411;hero5&#x4E2D;&#x63D2;&#x5165;&#x6570;&#x636E;</p>
-<pre><code>INSERT INTO hero5 VALUES
+<pre class="language-"><code>INSERT INTO hero5 VALUES
 (90516,&apos;&#x6F29;&#x6DA1;&#x9E23;&#x4EBA;&apos;,&apos;&#x4E0B;&#x5FCD;&apos;,10);
 INSERT INTO hero5 VALUES
 (90517,&apos;&#x5B87;&#x667A;&#x6CE2;&#x4F50;&#x52A9;&apos;,&apos;&#x4E0B;&#x5FCD;&apos;,20);
@@ -1055,7 +1063,7 @@ INSERT INTO hero5 VALUES
 <p>   &#x5728;MySQL&#x4E2D;&#xFF0C;&#x975E;&#x7A7A;&#x7EA6;&#x675F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;CREATE TABLE&#x6216;ALTERTABLE&#x8BED;&#x53E5;&#x4E2D;&#xFF0C;&#x67D0;&#x4E2A;&#x5217;&#x5B9A;&#x4E49;&#x540E;&#x9762;&#x52A0;&#x4E0A;&#x5173;&#x952E;&#x5B57; NOT NULL&#x6765;&#x5B9A;&#x4E49;&#xFF0C;&#x7528;&#x6765;&#x7EA6;&#x675F;&#x8BE5;&#x5217;&#x7684;&#x53D6;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x3002;</p>
 </blockquote>
 <p>&#x4F8B;&#xFF1A;&#x521B;&#x5EFA;hero6&#x8868;&#xFF0C;&#x5E76;&#x4E14;&#x4E3A;heroName&#x5B57;&#x6BB5;&#x8BBE;&#x7F6E;&#x4E3A;&#x975E;&#x7A7A;&#x7EA6;&#x675F;</p>
-<pre><code>CREATE TABLE hero6 (
+<pre class="language-"><code>CREATE TABLE hero6 (
     heroId INT auto_increment,
     heroName VARCHAR (30) NOT NULL,
     PRIMARY KEY (heroId)
@@ -1063,24 +1071,24 @@ INSERT INTO hero5 VALUES
 </code></pre><h2 id="check&#x7EA6;&#x675F;"><a name="check&#x7EA6;&#x675F;" class="anchor-navigation-ex-anchor" href="#check&#x7EA6;&#x675F;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. CHECK&#x7EA6;&#x675F;</h2>
 <p>&#x4E0E;&#x975E;&#x7A7A;&#x7EA6;&#x675F;&#x4E00;&#x6837;&#xFF0C;CHECK&#x7EA6;&#x675F;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;CREATE TABLE&#x6216;ALTER TABLE&#x8BED;&#x53E5;&#x4E2D;&#xFF0C;&#x6839;&#x636E;&#x7528;&#x6237;&#x7684;&#x5B9E;&#x9645;&#x5B8C;&#x6574;&#x6027;&#x7684;&#x8981;&#x6C42;&#x6765;&#x5B9A;&#x4E49;&#x3002;</p>
 <p>&#x4F8B;&#xFF1A;&#x521B;&#x5EFA;&#x8868;hero7&#xFF0C;&#x8981;&#x6C42;&#x5217;&#x4E2D;&#x7684;sex&#x6027;&#x522B;&#x5217;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#x53EA;&#x80FD;&#x5728; &#x201C;&#x7537;&#x201D; &#x548C; &#x201C;&#x5973;&#x201D;&#x4E2D;&#xFF0C;age&#x53EA;&#x80FD;&#x5728;0~100&#x4E4B;&#x95F4;&#xFF08;&#x5305;&#x62EC;0&#xFF0C;&#x4E0D;&#x5305;&#x62EC;100&#xFF09;</p>
-<pre><code>CREATE TABLE hero7 (
+<pre class="language-"><code>CREATE TABLE hero7 (
     heroId INT auto_increment,
     heroName VARCHAR (30) NOT NULL,
     sex VARCHAR(10) NOT NULL  CHECK(sex in (&apos;&#x7537;&apos;,&apos;&#x5973;&apos;)),
     age int not null CHECK (age &gt;=0 and age &lt;100),
     PRIMARY KEY (heroId)
 );
-</code></pre><pre><code>INSERT INTO hero7 VALUES (90516,&apos;&#x65CB;&#x6DA1;&#x9E23;&#x4EBA;&apos;,&apos;&#x7537;&apos;,18);
+</code></pre><pre class="language-"><code>INSERT INTO hero7 VALUES (90516,&apos;&#x65CB;&#x6DA1;&#x9E23;&#x4EBA;&apos;,&apos;&#x7537;&apos;,18);
 </code></pre><p><mark>&#x6CE8;&#xFF1A;&#x76EE;&#x524D;MySQL&#x7248;&#x672C;&#x81F3;&#x5C11;&#x5BF9;CHECK&#x7EA6;&#x675F;&#x8FDB;&#x884C;&#x4E86;&#x5206;&#x6790;&#x5904;&#x7406;&#xFF0C;&#x4F46;&#x4F1A;&#x88AB;&#x76F4;&#x63A5;&#x5FFD;&#x7565;&#xFF0C;&#x63D2;&#x5165;&#x9519;&#x8BEF;&#x6570;&#x636E;&#x5E76;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#x3002;</mark></p>
 <h1 id="&#x547D;&#x540D;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;"><a name="&#x547D;&#x540D;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;" class="anchor-navigation-ex-anchor" href="#&#x547D;&#x540D;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x547D;&#x540D;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;</h1>
 <blockquote>
 <p>   &#x5728;MySQL&#x4E2D;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5BF9;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#x8FDB;&#x884C;&#x6DFB;&#x52A0;&#x3001;&#x4FEE;&#x6539;&#x548C;&#x5220;&#x9664;&#x7B49;&#x64CD;&#x4F5C;&#x3002;&#x5176;&#x4E2D;&#xFF0C;&#x4E3A;&#x4E86;&#x5220;&#x9664;&#x548C;&#x4FEE;&#x6539;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x5B9A;&#x4E49;&#x7EA6;&#x675F;&#x7684;&#x540C;&#x65F6;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x547D;&#x540D;&#x3002;&#x547D;&#x540D;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x5728;&#x5404;&#x79CD;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#x7684;&#x5B9A;&#x4E49;&#x8BF4;&#x660E;&#x4E4B;&#x524D;&#x52A0;&#x4E0A;CONSTRAINT&#x5B50;&#x53E5;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
 </blockquote>
 <p>CONSTRAINT&#x5B50;&#x53E5;&#x7684;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>CONSTRAINT &lt;symbol&gt;
+<pre class="language-"><code>CONSTRAINT <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>symbol</span><span class="token punctuation">&gt;</span></span>
     [PRIMAR KEY &#x77ED;&#x8BED; |FOREIGN KEY &#x77ED;&#x8BED; |CHECK &#x77ED;&#x8BED;]
 </code></pre><p>&#x4F8B;&#xFF1A;&#x521B;&#x5EFA;hero8&#x8868;&#x65F6;&#xFF0C;&#x7ED9;&#x5916;&#x952E;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#x547D;&#x540D;&#x4E3A; fk_deptId</p>
-<pre><code>CREATE TABLE hero8 (
+<pre class="language-"><code>CREATE TABLE hero8 (
     heroId INT auto_increment,
     heroName VARCHAR (30),
     job VARCHAR (30),
@@ -1091,7 +1099,7 @@ INSERT INTO hero5 VALUES
 </code></pre><h1 id="&#x66F4;&#x65B0;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;"><a name="&#x66F4;&#x65B0;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;" class="anchor-navigation-ex-anchor" href="#&#x66F4;&#x65B0;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x66F4;&#x65B0;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;</h1>
 <h2 id="&#x5220;&#x9664;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;"><a name="&#x5220;&#x9664;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1. &#x5220;&#x9664;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;</h2>
 <p>&#x5728;MySQL&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;ALTER TABLE&#x8BED;&#x53E5;&#xFF0C;&#x53EF;&#x4EE5;&#x72EC;&#x7ACB;&#x5730;&#x5220;&#x9664;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x5220;&#x9664;&#x8868;&#x672C;&#x8EAB;&#x3002;&#x5982;&#x679C;&#x4F7F;&#x7528;DROP TABLE&#x8BED;&#x53E5;&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x8868;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x8868;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#x4E5F;&#x4F1A;&#x81EA;&#x52A8;&#x88AB;&#x5220;&#x9664;&#x3002;&#x5220;&#x9664;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#x9700;&#x8981;&#x5728;ALTER TABLE&#x8BED;&#x53E5;&#x4E2D;&#x4F7F;&#x7528;DROP&#x5173;&#x952E;&#x5B57;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x5177;&#x4F53;&#x7684;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A; </p>
-<pre><code>ALTER  TABLE  &#x8868;&#x540D; DROP [FOREIGN KEY| INDEX| &lt;symbol&gt;] |[PRIMARY KEY]
+<pre class="language-"><code>ALTER  TABLE  &#x8868;&#x540D; DROP [FOREIGN KEY| INDEX| <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>symbol</span><span class="token punctuation">&gt;</span></span>] |[PRIMARY KEY]
 </code></pre><p>FOREIGN &#x4EE3;&#x8868;&#x5916;&#x952E;
 INDEX &#x4EE3;&#x8868;&#x5019;&#x9009;&#x952E;
 symbol &#x4EE3;&#x8868;&#x7EA6;&#x675F;&#x540D;&#x79F0;
@@ -1104,9 +1112,9 @@ PRIMARY KEY &#x4EE3;&#x8868;&#x4E3B;&#x952E;
 <p>   &#x5728;MySQL&#x4E2D;&#xFF0C;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x88AB;&#x4FEE;&#x6539;&#xFF0C;&#x82E5;&#x8981;&#x4FEE;&#x6539;&#x53EA;&#x80FD;&#x662F;&#x7528;ALTER TABLE&#x8BED;&#x53E5;&#x5148;&#x5220;&#x9664;&#x9664;&#x8BE5;&#x7EA6;&#x675F;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x4E0E;&#x8BE5;&#x7EA6;&#x675F;&#x540C;&#x540D;&#x7684;&#x65B0;&#x7EA6;&#x675F;&#x3002;&#x7531;&#x4E8E;&#x5220;&#x9664;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#x7684;&#x8BED;&#x6CD5;&#x5728;13.3.1&#x8282;&#x5DF2;&#x7ECF;&#x4ECB;&#x7ECD;&#x4E86;&#xFF0C;&#x8FD9;&#x91CC;&#x53EA;&#x7ED9;&#x51FA;&#x5728;ALTER TABLE&#x8BED;&#x53E5;&#x4E2D;&#x6DFB;&#x52A0;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#x7684;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#x3002;</p>
 </blockquote>
 <p>&#x5177;&#x4F53;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
-<p><code>ADD CONSTRAINT &lt;symbol&gt; &#x5404;&#x79CD;&#x7EA6;&#x675F;</code></p>
+<p><code>ADD CONSTRAINT <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>symbol</span><span class="token punctuation">&gt;</span></span> &#x5404;&#x79CD;&#x7EA6;&#x675F;</code></p>
 <p>&#x4F8B;&#xFF1A;&#x5728;hero8&#x4E2D;&#x518D;&#x6DFB;&#x52A0;&#x56DE;<code>fk_deptId</code>&#x7EA6;&#x675F;</p>
-<pre><code>ALTER TABLE hero8 
+<pre class="language-"><code>ALTER TABLE hero8 
 ADD CONSTRAINT fk_deptId FOREIGN KEY (deptId) REFERENCES dept2 (deptId) 
 ON DELETE CASCADE ON UPDATE CASCADE;
 </code></pre>
@@ -1136,7 +1144,7 @@ ON DELETE CASCADE ON UPDATE CASCADE;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数据完整性约束","level":"1.3.11","depth":2,"next":{"title":"Go操作MysSql","level":"1.3.12","depth":2,"path":"Database/012Go操作MysSql.md","ref":"Database/012Go操作MysSql.md","articles":[]},"previous":{"title":"视图","level":"1.3.10","depth":2,"path":"Database/010视图.md","ref":"Database/010视图.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"Database/011数据完整性约束.md","mtime":"2018-08-31T03:00:02.060Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T01:02:50.375Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数据完整性约束","level":"1.3.11","depth":2,"next":{"title":"Go操作MysSql","level":"1.3.12","depth":2,"path":"Database/012Go操作MysSql.md","ref":"Database/012Go操作MysSql.md","articles":[]},"previous":{"title":"视图","level":"1.3.10","depth":2,"path":"Database/010视图.md","ref":"Database/010视图.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","emphasize","-highlight","prism","prism-themes","copy-code-button","splitter","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"shortName":"introducetogitbook"},"emphasize":{},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"Database/011数据完整性约束.md","mtime":"2018-08-31T03:00:02.060Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T10:13:53.853Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1151,6 +1159,14 @@ ON DELETE CASCADE ON UPDATE CASCADE;
     
         
         <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         

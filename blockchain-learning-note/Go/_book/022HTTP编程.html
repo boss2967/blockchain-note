@@ -25,7 +25,15 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -556,7 +564,7 @@
 <li>&#x8DEF;&#x5F84;&#x548C;&#x6587;&#x4EF6;&#x540D;&#x3002;</li>
 </ul>
 <p>&#x5E38;&#x89C1;&#x7684;&#x534F;&#x8BAE;/&#x6A21;&#x5F0F;&#x5982;http&#x3001;https&#x3001;ftp&#x7B49;&#x3002;&#x670D;&#x52A1;&#x5668;&#x7684;&#x540D;&#x79F0;&#x6216;IP&#x5730;&#x5740;&#x540E;&#x9762;&#x6709;&#x65F6;&#x8FD8;&#x8DDF;&#x4E00;&#x4E2A;&#x5192;&#x53F7;&#x548C;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x53F7;&#x3002;&#x518D;&#x540E;&#x9762;&#x662F;&#x5230;&#x8FBE;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x548C;&#x6587;&#x4EF6;&#x672C;&#x8EAB;&#x7684;&#x540D;&#x79F0;&#x3002;&#x5982;&#xFF1A;</p>
-<pre><code>http://localhost[&quot;:&quot;port][abs_path]
+<pre class="language-"><code>http://localhost[&quot;:&quot;port][abs_path]
 http://192.168.31.1/html/index
 https://pan.baidu.com/
 </code></pre><p>URL&#x7684;&#x957F;&#x5EA6;&#x6709;&#x9650;&#x5236;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x670D;&#x52A1;&#x5668;&#x7684;&#x9650;&#x5236;&#x503C;&#x4E0D;&#x592A;&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x80FD;&#x65E0;&#x9650;&#x957F;&#x3002;</p>
@@ -566,7 +574,7 @@ https://pan.baidu.com/
 <p><strong>&#x83B7;&#x53D6;&#x8BF7;&#x6C42;&#x62A5;&#x6587;</strong></p>
 <p>&#x4E3A;&#x4E86;&#x66F4;&#x76F4;&#x89C2;&#x7684;&#x770B;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x9001;&#x7684;&#x8BF7;&#x6C42;&#x5305;&#xFF0C;&#x6211;&#x4EEC;&#x501F;&#x52A9;&#x524D;&#x9762;&#x5B66;&#x4E60;&#x7684;TCP&#x901A;&#x4FE1;&#x6A21;&#x578B;&#xFF0C;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;web&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53EA;&#x63A5;&#x6536;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x9001;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6253;&#x5370;&#x67E5;&#x770B;&#x3002;</p>
 <p>&#x670D;&#x52A1;&#x5668;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code>package main
+<pre class="language-"><code>package main
 
 import (
    &quot;net&quot;
@@ -677,7 +685,7 @@ func main() {
 </ul>
 <p><strong>&#x521B;&#x5EFA;&#x7B80;&#x5355;&#x7684;&#x54CD;&#x5E94;&#x670D;&#x52A1;&#x5668;</strong></p>
 <p>&#x670D;&#x52A1;&#x5668;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code>package main
+<pre class="language-"><code>package main
 
 import &quot;net/http&quot;
 
@@ -698,7 +706,7 @@ func main()  {
 <p>&#x4F46;&#x670D;&#x52A1;&#x5668;&#x662F;&#x600E;&#x6837;&#x501F;&#x52A9;http&#x534F;&#x8BAE;&#x5C06;&#x201C;hello http&#x201D;&#x5B57;&#x7B26;&#x4E32;&#x5199;&#x56DE;&#x6765;&#x7684;&#x5462;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x54CD;&#x5E94;&#x62A5;&#x6587;&#x7684;&#x5177;&#x4F53;&#x683C;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x5462;&#xFF1F;</p>
 <p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x6A21;&#x62DF;&#x6D4F;&#x89C8;&#x5668;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x201C;&#x8BF7;&#x6C42;&#x62A5;&#x6587;&#x201D;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x670D;&#x52A1;&#x5668;&#x56DE;&#x53D1;&#x7684;&#x54CD;&#x5E94;&#x62A5;&#x6587;&#x6253;&#x5370;&#x51FA;&#x6765;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4E86;&#x3002;</p>
 <p>&#x5BA2;&#x6237;&#x7AEF;&#x6D4B;&#x8BD5;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code>package main
+<pre class="language-"><code>package main
 
 import (
    &quot;net&quot;
@@ -844,7 +852,7 @@ func main()  {
 <h3 id="go&#x8BED;&#x8A00;http&#x7F16;&#x7A0B;"><a name="go&#x8BED;&#x8A00;http&#x7F16;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#go&#x8BED;&#x8A00;http&#x7F16;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.5. Go&#x8BED;&#x8A00;HTTP&#x7F16;&#x7A0B;</h3>
 <p>Go&#x8BED;&#x8A00;&#x6807;&#x51C6;&#x5E93;&#x5185;&#x5EFA;&#x63D0;&#x4F9B;&#x4E86;net/http&#x5305;&#xFF0C;&#x6DB5;&#x76D6;&#x4E86;HTTP&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x3002;&#x4F7F;&#x7528;net/http&#x5305;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x5730;&#x7F16;&#x5199;HTTP&#x5BA2;&#x6237;&#x7AEF;&#x6216;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x7A0B;&#x5E8F;&#x3002;</p>
 <p><strong>HTTP&#x670D;&#x52A1;&#x7AEF;</strong></p>
-<pre><code>package main
+<pre class="language-"><code>package main
 
 import (
     &quot;fmt&quot;
@@ -872,13 +880,13 @@ func main() {
 }
 </code></pre><p>&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;url&#x5730;&#x5740;&#xFF1A;127.0.0.1:8000/hello</p>
 <p>&#x56DE;&#x8C03;&#x51FD;&#x6570;myHandler&#x7684;&#x51FD;&#x6570;&#x539F;&#x578B;&#x56FA;&#x5B9A;&#x3002;func myHandler(w http.ResponseWriter, r <em> http.Request) &#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;w http.ResponseWriter &#x548C; r </em>http.Request&#x3002;w&#x7528;&#x6765;&#x201C;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x56DE;&#x53D1;&#x6570;&#x636E;&#x201D;&#x3002;&#x5B83;&#x662F;&#x4E00;&#x4E2A;interface&#xFF1A;</p>
-<pre><code>type ResponseWriter interface {
+<pre class="language-"><code>type ResponseWriter interface {
    Header() Header            
    Write([]byte) (int, error)    
    WriteHeader(int)            
 }
 </code></pre><p>r &#x7528;&#x6765;&#x201C;&#x63A5;&#x6536;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;&#x201D;&#x3002;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x9001;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x7684;http&#x8BF7;&#x6C42;&#x5305;&#x7684;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x501F;&#x52A9;r&#x6765;&#x67E5;&#x770B;&#x3002;&#x5B83;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;&#xFF1A;</p>
-<pre><code>type Request struct {
+<pre class="language-"><code>type Request struct {
     Method string        // &#x6D4F;&#x89C8;&#x5668;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5; GET&#x3001;POST&#x2026;
     URL *url.URL        // &#x6D4F;&#x89C8;&#x5668;&#x8BF7;&#x6C42;&#x7684;&#x8BBF;&#x95EE;&#x8DEF;&#x5F84;
     &#x2026;&#x2026;
@@ -889,14 +897,14 @@ func main() {
         ctx context.Context
 }
 </code></pre><p>&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x7ED3;&#x6784;&#x4F53;&#x6210;&#x5458;&#xFF1A;</p>
-<pre><code>fmt.Println(&quot;Method = &quot;, r.Method)
+<pre class="language-"><code>fmt.Println(&quot;Method = &quot;, r.Method)
 fmt.Println(&quot;URL = &quot;, r.URL)
 fmt.Println(&quot;Header = &quot;, r.Header)
 fmt.Println(&quot;Body = &quot;, r.Body)
 fmt.Println(r.RemoteAddr, &quot;&#x8FDE;&#x63A5;&#x6210;&#x529F;&quot;)
 </code></pre><p><strong>HTTP&#x5BA2;&#x6237;&#x7AEF;</strong></p>
 <p>&#x5BA2;&#x6237;&#x7AEF;&#x8BBF;&#x95EE;web&#x670D;&#x52A1;&#x5668;&#x6570;&#x636E;&#xFF0C;&#x4E3B;&#x8981;&#x4F7F;&#x7528;func Get(url string) (resp *Response, err error)&#x51FD;&#x6570;&#x6765;&#x5B8C;&#x6210;&#x3002;&#x8BFB;&#x5230;&#x7684;&#x54CD;&#x5E94;&#x62A5;&#x6587;&#x6570;&#x636E;&#x88AB;&#x4FDD;&#x5B58;&#x5728; Response &#x7ED3;&#x6784;&#x4F53;&#x4E2D;&#x3002;</p>
-<pre><code>type Response struct {
+<pre class="language-"><code>type Response struct {
    Status     string // e.g. &quot;200 OK&quot;
    StatusCode int    // e.g.  200
    Proto      string // e.g. &quot;HTTP/1.0&quot;
@@ -907,7 +915,7 @@ fmt.Println(r.RemoteAddr, &quot;&#x8FDE;&#x63A5;&#x6210;&#x529F;&quot;)
 }
 </code></pre><p>&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x7684;&#x54CD;&#x5E94;&#x5305;&#x4F53;&#x88AB;&#x4FDD;&#x5B58;&#x5728;Body&#x4E2D;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B83;&#x63D0;&#x4F9B;&#x7684;Read&#x65B9;&#x6CD5;&#x6765;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x3002;&#x4FDD;&#x5B58;&#x81F3;&#x5207;&#x7247;&#x7F13;&#x51B2;&#x533A;&#x4E2D;&#xFF0C;&#x62FC;&#x63A5;&#x6210;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6765;&#x67E5;&#x770B;&#x3002;</p>
 <p><mark>&#x7ED3;&#x675F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528;Body&#x4E2D;&#x7684;Close()&#x65B9;&#x6CD5;&#x5173;&#x95ED;io&#x3002;</mark></p>
-<pre><code>package main
+<pre class="language-"><code>package main
 
 import (
    &quot;net/http&quot;
@@ -952,7 +960,7 @@ func main()  {
 </code></pre><h2 id="&#x7EC3;&#x4E60;&#xFF1A;"><a name="&#x7EC3;&#x4E60;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x7EC3;&#x4E60;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x7EC3;&#x4E60;&#xFF1A;</h2>
 <p>&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#x9009;&#x5B9A;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x5B58;&#x653E;jpg&#x3001;png&#x3001;txt&#x3001;mp3&#x3001;gif&#x3001;m4a&#x7B49;&#x7C7B;&#x578B;&#x6587;&#x4EF6;&#x3002;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x7A0B;&#x5E8F;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#x63D0;&#x4F9B;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#x6587;&#x4EF6;&#x7684;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x3002;
 &#x5982;&#xFF1A;&#x76EE;&#x5F55;&#x4E2D;&#x5B58;&#x6709;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#xFF1A;lf.jpg&#x3002;&#x7528;&#x6237;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;&#xFF1A;127.0.0.1:8000/lf.jpg &#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x8BE5;&#x56FE;&#x7247;&#x3002;</p>
-<pre><code>package main
+<pre class="language-"><code>package main
 
 import (
     &quot;net/http&quot;
@@ -1044,7 +1052,7 @@ func sendFileToClient(path string, writer http.ResponseWriter) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HTTP编程","level":"1.4.7","depth":2,"next":{"title":"正则表达式","level":"1.4.8","depth":2,"path":"023正则表达式.md","ref":"023正则表达式.md","articles":[]},"previous":{"title":"聊天室（案例）","level":"1.4.6","depth":2,"path":"021聊天室.md","ref":"021聊天室.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"022HTTP编程.md","mtime":"2018-09-09T02:43:03.903Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T03:23:07.829Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"HTTP编程","level":"1.4.7","depth":2,"next":{"title":"正则表达式","level":"1.4.8","depth":2,"path":"023正则表达式.md","ref":"023正则表达式.md","articles":[]},"previous":{"title":"聊天室（案例）","level":"1.4.6","depth":2,"path":"021聊天室.md","ref":"021聊天室.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","emphasize","-highlight","prism","prism-themes","copy-code-button","splitter","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"shortName":"introducetogitbook"},"emphasize":{},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"022HTTP编程.md","mtime":"2018-09-09T02:43:03.903Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T10:18:22.173Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -1059,6 +1067,14 @@ func sendFileToClient(path string, writer http.ResponseWriter) {
     
         
         <script src="gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         

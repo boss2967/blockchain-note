@@ -25,7 +25,15 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -535,20 +543,20 @@
 <li>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;channel&#x65F6;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x53D1;&#x9001;&#x5230;channel&#x7684;&#x503C;&#x7684;&#x7C7B;&#x578B;&#x3002;channel&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x7684;make()&#x51FD;&#x6570;&#x6765;&#x521B;&#x5EFA;&#xFF1A;</li>
 <li>chan&#x662F;&#x521B;&#x5EFA;channel&#x6240;&#x9700;&#x4F7F;&#x7528;&#x7684;&#x5173;&#x952E;&#x5B57;&#x3002;Type &#x4EE3;&#x8868;&#x6307;&#x5B9A;channel&#x6536;&#x53D1;&#x6570;&#x636E;&#x7684;&#x7C7B;&#x578B;&#x3002;</li>
 </ul>
-<pre><code>  make(chan Type)  //&#x7B49;&#x4EF7;&#x4E8E;make(chan Type, 0)
+<pre class="language-"><code>  make(chan Type)  //&#x7B49;&#x4EF7;&#x4E8E;make(chan Type, 0)
   make(chan Type, capacity)
 </code></pre><ul>
 <li>&#x5F53;&#x6211;&#x4EEC;&#x590D;&#x5236;&#x4E00;&#x4E2A;channel&#x6216;&#x7528;&#x4E8E;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x662F;&#x62F7;&#x8D1D;&#x4E86;&#x4E00;&#x4E2A;channel&#x5F15;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x8C03;&#x7528;&#x8005;&#x548C;&#x88AB;&#x8C03;&#x7528;&#x8005;&#x5C06;&#x5F15;&#x7528;&#x540C;&#x4E00;&#x4E2A;channel&#x5BF9;&#x8C61;&#x3002;&#x548C;&#x5176;&#x5B83;&#x7684;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x4E00;&#x6837;&#xFF0C;channel&#x7684;&#x96F6;&#x503C;&#x4E5F;&#x662F;nil&#x3002;</li>
 <li>&#x5F53; &#x53C2;&#x6570;capacity= 0 &#x65F6;&#xFF0C;channel &#x662F;&#x65E0;&#x7F13;&#x51B2;&#x963B;&#x585E;&#x8BFB;&#x5199;&#x7684;&#xFF1B;&#x5F53;capacity &gt; 0 &#x65F6;&#xFF0C;channel &#x6709;&#x7F13;&#x51B2;&#x3001;&#x662F;&#x975E;&#x963B;&#x585E;&#x7684;&#xFF0C;&#x76F4;&#x5230;&#x5199;&#x6EE1; capacity&#x4E2A;&#x5143;&#x7D20;&#x624D;&#x963B;&#x585E;&#x5199;&#x5165;&#x3002;</li>
 <li>channel&#x975E;&#x5E38;&#x50CF;&#x751F;&#x6D3B;&#x4E2D;&#x7684;&#x7BA1;&#x9053;&#xFF0C;&#x4E00;&#x8FB9;&#x53EF;&#x4EE5;&#x5B58;&#x653E;&#x4E1C;&#x897F;&#xFF0C;&#x53E6;&#x4E00;&#x8FB9;&#x53EF;&#x4EE5;&#x53D6;&#x51FA;&#x4E1C;&#x897F;&#x3002;channel&#x901A;&#x8FC7;&#x64CD;&#x4F5C;&#x7B26; &lt;- &#x6765;&#x63A5;&#x6536;&#x548C;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x6570;&#x636E;&#x8BED;&#x6CD5;&#xFF1A;</li>
 </ul>
-<pre><code>    channel &lt;- value      //&#x53D1;&#x9001;value&#x5230;channel
+<pre class="language-"><code>    channel &lt;- value      //&#x53D1;&#x9001;value&#x5230;channel
     &lt;-channel             //&#x63A5;&#x6536;&#x5E76;&#x5C06;&#x5176;&#x4E22;&#x5F03;
     x := &lt;-channel        //&#x4ECE;channel&#x4E2D;&#x63A5;&#x6536;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x8D4B;&#x503C;&#x7ED9;x
     x, ok := &lt;-channel    //&#x529F;&#x80FD;&#x540C;&#x4E0A;&#xFF0C;&#x540C;&#x65F6;&#x68C0;&#x67E5;&#x901A;&#x9053;&#x662F;&#x5426;&#x5DF2;&#x5173;&#x95ED;&#x6216;&#x8005;&#x662F;&#x5426;&#x4E3A;&#x7A7A;
 </code></pre><p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;channel&#x63A5;&#x6536;&#x548C;&#x53D1;&#x9001;&#x6570;&#x636E;&#x90FD;&#x662F;&#x963B;&#x585E;&#x7684;&#xFF0C;&#x9664;&#x975E;&#x53E6;&#x4E00;&#x7AEF;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x597D;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4F7F;&#x5F97;goroutine&#x540C;&#x6B65;&#x53D8;&#x7684;&#x66F4;&#x52A0;&#x7684;&#x7B80;&#x5355;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x663E;&#x5F0F;&#x7684;lock&#x3002;</p>
 <p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code>func main() {
+<pre class="language-"><code>func main() {
     c := make(chan int)
 
     go func() {
@@ -586,7 +594,7 @@
 <p><code>make(chan Type)   //&#x7B49;&#x4EF7;&#x4E8E;make(chan Type, 0)</code></p>
 <p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x7F13;&#x51B2;&#x533A;&#x5BB9;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x901A;&#x9053;&#x5C31;&#x662F;&#x540C;&#x6B65;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x4F1A;&#x963B;&#x585E;&#x5230;&#x53D1;&#x9001;&#x8005;&#x51C6;&#x5907;&#x597D;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x8005;&#x51C6;&#x5907;&#x597D;&#x63A5;&#x6536;&#x3002;
 &#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code>func main() {
+<pre class="language-"><code>func main() {
     c := make(chan int, 0) //&#x521B;&#x5EFA;&#x65E0;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053; c 
 
     //&#x5185;&#x7F6E;&#x51FD;&#x6570; len &#x8FD4;&#x56DE;&#x672A;&#x88AB;&#x8BFB;&#x53D6;&#x7684;&#x7F13;&#x51B2;&#x5143;&#x7D20;&#x6570;&#x91CF;&#xFF0C;cap &#x8FD4;&#x56DE;&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;
@@ -633,7 +641,7 @@
 <p><code>make(chan Type, capacity)</code></p>
 <p>&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x4E86;&#x4E00;&#x4E2A;&#x7F13;&#x51B2;&#x533A;&#x5BB9;&#x91CF;&#xFF0C;&#x901A;&#x9053;&#x5C31;&#x662F;&#x5F02;&#x6B65;&#x7684;&#x3002;&#x53EA;&#x8981;&#x7F13;&#x51B2;&#x533A;&#x6709;&#x672A;&#x4F7F;&#x7528;&#x7A7A;&#x95F4;&#x7528;&#x4E8E;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x6216;&#x8FD8;&#x5305;&#x542B;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4E48;&#x5176;&#x901A;&#x4FE1;&#x5C31;&#x4F1A;&#x65E0;&#x963B;&#x585E;&#x5730;&#x8FDB;&#x884C;&#x3002;</p>
 <p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code>func main() {
+<pre class="language-"><code>func main() {
     c := make(chan int, 3) //&#x5E26;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053;
 
     //&#x5185;&#x7F6E;&#x51FD;&#x6570; len &#x8FD4;&#x56DE;&#x672A;&#x88AB;&#x8BFB;&#x53D6;&#x7684;&#x7F13;&#x51B2;&#x5143;&#x7D20;&#x6570;&#x91CF;&#xFF0C; cap &#x8FD4;&#x56DE;&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;
@@ -659,7 +667,7 @@
 <h1 id="&#x5173;&#x95ED;channel"><a name="&#x5173;&#x95ED;channel" class="anchor-navigation-ex-anchor" href="#&#x5173;&#x95ED;channel"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x5173;&#x95ED;channel</h1>
 <p>&#x5982;&#x679C;&#x53D1;&#x9001;&#x8005;&#x77E5;&#x9053;&#xFF0C;&#x6CA1;&#x6709;&#x66F4;&#x591A;&#x7684;&#x503C;&#x9700;&#x8981;&#x53D1;&#x9001;&#x5230;channel&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x8BA9;&#x63A5;&#x6536;&#x8005;&#x4E5F;&#x80FD;&#x53CA;&#x65F6;&#x77E5;&#x9053;&#x6CA1;&#x6709;&#x591A;&#x4F59;&#x7684;&#x503C;&#x53EF;&#x63A5;&#x6536;&#x5C06;&#x662F;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x63A5;&#x6536;&#x8005;&#x53EF;&#x4EE5;&#x505C;&#x6B62;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x63A5;&#x6536;&#x7B49;&#x5F85;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x7684;close&#x51FD;&#x6570;&#x6765;&#x5173;&#x95ED;channel&#x5B9E;&#x73B0;&#x3002;
 &#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code>func main() {
+<pre class="language-"><code>func main() {
     c := make(chan int)
 
     go func() {
@@ -696,7 +704,7 @@ Finished</p>
 <li>&#x5BF9;&#x4E8E;nil channel&#xFF0C;&#x65E0;&#x8BBA;&#x6536;&#x53D1;&#x90FD;&#x4F1A;&#x88AB;&#x963B;&#x585E;&#x3002;</li>
 </ul>
 <p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; range &#x6765;&#x8FED;&#x4EE3;&#x4E0D;&#x65AD;&#x64CD;&#x4F5C;channel&#xFF1A;</p>
-<pre><code>func main() {
+<pre class="language-"><code>func main() {
     c := make(chan int)
 
     go func() {
@@ -718,7 +726,7 @@ Finished</p>
 <li>&#x4F46;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x89C1;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x4F20;&#x9012;&#x800C;&#x503C;&#x5E0C;&#x671B;&#x5BF9;&#x65B9;&#x662F;&#x5355;&#x5411;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x8981;&#x4E48;&#x53EA;&#x8BA9;&#x5B83;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x8981;&#x4E48;&#x53EA;&#x8BA9;&#x5B83;&#x63A5;&#x6536;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x901A;&#x9053;&#x7684;&#x65B9;&#x5411;&#x3002;</li>
 </ul>
 <p>&#x5355;&#x5411;channel&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>var ch1 chan int       // ch1&#x662F;&#x4E00;&#x4E2A;&#x6B63;&#x5E38;&#x7684;channel&#xFF0C;&#x662F;&#x53CC;&#x5411;&#x7684;
+<pre class="language-"><code>var ch1 chan int       // ch1&#x662F;&#x4E00;&#x4E2A;&#x6B63;&#x5E38;&#x7684;channel&#xFF0C;&#x662F;&#x53CC;&#x5411;&#x7684;
 var ch2 chan&lt;- float64 // ch2&#x662F;&#x5355;&#x5411;channel&#xFF0C;&#x53EA;&#x7528;&#x4E8E;&#x5199;float64&#x6570;&#x636E;
 var ch3 &lt;-chan int     // ch3&#x662F;&#x5355;&#x5411;channel&#xFF0C;&#x53EA;&#x7528;&#x4E8E;&#x8BFB;int&#x6570;&#x636E;
 </code></pre><ul>
@@ -726,7 +734,7 @@ var ch3 &lt;-chan int     // ch3&#x662F;&#x5355;&#x5411;channel&#xFF0C;&#x53EA;&
 <li>&lt;-chan &#x8868;&#x793A;&#x6570;&#x636E;&#x4ECE;&#x7BA1;&#x9053;&#x51FA;&#x6765;&#xFF0C;&#x5BF9;&#x4E8E;&#x8C03;&#x7528;&#x8005;&#x5C31;&#x662F;&#x5F97;&#x5230;&#x7BA1;&#x9053;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5F53;&#x7136;&#x5C31;&#x662F;&#x8F93;&#x5165;&#x3002;</li>
 </ul>
 <p>&#x53EF;&#x4EE5;&#x5C06; channel &#x9690;&#x5F0F;&#x8F6C;&#x6362;&#x4E3A;&#x5355;&#x5411;&#x961F;&#x5217;&#xFF0C;&#x53EA;&#x6536;&#x6216;&#x53EA;&#x53D1;&#xFF0C;&#x4E0D;&#x80FD;&#x5C06;&#x5355;&#x5411; channel &#x8F6C;&#x6362;&#x4E3A;&#x666E;&#x901A; channel&#xFF1A;</p>
-<pre><code>    c := make(chan int, 3)
+<pre class="language-"><code>    c := make(chan int, 3)
     var send chan&lt;- int = c // send-only
     var recv &lt;-chan int = c // receive-only
     send &lt;- 1
@@ -738,7 +746,7 @@ var ch3 &lt;-chan int     // ch3&#x662F;&#x5355;&#x5411;channel&#xFF0C;&#x53EA;&
     d1 := (chan int)(send) //cannot convert send (type chan&lt;- int) to type chan int
     d2 := (chan int)(recv) //cannot convert recv (type &lt;-chan int) to type chan int
 </code></pre><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code>//   chan&lt;- //&#x53EA;&#x5199;
+<pre class="language-"><code>//   chan&lt;- //&#x53EA;&#x5199;
 func counter(out chan&lt;- int) {
     defer close(out)
     for i := 0; i &lt; 5; i++ {
@@ -788,7 +796,7 @@ func main() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"channel","level":"1.3.3","depth":2,"next":{"title":"生产者消费者","level":"1.3.4","depth":2,"path":"011生产者消费者.md","ref":"011生产者消费者.md","articles":[]},"previous":{"title":"goroutine","level":"1.3.2","depth":2,"path":"009goroutine.md","ref":"009goroutine.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"010channel.md","mtime":"2018-09-03T08:59:32.656Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T03:23:07.829Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"channel","level":"1.3.3","depth":2,"next":{"title":"生产者消费者","level":"1.3.4","depth":2,"path":"011生产者消费者.md","ref":"011生产者消费者.md","articles":[]},"previous":{"title":"goroutine","level":"1.3.2","depth":2,"path":"009goroutine.md","ref":"009goroutine.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","emphasize","-highlight","prism","prism-themes","copy-code-button","splitter","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"shortName":"introducetogitbook"},"emphasize":{},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"010channel.md","mtime":"2018-09-03T08:59:32.656Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T10:18:22.173Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -803,6 +811,14 @@ func main() {
     
         
         <script src="gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         

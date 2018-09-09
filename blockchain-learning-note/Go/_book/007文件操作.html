@@ -25,7 +25,15 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -566,7 +574,7 @@
 <p><code>func Remove(name string) Error</code></p>
 <p>&#x8C03;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x5C31;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x6587;&#x4EF6;&#x540D;&#x4E3A;name&#x7684;&#x6587;&#x4EF6;</p>
 <h2 id="&#x7EC3;&#x4E60;&#xFF1A;&#x5927;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;"><a name="&#x7EC3;&#x4E60;&#xFF1A;&#x5927;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;" class="anchor-navigation-ex-anchor" href="#&#x7EC3;&#x4E60;&#xFF1A;&#x5927;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x7EC3;&#x4E60;&#xFF1A;&#x5927;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;</h2>
-<pre><code>package main
+<pre class="language-"><code>package main
 
 import (
     &quot;fmt&quot;
@@ -640,7 +648,7 @@ func main() {
 <p>&#x8FD9;&#x4E0E;&#x8BFB;&#x6587;&#x4EF6;&#x6709;&#x6240;&#x4E0D;&#x540C;&#x3002;&#x76EE;&#x5F55;&#x4E2D;&#x5B58;&#x653E;&#x7684;&#x662F;&#x6587;&#x4EF6;&#x540D;&#x548C;&#x5B50;&#x76EE;&#x5F55;&#x540D;&#x3002;&#x6240;&#x4EE5;&#x4F7F;&#x7528;Readdir&#x51FD;&#x6570;&#x6765;&#x5B8C;&#x6210;&#x3002;</p>
 <p><code>&#x53C2;&#x6570;&#xFF1A;n, &#x8868;&#x8BFB;&#x53D6;&#x76EE;&#x5F55;&#x7684;&#x6210;&#x5458;&#x4E2A;&#x6570;&#x3002;&#x901A;&#x5E38;&#x4F20;-1,&#x8868;&#x8BFB;&#x53D6;&#x76EE;&#x5F55;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;</code>
 <code>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;FileInfo&#x7C7B;&#x578B;&#x7684;&#x5207;&#x7247;&#x3002;&#x5176;&#x5185;&#x90E8;&#x4FDD;&#x5B58;&#x4E86;&#x6587;&#x4EF6;&#x540D;&#x3002;error&#x4E2D;&#x4FDD;&#x5B58;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;</code></p>
-<pre><code>type FileInfo interface {
+<pre class="language-"><code>type FileInfo interface {
    Name() string       // base name of the file
    Size() int64        // length in bytes for regular files; system-dependent for others
    Mode() FileMode     // file mode bits
@@ -651,7 +659,7 @@ func main() {
 </code></pre><p>&#x5F97;&#x5230; FileInfo&#x7C7B;&#x578B;&#x5207;&#x7247;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;range&#x904D;&#x5386;&#x5207;&#x7247;&#x5143;&#x7D20;&#xFF0C;&#x4F7F;&#x7528;.Name()&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x540D;&#x3002;&#x4F7F;&#x7528;.Size()&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;&#x4F7F;&#x7528;.IsDir()&#x5224;&#x65AD;&#x6587;&#x4EF6;&#x662F;&#x76EE;&#x5F55;&#x8FD8;&#x662F;&#x975E;&#x76EE;&#x5F55;&#x6587;&#x4EF6;&#x3002;</p>
 <p>&#x5982;&#xFF1A;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x63D0;&#x793A;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x4F4D;&#x7F6E;&#xFF0C;&#x6253;&#x5F00;&#x8BE5;&#x76EE;&#x5F55;&#xFF0C;&#x67E5;&#x770B;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6210;&#x5458;&#xFF0C;&#x5E76;&#x5224;&#x522B;&#x4ED6;&#x4EEC;&#x662F;&#x6587;&#x4EF6;&#x8FD8;&#x662F;&#x76EE;&#x5F55;&#x3002;
 &#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code>func main()  {
+<pre class="language-"><code>func main()  {
    fmt.Println(&quot;&#x8BF7;&#x8F93;&#x5165;&#x8981;&#x627E;&#x5BFB;&#x7684;&#x76EE;&#x5F55;&#xFF1A;&quot;)
    var path string
    fmt.Scan(&amp;path)                   // &#x83B7;&#x53D6;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x5F55;&#x540D;
@@ -711,7 +719,7 @@ func main() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"文件操作","level":"1.2.7","depth":2,"next":{"title":"并发编程","level":"1.3","depth":1,"path":"008并发编程.md","ref":"008并发编程.md","articles":[{"title":"并发编程","level":"1.3.1","depth":2,"path":"008并发编程.md","ref":"008并发编程.md","articles":[]},{"title":"goroutine","level":"1.3.2","depth":2,"path":"009goroutine.md","ref":"009goroutine.md","articles":[]},{"title":"channel","level":"1.3.3","depth":2,"path":"010channel.md","ref":"010channel.md","articles":[]},{"title":"生产者消费者","level":"1.3.4","depth":2,"path":"011生产者消费者.md","ref":"011生产者消费者.md","articles":[]},{"title":"定时器","level":"1.3.5","depth":2,"path":"012定时器.md","ref":"012定时器.md","articles":[]},{"title":"select","level":"1.3.6","depth":2,"path":"013select.md","ref":"013select.md","articles":[]},{"title":"锁","level":"1.3.7","depth":2,"path":"014锁.md","ref":"014锁.md","articles":[]},{"title":"条件变量","level":"1.3.8","depth":2,"path":"015条件变量.md","ref":"015条件变量.md","articles":[]}]},"previous":{"title":"字符串","level":"1.2.6","depth":2,"path":"006字符串.md","ref":"006字符串.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"007文件操作.md","mtime":"2018-09-03T02:04:59.868Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T03:23:07.829Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"文件操作","level":"1.2.7","depth":2,"next":{"title":"并发编程","level":"1.3","depth":1,"path":"008并发编程.md","ref":"008并发编程.md","articles":[{"title":"并发编程","level":"1.3.1","depth":2,"path":"008并发编程.md","ref":"008并发编程.md","articles":[]},{"title":"goroutine","level":"1.3.2","depth":2,"path":"009goroutine.md","ref":"009goroutine.md","articles":[]},{"title":"channel","level":"1.3.3","depth":2,"path":"010channel.md","ref":"010channel.md","articles":[]},{"title":"生产者消费者","level":"1.3.4","depth":2,"path":"011生产者消费者.md","ref":"011生产者消费者.md","articles":[]},{"title":"定时器","level":"1.3.5","depth":2,"path":"012定时器.md","ref":"012定时器.md","articles":[]},{"title":"select","level":"1.3.6","depth":2,"path":"013select.md","ref":"013select.md","articles":[]},{"title":"锁","level":"1.3.7","depth":2,"path":"014锁.md","ref":"014锁.md","articles":[]},{"title":"条件变量","level":"1.3.8","depth":2,"path":"015条件变量.md","ref":"015条件变量.md","articles":[]}]},"previous":{"title":"字符串","level":"1.2.6","depth":2,"path":"006字符串.md","ref":"006字符串.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","emphasize","-highlight","prism","prism-themes","copy-code-button","splitter","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"shortName":"introducetogitbook"},"emphasize":{},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"007文件操作.md","mtime":"2018-09-03T02:04:59.868Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T10:18:22.173Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -726,6 +734,14 @@ func main() {
     
         
         <script src="gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         

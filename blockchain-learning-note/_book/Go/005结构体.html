@@ -25,7 +25,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -979,7 +987,7 @@
 <p>&#x7ED3;&#x6784;&#x4F53;&#x662F;&#x4E00;&#x79CD;&#x805A;&#x5408;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5B83;&#x662F;&#x7531;&#x4E00;&#x7CFB;&#x5217;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x6216;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x6784;&#x6210;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5408;&#xFF0C;&#x5C31;&#x662F;java&#x4E2D;&#x7684;&#x5B9E;&#x4F53;&#x7C7B;&#x3002;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x79F0;&#x4E3A;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x6210;&#x5458;&#x3002; </p>
 <h1 id="&#x7ED3;&#x6784;&#x4F53;&#x521D;&#x59CB;&#x5316;"><a name="&#x7ED3;&#x6784;&#x4F53;&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x7ED3;&#x6784;&#x4F53;&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x7ED3;&#x6784;&#x4F53;&#x521D;&#x59CB;&#x5316;</h1>
 <h2 id="&#x666E;&#x901A;&#x53D8;&#x91CF;"><a name="&#x666E;&#x901A;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x666E;&#x901A;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x666E;&#x901A;&#x53D8;&#x91CF;</h2>
-<pre><code>type Student struct {
+<pre class="language-"><code>type Student struct {
     id   int
     name string
     sex  byte
@@ -997,7 +1005,7 @@ func main() {
     s4 := Student{id: 2, name: &quot;Zoro&quot;}
 }
 </code></pre><h2 id="&#x6307;&#x9488;&#x53D8;&#x91CF;"><a name="&#x6307;&#x9488;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x6307;&#x9488;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x6307;&#x9488;&#x53D8;&#x91CF;</h2>
-<pre><code>type Student struct {
+<pre class="language-"><code>type Student struct {
     id   int
     name string
     sex  byte
@@ -1011,7 +1019,7 @@ func main() {
 }
 </code></pre><h1 id="&#x4F7F;&#x7528;&#x7ED3;&#x6784;&#x4F53;&#x6210;&#x5458;"><a name="&#x4F7F;&#x7528;&#x7ED3;&#x6784;&#x4F53;&#x6210;&#x5458;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x7ED3;&#x6784;&#x4F53;&#x6210;&#x5458;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x4F7F;&#x7528;&#x7ED3;&#x6784;&#x4F53;&#x6210;&#x5458;</h1>
 <h2 id="&#x666E;&#x901A;&#x53D8;&#x91CF;_1"><a name="&#x666E;&#x901A;&#x53D8;&#x91CF;_1" class="anchor-navigation-ex-anchor" href="#&#x666E;&#x901A;&#x53D8;&#x91CF;_1"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x666E;&#x901A;&#x53D8;&#x91CF;</h2>
-<pre><code>//===============&#x7ED3;&#x6784;&#x4F53;&#x53D8;&#x91CF;&#x4E3A;&#x666E;&#x901A;&#x53D8;&#x91CF;
+<pre class="language-"><code>//===============&#x7ED3;&#x6784;&#x4F53;&#x53D8;&#x91CF;&#x4E3A;&#x666E;&#x901A;&#x53D8;&#x91CF;
     //1&#x3001;&#x6253;&#x5370;&#x6210;&#x5458;
     var s1 Student = Student{1, &quot;Luffy&quot;, &apos;m&apos;, 18, &quot;EastSea&quot;}
     //&#x7ED3;&#x679C;&#xFF1A;id = 1, name = Luffy, sex = m, age = 18, addr = EastSea
@@ -1026,7 +1034,7 @@ func main() {
     s2.addr = &quot;EastSea&quot;
     fmt.Println(s2) //{2 yoyo 102 16 EastSea}
 </code></pre><h2 id="&#x6307;&#x9488;&#x53D8;&#x91CF;_1"><a name="&#x6307;&#x9488;&#x53D8;&#x91CF;_1" class="anchor-navigation-ex-anchor" href="#&#x6307;&#x9488;&#x53D8;&#x91CF;_1"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x6307;&#x9488;&#x53D8;&#x91CF;</h2>
-<pre><code> //===============&#x7ED3;&#x6784;&#x4F53;&#x53D8;&#x91CF;&#x4E3A;&#x6307;&#x9488;&#x53D8;&#x91CF;
+<pre class="language-"><code> //===============&#x7ED3;&#x6784;&#x4F53;&#x53D8;&#x91CF;&#x4E3A;&#x6307;&#x9488;&#x53D8;&#x91CF;
     //3&#x3001;&#x5148;&#x5206;&#x914D;&#x7A7A;&#x95F4;&#xFF0C;&#x518D;&#x8D4B;&#x503C;
     s3 := new(Student)
     s3.id = 3
@@ -1045,7 +1053,7 @@ func main() {
 </code></pre><p>&#x5728;Go&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x666E;&#x901A;&#x7ED3;&#x6784;&#x4F53;&#x53D8;&#x91CF; &#x548C; &#x7ED3;&#x6784;&#x4F53;&#x6307;&#x9488;&#x53D8;&#x91CF;&#x53D1;&#x8BBF;&#x95EE;&#x6210;&#x5458;&#x7684;&#x65B9;&#x6CD5;&#x4E00;&#x81F4;&#x3002;&#x4E0D;&#x9700;&#x8981;&#x52A0;&#x4EE5;&#x533A;&#x5206;&#x3002;</p>
 <h1 id="&#x7ED3;&#x6784;&#x4F53;&#x6BD4;&#x8F83;"><a name="&#x7ED3;&#x6784;&#x4F53;&#x6BD4;&#x8F83;" class="anchor-navigation-ex-anchor" href="#&#x7ED3;&#x6784;&#x4F53;&#x6BD4;&#x8F83;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x7ED3;&#x6784;&#x4F53;&#x6BD4;&#x8F83;</h1>
 <p>&#x5982;&#x679C;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x5168;&#x90E8;&#x6210;&#x5458;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x6BD4;&#x8F83;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x7ED3;&#x6784;&#x4F53;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x6BD4;&#x8F83;&#x7684;&#xFF0C;&#x90A3;&#x6837;&#x7684;&#x8BDD;&#x4E24;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;&#x5C06;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; == &#x6216; != &#x8FD0;&#x7B97;&#x7B26;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF0C;&#x4F46;&#x4E0D;&#x652F;&#x6301; &gt; &#x6216; &lt; &#x3002;</p>
-<pre><code>func main() {
+<pre class="language-"><code>func main() {
     s1 := Student{1, &quot;Luffy&quot;, &apos;m&apos;, 18, &quot;EastSea&quot;}
     s2 := Student{1, &quot;Luffy&quot;, &apos;m&apos;, 18, &quot;EastSea&quot;}
 
@@ -1054,7 +1062,7 @@ func main() {
 }
 </code></pre><h1 id="&#x4F5C;&#x51FD;&#x6570;&#x53C2;&#x6570;"><a name="&#x4F5C;&#x51FD;&#x6570;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x4F5C;&#x51FD;&#x6570;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x4F5C;&#x51FD;&#x6570;&#x53C2;&#x6570;</h1>
 <h2 id="&#x4F20;&#x503C;"><a name="&#x4F20;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x4F20;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1. &#x4F20;&#x503C;</h2>
-<pre><code>func printValue(stu Student) {
+<pre class="language-"><code>func printValue(stu Student) {
     stu.id = 250
     //printValue stu =  {250 Luffy 109 18 s EastSea}
     fmt.Println(&quot;printValue stu = &quot;, stu)
@@ -1068,7 +1076,7 @@ var s Student = Student{1, &quot;Luffy&quot;, &apos;m&apos;, 18, &quot;EastSea&q
 }
 </code></pre><p>&#x4F20;&#x53C2;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5B9E;&#x53C2;&#x4F1A;&#x5C06;&#x81EA;&#x5DF1;&#x7684;&#x503C;&#x62F7;&#x8D1D;&#x4E00;&#x4EFD;&#x7ED9;&#x5F62;&#x53C2;&#x3002;&#x56E0;&#x6B64;&#x7ED3;&#x6784;&#x4F53;&#x201C;&#x4F20;&#x503C;&#x201D;&#x64CD;&#x4F5C;&#x51E0;&#x4E4E;&#x4E0D;&#x4F1A;&#x5728;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#x88AB;&#x4F7F;&#x7528;&#x5230;&#x3002;&#x8FD1;&#x4E4E;100%&#x7684;&#x4F7F;&#x7528;&#x90FD;&#x91C7;&#x7528;&#x201C;&#x4F20;&#x5740;&#x201D;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5C06;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x5F15;&#x7528;&#x4F20;&#x9012;&#x7ED9;&#x6240;&#x9700;&#x51FD;&#x6570;&#x3002;</p>
 <h2 id="&#x4F20;&#x5F15;&#x7528;"><a name="&#x4F20;&#x5F15;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x4F20;&#x5F15;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2. &#x4F20;&#x5F15;&#x7528;</h2>
-<pre><code>func printPointer(p *Student) {
+<pre class="language-"><code>func printPointer(p *Student) {
     p.id = 250
     //printPointer p =  &amp;{250 Luffy 109 18 EastSea}
     fmt.Println(&quot;printPointer p = &quot;, p)
@@ -1107,7 +1115,7 @@ func main() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"结构体","level":"1.2.5","depth":2,"next":{"title":"字符串","level":"1.2.6","depth":2,"path":"Go/006字符串.md","ref":"Go/006字符串.md","articles":[]},"previous":{"title":"map","level":"1.2.4","depth":2,"path":"Go/004map.md","ref":"Go/004map.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"Go/005结构体.md","mtime":"2018-09-02T13:48:36.441Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T01:02:50.375Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"结构体","level":"1.2.5","depth":2,"next":{"title":"字符串","level":"1.2.6","depth":2,"path":"Go/006字符串.md","ref":"Go/006字符串.md","articles":[]},"previous":{"title":"map","level":"1.2.4","depth":2,"path":"Go/004map.md","ref":"Go/004map.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","emphasize","-highlight","prism","prism-themes","copy-code-button","splitter","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"shortName":"introducetogitbook"},"emphasize":{},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"Go/005结构体.md","mtime":"2018-09-02T13:48:36.441Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T10:13:53.853Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1122,6 +1130,14 @@ func main() {
     
         
         <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         

@@ -25,7 +25,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -975,7 +983,7 @@
                                 
                                 <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x5BFC;&#x5165;mysql&#x9A71;&#x52A8;"><b>1. </b>&#x5BFC;&#x5165;MySQL&#x9A71;&#x52A8;</a></li><li><span class="title-icon "></span><a href="#&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;"><b>2. </b>&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;</a></li><li><span class="title-icon "></span><a href="#&#x63D2;&#x5165;&#x6570;&#x636E;"><b>3. </b>&#x63D2;&#x5165;&#x6570;&#x636E;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5355;&#x884C;&#x63D2;&#x5165;"><b>3.1. </b>&#x5355;&#x884C;&#x63D2;&#x5165;</a></li><li><span class="title-icon "></span><a href="#&#x591A;&#x884C;&#x63D2;&#x5165;"><b>3.2. </b>&#x591A;&#x884C;&#x63D2;&#x5165;</a></li><li><span class="title-icon "></span><a href="#&#x9884;&#x7F16;&#x8BD1;&#x63D2;&#x5165;"><b>3.3. </b>&#x9884;&#x7F16;&#x8BD1;&#x63D2;&#x5165;</a></li></ul><li><span class="title-icon "></span><a href="#&#x67E5;&#x8BE2;&#x6570;&#x636E;"><b>4. </b>&#x67E5;&#x8BE2;&#x6570;&#x636E;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5355;&#x884C;&#x67E5;&#x8BE2;"><b>4.1. </b>&#x5355;&#x884C;&#x67E5;&#x8BE2;</a></li><li><span class="title-icon "></span><a href="#&#x591A;&#x884C;&#x67E5;&#x8BE2;"><b>4.2. </b>&#x591A;&#x884C;&#x67E5;&#x8BE2;</a></li><li><span class="title-icon "></span><a href="#&#x9884;&#x7F16;&#x8BD1;&#x67E5;&#x8BE2;"><b>4.3. </b>&#x9884;&#x7F16;&#x8BD1;&#x67E5;&#x8BE2;</a></li></ul></ul></div><a href="#&#x5BFC;&#x5165;mysql&#x9A71;&#x52A8;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5BFC;&#x5165;mysql&#x9A71;&#x52A8;"><a name="&#x5BFC;&#x5165;mysql&#x9A71;&#x52A8;" class="anchor-navigation-ex-anchor" href="#&#x5BFC;&#x5165;mysql&#x9A71;&#x52A8;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5BFC;&#x5165;MySQL&#x9A71;&#x52A8;</h1>
 <p>&#x5728;Go&#x4E2D;&#x64CD;&#x4F5C;mysql&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x9700;&#x8981;&#x5F15;&#x5165;&#x7B2C;&#x4E09;&#x65B9;&#x9A71;&#x52A8;&#xFF0C;&#x9996;&#x5148;&#x5BFC;&#x5165;&#x4EE5;&#x4E0B;&#x5305;&#x540D;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x8BC6;&#x522B;<code>_ &quot;github.com/go-sql-driver/mysql&quot;</code>&#xFF0C;&#x9700;&#x8981;&#x5148;&#x5728;github&#x4E0A;&#x4E0B;&#x8F7D;&#x9A71;&#x52A8;&#xFF0C;&#x4E0B;&#x8F7D;&#x548C;&#x914D;&#x7F6E;&#x8BE6;&#x7EC6;&#x8FC7;&#x7A0B;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x9644;&#x5F55;&#x3002;</p>
-<pre><code>import (
+<pre class="language-"><code>import (
    &quot;database/sql&quot;
    _ &quot;github.com/go-sql-driver/mysql&quot;
 )
@@ -986,12 +994,12 @@
 <p>dataSourceName: &#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FDE;&#x63A5;&#x5305;&#x542B;&#x4E86;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7528;&#x6237;&#x540D;, &#x5BC6;&#x7801;, &#x6570;&#x636E;&#x5E93;&#x4E3B;&#x673A;&#x4EE5;&#x53CA;&#x9700;&#x8981;&#x8FDE;&#x63A5;&#x7684;&#x6570;&#x636E;&#x5E93;&#x540D;&#x7B49;&#x4FE1;&#x606F;.</p>
 <p><strong>sql.Open&#x5E76;&#x4E0D;&#x4F1A;&#x7ACB;&#x5373;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;, &#x4E5F;&#x4E0D;&#x4F1A;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x94FE;&#x63A5;&#x53C2;&#x6570;&#x7684;&#x5408;&#x6CD5;&#x6027;&#x505A;&#x68C0;&#x9A8C;, &#x5B83;&#x4EC5;&#x4EC5;&#x662F;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;sql.DB&#x5BF9;&#x8C61;. &#x5F53;&#x771F;&#x6B63;&#x8FDB;&#x884C;&#x7B2C;&#x4E00;&#x6B21;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;&#x64CD;&#x4F5C;&#x65F6;, &#x6B64;&#x65F6;&#x624D;&#x4F1A;&#x771F;&#x6B63;&#x5EFA;&#x7ACB;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;;</strong></p>
 <p><strong>&#x8BED;&#x6CD5;&#xFF1A;sql.Open(&#x9A71;&#x52A8;&#x540D;&#xFF0C;&quot;&#x7528;&#x6237;&#x540D;:&#x5BC6;&#x7801;@[&#x8FDE;&#x63A5;&#x65B9;&#x5F0F;]&#xFF08;&#x4E3B;&#x673A;&#x540D;&#x79F0;:&#x7AEF;&#x53E3;&#x53F7;&#xFF09;/&#x8FDE;&#x63A5;&#x7684;&#x6570;&#x636E;&#x5E93;&#x540D;&quot;)</strong></p>
-<pre><code>db,err :=sql.Open(&quot;mysql&quot;,&quot;root:1@tcp(192.168.110.3:3306)/huoying&quot;);
+<pre class="language-"><code>db,err :=sql.Open(&quot;mysql&quot;,&quot;root:1@tcp(192.168.110.3:3306)/huoying&quot;);
 
 defer db.Close()
 </code></pre><p><mark>sql.DB&#x8868;&#x793A;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x62BD;&#x8C61;&#x63A5;&#x53E3;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x4E0D;&#x662F;&#x6240;&#x8C13;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x5BF9;&#x8C61;&#xFF0C;sql.DB&#x5BF9;&#x8C61;&#x53EA;&#x6709;&#x5F53;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x65F6;&#x624D;&#x4F1A;&#x521B;&#x5EFA;&#x8FDE;&#x63A5;&#x3002;</mark></p>
 <p>&#x5982;&#x679C;&#x60F3;&#x7ACB;&#x5373;&#x9A8C;&#x8BC1;&#x8FDE;&#x63A5;&#xFF0C;&#x9700;&#x8981;&#x7528;Ping()&#x65B9;&#x6CD5;;</p>
-<pre><code>err = db.Ping()
+<pre class="language-"><code>err = db.Ping()
 if err != nil{
    fmt.Println(&quot;ping fail&quot;)
    log.Fatal(err)
@@ -1008,7 +1016,7 @@ if err != nil{
 <h1 id="&#x63D2;&#x5165;&#x6570;&#x636E;"><a name="&#x63D2;&#x5165;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x63D2;&#x5165;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x63D2;&#x5165;&#x6570;&#x636E;</h1>
 <h2 id="&#x5355;&#x884C;&#x63D2;&#x5165;"><a name="&#x5355;&#x884C;&#x63D2;&#x5165;" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x884C;&#x63D2;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x5355;&#x884C;&#x63D2;&#x5165;</h2>
 <p>&#x5728;go&#x4E2D;&#x8F93;&#x5165;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code>ret, err := db.Exec(&quot;INSERT INTO hero VALUES(390000,&apos;&#x6C34;&#x5F71;&apos;,&apos;&#x4E0A;&#x5FCD;&apos;,null,&apos;2000-10-10&apos;,22000,null,null)&quot;)
+<pre class="language-"><code>ret, err := db.Exec(&quot;INSERT INTO hero VALUES(390000,&apos;&#x6C34;&#x5F71;&apos;,&apos;&#x4E0A;&#x5FCD;&apos;,null,&apos;2000-10-10&apos;,22000,null,null)&quot;)
 
 if err != nil {
    fmt.Printf(&quot;insert data error: %v\n&quot;, err)
@@ -1019,7 +1027,7 @@ if RowsAffected, err := ret.RowsAffected(); nil == err {
 }
 </code></pre><p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7136;&#x540E;&#x7ED3;&#x679C;ret&#x4E2D;&#x7684;RowsAffected()&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5F71;&#x54CD;&#x7684;&#x884C;&#x6570;</p>
 <h2 id="&#x591A;&#x884C;&#x63D2;&#x5165;"><a name="&#x591A;&#x884C;&#x63D2;&#x5165;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x884C;&#x63D2;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x591A;&#x884C;&#x63D2;&#x5165;</h2>
-<pre><code>str :=  `
+<pre class="language-"><code>str :=  `
 INSERT INTO hero (
    heroId,
    heroName,
@@ -1048,7 +1056,7 @@ if RowsAffected, err := ret.RowsAffected(); nil == err {
 </code></pre><h2 id="&#x9884;&#x7F16;&#x8BD1;&#x63D2;&#x5165;"><a name="&#x9884;&#x7F16;&#x8BD1;&#x63D2;&#x5165;" class="anchor-navigation-ex-anchor" href="#&#x9884;&#x7F16;&#x8BD1;&#x63D2;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. &#x9884;&#x7F16;&#x8BD1;&#x63D2;&#x5165;</h2>
 <p>&#x4F7F;&#x7528;&#x9884;&#x7F16;&#x8BD1;&#x63D2;&#x5165;&#x53EF;&#x4EE5;&#x540E;&#x671F;&#x6307;&#x5B9A;&#x63D2;&#x5165;&#x7684;&#x6570;&#x636E;&#xFF1B;</p>
 <p>&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>stmt, _ := db.Prepare(`INSERT INTO hero(heroId,heroName,job)VALUES(?,?,?);`)
+<pre class="language-"><code>stmt, _ := db.Prepare(`INSERT INTO hero(heroId,heroName,job)VALUES(?,?,?);`)
 ret, err := stmt.Exec(333,&quot;ccc&quot;,&quot;&#x4E0A;&#x5FCD;&quot;)
 
 if err != nil {
@@ -1061,7 +1069,7 @@ if RowsAffected, err := ret.RowsAffected(); nil == err {
 </code></pre><h1 id="&#x67E5;&#x8BE2;&#x6570;&#x636E;"><a name="&#x67E5;&#x8BE2;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x67E5;&#x8BE2;&#x6570;&#x636E;</h1>
 <h2 id="&#x5355;&#x884C;&#x67E5;&#x8BE2;"><a name="&#x5355;&#x884C;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x884C;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. &#x5355;&#x884C;&#x67E5;&#x8BE2;</h2>
 <p>&#x5229;&#x7528;QueryRow&#x5B9E;&#x73B0;&#x5355;&#x884C;&#x67E5;&#x8BE2;&#xFF0C;&#x5C06;&#x63D2;&#x5165;&#x7ED3;&#x679C;&#x653E;&#x5165;&#x5230;.Scan()&#x7684;&#x53C2;&#x6570;&#x4E2D;</p>
-<pre><code>var heroId int
+<pre class="language-"><code>var heroId int
 var heroName string
 
 err =db.QueryRow(&quot;SELECT heroId,heroName FROM hero WHERE heroName = &apos;&#x6F29;&#x6DA1;&#x9E23;&#x4EBA;&apos;;&quot;).Scan(&amp;heroId,&amp;heroName)
@@ -1072,7 +1080,7 @@ if err != nil{
 
 fmt.Println(heroId,heroName)
 </code></pre><h2 id="&#x591A;&#x884C;&#x67E5;&#x8BE2;"><a name="&#x591A;&#x884C;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x884C;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. &#x591A;&#x884C;&#x67E5;&#x8BE2;</h2>
-<pre><code>rows, err := db.Query(&quot;SELECT heroId,heroName FROM hero;&quot;)
+<pre class="language-"><code>rows, err := db.Query(&quot;SELECT heroId,heroName FROM hero;&quot;)
 
 for rows.Next(){
    var heroId,heroName string
@@ -1085,7 +1093,7 @@ for rows.Next(){
    fmt.Println(heroName)
 }
 </code></pre><h2 id="&#x9884;&#x7F16;&#x8BD1;&#x67E5;&#x8BE2;"><a name="&#x9884;&#x7F16;&#x8BD1;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x9884;&#x7F16;&#x8BD1;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>4.3. &#x9884;&#x7F16;&#x8BD1;&#x67E5;&#x8BE2;</h2>
-<pre><code>var heroId,heroName string
+<pre class="language-"><code>var heroId,heroName string
 stmt, _ := db.Prepare(&quot;SELECT heroId,heroName FROM hero where heroid = ?;&quot;);
 ret, err := stmt.Query(90516);
 //&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x9700;&#x8981;Next()&#x4E0B;&#xFF0C;&#x4E0D;&#x7136;&#x4E0B;&#x9762;&#x53D6;&#x4E0D;&#x5230;&#x503C;
@@ -1119,7 +1127,7 @@ fmt.Println(&quot;heroId =&quot; , heroId, &quot;heroName = &quot;, heroName);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Go操作MysSql","level":"1.3.12","depth":2,"next":{"title":"附录","level":"1.3.13","depth":2,"path":"Database/013附录.md","ref":"Database/013附录.md","articles":[]},"previous":{"title":"数据完整性约束","level":"1.3.11","depth":2,"path":"Database/011数据完整性约束.md","ref":"Database/011数据完整性约束.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"Database/012Go操作MysSql.md","mtime":"2018-08-31T13:41:17.094Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T01:02:50.375Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Go操作MysSql","level":"1.3.12","depth":2,"next":{"title":"附录","level":"1.3.13","depth":2,"path":"Database/013附录.md","ref":"Database/013附录.md","articles":[]},"previous":{"title":"数据完整性约束","level":"1.3.11","depth":2,"path":"Database/011数据完整性约束.md","ref":"Database/011数据完整性约束.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","emphasize","-highlight","prism","prism-themes","copy-code-button","splitter","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"shortName":"introducetogitbook"},"emphasize":{},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"Database/012Go操作MysSql.md","mtime":"2018-08-31T13:41:17.094Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T10:13:53.853Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1134,6 +1142,14 @@ fmt.Println(&quot;heroId =&quot; , heroId, &quot;heroName = &quot;, heroName);
     
         
         <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         
