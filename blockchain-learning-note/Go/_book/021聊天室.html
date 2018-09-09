@@ -494,7 +494,137 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x5E76;&#x53D1;&#x804A;&#x5929;&#x5BA4;"><b>1. </b>&#x5E76;&#x53D1;&#x804A;&#x5929;&#x5BA4;</a></li></ul></div><a href="#&#x5E76;&#x53D1;&#x804A;&#x5929;&#x5BA4;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5E76;&#x53D1;&#x804A;&#x5929;&#x5BA4;"><a name="&#x5E76;&#x53D1;&#x804A;&#x5929;&#x5BA4;" class="anchor-navigation-ex-anchor" href="#&#x5E76;&#x53D1;&#x804A;&#x5929;&#x5BA4;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5E76;&#x53D1;&#x804A;&#x5929;&#x5BA4;</h1>
+<p><img src="images/&#x5E76;&#x53D1;&#x804A;&#x5929;&#x5BA4;.png" alt=""></p>
+<p>&#x540E;&#x671F;&#x53EF;&#x4EE5;&#x6269;&#x5C55;&#x4E00;&#x5BF9;&#x4E00;&#x804A;&#x5929;</p>
+<pre><code>package main
+
+import (
+    &quot;net&quot;
+    &quot;fmt&quot;
+    &quot;os&quot;
+    &quot;strings&quot;
+    &quot;time&quot;
+)
+
+type Client struct {
+    C    chan string
+    Addr string
+    Name string
+    conn net.Conn
+}
+
+var message = make(chan string)
+var onlineMap = make(map[string]*Client)
+//1&#xFF0C;&#x521B;&#x5EFA;&#x8FDE;&#x63A5;
+//2&#xFF0C;&#x5FAA;&#x73AF;&#x521B;&#x5EFA;&#x76D1;&#x542C;
+//3&#xFF0C;handleconnect&#xFF0C;
+//4&#xFF0C;&#x8BFB;&#x53D6;&#x7528;&#x6237;&#x4E0A;&#x7EBF;&#x6D88;&#x606F;&#x53D1;&#x7ED9;
+//5&#xFF0C;&#x521B;&#x5EFA;&#x7ED3;&#x6784;&#x4F53;&#xFF0C;map&#xFF0C;channel
+//6&#xFF0C;&#x521B;&#x5EFA;manage
+//7&#xFF0C;&#x521B;&#x5EFA;writeToClient
+
+func main() {
+
+    listener, err := net.Listen(&quot;tcp&quot;, &quot;127.0.0.1:8989&quot;)
+    handleErr(err, &quot;net.listen err&quot;)
+    defer listener.Close()
+    //Manage&#x5168;&#x53E5;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;&#x5E76;&#x4E14;&#x8981;&#x5728;&#x524D;&#x9762;&#x4EE5;go&#x7684;&#x65B9;&#x5F0F;&#x542F;&#x52A8;
+    go Manage()
+    for {
+        conn, err := listener.Accept()
+        handleErr(err, &quot;listener accept err&quot;)
+        go handleConnect(conn)
+    }
+}
+
+func Manage() {
+    for {
+        msg := &lt;-message
+        for _, v := range onlineMap {
+            v.C &lt;- msg
+        }
+    }
+}
+
+func handleConnect(conn net.Conn) {
+    var quit = make(chan bool)
+    var alive = make(chan bool)
+    defer conn.Close()
+    addr := conn.RemoteAddr().String()
+    fmt.Println(addr, &quot;&#x4E0A;&#x7EBF;&#x4E86;&quot;)
+    //&#x521B;&#x5EFA;&#x7ED3;&#x6784;&#x4F53;&#xFF0C;&#x5B58;&#x5165;map
+    clt := Client{make(chan string), addr, addr, conn}
+    onlineMap[addr] = &amp;clt
+    //&#x8981;&#x5728;&#x5E7F;&#x64AD;&#x524D;&#x542F;&#x52A8;
+    go writeToClient(clt)
+    message &lt;- makeMsg(addr, &quot;login!!!&quot;)
+    //&#x542F;&#x52A8;&#x4E00;&#x4E2A;go&#x7A0B; readmsg
+    go func() {
+        buf := make([]byte, 4096)
+        var msg string
+        for {
+            n, err := conn.Read(buf)
+            fmt.Println(n, err)
+            if err != nil {
+                quit &lt;- true
+                return
+            }
+            msg = string(buf[:n-1])
+            //Label:
+            fmt.Println(&quot;read finish&quot;)
+            fmt.Println(makeMsg(addr, msg))
+            if strings.Contains(msg, &quot;who&quot;) {
+                var userInfo string
+                for _, v := range onlineMap {
+                    userInfo += makeMsg(v.Addr, v.Name)
+                }
+                conn.Write([]byte(userInfo))
+                continue
+            } else if strings.HasPrefix(msg, &quot;rename|&quot;) {
+                clt.Name = string(msg[7:])
+                onlineMap[addr] = &amp;clt
+                conn.Write([]byte(&quot;rename success\n&quot;))
+                continue
+            }
+                message &lt;- makeMsg(addr, msg)
+            alive &lt;- true
+        }
+    }()
+    for {
+        select {
+        case &lt;-quit:
+            close(clt.C)
+            delete(onlineMap, addr)
+            message &lt;- makeMsg(clt.Name, &quot;quit!!!&quot;)
+            return
+        case &lt;-time.After(time.Second * 10000):
+            close(clt.C)
+            delete(onlineMap, addr)
+            message &lt;- makeMsg(clt.Name, &quot;quit!!!&quot;)
+            return
+        case &lt;-alive:
+
+        }
+    }
+
+}
+
+func writeToClient(clt Client) {
+    for msg := range clt.C {
+        clt.conn.Write([]byte(msg))
+    }
+}
+func makeMsg(addr string, s string) string {
+    return &quot;[&quot; + addr + &quot;]&quot; + s + &quot;\n&quot;
+}
+func handleErr(err error, str string) {
+    if err != nil {
+        fmt.Println(str, err)
+        os.Exit(1)
+    }
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -521,7 +651,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"聊天室（案例）","level":"1.4.6","depth":2,"next":{"title":"HTTP编程","level":"1.4.7","depth":2,"path":"022HTTP编程.md","ref":"022HTTP编程.md","articles":[]},"previous":{"title":"文件传输（案例）","level":"1.4.5","depth":2,"path":"020文件传输.md","ref":"020文件传输.md","articles":[]},"dir":"neutral"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"021聊天室.md","mtime":"2018-09-09T03:06:31.881Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T03:23:07.829Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"聊天室（案例）","level":"1.4.6","depth":2,"next":{"title":"HTTP编程","level":"1.4.7","depth":2,"path":"022HTTP编程.md","ref":"022HTTP编程.md","articles":[]},"previous":{"title":"文件传输（案例）","level":"1.4.5","depth":2,"path":"020文件传输.md","ref":"020文件传输.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"021聊天室.md","mtime":"2018-09-09T08:56:14.745Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T03:23:07.829Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
