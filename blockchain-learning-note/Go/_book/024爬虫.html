@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>文件传输（案例） · go语言学习笔记</title>
+        <title>爬虫 · go语言学习笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -59,10 +59,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="021聊天室.html" />
     
-    
-    <link rel="prev" href="019TCPUDP.html" />
+    <link rel="prev" href="023正则表达式.md" />
     
 
     </head>
@@ -408,7 +406,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.5" data-path="020文件传输.html">
+        <li class="chapter " data-level="1.4.5" data-path="020文件传输.html">
             
                 <a href="020文件传输.html">
             
@@ -460,7 +458,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.9" data-path="024爬虫.html">
+        <li class="chapter active" data-level="1.4.9" data-path="024爬虫.html">
             
                 <a href="024爬虫.html">
             
@@ -508,7 +506,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >文件传输（案例）</a>
+        <a href="." >爬虫</a>
     </h1>
 </div>
 
@@ -520,133 +518,93 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x4F20;&#x8F93;"><b>1. </b>&#x6587;&#x4EF6;&#x4F20;&#x8F93;</a></li></ul></div><a href="#&#x6587;&#x4EF6;&#x4F20;&#x8F93;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6587;&#x4EF6;&#x4F20;&#x8F93;"><a name="&#x6587;&#x4EF6;&#x4F20;&#x8F93;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x4F20;&#x8F93;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6587;&#x4EF6;&#x4F20;&#x8F93;</h1>
-<p><mark>&#x5199;&#x5728;&#x524D;&#x9762;&#xFF1A;&#x5728;tcp&#x901A;&#x8BAF;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x7AEF;&#x4E0D;&#x65AD;&#x5F00;&#xFF0C;&#x90A3;&#x4E48;&#x53E6;&#x4E00;&#x7AEF;&#x4E0D;&#x4F1A;&#x6536;&#x5230;eof&#xFF01;</mark></p>
-<p>&#x501F;&#x52A9;TCP&#x5B8C;&#x6210;&#x6587;&#x4EF6;&#x7684;&#x4F20;&#x8F93;&#xFF0C;&#x57FA;&#x672C;&#x601D;&#x8DEF;&#x5982;&#x4E0B;&#xFF1A;</p>
-<ol>
-<li>&#x53D1;&#x9001;&#x65B9;&#xFF08;&#x5BA2;&#x6237;&#x7AEF;&#xFF09;&#x5411;&#x670D;&#x52A1;&#x7AEF;&#x53D1;&#x9001;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x4FDD;&#x5B58;&#x8BE5;&#x6587;&#x4EF6;&#x540D;&#x3002;</li>
-<li>&#x63A5;&#x6536;&#x65B9;&#xFF08;&#x670D;&#x52A1;&#x7AEF;&#xFF09;&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6D88;&#x606F;ok&#xFF0C;&#x786E;&#x8BA4;&#x6587;&#x4EF6;&#x540D;&#x4FDD;&#x5B58;&#x6210;&#x529F;&#x3002;</li>
-<li>&#x53D1;&#x9001;&#x65B9;&#xFF08;&#x5BA2;&#x6237;&#x7AEF;&#xFF09;&#x6536;&#x5230;&#x6D88;&#x606F;&#x540E;&#xFF0C;&#x5F00;&#x59CB;&#x5411;&#x670D;&#x52A1;&#x7AEF;&#x53D1;&#x9001;&#x6587;&#x4EF6;&#x6570;&#x636E;&#x3002;</li>
-<li>&#x63A5;&#x6536;&#x65B9;&#xFF08;&#x670D;&#x52A1;&#x7AEF;&#xFF09;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x5199;&#x5165;&#x5230;&#x4E4B;&#x524D;&#x4FDD;&#x5B58;&#x597D;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</li>
-</ol>
-<p><img src="images/&#x6587;&#x4EF6;&#x4F20;&#x8F93;.png" alt=""></p>
-<p>&#x5BA2;&#x6237;&#x7AEF;&#x5B9E;&#x73B0;&#xFF1A;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x9AD8;&#x5E76;&#x53D1;&#x722C;&#x53BB;&#x6597;&#x9C7C;lol&#x533A;&#xFF0C;&#x989C;&#x503C;&#x533A;"><b>1. </b>&#x9AD8;&#x5E76;&#x53D1;&#x722C;&#x53BB;&#x6597;&#x9C7C;lol&#x533A;&#xFF0C;&#x989C;&#x503C;&#x533A;</a></li></ul></div><a href="#&#x9AD8;&#x5E76;&#x53D1;&#x722C;&#x53BB;&#x6597;&#x9C7C;lol&#x533A;&#xFF0C;&#x989C;&#x503C;&#x533A;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9AD8;&#x5E76;&#x53D1;&#x722C;&#x53BB;&#x6597;&#x9C7C;lol&#x533A;&#xFF0C;&#x989C;&#x503C;&#x533A;"><a name="&#x9AD8;&#x5E76;&#x53D1;&#x722C;&#x53BB;&#x6597;&#x9C7C;lol&#x533A;&#xFF0C;&#x989C;&#x503C;&#x533A;" class="anchor-navigation-ex-anchor" href="#&#x9AD8;&#x5E76;&#x53D1;&#x722C;&#x53BB;&#x6597;&#x9C7C;lol&#x533A;&#xFF0C;&#x989C;&#x503C;&#x533A;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9AD8;&#x5E76;&#x53D1;&#x722C;&#x53BB;&#x6597;&#x9C7C;lol&#x533A;&#xFF0C;&#x989C;&#x503C;&#x533A;</h1>
 <pre><code>package main
 
 import (
+    &quot;strconv&quot;
     &quot;fmt&quot;
-    &quot;net&quot;
-    &quot;os&quot;
+    &quot;net/http&quot;
     &quot;io&quot;
+    &quot;github.com/json-iterator/go&quot;
+    &quot;os&quot;
 )
 
-var path = &quot;/Users/zhengjunling/Downloads/picture/linux-kernel-map.jpg&quot;
+var url = &quot;https://www.douyu.com/gapi/rkc/directory/2_201/&quot;
+var dstUrl = &quot;/Users/zhengjunling/Downloads/awesomeProject/src/douyu/yanzhi/&quot;
+//
+//var url = &quot;https://www.douyu.com/gapi/rkc/directory/2_1/&quot;
+//var dstUrl = &quot;/Users/zhengjunling/Downloads/awesomeProject/src/douyu/lol/&quot;
 
 func main() {
-    fileInfo,_:=os.Stat(path)
-    //&#x548C;&#x670D;&#x52A1;&#x5668;&#x521B;&#x5EFA;&#x8FDE;&#x63A5;
-    conn, err := net.Dial(&quot;tcp&quot;, &quot;127.0.0.1:8686&quot;)
-    defer conn.Close()
-    ControErr(err, &quot;net dial err:&quot;)
-    sendFileNameToServer(conn, fileInfo.Name())
-    reciveFromServer(conn)
+    ch := make(chan int)
+    const TOTAL = 14
+    for i := 0; i &lt; TOTAL; i++ {
+        go getPageUrl(url+strconv.Itoa(i), i, ch)
+    }
+    for i := 0; i &lt; TOTAL; i++ {
+        fmt.Printf(&quot;&#x7B2C;%d&#x9875;&#x722C;&#x53BB;&#x5B8C;&#x6210;\n&quot;, &lt;-ch)
+    }
 }
-func reciveFromServer(conn net.Conn) {
-    b := make([]byte, 4096)
-    var result string
-    n, err := conn.Read(b)
+func getPageUrl(url string, i int, ch chan&lt;- int) {
+    fmt.Println(&quot;url:&quot;, url)
+    response, err := http.Get(url)
     if err != nil {
+        fmt.Println(&quot;http get err:&quot;, err)
         return
     }
-    result = string(b[:n])
-
-    fmt.Println(&quot;result=&quot;, result)
-    if result == &quot;ok&quot; {
-        sendFileToServe(conn)
+    defer response.Body.Close()
+    buf := make([]byte, 4096)
+    var content string
+    for {
+        n, err1 := response.Body.Read(buf)
+        content += string(buf[:n])
+        if err1 == io.EOF {
+            break
+        }
+        if err1 != nil {
+            fmt.Println(&quot;err1:&quot;, err1)
+            return
+        }
     }
+    //fmt.Println(content)
+    val := []byte(content)
+    for i := 0; ; i++ {
+        if jsoniter.Get(val, &quot;data&quot;, &quot;rl&quot;, i, &quot;rs1&quot;).ToString() == &quot;&quot; {
+            return
+        }
+        fmt.Println(jsoniter.Get(val, &quot;data&quot;, &quot;rl&quot;, i, &quot;rs1&quot;).ToString())
+        pictureUrl := jsoniter.Get(val, &quot;data&quot;, &quot;rl&quot;, i, &quot;rs1&quot;).ToString()
+        name := jsoniter.Get(val, &quot;data&quot;, &quot;rl&quot;, i, &quot;nn&quot;).ToString()
+        go fetchThePictrue(name, pictureUrl)
+    }
+    ch &lt;- i
 }
-func sendFileToServe(conn net.Conn) {
-    f, err := os.Open(path)
+func fetchThePictrue(name string, pictureUrl string) {
+    response,err:=http.Get(pictureUrl)
+    if err!=nil{
+        fmt.Println(&quot;http get err:&quot;,err)
+        return
+    }
+    defer response.Body.Close()
+    f,err2:=os.Create(dstUrl+name+&quot;.jpg&quot;)
+    if err2!=nil{
+        fmt.Println(&quot;os create err:&quot;,err2)
+        return
+    }
     defer f.Close()
-    ControErr(err, &quot;os open err:&quot;)
-    buf := make([]byte, 4096)
+    buf:=make([]byte,4096)
     for {
-        n, err := f.Read(buf)
-        conn.Write(buf[:n])
-        if err == io.EOF {
-            fmt.Println(&quot;&#x53D1;&#x9001;&#x5B8C;&#x6210;&quot;)
-            break
-        }
-        if err != nil {
-            return
-        }
-    }
-}
-func sendFileNameToServer(conn net.Conn, fileName string) {
-    //&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x6D88;&#x606F;
-    _, err := conn.Write([]byte(fileName))
-    ControErr(err, &quot;conn write err:&quot;)
-}
-func ControErr(err error, errMessage string) {
-    if err != nil {
-        fmt.Println(errMessage, err)
-        os.Exit(1)
-    }
-}
-</code></pre><p>&#x670D;&#x52A1;&#x5668;&#x5B9E;&#x73B0;&#xFF1A;</p>
-<pre><code>package main
-
-import (
-    &quot;net&quot;
-    &quot;io&quot;
-    &quot;fmt&quot;
-    &quot;os&quot;
-)
-
-var fileName string
-
-func main() {
-
-    listener, err := net.Listen(&quot;tcp&quot;, &quot;127.0.0.1:8686&quot;)
-    defer listener.Close()
-    ControErr(err, &quot;net listen err:&quot;)
-    conn, err := listener.Accept()
-    defer conn.Close()
-    ControErr(err, &quot;listener accept err:&quot;)
-    buf := make([]byte, 4096)
-    n, err := conn.Read(buf)
-    if err != nil {
-        return
-    }
-    fileName = string(buf[:n])
-    addr := conn.RemoteAddr()
-    fmt.Printf(&quot;[%s]&#xFF1A;%s&quot;, addr, fileName)
-    sendOkToClient(conn)
-    reciveFromClient(conn)
-}
-func reciveFromClient(conn net.Conn) {
-    buf := make([]byte, 4096)
-    f, err := os.Create(fileName)
-    ControErr(err, &quot;os create err:&quot;)
-    for {
-        n, err := conn.Read(buf)
+        n, err1 := response.Body.Read(buf)
         f.Write(buf[:n])
-        if err == io.EOF {
-            fmt.Println(&quot;&#x63A5;&#x6536;&#x5B8C;&#x6210;&quot;)
+        if err1==io.EOF{
+            fmt.Println(&quot;end&quot;)
             break
         }
-        if err != nil {
+        if err1!=nil{
+            fmt.Println(&quot;response body read err:&quot;,err1)
             return
         }
-    }
-}
-func sendOkToClient(conn net.Conn) {
-    conn.Write([]byte(&quot;ok&quot;))
-}
-func ControErr(err error, errMessage string) {
-    if err != nil {
-        fmt.Println(errMessage, err)
-        os.Exit(1)
     }
 }
 </code></pre>
@@ -660,14 +618,10 @@ func ControErr(err error, errMessage string) {
 
             
                 
-                <a href="019TCPUDP.html" class="navigation navigation-prev " aria-label="Previous page: TCPUDP">
+                <a href="023正则表达式.md" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 正则表达式">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="021聊天室.html" class="navigation navigation-next " aria-label="Next page: 聊天室（案例）">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -676,7 +630,7 @@ func ControErr(err error, errMessage string) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"文件传输（案例）","level":"1.4.5","depth":2,"next":{"title":"聊天室（案例）","level":"1.4.6","depth":2,"path":"021聊天室.md","ref":"021聊天室.md","articles":[]},"previous":{"title":"TCPUDP","level":"1.4.4","depth":2,"path":"019TCPUDP.md","ref":"019TCPUDP.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"020文件传输.md","mtime":"2018-09-09T06:45:39.886Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T03:23:07.829Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"爬虫","level":"1.4.9","depth":2,"previous":{"title":"正则表达式","level":"1.4.8","depth":2,"path":"023正则表达式.md","ref":"023正则表达式.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"introducetogitbook"},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"024爬虫.md","mtime":"2018-09-09T09:10:57.489Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-09T03:23:07.829Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
