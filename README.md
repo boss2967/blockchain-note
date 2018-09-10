@@ -17,7 +17,7 @@
 [<img src="blockchain-learning-note/images/logo_web.png" width="80" height="80">](blockchain-learning-note/Web/SUMMARY.md)[Web](blockchain-learning-note/Web/SUMMARY.md)
 [<img src="blockchain-learning-note/images/logo_blockchain.png" width="80" height="80">](blockchain-learning-note/SUMMARY.md)[Blockchain](blockchain-learning-note/SUMMARY.md)
 [<img src="blockchain-learning-note/images/logo_mac.png" width="80" height="80">](blockchain-learning-note/SUMMARY.md)[MAC](blockchain-learning-note/SUMMARY.md)
-[<img src="blockchain-learning-note/images/kotlin.jpg" width="80" height="80">](blockchain-learning-note/SUMMARY.md)[Kotlin](blockchain-learning-note/Kotlin)
+[<img src="blockchain-learning-note/images/kotlin.jpg" width="80" height="80">](blockchain-learning-note/Kotlin)[Kotlin](blockchain-learning-note/Kotlin)
 
 ****
 # 文章总览
