@@ -10,14 +10,14 @@
 [![Author](https://img.shields.io/badge/Author-Zheng-black.svg?)](https://github.com/Coder-zheng)
 [![Author](https://img.shields.io/badge/QQ-812397431-yellow.svg?)](http://wpa.qq.com/msgrd?v=3&uin=812397431&site=qq&menu=yes)
 
-[<img src="blockchain-learning-note/images/logo_golang.png" width="80" height="80">](blockchain-learning-note/Go/SUMMARY.md)
+[<img src="blockchain-learning-note/images/logo_golang.png" width="70" height="70">](blockchain-learning-note/Go/SUMMARY.md)
 [Golang](blockchain-learning-note/Go/SUMMARY.md)
-[<img src="blockchain-learning-note/images/logo_database.png" width="80" height="80">](blockchain-learning-note/SUMMARY.md)[Database](blockchain-learning-note/SUMMARY.md)
-[<img src="blockchain-learning-note/images/logo_linux.png" width="80" height="80">](blockchain-learning-note/SUMMARY.md)[Linux](blockchain-learning-note/SUMMARY.md)
-[<img src="blockchain-learning-note/images/logo_web.png" width="80" height="80">](blockchain-learning-note/Web/SUMMARY.md)[Web](blockchain-learning-note/Web/SUMMARY.md)
-[<img src="blockchain-learning-note/images/logo_blockchain.png" width="80" height="80">](blockchain-learning-note/SUMMARY.md)[Blockchain](blockchain-learning-note/SUMMARY.md)
-[<img src="blockchain-learning-note/images/logo_mac.png" width="80" height="80">](blockchain-learning-note/SUMMARY.md)[MAC](blockchain-learning-note/SUMMARY.md)
-[<img src="blockchain-learning-note/images/kotlin.jpg" width="80" height="80">](blockchain-learning-note/Kotlin)[Kotlin](blockchain-learning-note/Kotlin)
+[<img src="blockchain-learning-note/images/logo_database.png" width="70" height="70">](blockchain-learning-note/SUMMARY.md)[Database](blockchain-learning-note/SUMMARY.md)
+[<img src="blockchain-learning-note/images/logo_linux.png" width="70" height="70">](blockchain-learning-note/SUMMARY.md)[Linux](blockchain-learning-note/SUMMARY.md)
+[<img src="blockchain-learning-note/images/logo_web.png" width="70" height="70">](blockchain-learning-note/Web/SUMMARY.md)[Web](blockchain-learning-note/Web/SUMMARY.md)
+[<img src="blockchain-learning-note/images/logo_blockchain.png" width="70" height="70">](blockchain-learning-note/SUMMARY.md)[Blockchain](blockchain-learning-note/SUMMARY.md)
+[<img src="blockchain-learning-note/images/logo_mac.png" width="70" height="70">](blockchain-learning-note/SUMMARY.md)[MAC](blockchain-learning-note/SUMMARY.md)
+[<img src="blockchain-learning-note/images/kotlin.jpg" width="70" height="70">](blockchain-learning-note/Kotlin)[Kotlin](blockchain-learning-note/Kotlin)
 
 ****
 # 文章总览
