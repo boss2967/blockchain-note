@@ -3,8 +3,6 @@ package main
 import (
 	"sync"
 	"time"
-	"github.com/astaxie/beego"
-	"beego/controllers"
 )
 
 func main() {

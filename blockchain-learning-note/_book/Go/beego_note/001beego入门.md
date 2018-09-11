@@ -32,20 +32,35 @@
 ├── conf
 │   └── app.conf
 ├── controllers
-│   └── object.go
-│   └── user.go
-├── docs
-│   └── doc.go
+│   └── default.go
 ├── main.go
 ├── models
-│   └── object.go
-│   └── user.go
 ├── routers
 │   └── router.go
-└── tests
-    └── default_test.go
+├── static
+│   ├── css
+│   ├── img
+│   └── js
+├── tests
+│   └── default_test.go
+├── views
+    └── index.tpl
 
 	```
+	
+	* app.conf
+	
+		```
+		appname = hellobee//项目名称
+		httpport = 8080//端口号
+		runmode = dev//运行环境
+		```
+	* static 放静态页面，比router先执行,比如
+		`http://localhost:8080/static`
+		即使router中有/static 对应的controller也会执行 static中的页面
+	* test 测试文件
+	
+		
 4. 这些指令帮助您：
 
 *	安装 beego 到您的 $GOPATH 中。
