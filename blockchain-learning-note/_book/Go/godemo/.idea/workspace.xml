@@ -46,9 +46,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="684" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="260" />
+    <option name="y" value="51" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
@@ -96,7 +96,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build 内存.go">
+  <component name="RunManager" selected="Go Build.go build cond.Wait理解.go">
     <configuration name="go build 生产者对应多个消费者的问题.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="godemo" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -132,11 +132,9 @@
     <list>
       <item itemvalue="Go Build.go build cond.Wait理解.go" />
       <item itemvalue="Go Build.go build 生产者对应多个消费者的问题.go" />
-      <item itemvalue="Go Build.go build 内存.go" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build 内存.go" />
         <item itemvalue="Go Build.go build 生产者对应多个消费者的问题.go" />
         <item itemvalue="Go Build.go build cond.Wait理解.go" />
       </list>

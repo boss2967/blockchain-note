@@ -23,5 +23,4 @@ func main() {
 		}()
 	}
 	wg.Wait()
-	beego.Router("/",&controllers.MainController{})
 }
