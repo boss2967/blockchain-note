@@ -15,11 +15,11 @@ type User struct {
 
 type Article struct {
 	Id2 int `orm:"pk;auto"`//手动设置为主键，自增长
-	Title string `orm:size(30)`//不为空
+	Title string `orm:"size(30)"`//不为空
 	Content string `orm:"size(500)"`
 	Img string `orm:"size(500);null"`
 	//Type string
-	Time time.Time `orm:type(datetime);`
+	Time time.Time `orm:"auto_now;type(date)"`
 	Count int
 }
 

@@ -52,6 +52,7 @@ func (this *RegController)HandleReg(){
 type LoginController struct {
 	beego.Controller
 }
+
 func (this *LoginController)ShowLogin(){
 	this.TplName="login.html"
 }
