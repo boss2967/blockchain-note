@@ -13,7 +13,7 @@
 	</head>
 	<body>
 	<h1>hellobee</h1>
-	<h1>{{.type}}</h1>
+	<h1>{{。type}}</h1>
 	<form method="POST" action="/index">
 	    <input type="submit">
 	</form>

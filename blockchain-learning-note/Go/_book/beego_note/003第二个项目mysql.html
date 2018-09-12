@@ -1,0 +1,783 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第二个项目mysql案例 · go语言学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Junling Zheng <me@chengweiyang.cn>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="004第二个项目orm.html" />
+    
+    
+    <link rel="prev" href="002beego第一个项目.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://juejin.im/user/58fb6268a22b9d0065995827" target="_blank" class="custom-link">Zhengjunling's Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Go语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../001指针.html">
+            
+                <a href="../001指针.html">
+            
+                    
+                    语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../001指针.html">
+            
+                <a href="../001指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../002new.html">
+            
+                <a href="../002new.html">
+            
+                    
+                    new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../003slice.html">
+            
+                <a href="../003slice.html">
+            
+                    
+                    slice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../004map.html">
+            
+                <a href="../004map.html">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../005结构体.html">
+            
+                <a href="../005结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../006字符串.html">
+            
+                <a href="../006字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../007文件操作.html">
+            
+                <a href="../007文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../008并发编程.html">
+            
+                <a href="../008并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../008并发编程.html">
+            
+                <a href="../008并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../009goroutine.html">
+            
+                <a href="../009goroutine.html">
+            
+                    
+                    goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../010channel.html">
+            
+                <a href="../010channel.html">
+            
+                    
+                    channel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../011生产者消费者.html">
+            
+                <a href="../011生产者消费者.html">
+            
+                    
+                    生产者消费者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../012定时器.html">
+            
+                <a href="../012定时器.html">
+            
+                    
+                    定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../013select.html">
+            
+                <a href="../013select.html">
+            
+                    
+                    select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../014锁.html">
+            
+                <a href="../014锁.html">
+            
+                    
+                    锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../015条件变量.html">
+            
+                <a href="../015条件变量.html">
+            
+                    
+                    条件变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0016网络编程.html">
+            
+                <a href="../0016网络编程.html">
+            
+                    
+                    Go网络编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../0016网络编程.html">
+            
+                <a href="../0016网络编程.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../0017Socket编程.html">
+            
+                <a href="../0017Socket编程.html">
+            
+                    
+                    Socket编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../0018网络应用程序设计模式.html">
+            
+                <a href="../0018网络应用程序设计模式.html">
+            
+                    
+                    网络应用程序设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../019TCPUDP.html">
+            
+                <a href="../019TCPUDP.html">
+            
+                    
+                    TCPUDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../020文件传输.html">
+            
+                <a href="../020文件传输.html">
+            
+                    
+                    文件传输（案例）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../021聊天室.html">
+            
+                <a href="../021聊天室.html">
+            
+                    
+                    聊天室（案例）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../022HTTP编程.html">
+            
+                <a href="../022HTTP编程.html">
+            
+                    
+                    HTTP编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../023正则表达式.md">
+            
+                <span>
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../024爬虫.html">
+            
+                <a href="../024爬虫.html">
+            
+                    
+                    爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="001beego入门.html">
+            
+                <a href="001beego入门.html">
+            
+                    
+                    Beego
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="001beego入门.html">
+            
+                <a href="001beego入门.html">
+            
+                    
+                    Beego入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="002beego第一个项目.html">
+            
+                <a href="002beego第一个项目.html">
+            
+                    
+                    第一个项目Post案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="003第二个项目mysql.html">
+            
+                <a href="003第二个项目mysql.html">
+            
+                    
+                    第二个项目mysql案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="004第二个项目orm.html">
+            
+                <a href="004第二个项目orm.html">
+            
+                    
+                    第三个项目orm操作数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第二个项目mysql案例</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#beego&#x64CD;&#x4F5C;mysql"><b>1. </b>beego&#x64CD;&#x4F5C;mysql</a></li></ul></div><a href="#beego&#x64CD;&#x4F5C;mysql" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="beego&#x64CD;&#x4F5C;mysql"><a name="beego&#x64CD;&#x4F5C;mysql" class="anchor-navigation-ex-anchor" href="#beego&#x64CD;&#x4F5C;mysql"><i class="fa fa-link" aria-hidden="true"></i></a>1. beego&#x64CD;&#x4F5C;mysql</h1>
+<ol>
+<li><p>&#x914D;&#x7F6E;&#x8DEF;&#x7531;router.go</p>
+<pre class="language-"><code> func init() {
+     beego.Router(&quot;/mysql/create&quot;,&amp;controllers.MysqlController{},&quot;get:CreateMysql&quot;)
+     beego.Router(&quot;/mysql/insert&quot;,&amp;controllers.MysqlController{},&quot;get:InsertMysql&quot;)
+     beego.Router(&quot;/mysql/query&quot;,&amp;controllers.MysqlController{},&quot;get:QueryMysql&quot;)
+ }
+</code></pre></li>
+<li><p>&#x521B;&#x5EFA;&#x6570;&#x636E;&#x8868; goMysql.go</p>
+<pre class="language-"><code> //&#x9996;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;MysqlController&#x7EE7;&#x627F;&#x81EA;beego.Controller
+ type MysqlController struct {
+     beego.Controller
+ }
+</code></pre><pre class="language-"><code> func (this *MysqlController)CreateMysql(){
+     //1. &#x6253;&#x5F00;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;
+         //&#x53C2;&#x6570; 1. &#x9A71;&#x52A8;&#x540D;&#x79F0;
+         //&#x53C2;&#x6570; 2. &#x8FDE;&#x63A5;&#x5B57;&#x7B26;&#x4E32;
+     conn,err:=sql.Open(&quot;mysql&quot;,&quot;root:123456@tcp(127.0.0.1:3306)/test?charset=utf8&quot;)
+     if err != nil {
+         beego.Info(&quot;sql open err:=&quot;,err)
+         return
+     }
+     //3. &#x5173;&#x95ED;&#x8FDE;&#x63A5;
+     defer conn.Close()
+     //2. &#x6267;&#x884C;&#x8BED;&#x53E5;
+     res,err:=conn.Exec(&quot;create table userInfo(id int,name varchar(30))&quot;)
+     fmt.Println(res)
+     if err != nil {
+         beego.Info(&quot;conn.Exec err:=&quot;,err)
+         return
+     }
+     //4. &#x5FC5;&#x987B;&#x7ED9;&#x9875;&#x9762;&#x54CD;&#x5E94;&#x6570;&#x636E;&#xFF0C;&#x5426;&#x5219;&#x62A5;&#x9519;
+     this.Ctx.WriteString(&quot;&#x521B;&#x5EFA;&#x6210;&#x529F;&quot;)
+ }
+</code></pre></li>
+</ol>
+<ol>
+<li><p>&#x63D2;&#x5165;&#x6570;&#x636E;</p>
+<pre class="language-"><code> func (this *MysqlController)InsertMysql(){
+     //1. &#x6253;&#x5F00;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;
+     //&#x53C2;&#x6570; 1. &#x9A71;&#x52A8;&#x540D;&#x79F0;
+     //&#x53C2;&#x6570; 2. &#x8FDE;&#x63A5;&#x5B57;&#x7B26;&#x4E32;
+     conn,err:=sql.Open(&quot;mysql&quot;,&quot;root:123456@tcp(127.0.0.1:3306)/test?charset=utf8&quot;)
+     if err != nil {
+         fmt.Println(&quot;sql.Open&quot;,err)
+         return
+     }
+     //3. &#x5173;&#x95ED;&#x8FDE;&#x63A5;
+     defer conn.Close()
+     //2. &#x6267;&#x884C;&#x8BED;&#x53E5;
+     _,err=conn.Exec(&quot;insert userInfo(id,name) values (?,?)&quot;,1,&quot;zhangsan&quot;)
+     if err != nil {
+         beego.Info(&quot;&#x63D2;&#x5165;&#x5931;&#x8D25;&quot;)
+         return
+     }
+     this.Ctx.WriteString(&quot;&#x63D2;&#x5165;&#x6210;&#x529F;&quot;)
+ }
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x6570;&#x636E;</p>
+<pre class="language-"><code> func (this *MysqlController)QueryMysql(){
+     //1. &#x6253;&#x5F00;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;
+     //&#x53C2;&#x6570; 1. &#x9A71;&#x52A8;&#x540D;&#x79F0;
+     //&#x53C2;&#x6570; 2. &#x8FDE;&#x63A5;&#x5B57;&#x7B26;&#x4E32;
+     conn,err:=sql.Open(&quot;mysql&quot;,&quot;root:123456@tcp(127.0.0.1:3306)/test?charset=utf8&quot;)
+     if err != nil {
+         beego.Info(&quot;sql open err:&quot;,err)
+         return
+     }
+     //3. &#x5173;&#x95ED;&#x8FDE;&#x63A5;
+     defer conn.Close()
+     //2. &#x6267;&#x884C;&#x8BED;&#x53E5;
+     row,err:=conn.Query(&quot;select id from userInfo&quot;)
+     if err != nil {
+         beego.Info(&quot;conn.Query err:&quot;,err)
+         return
+     }
+     var ids string
+     //&#x904D;&#x5386;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;
+     for row.Next(){
+         var id int
+         row.Scan(&amp;id)
+         ids+= strconv.Itoa(id)+&quot;,&quot;
+     }
+     this.Ctx.WriteString(&quot;&#x67E5;&#x8BE2;&#x6210;&#x529F;id:&quot;+ids)
+ }
+</code></pre></li>
+<li><p>&#x5220;&#x9664;&#x6570;&#x636E;</p>
+<pre class="language-"><code> func (this *MysqlController)DeleteMysql(){
+     conn,err:=sql.Open(&quot;mysql&quot;,&quot;root:123456@tcp(127.0.0.1:3306)/test?charset=utf8&quot;)
+     if err != nil {
+         beego.Info(&quot;sql open err:&quot;,err)
+         return
+     }
+     defer conn.Close()
+     //&#x83B7;&#x53D6;&#x8981;&#x5220;&#x9664;&#x7684;&#x7528;&#x6237;&#x7684;id
+     id:=this.GetString(&quot;:id&quot;)
+     _,err=conn.Exec(&quot;delete from userInfo where id = ?&quot;,id)
+     if err != nil {
+         beego.Info(&quot;conn exec err:&quot;,err)
+         return
+     }
+     this.Ctx.WriteString(&quot;&#x5220;&#x9664;&#x6210;&#x529F;&quot;)
+ }
+</code></pre></li>
+</ol>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="002beego第一个项目.html" class="navigation navigation-prev " aria-label="Previous page: 第一个项目Post案例">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="004第二个项目orm.html" class="navigation navigation-next " aria-label="Next page: 第三个项目orm操作数据库">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第二个项目mysql案例","level":"1.5.3","depth":2,"next":{"title":"第三个项目orm操作数据库","level":"1.5.4","depth":2,"path":"beego_note/004第二个项目orm.md","ref":"beego_note/004第二个项目orm.md","articles":[]},"previous":{"title":"第一个项目Post案例","level":"1.5.2","depth":2,"path":"beego_note/002beego第一个项目.md","ref":"beego_note/002beego第一个项目.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","emphasize","-highlight","prism","prism-themes","copy-code-button","splitter","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"shortName":"introducetogitbook"},"emphasize":{},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"beego_note/003第二个项目mysql.md","mtime":"2018-09-11T11:59:30.154Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-12T01:28:32.978Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
