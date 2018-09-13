@@ -30,5 +30,6 @@
 	- [Beego入门](beego_note/001beego入门.md)
 	- [第一个项目Post案例](beego_note/002beego第一个项目.md)
 	- [第二个项目mysql案例](beego_note/003第二个项目mysql.md)
-	- [第三个项目orm操作数据库](beego_note/004第二个项目orm.md)
+	- [第三个项目orm操作数据库](beego_note/004第三个项目orm.md)
 	- [第四个项目注册登录](beego_note/005第四个项目注册登录.md)
+	- [第五个项目文章论坛](beego_note/006第五个项目文章发布系统.md)
