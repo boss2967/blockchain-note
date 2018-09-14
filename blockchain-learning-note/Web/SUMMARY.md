@@ -45,6 +45,7 @@
 	- [6.2 jquery文档加载完再执行](6/62jquery文档加载完再执行.md)
 	- [6.3 jquery选择器](6/63jquery选择器.md)
 	- [6.4 jquery样式操作](6/64jquery样式操作.md)
+	- [6.4.1 jq操作select的值](6/641jq操作select的值.md)
 	- [6.5 绑定click事件](6/65绑定click事件.md)
 	- [6.6 jquery动画](6/66jquery动画.md)
 * [7. jquery进阶](7/71jquery特殊效果.md)

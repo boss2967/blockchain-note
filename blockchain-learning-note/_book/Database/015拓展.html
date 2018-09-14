@@ -1,0 +1,2476 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>15. 拓展 · go语言学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Junling Zheng <me@chengweiyang.cn>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="016事务.html" />
+    
+    
+    <link rel="prev" href="014练习.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://juejin.im/user/58fb6268a22b9d0065995827" target="_blank" class="custom-link">Zhengjunling's Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Go/001指针.html">
+            
+                <a href="../Go/001指针.html">
+            
+                    
+                    Go语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Go/001指针.html">
+            
+                <a href="../Go/001指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Go/002new.html">
+            
+                <a href="../Go/002new.html">
+            
+                    
+                    new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Go/003slice.html">
+            
+                <a href="../Go/003slice.html">
+            
+                    
+                    slice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Go/004map.html">
+            
+                <a href="../Go/004map.html">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Go/005结构体.html">
+            
+                <a href="../Go/005结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Go/006字符串.html">
+            
+                <a href="../Go/006字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../Go/007文件操作.html">
+            
+                <a href="../Go/007文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../Go/008并发编程.html">
+            
+                <a href="../Go/008并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../Go/009goroutine.html">
+            
+                <a href="../Go/009goroutine.html">
+            
+                    
+                    goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../Go/010channel.html">
+            
+                <a href="../Go/010channel.html">
+            
+                    
+                    channel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../Go/011生产者消费者.html">
+            
+                <a href="../Go/011生产者消费者.html">
+            
+                    
+                    生产者消费者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../Go/012定时器.html">
+            
+                <a href="../Go/012定时器.html">
+            
+                    
+                    定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../Go/013select.html">
+            
+                <a href="../Go/013select.html">
+            
+                    
+                    select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../Go/014锁.html">
+            
+                <a href="../Go/014锁.html">
+            
+                    
+                    锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../Go/015条件变量.html">
+            
+                <a href="../Go/015条件变量.html">
+            
+                    
+                    条件变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../Go/0016网络编程.html">
+            
+                <a href="../Go/0016网络编程.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../Go/0017Socket编程.html">
+            
+                <a href="../Go/0017Socket编程.html">
+            
+                    
+                    Socket编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../Go/0018网络应用程序设计模式.html">
+            
+                <a href="../Go/0018网络应用程序设计模式.html">
+            
+                    
+                    网络应用程序设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../Go/019TCPUDP.html">
+            
+                <a href="../Go/019TCPUDP.html">
+            
+                    
+                    TCPUDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../0Go/20文件传输.md">
+            
+                <span>
+            
+                    
+                    文件传输（案例）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="../Go/021聊天室.html">
+            
+                <a href="../Go/021聊天室.html">
+            
+                    
+                    聊天室（案例）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="../Go/022HTTP编程.html">
+            
+                <a href="../Go/022HTTP编程.html">
+            
+                    
+                    HTTP编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="../Go/023正则表达式.md">
+            
+                <span>
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="../Go/024爬虫.html">
+            
+                <a href="../Go/024爬虫.html">
+            
+                    
+                    爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="../Go/beego_note/001beego入门.html">
+            
+                <a href="../Go/beego_note/001beego入门.html">
+            
+                    
+                    Beego入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="../Go/beego_note/002beego第一个项目.html">
+            
+                <a href="../Go/beego_note/002beego第一个项目.html">
+            
+                    
+                    第一个项目Post案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="../Go/beego_note/003第二个项目mysql.html">
+            
+                <a href="../Go/beego_note/003第二个项目mysql.html">
+            
+                    
+                    第二个项目mysql案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.28" data-path="../Go/beego_note/004第三个项目orm.html">
+            
+                <a href="../Go/beego_note/004第三个项目orm.html">
+            
+                    
+                    第三个项目orm操作数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.29" data-path="../Go/beego_note/005第四个项目注册登录.html">
+            
+                <a href="../Go/beego_note/005第四个项目注册登录.html">
+            
+                    
+                    第四个项目注册登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.30" data-path="../Go/beego_note/006第五个项目文章发布系统.html">
+            
+                <a href="../Go/beego_note/006第五个项目文章发布系统.html">
+            
+                    
+                    第五个项目文章论坛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.31" data-path="../Go/beego_note/007知识点.html">
+            
+                <a href="../Go/beego_note/007知识点.html">
+            
+                    
+                    知识点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="001Mysql介绍与安装.html">
+            
+                <a href="001Mysql介绍与安装.html">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="001Mysql介绍与安装.html">
+            
+                <a href="001Mysql介绍与安装.html">
+            
+                    
+                    1. Mysql介绍与安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="002Mysql断开与连接.html">
+            
+                <a href="002Mysql断开与连接.html">
+            
+                    
+                    2. Mysql断开与连接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="003数据库操作.html">
+            
+                <a href="003数据库操作.html">
+            
+                    
+                    3. 数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="004数据库数据类型.html">
+            
+                <a href="004数据库数据类型.html">
+            
+                    
+                    4. 数据库数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="005数据表基本操作.html">
+            
+                <a href="005数据表基本操作.html">
+            
+                    
+                    5. 数据表基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="006表数据的增，删，改.html">
+            
+                <a href="006表数据的增，删，改.html">
+            
+                    
+                    6. 表数据的增，删，改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="007表数据的准备.html">
+            
+                <a href="007表数据的准备.html">
+            
+                    
+                    7. 表数据的准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="008表数据的查询.html">
+            
+                <a href="008表数据的查询.html">
+            
+                    
+                    8. 表数据的查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="009数据库的常用函数.html">
+            
+                <a href="009数据库的常用函数.html">
+            
+                    
+                    9. 数据库的常用函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="010视图.html">
+            
+                <a href="010视图.html">
+            
+                    
+                    10. 视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="011数据完整性约束.html">
+            
+                <a href="011数据完整性约束.html">
+            
+                    
+                    11. 数据完整性约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="012Go操作MysSql.html">
+            
+                <a href="012Go操作MysSql.html">
+            
+                    
+                    12. Go操作MysSql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="013附录.html">
+            
+                <a href="013附录.html">
+            
+                    
+                    13. 附录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="014练习.html">
+            
+                <a href="014练习.html">
+            
+                    
+                    14. 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.15" data-path="015拓展.html">
+            
+                <a href="015拓展.html">
+            
+                    
+                    15. 拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="016事务.html">
+            
+                <a href="016事务.html">
+            
+                    
+                    16. 事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Linux/001Linux操作系统介绍.html">
+            
+                <a href="../Linux/001Linux操作系统介绍.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Linux/001Linux操作系统介绍.html">
+            
+                <a href="../Linux/001Linux操作系统介绍.html">
+            
+                    
+                    Linux操作系统介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Linux/002文件系统.html">
+            
+                <a href="../Linux/002文件系统.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Linux/003命令概述与使用方法.html">
+            
+                <a href="../Linux/003命令概述与使用方法.html">
+            
+                    
+                    命令概述与使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Linux/004常用命令.html">
+            
+                <a href="../Linux/004常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Linux/005远程操作.html">
+            
+                <a href="../Linux/005远程操作.html">
+            
+                    
+                    远程操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Web/0/01css样式面试题.html">
+            
+                <a href="../Web/0/01css样式面试题.html">
+            
+                    
+                    Web
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Web/1/11html概述.html">
+            
+                <a href="../Web/1/11html概述.html">
+            
+                    
+                    1.1 html概述及html文档基本结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Web/1/12html标签入门.html">
+            
+                <a href="../Web/1/12html标签入门.html">
+            
+                    
+                    1.2 html标签入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Web/1/13html布局入门.html">
+            
+                <a href="../Web/1/13html布局入门.html">
+            
+                    
+                    1.3 html布局入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Web/1/14css介绍.html">
+            
+                <a href="../Web/1/14css介绍.html">
+            
+                    
+                    1.4 css介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Web/1/15css引入方式.html">
+            
+                <a href="../Web/1/15css引入方式.html">
+            
+                    
+                    1.5 css引入方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Web/1/16css选择器.html">
+            
+                <a href="../Web/1/16css选择器.html">
+            
+                    
+                    1.6 css选择器一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Web/1/17CSS元素属性.html">
+            
+                <a href="../Web/1/17CSS元素属性.html">
+            
+                    
+                    1.7 CSS元素属性及盒子模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Web/1/18css文本属性.html">
+            
+                <a href="../Web/1/18css文本属性.html">
+            
+                    
+                    1.8 css文本属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../Web/1/19css布局演示.html">
+            
+                <a href="../Web/1/19css布局演示.html">
+            
+                    
+                    1.9 css布局演示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../Web/2/21相对地址与绝对地址.html">
+            
+                <a href="../Web/2/21相对地址与绝对地址.html">
+            
+                    
+                    2.1 相对地址与绝对地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../Web/2/22列表.html">
+            
+                <a href="../Web/2/22列表.html">
+            
+                    
+                    2.2 列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../Web/2/23表单.html">
+            
+                <a href="../Web/2/23表单.html">
+            
+                    
+                    2.3 表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../Web/2/24表格.html">
+            
+                <a href="../Web/2/24表格.html">
+            
+                    
+                    2.4 表格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../Web/2/25css选择器二.html">
+            
+                <a href="../Web/2/25css选择器二.html">
+            
+                    
+                    2.5 css选择器二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../Web/2/26css显示特性.html">
+            
+                <a href="../Web/2/26css显示特性.html">
+            
+                    
+                    2.6 css显示特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="../Web/2/27css元素溢出.html">
+            
+                <a href="../Web/2/27css元素溢出.html">
+            
+                    
+                    2.7 css元素溢出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.17" data-path="../Web/3/31定位.html">
+            
+                <a href="../Web/3/31定位.html">
+            
+                    
+                    3.1 定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.18" data-path="../Web/3/32CSS权重.html">
+            
+                <a href="../Web/3/32CSS权重.html">
+            
+                    
+                    3.2 CSS权重
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.19" data-path="../Web/3/33开发流程.html">
+            
+                <a href="../Web/3/33开发流程.html">
+            
+                    
+                    3.3 开发流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.20" data-path="../Web/4/41JavaScript介绍.html">
+            
+                <a href="../Web/4/41JavaScript介绍.html">
+            
+                    
+                    4.1 JavaScript介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.21" data-path="../Web/4/42JavaScript嵌入页面的方式.html">
+            
+                <a href="../Web/4/42JavaScript嵌入页面的方式.html">
+            
+                    
+                    4.2 JavaScript嵌入页面的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.22" data-path="../Web/4/43变量.html">
+            
+                <a href="../Web/4/43变量.html">
+            
+                    
+                    4.3 变量、数据类型及基本语法规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.23" data-path="../Web/4/44函数.html">
+            
+                <a href="../Web/4/44函数.html">
+            
+                    
+                    4.4 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.24" data-path="../Web/4/45获取元素方法.html">
+            
+                <a href="../Web/4/45获取元素方法.html">
+            
+                    
+                    4.5 获取元素方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.25" data-path="../Web/4/46操作元素属性.html">
+            
+                <a href="../Web/4/46操作元素属性.html">
+            
+                    
+                    4.6 操作元素属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.26" data-path="../Web/4/47事件属性及匿名函数.html">
+            
+                <a href="../Web/4/47事件属性及匿名函数.html">
+            
+                    
+                    4.7 事件属性及匿名函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.27" data-path="../Web/4/48条件语句.html">
+            
+                <a href="../Web/4/48条件语句.html">
+            
+                    
+                    4.8 条件语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.28" data-path="../Web/5/51数组及操作方法.html">
+            
+                <a href="../Web/5/51数组及操作方法.html">
+            
+                    
+                    5.1 数组及操作方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.29" data-path="../Web/5/52循环语句.html">
+            
+                <a href="../Web/5/52循环语句.html">
+            
+                    
+                    5.2 循环语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.30" data-path="../Web/5/53字符串处理方法.html">
+            
+                <a href="../Web/5/53字符串处理方法.html">
+            
+                    
+                    5.3 字符串处理方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.31" data-path="../Web/5/54定时器.html">
+            
+                <a href="../Web/5/54定时器.html">
+            
+                    
+                    5.4 定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.32" data-path="../Web/5/55调试程序的方法.html">
+            
+                <a href="../Web/5/55调试程序的方法.html">
+            
+                    
+                    5.5 调试程序的方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.33" data-path="../Web/5/56变量作用域.html">
+            
+                <a href="../Web/5/56变量作用域.html">
+            
+                    
+                    5.6 变量作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.34" data-path="../Web/5/57封闭函数.html">
+            
+                <a href="../Web/5/57封闭函数.html">
+            
+                    
+                    5.7 封闭函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.35" data-path="../Web/6/61jquery介绍.html">
+            
+                <a href="../Web/6/61jquery介绍.html">
+            
+                    
+                    6.1 jquery介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.36" data-path="../Web/6/62jquery文档加载完再执行.html">
+            
+                <a href="../Web/6/62jquery文档加载完再执行.html">
+            
+                    
+                    6.2 jquery文档加载完再执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.37" data-path="../Web/6/63jquery选择器.html">
+            
+                <a href="../Web/6/63jquery选择器.html">
+            
+                    
+                    6.3 jquery选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.38" data-path="../Web/6/64jquery样式操作.html">
+            
+                <a href="../Web/6/64jquery样式操作.html">
+            
+                    
+                    6.4 jquery样式操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.39" data-path="../Web/6/641jq操作select的值.html">
+            
+                <a href="../Web/6/641jq操作select的值.html">
+            
+                    
+                    6.4.1 jq操作select的值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.40" data-path="../Web/6/65绑定click事件.html">
+            
+                <a href="../Web/6/65绑定click事件.html">
+            
+                    
+                    6.5 绑定click事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.41" data-path="../Web/6/66jquery动画.html">
+            
+                <a href="../Web/6/66jquery动画.html">
+            
+                    
+                    6.6 jquery动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.42" data-path="../Web/7/71jquery特殊效果.html">
+            
+                <a href="../Web/7/71jquery特殊效果.html">
+            
+                    
+                    7.1 jquery特殊效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.43" data-path="../Web/7/72jquery链式调用.html">
+            
+                <a href="../Web/7/72jquery链式调用.html">
+            
+                    
+                    7.2 jquery链式调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.44" data-path="../Web/7/73jquery属性操作.html">
+            
+                <a href="../Web/7/73jquery属性操作.html">
+            
+                    
+                    7.3 jquery属性操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.45" data-path="../Web/7/74jquery事件.html">
+            
+                <a href="../Web/7/74jquery事件.html">
+            
+                    
+                    7.4 jquery事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.46" data-path="../Web/7/75表单验证.html">
+            
+                <a href="../Web/7/75表单验证.html">
+            
+                    
+                    7.5 表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.47" data-path="../Web/8/81事件冒泡.html">
+            
+                <a href="../Web/8/81事件冒泡.html">
+            
+                    
+                    8.1 事件冒泡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.48" data-path="../Web/8/82事件委托.html">
+            
+                <a href="../Web/8/82事件委托.html">
+            
+                    
+                    8.2 事件委托
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.49" data-path="../Web/8/84Dom操作.html">
+            
+                <a href="../Web/8/84Dom操作.html">
+            
+                    
+                    8.3 Dom操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.50" data-path="../Web/8/83javascript对象.html">
+            
+                <a href="../Web/8/83javascript对象.html">
+            
+                    
+                    8.4 javascript对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.51" data-path="../Web/8/85json.html">
+            
+                <a href="../Web/8/85json.html">
+            
+                    
+                    8.5 json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.52" data-path="../Web/8/86ajax.html">
+            
+                <a href="../Web/8/86ajax.html">
+            
+                    
+                    8.6 ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.53" data-path="../Web/9/91变量声明和赋值.html">
+            
+                <a href="../Web/9/91变量声明和赋值.html">
+            
+                    
+                    9.1 变量声明和赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.54" data-path="../Web/9/92函数相关.html">
+            
+                <a href="../Web/9/92函数相关.html">
+            
+                    
+                    9.2 函数相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.55" data-path="../Web/9/93模块及面向对象.html">
+            
+                <a href="../Web/9/93模块及面向对象.html">
+            
+                    
+                    9.3 模块及面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.56" data-path="../Web/9/94异步请求数据.html">
+            
+                <a href="../Web/9/94异步请求数据.html">
+            
+                    
+                    9.4 异步请求数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.57" data-path="../Web/9/95新增数组操作方法.html">
+            
+                <a href="../Web/9/95新增数组操作方法.html">
+            
+                    
+                    9.5 新增数组操作方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.58" data-path="../Web/10/01react介绍.html">
+            
+                <a href="../Web/10/01react介绍.html">
+            
+                    
+                    10.1 react介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.59" data-path="../Web/10/02快速开始.html">
+            
+                <a href="../Web/10/02快速开始.html">
+            
+                    
+                    10.2 快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.60" data-path="../Web/10/03JSX语法.html">
+            
+                <a href="../Web/10/03JSX语法.html">
+            
+                    
+                    10.3 JSX语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.61" data-path="../Web/10/04组件和属性.html">
+            
+                <a href="../Web/10/04组件和属性.html">
+            
+                    
+                    10.4 组件和属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.62" data-path="../Web/10/05绑定事件.html">
+            
+                <a href="../Web/10/05绑定事件.html">
+            
+                    
+                    10.5 绑定事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.63" data-path="../Web/10/06状态.html">
+            
+                <a href="../Web/10/06状态.html">
+            
+                    
+                    10.6 状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.64" data-path="../Web/10/07列表渲染.html">
+            
+                <a href="../Web/10/07列表渲染.html">
+            
+                    
+                    10.7 列表渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.65" data-path="../Web/10/08表单数据绑定.html">
+            
+                <a href="../Web/10/08表单数据绑定.html">
+            
+                    
+                    10.8 表单数据绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.66" data-path="../Web/10/01生命周期方法.html">
+            
+                <a href="../Web/10/01生命周期方法.html">
+            
+                    
+                    11.1 生命周期方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.67" data-path="../Web/10/02数据交互.html">
+            
+                <a href="../Web/10/02数据交互.html">
+            
+                    
+                    11.2 数据交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.68" data-path="../Web/10/03脚手架开发.html">
+            
+                <a href="../Web/10/03脚手架开发.html">
+            
+                    
+                    11.3 脚手架开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../BlockChain/001区块链记账原理.html">
+            
+                <a href="../BlockChain/001区块链记账原理.html">
+            
+                    
+                    区块链
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../BlockChain/001区块链记账原理.html">
+            
+                <a href="../BlockChain/001区块链记账原理.html">
+            
+                    
+                    1. 区块链记账原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../BlockChain/002比特币所有权及隐私问题.html">
+            
+                <a href="../BlockChain/002比特币所有权及隐私问题.html">
+            
+                    
+                    2. 比特币所有权及隐私问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../BlockChain/003比特币如何挖矿.html">
+            
+                <a href="../BlockChain/003比特币如何挖矿.html">
+            
+                    
+                    3. 比特币如何挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../BlockChain/004拜占庭将军.html">
+            
+                <a href="../BlockChain/004拜占庭将军.html">
+            
+                    
+                    4. 拜占庭将军
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../MAC/001Mac设置环境变量.html">
+            
+                <a href="../MAC/001Mac设置环境变量.html">
+            
+                    
+                    MAC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../MAC/001Mac设置环境变量.html">
+            
+                <a href="../MAC/001Mac设置环境变量.html">
+            
+                    
+                    1. 设置环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../MAC/002Mac下运行shell脚本.html">
+            
+                <a href="../MAC/002Mac下运行shell脚本.html">
+            
+                    
+                    2. Mac下运行shell脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >15. 拓展</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#sql&#x8BED;&#x53E5;&#x7684;&#x6574;&#x4F53;&#x7ED3;&#x6784;"><b>1. </b>SQL&#x8BED;&#x53E5;&#x7684;&#x6574;&#x4F53;&#x7ED3;&#x6784;:</a></li><li><span class="title-icon "></span><a href="#&#x57FA;&#x672C;&#x7684;select&#x8BED;&#x53E5;"><b>2. </b>&#x57FA;&#x672C;&#x7684;SELECT&#x8BED;&#x53E5;</a></li><li><span class="title-icon "></span><a href="#where&#x6761;&#x4EF6;"><b>3. </b>where&#x6761;&#x4EF6;:</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;-------between-and"><b>3.1. </b>&#x4F7F;&#x7528;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;: &gt; &gt;= &lt; <= !="(&lt;">) between and</=></a></li><li><span class="title-icon "></span><a href="#&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;-or-and-not"><b>3.2. </b>&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;: or and not</a></li><li><span class="title-icon "></span><a href="#&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;in--in&#x540E;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x96C6;&#x5408;"><b>3.3. </b>&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;in--in&#x540E;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x96C6;&#x5408;</a></li><li><span class="title-icon "></span><a href="#&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;like--&#x6A21;&#x7CCA;&#x67E5;&#x627E;-&#x5176;&#x4E2D;-&#x5339;&#x914D;&#x4EFB;&#x610F;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x3002;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;-escape&#x6307;&#x5B9A;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;"><b>3.4. </b>&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;like--&#x6A21;&#x7CCA;&#x67E5;&#x627E;, &#x5176;&#x4E2D;: &apos;%&apos;&#x5339;&#x914D;&#x4EFB;&#x610F;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x3002;&apos;_&apos;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;, escape&#x6307;&#x5B9A;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;.</a></li></ul><li><span class="title-icon "></span><a href="#&#x6392;&#x5E8F;-&#x4F7F;&#x7528;order-by&#x5173;&#x952E;&#x5B57;"><b>4. </b>&#x6392;&#x5E8F;: &#x4F7F;&#x7528;order by&#x5173;&#x952E;&#x5B57;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x5217;&#x540D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;"><b>4.1. </b>&#x4F7F;&#x7528;&#x5217;&#x540D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;:</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x5E8F;&#x53F7;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x5E76;&#x8BF4;&#x660E;&#x4EC0;&#x4E48;&#x5E8F;&#x53F7;"><b>4.2. </b>&#x4F7F;&#x7528;&#x5E8F;&#x53F7;&#x8FDB;&#x884C;&#x6392;&#x5E8F;:(&#x5E76;&#x8BF4;&#x660E;&#x4EC0;&#x4E48;&#x5E8F;&#x53F7;)</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x522B;&#x540D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;"><b>4.3. </b>&#x4F7F;&#x7528;&#x522B;&#x540D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x6392;&#x5E8F;"><b>4.4. </b>&#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x6392;&#x5E8F;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;"><b>5. </b>&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;:</a></li><li><span class="title-icon "></span><a href="#&#x5206;&#x7EC4;&#x51FD;&#x6570;&#x548C;&#x5206;&#x7EC4;&#x6570;&#x636E;"><b>6. </b>&#x5206;&#x7EC4;&#x51FD;&#x6570;&#x548C;&#x5206;&#x7EC4;&#x6570;&#x636E;</a></li><li><span class="title-icon "></span><a href="#&#x591A;&#x8868;&#x67E5;&#x8BE2;"><b>7. </b>&#x591A;&#x8868;&#x67E5;&#x8BE2;:</a></li><li><span class="title-icon "></span><a href="#&#x5B50;&#x67E5;&#x8BE2;"><b>8. </b>&#x5B50;&#x67E5;&#x8BE2;</a></li><li><span class="title-icon "></span><a href="#&#x96C6;&#x5408;&#x8FD0;&#x7B97;"><b>9. </b>&#x96C6;&#x5408;&#x8FD0;&#x7B97;</a></li><li><span class="title-icon "></span><a href="#sql&#x8BED;&#x8A00;&#x7684;&#x7C7B;&#x578B;"><b>10. </b>sql&#x8BED;&#x8A00;&#x7684;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x8868;&#x7684;&#x7EA6;&#x675F;"><b>11. </b>&#x8868;&#x7684;&#x7EA6;&#x675F;:</a></li><ul><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b>11.1. </b>&#x603B;&#x7ED3;:</a></li></ul><li><span class="title-icon "></span><a href="#&#x7D22;&#x5F15;"><b>12. </b>&#x7D22;&#x5F15;:</a></li></ul></div><a href="#sql&#x8BED;&#x53E5;&#x7684;&#x6574;&#x4F53;&#x7ED3;&#x6784;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="sql&#x8BED;&#x53E5;&#x7684;&#x6574;&#x4F53;&#x7ED3;&#x6784;"><a name="sql&#x8BED;&#x53E5;&#x7684;&#x6574;&#x4F53;&#x7ED3;&#x6784;" class="anchor-navigation-ex-anchor" href="#sql&#x8BED;&#x53E5;&#x7684;&#x6574;&#x4F53;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>1. SQL&#x8BED;&#x53E5;&#x7684;&#x6574;&#x4F53;&#x7ED3;&#x6784;:</h1>
+<pre class="language-"><code>select colname... from tablename 
+    where cond group by colname 
+    having cond order by ...;
+</code></pre><h1 id="&#x57FA;&#x672C;&#x7684;select&#x8BED;&#x53E5;"><a name="&#x57FA;&#x672C;&#x7684;select&#x8BED;&#x53E5;" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x672C;&#x7684;select&#x8BED;&#x53E5;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x57FA;&#x672C;&#x7684;SELECT&#x8BED;&#x53E5;</h1>
+<p>&#x5176;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;
+<code>SELECT *|{[DISTINCT] column|expression [alias],...} FROM    table;</code></p>
+<ol>
+<li>&#x67E5;&#x8BE2;&#x6240;&#x6709;&#x5458;&#x5DE5;&#x7684;&#x6240;&#x6709;&#x8BB0;&#x5F55;<pre class="language-"><code> select * from emp;
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x53F7;&#xFF0C;&#x59D3;&#x540D;&#xFF0C;&#x6708;&#x85AA;&#xFF0C;&#x5956;&#x91D1;&#xFF0C;&#x5E74;&#x85AA;</p>
+<pre class="language-"><code> select empno, ename, sal, comm, sal*12 from emp;
+</code></pre><p> <mark>&#x4F7F;&#x7528;select <em> &#x548C; select &#x5217;&#x540D;&#x7684;&#x533A;&#x522B;: &#x4F7F;&#x7528;select </em>&#x4F1A;&#x5148;&#x67E5;&#x6709;&#x54EA;&#x4E9B;&#x5217;, &#x5F71;&#x54CD;&#x6548;&#x7387;</mark></p>
+</li>
+<li><p>&#x5BF9;&#x6848;&#x4F8B;2&#x4F7F;&#x7528;&#x522B;&#x540D;:</p>
+<pre class="language-"><code> select empno, ename, sal as &#x5DE5;&#x8D44;, comm &#x5956;&#x91D1;, sal*12 &quot;&#x5E74; &#x85AA;&quot; from emp;
+</code></pre><p> &#x5173;&#x4E8E;&#x522B;&#x540D;&#x7684;&#x7ED3;&#x8BBA;: </p>
+<ul>
+<li>as&#x53EF;&#x4EE5;&#x7701;&#x7565;</li>
+<li>&#x5982;&#x679C;&#x522B;&#x540D;&#x4E2D;&#x95F4;&#x6709;&#x7A7A;&#x683C;, &#x9700;&#x8981;&#x4F7F;&#x7528;&quot;&quot;&#x5F15;&#x8D77;&#x6765;</li>
+</ul>
+</li>
+<li><p>&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x53F7;&#xFF0C;&#x59D3;&#x540D;&#xFF0C;&#x6708;&#x85AA;&#xFF0C;&#x5956;&#x91D1;&#xFF0C;&#x5E74;&#x85AA;&#xFF0C;&#x5E74;&#x6536;&#x5165;</p>
+<pre class="language-"><code> select empno, ename, sal, comm, sal*12, sal*12+comm from emp;
+ select empno, ename, sal, comm, sal*12, sal*12+ifnull(comm, 0) &quot;&#x5E74;&#x6536;&#x5165;&quot;from emp;
+</code></pre><p>  &#x7ED3;&#x8BBA;: </p>
+<ol>
+<li>&#x5305;&#x542B;&#x6709;null&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x90FD;&#x662F;&#x7A7A;, &#x5982;<code>sal*12+comm</code></li>
+<li><code>ifnull: ifnull(a, b)</code>---&gt;&#x82E5;a&#x4E3A;&#x7A7A;, &#x5219;&#x53D6;b&#x7684;&#x503C;</li>
+</ol>
+</li>
+<li><p>&#x67E5;&#x770B;&#x5458;&#x5DE5;&#x8868;&#x4E0D;&#x540C;&#x7684;&#x90E8;&#x95E8;&#x7F16;&#x53F7;</p>
+<pre class="language-"><code> select distinct deptno from emp;
+</code></pre></li>
+<li><p>&#x67E5;&#x770B;&#x4E0D;&#x540C;&#x90E8;&#x95E8;&#x7684;&#x4E0D;&#x540C;&#x5DE5;&#x79CD;</p>
+<pre class="language-"><code> select distinct deptno, job from emp;
+</code></pre><p> &#x7ED3;&#x8BBA;:distinct&#x7684;&#x4F5C;&#x7528;&#x8303;&#x56F4;??</p>
+<p> distinct&#x4F5C;&#x7528;&#x4E8E;&#x540E;&#x9762;&#x6240;&#x6709;&#x7684;&#x5217;.        </p>
+</li>
+</ol>
+<h1 id="where&#x6761;&#x4EF6;"><a name="where&#x6761;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#where&#x6761;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>3. where&#x6761;&#x4EF6;:</h1>
+<h2 id="&#x4F7F;&#x7528;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;-------between-and"><a name="&#x4F7F;&#x7528;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;-------between-and" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;-------between-and"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x4F7F;&#x7528;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;: &gt; &gt;= &lt; &lt;= != (&lt;&gt;) between and</h2>
+<ol>
+<li><p>&#x67E5;&#x8BE2;10&#x53F7;&#x90E8;&#x95E8;&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code> select * from emp where deptno=10;
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x540D;&#x5B57;&#x4E3A;king&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code> select * from emp where ename=&apos;king&apos;;
+ SELECT * FROM emp WHERE ENAME=&apos;KING&apos;;
+</code></pre></li>
+<li><p>&#x67E5;&#x627E;&#x85AA;&#x6C34;&#x4E0D;&#x7B49;&#x4E8E;1250&#x5458;&#x5DE5;&#x7684;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code> select * from emp where sal!=1250;
+ select * from emp where sal&lt;&gt;1250;
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x5165;&#x804C;&#x65E5;&#x671F;&#x4E3A;1981&#x5E74;11&#x6708;17&#x65E5;&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code> select * from emp where hiredate=&apos;1981-11-17&apos;;
+</code></pre></li>
+<li><p>&#x67E5;&#x627E;&#x5DE5;&#x8D44;&#x4ECB;&#x4E8E;1000-2000&#x4E4B;&#x95F4;&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code> select * from emp where sal&gt;=1000 and sal&lt;=2000;
+ select * from emp where sal between 1000 and 2000;
+</code></pre><p> &#x7ED3;&#x8BBA;: between and&#x662F;&#x95ED;&#x533A;&#x95F4;</p>
+</li>
+</ol>
+<h2 id="&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;-or-and-not"><a name="&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;-or-and-not" class="anchor-navigation-ex-anchor" href="#&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;-or-and-not"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;: or and not</h2>
+<ol>
+<li><p>&#x67E5;&#x8BE2;10&#x53F7;&#x90E8;&#x95E8;&#x6216;&#x8005;20&#x90E8;&#x95E8;&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code> select * from emp where deptno=10 or deptno=20;
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;10&#x53F7;&#x90E8;&#x95E8;&#x5458;&#x5DE5;&#x5DE5;&#x8D44;&#x4E3A;1300&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code> select * from emp where deptno=10 and sal=1300;
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x5DE5;&#x8D44;&#x4ECB;&#x4E8E;1600&#x5230;3000&#x7684;</p>
+<pre class="language-"><code> select * from emp where sal between 1600 and 3000;
+</code></pre><p> &#x7ED3;&#x8BBA;: &#x5173;&#x4E8E;and or &#x64CD;&#x4F5C;&#x7B26;&#x7684;sql&#x4F18;&#x5316;&#x95EE;&#x9898;?</p>
+<ul>
+<li>where&#x6761;&#x4EF6;&#x5728;&#x8FDB;&#x884C;&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;&#x8BA1;&#x7B97;&#x7684;&#x65F6;&#x5019;,&#x662F;&#x4ECE;&#x53F3;&#x5F80;&#x5DE6;&#x8FDB;&#x884C;&#x7684;</li>
+<li>&#x6240;&#x4EE5;&#x5BF9;&#x4E8E;and&#x6765;&#x8BF4;, &#x8981;&#x628A;&#x5BB9;&#x6613;&#x51FA;&#x73B0;&#x5047;&#x7684;&#x653E;&#x5728;&#x6700;&#x53F3;&#x8FB9;</li>
+<li><p>&#x5BF9;&#x4E8E;or&#x6765;&#x8BF4;, &#x8981;&#x628A;&#x5BB9;&#x6613;&#x51FA;&#x73B0;&#x771F;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x653E;&#x5728;&#x6700;&#x53F3;&#x8FB9;</p>
+<pre class="language-"><code> where a and b and c and d;
+ where a or b or c or d;
+</code></pre></li>
+</ul>
+</li>
+<li><p>&#x67E5;&#x8BE2;&#x5956;&#x91D1;&#x4E3A;&#x7A7A;&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;-null</p>
+<pre class="language-"><code> select * from emp where comm = null;  ---&#x67E5;&#x4E0D;&#x5230;&#x7ED3;&#x679C;
+ select * from emp where comm is null;
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x5956;&#x91D1;&#x4E0D;&#x4E3A;&#x7A7A;&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code> select * from emp where comm != null; ---&#x67E5;&#x4E0D;&#x5230;&#x7ED3;&#x679C;
+ select * from emp where comm is not null;
+</code></pre><p> &#x7ED3;&#x8BBA;: &#x5173;&#x4E8E;null&#x7684;&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x7ED3;&#x8BBA;?</p>
+<ul>
+<li>&#x82E5;&#x4E3A;&#x7A7A;, &#x5E94;&#x8BE5;&#x4F7F;&#x7528;is null</li>
+<li>&#x82E5;&#x4E0D;&#x4E3A;&#x7A7A;, &#x5E94;&#x8BE5;&#x4F7F;&#x7528;is not null    </li>
+</ul>
+</li>
+</ol>
+<h2 id="&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;in--in&#x540E;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x96C6;&#x5408;"><a name="&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;in--in&#x540E;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x96C6;&#x5408;" class="anchor-navigation-ex-anchor" href="#&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;in--in&#x540E;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x96C6;&#x5408;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. &#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;in--in&#x540E;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x96C6;&#x5408;</h2>
+<ol>
+<li><p>&#x67E5;&#x8BE2;&#x90E8;&#x95E8;&#x53F7;&#x662F;10&#x6216;&#x8005;20&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code> select * from emp where deptno in (10, 20);
+ select * from emp where deptno=10 or deptno=20;
+</code></pre><p> &#x601D;&#x8003;: &#x53EF;&#x4EE5;&#x5728;in&#x7684;&#x96C6;&#x5408;&#x4E2D;&#x4F7F;&#x7528;null&#x5417;?</p>
+<pre class="language-"><code> select * from emp where deptno in (10, 20, null);
+ select * from emp where deptno=10 or deptno=20 or deptno=null;
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x4E0D;&#x662F;10&#x548C;20&#x53F7;&#x90E8;&#x95E8;&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code> select * from emp where deptno not in (10, 20);
+ select * from emp where deptno!=10 and deptno!=20;
+
+ select * from emp where deptno not in (10, 20, null);
+ select * from emp where deptno!=10 and deptno!=20 and deptno!=null;
+</code></pre><p> &#x601D;&#x8003;: &#x82E5;not in&#x7684;&#x96C6;&#x5408;&#x4E2D;&#x6709;null&#x4F1A;&#x600E;&#x4E48;&#x6837;&#x5462;?</p>
+<p> &#x67E5;&#x8BE2;&#x4E0D;&#x5230;&#x6570;&#x636E;, not in&#x540E;&#x9762;&#x4E0D;&#x80FD;&#x51FA;&#x73B0;null.</p>
+<pre class="language-"><code> deptno in (a, b, null)-----&gt;deptno=a or deptno=b or deptno=null;
+ deptno not in (a, b, null)----&gt;deptno!=a and deptno!=b and deptno!=null;
+</code></pre></li>
+</ol>
+<h2 id="&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;like--&#x6A21;&#x7CCA;&#x67E5;&#x627E;-&#x5176;&#x4E2D;-&#x5339;&#x914D;&#x4EFB;&#x610F;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x3002;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;-escape&#x6307;&#x5B9A;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;"><a name="&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;like--&#x6A21;&#x7CCA;&#x67E5;&#x627E;-&#x5176;&#x4E2D;-&#x5339;&#x914D;&#x4EFB;&#x610F;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x3002;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;-escape&#x6307;&#x5B9A;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;like--&#x6A21;&#x7CCA;&#x67E5;&#x627E;-&#x5176;&#x4E2D;-&#x5339;&#x914D;&#x4EFB;&#x610F;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x3002;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;-escape&#x6307;&#x5B9A;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. &#x5728;where&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;like--&#x6A21;&#x7CCA;&#x67E5;&#x627E;, &#x5176;&#x4E2D;: &apos;%&apos;&#x5339;&#x914D;&#x4EFB;&#x610F;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x3002;&apos;_&apos;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;, escape&#x6307;&#x5B9A;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;.</h2>
+<ol>
+<li><p>&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x9996;&#x5B57;&#x6BCD;&#x662F;S&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code> select * from emp where ename like &apos;S%&apos;;
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x7F16;&#x53F7;&#x4E3A;79&#x5F00;&#x5934;&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code> select * from emp where empno like &apos;79%&apos;;
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x540D;&#x5B57;&#x4E3A;&#x56DB;&#x4E2A;&#x5B57;&#x6BCD;&#x957F;&#x5EA6;&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code> select * from emp where ename like &apos;____&apos;;
+</code></pre><p> &#x63D2;&#x5165;&#x4E00;&#x6761;&#x8BB0;&#x5F55;, &#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;</p>
+<pre class="language-"><code> insert into emp (EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO)
+ values (1000, &apos;TOM_CAT&apos;, &apos;CLERK&apos;, 9999, &apos;1988-09-09&apos;, 1200.00, null, 10);
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#x5E26;_&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code> select * from emp where ename like &apos;%$_%&apos; escape &apos;$&apos;;
+</code></pre><p> &#x4F46;&#x662F;&#x4E0D;&#x80FD;&#x7528;\&#x4F5C;&#x4E3A;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;.</p>
+<p> &#x56DE;&#x987E;&#x4E00;&#x4E0B;where&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x54EA;&#x4E9B;&#x8FD0;&#x7B97;&#x7B26;?</p>
+<pre class="language-"><code> &#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;:= &gt; &gt;= &lt; &lt;= != &lt;&gt; between and
+ &#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;: and or not
+ &#x96C6;&#x5408;&#x8FD0;&#x7B97;&#x7B26;: in     not in 
+ &#x6A21;&#x7CCA;&#x67E5;&#x627E;:like % _ escape
+</code></pre></li>
+</ol>
+<h1 id="&#x6392;&#x5E8F;-&#x4F7F;&#x7528;order-by&#x5173;&#x952E;&#x5B57;"><a name="&#x6392;&#x5E8F;-&#x4F7F;&#x7528;order-by&#x5173;&#x952E;&#x5B57;" class="anchor-navigation-ex-anchor" href="#&#x6392;&#x5E8F;-&#x4F7F;&#x7528;order-by&#x5173;&#x952E;&#x5B57;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x6392;&#x5E8F;: &#x4F7F;&#x7528;order by&#x5173;&#x952E;&#x5B57;</h1>
+<p>&#x57FA;&#x672C;&#x683C;&#x5F0F;:</p>
+<pre class="language-"><code>select  ... from ... where condition order by colname|alias|expr|number(&#x5E8F;&#x53F7;)
+</code></pre><p>order by&#x6709;&#x4E24;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;; &#x4E00;&#x79CD;&#x662F;&#x5347;&#x5E8F;, &#x4E00;&#x79CD;&#x662F;&#x964D;&#x5E8F;: &#x9ED8;&#x8BA4;&#x662F;&#x5347;&#x5E8F;&#x7684;(asc), &#x964D;&#x5E8F;&#x4E3A;desc</p>
+<h2 id="&#x4F7F;&#x7528;&#x5217;&#x540D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;"><a name="&#x4F7F;&#x7528;&#x5217;&#x540D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x5217;&#x540D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. &#x4F7F;&#x7528;&#x5217;&#x540D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;:</h2>
+<ol>
+<li><p>&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#x6309;&#x5165;&#x804C;&#x65E5;&#x671F;&#x5148;&#x540E;&#x6392;&#x5E8F;</p>
+<pre class="language-"><code>select * from emp order by hiredate;
+select * from emp order by hiredate asc;
+</code></pre></li>
+<li><p>&#x5458;&#x5DE5;&#x85AA;&#x6C34;&#x6309;&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x6392;&#x5E8F;</p>
+<pre class="language-"><code> select * from emp order by sal desc
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#x6309;&#x5956;&#x91D1;&#x9006;&#x5E8F;</p>
+<pre class="language-"><code> select * from emp order by comm desc;
+</code></pre></li>
+<li><p>&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#x6309;&#x90E8;&#x95E8;&#x5347;&#x5E8F;&#x3001;&#x85AA;&#x6C34;&#x964D;&#x5E8F;&#x6392;&#x5217;</p>
+<pre class="language-"><code> select * from emp order by deptno asc, sal desc;
+</code></pre></li>
+</ol>
+<p>&#x6839;&#x636E;&#x6392;&#x5E8F;&#x7ED3;&#x679C;&#x5F97;&#x51FA;&#x7ED3;&#x8BBA;:</p>
+<ul>
+<li>asc&#x548C;desc&#x4F5C;&#x7528;&#x4E8E;&#x6700;&#x8FD1;&#x7684;&#x524D;&#x9762;&#x7684;&#x4E00;&#x5217;</li>
+<li>&#x6309;&#x7167;&#x591A;&#x4E2A;&#x5217;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x7684;&#x65F6;&#x5019;, &#x5148;&#x6309;&#x7167;&#x7B2C;&#x4E00;&#x5217;&#x8FDB;&#x884C;&#x6392;&#x5E8F;, &#x82E5;&#x7B2C;&#x4E00;&#x5217;&#x76F8;&#x540C;,&#x5219;&#x6309;&#x7167;&#x7B2C;&#x4E8C;&#x5217;&#x6392;&#x5E8F;</li>
+</ul>
+<h2 id="&#x4F7F;&#x7528;&#x5E8F;&#x53F7;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x5E76;&#x8BF4;&#x660E;&#x4EC0;&#x4E48;&#x5E8F;&#x53F7;"><a name="&#x4F7F;&#x7528;&#x5E8F;&#x53F7;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x5E76;&#x8BF4;&#x660E;&#x4EC0;&#x4E48;&#x5E8F;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x5E8F;&#x53F7;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x5E76;&#x8BF4;&#x660E;&#x4EC0;&#x4E48;&#x5E8F;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. &#x4F7F;&#x7528;&#x5E8F;&#x53F7;&#x8FDB;&#x884C;&#x6392;&#x5E8F;:(&#x5E76;&#x8BF4;&#x660E;&#x4EC0;&#x4E48;&#x5E8F;&#x53F7;)</h2>
+<p>&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x7F16;&#x53F7;, &#x5458;&#x5DE5;&#x59D3;&#x540D;&#x548C;&#x5DE5;&#x8D44;, &#x6309;&#x7167;&#x5E8F;&#x53F7;(&#x5DE5;&#x8D44;)&#x8FDB;&#x884C;&#x6392;&#x5E8F;</p>
+<pre class="language-"><code>select empno, ename, sal from emp order by 3;
+</code></pre><h2 id="&#x4F7F;&#x7528;&#x522B;&#x540D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;"><a name="&#x4F7F;&#x7528;&#x522B;&#x540D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x522B;&#x540D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>4.3. &#x4F7F;&#x7528;&#x522B;&#x540D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;</h2>
+<p>&#x6309;&#x5458;&#x5DE5;&#x7684;&#x5E74;&#x6536;&#x5165;&#x8FDB;&#x884C;&#x6392;&#x5E8F;</p>
+<pre class="language-"><code>select empno, ename, sal, comm, sal*12+ifnull(comm, 0) yearcomm from emp order by yearcomm;
+</code></pre><h2 id="&#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x6392;&#x5E8F;"><a name="&#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x6392;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x6392;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>4.4. &#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x6392;&#x5E8F;</h2>
+<p>&#x6309;&#x7167;&#x5458;&#x5DE5;&#x7684;&#x5E74;&#x85AA;&#x8FDB;&#x884C;&#x6392;&#x5E8F;</p>
+<pre class="language-"><code>select empno, ename, sal, sal*12 &quot;&#x5E74;&#x85AA;&quot; from emp order by sal*12;
+</code></pre><p><strong>&#x5173;&#x4E8E;&#x6392;&#x5E8F;&#x7684;&#x51E0;&#x70B9;&#x8BF4;&#x660E;:</strong></p>
+<p>&#x8981;&#x4E86;&#x89E3;&#x6392;&#x5E8F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x54EA;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;:</p>
+<ol>
+<li>&#x5217;&#x540D;   </li>
+<li>&#x5E8F;&#x53F7;   </li>
+<li>&#x522B;&#x540D;   </li>
+<li>&#x8868;&#x8FBE;&#x5F0F;</li>
+</ol>
+<p><mark>&#x6CE8;&#x610F;: order by&#x4E00;&#x5B9A;&#x662F;&#x51FA;&#x73B0;&#x5728;select&#x8BED;&#x53E5;&#x7684;&#x6700;&#x540E;&#x9762;, &#x4E5F;&#x5C31;&#x662F;&#x5BF9;&#x6700;&#x540E;&#x7684;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x6392;&#x5E8F;.    </mark></p>
+<h1 id="&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;"><a name="&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;:</h1>
+<p>&#x8001;&#x677F;&#x6253;&#x7B97;&#x7ED9;&#x6DA8;&#x5DE5;&#x8D44;&#xFF0C;&#x603B;&#x88C1;1000&#xFF0C;&#x7ECF;&#x7406;800&#xFF0C;&#x666E;&#x901A;&#x5458;&#x5DE5;400&#xFF0C;&#x5C06;&#x6DA8;&#x524D;&#x3001;&#x6DA8;&#x540E;&#x85AA;&#x6C34;&#x5217;&#x51FA;</p>
+<p>&#x4ECB;&#x7ECD;case when &#x7684;&#x7528;&#x6CD5;</p>
+<p><strong>&#x57FA;&#x672C;&#x8BED;&#x6CD5;:</strong></p>
+<pre class="language-"><code>case &#x8868;&#x8FBE;&#x5F0F;
+    when &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C; then
+        &#x8868;&#x8FBE;&#x5F0F;
+    when &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C; then
+        &#x8868;&#x8FBE;&#x5F0F;
+    else
+        &#x8868;&#x8FBE;&#x5F0F;
+end &quot;&#x522B;&#x540D;&quot;
+</code></pre><p>&#x4F7F;&#x7528;</p>
+<pre class="language-"><code>case when    
+    select empno,
+           ename,
+           sal &quot;&#x6DA8;&#x524D;&#x85AA;&#x6C34;&quot;,
+           job,
+           case job
+             when &apos;PRESIDENT&apos; then
+              sal + 1000
+             when &apos;MANAGER&apos; then
+              sal + 800
+             else
+              sal + 400
+           end &quot;&#x6DA8;&#x540E;&#x85AA;&#x6C34;&quot;
+      from emp;
+</code></pre><h1 id="&#x5206;&#x7EC4;&#x51FD;&#x6570;&#x548C;&#x5206;&#x7EC4;&#x6570;&#x636E;"><a name="&#x5206;&#x7EC4;&#x51FD;&#x6570;&#x548C;&#x5206;&#x7EC4;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x7EC4;&#x51FD;&#x6570;&#x548C;&#x5206;&#x7EC4;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x5206;&#x7EC4;&#x51FD;&#x6570;&#x548C;&#x5206;&#x7EC4;&#x6570;&#x636E;</h1>
+<p>&#x5206;&#x7EC4;&#x51FD;&#x6570;:&#x4E5F;&#x79F0;&#x4E4B;&#x4E3A;&#x7EC4;&#x51FD;&#x6570;&#x6216;&#x8005;&#x805A;&#x5408;&#x51FD;&#x6570;, oracle&#x63D0;&#x4F9B;&#x7684;&#x5E38;&#x7528;&#x7684;&#x5206;&#x7EC4;&#x51FD;&#x6570;&#x6709;:sum, avg, count, max, min</p>
+<ol>
+<li><p>&#x7EDF;&#x8BA1;&#x5458;&#x5DE5;&#x603B;&#x6570;</p>
+<pre class="language-"><code> select count(empno) from emp;
+</code></pre></li>
+<li><p>&#x7EDF;&#x8BA1;&#x5DE5;&#x79CD;&#x603B;&#x6570;</p>
+<pre class="language-"><code> select count(job) from emp;---&#x5305;&#x542B;&#x91CD;&#x590D;&#x7684;
+ select count(distinct job) from emp;
+</code></pre></li>
+<li><p>&#x6C42;&#x5458;&#x5DE5;&#x7684;&#x5E73;&#x5747;&#x5DE5;&#x8D44;</p>
+<pre class="language-"><code> select avg(sal) from emp;
+</code></pre></li>
+<li><p>&#x6C42;&#x5458;&#x5DE5;&#x7684;&#x5E73;&#x5747;&#x5956;&#x91D1;</p>
+<pre class="language-"><code> select avg(comm), sum(comm)/count(empno) from emp;
+</code></pre></li>
+<li><p>&#x6C42;&#x5458;&#x5DE5;&#x8868;&#x4E2D;&#x6700;&#x9AD8;&#x5DE5;&#x8D44;&#x548C;&#x6700;&#x4F4E;&#x5DE5;&#x8D44;</p>
+<pre class="language-"><code> select max(sal), min(sal) from emp;
+</code></pre></li>
+</ol>
+<p>&#x7ED3;&#x8BBA;: &#x5206;&#x7EC4;&#x51FD;&#x6570;&#x5177;&#x6709;&#x6EE4;&#x7A7A;&#x529F;&#x80FD;.</p>
+<p>&#x57FA;&#x672C;&#x683C;&#x5F0F; : select ..., count() from emp where ... group by .. 
+&#x8BF4;&#x660E;: &#x6309;&#x7167;group by &#x540E;&#x7ED9;&#x5B9A;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5C06;from&#x540E;&#x9762;&#x7684;table&#x8FDB;&#x884C;&#x5206;&#x7EC4;, &#x9488;&#x5BF9;&#x6BCF;&#x4E00;&#x7EC4;, &#x4F7F;&#x7528;&#x7EC4;&#x51FD;&#x6570;&#x3002;</p>
+<ol>
+<li><p>&#x7EDF;&#x8BA1;&#x5404;&#x4E2A;&#x90E8;&#x95E8;&#x7684;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#xFF1F;</p>
+<pre class="language-"><code> select deptno, avg(sal) from emp group by deptno;
+</code></pre><p> &#x6CE8;&#x610F;: &#x7EDF;&#x8BA1;&#x5404;&#x4E2A;&#x90E8;&#x95E8;&#x7684;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#x662F;: &#x5148;&#x6309;&#x7167;&#x90E8;&#x95E8;&#x8FDB;&#x884C;&#x5206;&#x7EC4;, &#x7136;&#x540E;&#x518D;&#x7EC4;&#x5185;&#x8FDB;&#x884C;&#x7EDF;&#x8BA1;.&#x6700;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x4E00;&#x5B9A;&#x662F;&#x6709;&#x51E0;&#x4E2A;&#x90E8;&#x95E8;&#x7F16;&#x53F7;&#x5C31;&#x6709;&#x51E0;&#x4E2A;&#x7ED3;&#x679C;.</p>
+</li>
+<li><p>&#x7EDF;&#x8BA1;&#x5404;&#x4E2A;&#x90E8;&#x95E8;&#x4E0D;&#x540C;&#x5DE5;&#x79CD;&#x7684;&#x5E73;&#x5747;&#x5DE5;&#x8D44;?</p>
+<pre class="language-"><code> select deptno, job, avg(sal) from emp group by deptno, job;
+</code></pre><p> &#x7ED3;&#x8BBA;: &#x8BF7;&#x601D;&#x8003;&#x901A;&#x8FC7;&#x6848;&#x4F8B;1&#x548C;&#x6848;&#x4F8B;2&#x5F97;&#x51FA;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x7ED3;&#x8BBA;?</p>
+<p> select&#x540E;&#x9762;&#x7684;&#x5217;&#x548C;group&#x540E;&#x9762;&#x7684;&#x5217;&#x6709;&#x4EC0;&#x4E48;&#x5173;&#x7CFB;?</p>
+<pre class="language-"><code> select a, b, c.., count(f) from table group by a, b, c
+</code></pre><p> &#x7ED3;&#x8BBA;: select&#x540E;&#x9762;&#x7684;&#x5217;&#x82E5;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x5728;&#x5206;&#x7EC4;&#x51FD;&#x6570;&#x4E2D;, &#x5219;&#x4E00;&#x5B9A;&#x8981;&#x51FA;&#x73B0;&#x5728;group by&#x5B50;&#x53E5;&#x4E2D;.</p>
+<p> &#x5728;group by&#x5B50;&#x53E5;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x5217;, &#x4E0D;&#x8981;&#x6C42;&#x4E00;&#x5B9A;&#x51FA;&#x73B0;&#x5728;select&#x540E;&#x9762;&#x7684;&#x5217;&#x4E2D;</p>
+</li>
+<li><p>&#x7EDF;&#x8BA1;&#x5404;&#x4E2A;&#x90E8;&#x95E8;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#x9AD8;&#x4E8E;2000?</p>
+<pre class="language-"><code> select deptno, avg(sal) from emp group by deptno having avg(sal)&gt;2000;
+</code></pre><p> &#x7ED3;&#x8BBA;:&#x5BF9;&#x5206;&#x7EC4;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;, &#x4E0D;&#x80FD;&#x591F;&#x4F7F;&#x7528;where, &#x5E94;&#x8BE5;&#x4F7F;&#x7528;having</p>
+</li>
+<li><p>&#x6C42;&#x85AA;&#x8D44;&#x5728;1200&#x4EE5;&#x4E0A;&#x7684;&#x5458;&#x5DE5;&#x6570;</p>
+<pre class="language-"><code> select count(empno) from emp where sal&gt;1200;
+</code></pre></li>
+<li><p>&#x6C42;&#x5458;&#x5DE5;&#x4EBA;&#x6570;&#x9AD8;&#x4E8E;4&#x4E2A;&#x4EBA;&#x7684;&#x90E8;&#x95E8;&#x7F16;&#x53F7;&#x548C;&#x5458;&#x5DE5;&#x6570;</p>
+<pre class="language-"><code> select deptno, count(empno) from emp group by deptno having count(empno)&gt;4;
+</code></pre></li>
+<li><p>&#x6C42;10&#x53F7;&#x90E8;&#x95E8;&#x5458;&#x5DE5;&#x7684;&#x5E73;&#x5747;&#x85AA;&#x6C34;</p>
+<p> &#x65B9;&#x6CD5;1:&#x5148;&#x8FC7;&#x6EE4;&#x518D;&#x5206;&#x7EC4;</p>
+<pre class="language-"><code> select deptno, avg(sal) from emp where deptno=10 group by deptno;
+</code></pre><p> &#x65B9;&#x6CD5;2:&#x5148;&#x5206;&#x7EC4;&#x518D;&#x8FC7;&#x6EE4;</p>
+<pre class="language-"><code> select deptno, avg(sal) from emp group by deptno having deptno=10;
+</code></pre><p> &#x7ED3;&#x8BBA;:&#x6BD4;&#x8F83;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;, &#x5E94;&#x8BE5;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#x90A3;&#x79CD;&#x65B9;&#x6CD5;?</p>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x79CD;&#x6548;&#x7387;&#x9AD8;, &#x539F;&#x56E0;&#x662F;&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x5148;&#x8FC7;&#x6EE4;, &#x7136;&#x540E;&#x5728;&#x8FDB;&#x884C;&#x7EDF;&#x8BA1;;</li>
+<li>&#x7B2C;&#x4E8C;&#x79CD;&#x6548;&#x7387;&#x4F4E;, &#x539F;&#x56E0;&#x662F;&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#x662F;&#x5BF9;&#x6574;&#x4E2A;&#x8868;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#x7EDF;&#x8BA1;, &#x7136;&#x540E;&#x5728;&#x5BF9;&#x5206;&#x7EC4;&#x4E4B;&#x540E;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;, &#x7EDF;&#x8BA1;&#x7684;&#x6570;&#x636E;&#x91CF;&#x6BD4;&#x7B2C;&#x4E00;&#x79CD;&#x8981;&#x5927;.</li>
+</ul>
+</li>
+</ol>
+<p><strong>&#x4F7F;&#x7528;&#x5206;&#x7EC4;&#x51FD;&#x6570;&#x7EDF;&#x8BA1;&#x5206;&#x7EC4;&#x6570;&#x636E;&#x4E0D;&#x5F53;&#x7684;&#x60C5;&#x51B5;:</strong></p>
+<pre class="language-"><code>select deptno, job, avg(sal) from emp group by deptno;
+</code></pre><p><mark>&#x5207;&#x8BB0;: &#x51FA;&#x73B0;&#x5728;select&#x540E;&#x9762;&#x7684;&#x5217;, &#x82E5;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x5728;&#x5206;&#x7EC4;&#x51FD;&#x6570;&#x4E2D;, &#x5219;&#x5FC5;&#x987B;&#x51FA;&#x73B0;&#x5728;group by &#x5B50;&#x53E5;&#x4E2D;.</mark></p>
+<p><strong>&#x6CE8;&#x610F;&#x70B9;: &#x5206;&#x7EC4;&#x6570;&#x636E;&#x662F;&#x5148;&#x5BF9;&#x8868;&#x8FDB;&#x884C;&#x5206;&#x7EC4;,&#x7136;&#x540E;&#x518D;&#x7EC4;&#x5185;&#x8FDB;&#x884C;&#x7EDF;&#x8BA1;.</strong>
+&#x51FA;&#x73B0;&#x5728;select&#x540E;&#x9762;&#x7684;&#x5217;, &#x82E5;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x5728;&#x5206;&#x7EC4;&#x51FD;&#x6570;&#x91CC;&#x9762;, &#x5219;&#x5FC5;&#x987B;&#x51FA;&#x73B0;&#x5728;group by&#x5B50;&#x53E5;&#x5F53;&#x4E2D;.</p>
+<p><strong>&#x601D;&#x8003;: &#x901A;&#x8FC7;&#x4E0A;&#x8FF0;&#x8BB2;&#x89E3;, &#x8BF4;&#x660E;where&#x548C;having&#x662F;&#x4EC0;&#x4E48;&#x533A;&#x522B;?</strong></p>
+<ul>
+<li><p><mark>select&#x540E;&#x9762;&#x7684;&#x5217;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x7684;&#x5728;&#x5206;&#x7EC4;&#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x90A3;&#x4E48;&#x4E00;&#x5B9A;&#x4F1A;&#x51FA;&#x73B0;&#x5728;group by&#x540E;&#x9762;</mark></p>
+</li>
+<li><p><mark>group by&#x540E;&#x9762;&#x7684;&#x6761;&#x4EF6;&#x5FC5;&#x987B;&#x662F;having</mark></p>
+</li>
+</ul>
+<h1 id="&#x591A;&#x8868;&#x67E5;&#x8BE2;"><a name="&#x591A;&#x8868;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x8868;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>7. &#x591A;&#x8868;&#x67E5;&#x8BE2;:</h1>
+<p>&#x7B1B;&#x5361;&#x5C14;&#x79EF;(&#x4F5C;&#x7528;&#x662F;&#x5904;&#x7406;&#x591A;&#x8868;&#x67E5;&#x8BE2;)
+&#x9996;&#x5148;&#x770B;&#x5982;&#x4E0B;&#x7684;&#x67E5;&#x8BE2;:</p>
+<p><code>select e.*, d.* from emp e cross join dept d;</code></p>
+<p>&#x7ED3;&#x8BBA;: </p>
+<ul>
+<li>&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x884C;&#x6570;=A&#x8868;&#x7684;&#x884C;&#x6570;*B&#x8868;&#x7684;&#x884C;&#x6570;</li>
+<li><p>&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x5217;&#x6570;=A&#x8868;&#x7684;&#x5217;&#x6570;+B&#x8868;&#x7684;&#x5217;&#x6570;</p>
+</li>
+<li><p>&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5408;&#x4E2D;&#x6709;&#x4E00;&#x4E9B;&#x662F;&#x65E0;&#x6548;&#x7684;&#x6570;&#x636E;, &#x9700;&#x8981;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;, </p>
+</li>
+<li>&#x5BF9;&#x4E8E;&#x6709;2&#x4E2A;&#x8868;&#x7684;&#x7684;&#x7B1B;&#x5361;&#x5C14;&#x79EF;, &#x9700;&#x8981;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;, &#x5BF9;&#x4E8E;n&#x4E2A;&#x8868;&#x9700;&#x8981;n-1&#x4E2A;&#x6761;&#x4EF6;.</li>
+</ul>
+<p>&#x6CE8;&#x610F;: </p>
+<ul>
+<li>&#x5BF9;&#x4E8E;&#x591A;&#x8868;&#x67E5;&#x8BE2;, &#x9996;&#x5148;&#x4F1A;&#x751F;&#x6210;&#x7B1B;&#x5361;&#x5C14;&#x79EF;, &#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x91CC;&#x9762;&#x4F1A;&#x6709;&#x65E0;&#x6548;&#x7684;&#x6570;&#x636E;, &#x6B64;&#x65F6;&#x9700;&#x8981;&#x8FC7;&#x6EE4;&#x7B5B;&#x9009;.</li>
+</ul>
+<p>&#x6848;&#x4F8B;:
+&#x5185;&#x8FDE;&#x63A5;(&#x4E5F;&#x79F0;&#x4E3A;&#x7B49;&#x503C;&#x8FDE;&#x63A5;)</p>
+<ol>
+<li>&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#xFF1A;&#x5458;&#x5DE5;&#x53F7; &#x59D3;&#x540D; &#x6708;&#x85AA;(emp)&#x548C;&#x90E8;&#x95E8;&#x540D;&#x79F0;(dept)<ul>
+<li><code>select e.empno, e.ename, e.sal, d.dname from emp e, dept d where e.deptno=d.deptno;</code><ul>
+<li><code>select e.empno, e.ename, e.sal, d.dname from emp e inner join dept d on e.deptno=d.deptno;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x67E5;&#x8BE2;emp&#x8868;&#x548C;dept&#x8868;&#x7684;&#x6240;&#x6709;&#x4FE1;&#x606F;:<ul>
+<li><code>select e.*, d.* from emp e inner join dept d on e.deptno=d.deptno;</code></li>
+<li><code>select e.*, d.* from emp e, dept d where e.deptno=d.deptno;</code></li>
+<li>&#x603B;&#x7ED3;&#xFF1A;<ul>
+<li><code>,-----&gt;inner join</code></li>
+<li><code>where-----&gt;on</code></li>
+<li>&#x6CE8;&#x610F;&#xFF1A;&#x4E0D;&#x80FD;&#x663E;&#x793A;40&#x53F7;&#x90E8;&#x95E8;&#x7684;&#x4FE1;&#x606F;, &#x6B64;&#x65F6;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5916;&#x8FDE;&#x63A5;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>&#x5916;&#x8FDE;&#x63A5;:
+--&#x6309;&#x90E8;&#x95E8;&#x7EDF;&#x8BA1;&#x5458;&#x5DE5;&#x4EBA;&#x6570;, &#x663E;&#x793A;&#x5982;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A; &#x90E8;&#x95E8;&#x53F7; &#x90E8;&#x95E8;&#x540D;&#x79F0; &#x4EBA;&#x6570; </p>
+<pre class="language-"><code>select e.deptno, d.dname, count(e.empno)
+  from emp e, dept d
+ where e.deptno = d.deptno
+ group by e.deptno, d.dname;
+</code></pre><p>&#x4E0A;&#x8FF0;&#x67E5;&#x8BE2;&#x4E0D;&#x80FD;&#x67E5;&#x8BE2;&#x51FA;40&#x53F7;&#x90E8;&#x95E8;&#x7684;&#x5458;&#x5DE5;&#x6570;, &#x9700;&#x8981;&#x4F7F;&#x7528;&#x5916;&#x8FDE;&#x63A5;:</p>
+<ul>
+<li><p>&#x53F3;&#x5916;&#x8FDE;&#x63A5;:</p>
+<pre class="language-"><code>`select e.*, d.* from emp e right outer join dept d on e.deptno=d.deptno;`
+</code></pre></li>
+<li><p>&#x5DE6;&#x5916;&#x8FDE;&#x63A5;:
+  <code>select e.*, d.* from dept d left outer join emp e on e.deptno=d.deptno;</code></p>
+</li>
+</ul>
+<p>&#x3010;&#x6CE8;&#x610F;&#x3011;SQL99&#x4E2D;&#xFF0C;&#x5916;&#x94FE;&#x63A5;&#x53D6;&#x503C;&#x4E0E;&#x5173;&#x7CFB;&#x8868;&#x8FBE;&#x5F0F;=&#x53F7;&#x5DE6;&#x53F3;&#x4F4D;&#x7F6E;&#x65E0;&#x5173;&#x3002;&#x53D6;&#x503C;&#x8DDF;from&#x540E;&#x8868;&#x7684;&#x4E66;&#x5199;&#x987A;&#x5E8F;&#x6709;&#x5173;&#x3002; </p>
+<pre class="language-"><code>&quot;xxx left outer join yyy&quot;  &#x5219;&#x4E3A;&#x53D6;&#x51FA;xxx&#x7684;&#x5185;&#x5BB9;&#x3002;
+&quot;xxx right outer join yyy&quot; &#x5219;&#x4E3A;&#x53D6;&#x51FA;yyy&#x7684;&#x5185;&#x5BB9;
+</code></pre><h1 id="&#x5B50;&#x67E5;&#x8BE2;"><a name="&#x5B50;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x5B50;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>8. &#x5B50;&#x67E5;&#x8BE2;</h1>
+<p>&#x67E5;&#x8BE2;&#x6BD4;SCOTT&#x5DE5;&#x8D44;&#x9AD8;&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</p>
+<p>&#x5206;&#x6790;: &#x53EF;&#x4EE5;&#x5206;&#x4E24;&#x90E8;&#x67E5;&#x627E;,</p>
+<ul>
+<li><p>&#x7B2C;&#x4E00;&#x6B65;: &#x67E5;&#x627E;SCOTT&#x7684;&#x5DE5;&#x8D44;</p>
+<p><code>select sal from emp where ename=&apos;SCOTT&apos;;  ---&gt;3000</code></p>
+</li>
+<li><p>&#x7B2C;&#x4E8C;&#x6B65;: &#x5C06;&#x4E0A;&#x4E00;&#x6B65;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x90E8;&#x67E5;&#x8BE2;&#x7684;&#x6761;&#x4EF6;
+<code>select * from emp where sal&gt;3000;</code></p>
+</li>
+<li><p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B50;&#x67E5;&#x8BE2;&#x65B9;&#x6CD5;&#x5C06;&#x4E24;&#x6B65;&#x5408;&#x6210;&#x4E00;&#x6B65;: 
+<code>select * from emp where sal&gt;(select sal from emp where ename=&apos;SCOTT&apos;);</code></p>
+</li>
+</ul>
+<p>&#x6848;&#x4F8B;:</p>
+<ol>
+<li>&#x67E5;&#x8BE2;&#x90E8;&#x95E8;&#x540D;&#x79F0;&#x662F;&quot;SALES&quot;&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;:
+ <code>select * from emp where deptno=(select deptno from dept where dname=&apos;SALES&apos;);</code></li>
+<li><p>&#x67E5;&#x8BE2;10&#x53F7;&#x90E8;&#x95E8;&#x5458;&#x5DE5;&#x53F7;, &#x5458;&#x5DE5;&#x59D3;&#x540D;, &#x90E8;&#x95E8;&#x7F16;&#x53F7;, &#x90E8;&#x95E8;&#x540D;&#x79F0;</p>
+<pre class="language-"><code> select e.empno, e.ename, e.deptno,
+     (select dname from dept where deptno=10)
+ dname from emp e where e.deptno=10;
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x90E8;&#x95E8;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#x9AD8;&#x4E8E;30&#x53F7;&#x90E8;&#x95E8;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#x7684;&#x90E8;&#x95E8;&#x548C;&#x5E73;&#x5747;&#x5DE5;&#x8D44;</p>
+<pre class="language-"><code> select deptno, avg(sal)
+     from emp
+     group by deptno
+     having avg(sal) &gt; (select avg(sal) from emp where deptno = 30);
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x6BD4;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#x9AD8;&#x7684;&#x5458;&#x5DE5;&#x7684;&#x4FE1;&#x606F;?
+ <code>select * from emp where sal&gt;(select avg(sal) from emp);</code></p>
+</li>
+<li><p>&#x67E5;&#x8BE2;&#x6700;&#x4F4E;&#x85AA;&#x6C34;&#x9AD8;&#x4E8E;30&#x53F7;&#x90E8;&#x95E8;&#x6700;&#x4F4E;&#x85AA;&#x6C34;&#x7684;&#x90E8;&#x95E8;&#x53CA;&#x5176;&#x6700;&#x4F4E;&#x85AA;&#x6C34;</p>
+<pre class="language-"><code> select deptno, min(sal) from emp group by deptno
+        having min(sal)&gt;(select min(sal) from emp where deptno=30);
+</code></pre></li>
+</ol>
+<h1 id="&#x96C6;&#x5408;&#x8FD0;&#x7B97;"><a name="&#x96C6;&#x5408;&#x8FD0;&#x7B97;" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x5408;&#x8FD0;&#x7B97;"><i class="fa fa-link" aria-hidden="true"></i></a>9. &#x96C6;&#x5408;&#x8FD0;&#x7B97;</h1>
+<p>union &#x4E24;&#x4E2A;&#x96C6;&#x5408;&#x76F8;&#x540C;&#x7684;&#x90E8;&#x5206;&#x4FDD;&#x7559;&#x4E00;&#x4EFD;</p>
+<p>union all &#x4E24;&#x4E2A;&#x96C6;&#x5408;&#x76F8;&#x540C;&#x7684;&#x90E8;&#x5206;&#x90FD;&#x4FDD;&#x7559;</p>
+<pre class="language-"><code>select * from emp where deptno = 10 union select * from emp where deptno=20;
+select * from emp where deptno = 10 union select * from emp where deptno in(20,10);
+select * from emp where deptno = 10 union all select * from emp where deptno in(20,10);
+</code></pre><h1 id="sql&#x8BED;&#x8A00;&#x7684;&#x7C7B;&#x578B;"><a name="sql&#x8BED;&#x8A00;&#x7684;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#sql&#x8BED;&#x8A00;&#x7684;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>10. sql&#x8BED;&#x8A00;&#x7684;&#x7C7B;&#x578B;</h1>
+<pre class="language-"><code>DML data manipulation language  &#x6570;&#x636E;&#x64CD;&#x4F5C;&#x8BED;&#x8A00;&#xFF0C;&#x5BF9;&#x5E94;&#x589E;&#x5220;&#x6539;&#x67E5;
+DDL  data definition language  &#x6570;&#x636E;&#x5B9A;&#x4E49;&#x8BED;&#x8A00; create, drop, truncate
+DCL  data control language &#x6570;&#x636E;&#x63A7;&#x5236;&#x8BED;&#x8A00; grant, revoke, commit, rollback
+</code></pre><p>delete&#x548C;truncate&#x7684;&#x533A;&#x522B;: 
+&#x76F8;&#x540C;&#x70B9;: delete&#x548C;truncate&#x90FD;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x6570;&#x636E;
+&#x4E0D;&#x540C;&#x70B9;:</p>
+<ol>
+<li>truncate&#x662F;DDL&#x8BED;&#x53E5;, &#x800C;delete&#x662F;DML&#x8BED;&#x53E5;</li>
+<li>truncate&#x5220;&#x9664;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x80FD;&#x8DDF;where&#x6761;&#x4EF6;,&#x800C;delete&#x53EF;&#x4EE5;</li>
+<li>&#x7528;truncate&#x5220;&#x9664;&#x4EE5;&#x540E;&#x4F1A;&#x81EA;&#x52A8;&#x63D0;&#x4EA4;,&#x4E0D;&#x80FD;&#x4F7F;&#x7528;rollback&#x6062;&#x590D;&#x6570;&#x636E;;
+&#x800C;&#x4F7F;&#x7528;delete&#x5220;&#x9664;&#x6570;&#x636E;&#x4E4B;&#x540E;, &#x53EA;&#x8981;&#x4E0D;commit, &#x5C31;&#x53EF;&#x4EE5;&#x7528;rollback&#x6062;&#x590D;</li>
+<li>&#x5C31;&#x5220;&#x9664;&#x6570;&#x636E;&#x7684;&#x901F;&#x5EA6;&#x6765;&#x8BF4;, &#x4E00;&#x822C;truncate&#x6BD4;delete&#x5FEB;.</li>
+</ol>
+<p>&#x901A;&#x8FC7;&#x5B9E;&#x9A8C;&#x9A8C;&#x8BC1;truncate&#x548C;delete&#x7684;&#x6548;&#x7387;:</p>
+<ol>
+<li>&#x6267;&#x884C;test.sh&#x811A;&#x672C;&#x751F;&#x6210;sql&#x8BED;&#x53E5;&#x6587;&#x4EF6;insert.sql, &#x7136;&#x540E;&#x6267;&#x884C;<code>mysql&gt; source insert.sql</code> &#x5C06;&#x6570;&#x636E;&#x5168;&#x90E8;&#x63D2;&#x5165;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;</li>
+<li><p>&#x63A5;&#x4E0B;&#x6765;&#x4F7F;&#x7528;delete&#x548C;truncate&#x8FDB;&#x884C;&#x5220;&#x9664;, &#x5E76;&#x6BD4;&#x8F83;&#x65F6;&#x95F4;.&#x6570;&#x636E;&#x603B;&#x6570;&#x4E3A;10000&#x6761;, &#x82E5;&#x6570;&#x636E;&#x91CF;&#x5927;&#x5DEE;&#x5F02;&#x4F1A;&#x6BD4;&#x8F83;&#x660E;&#x663E;.</p>
+</li>
+<li><p><code>mysql&gt; delete from mytest;</code>
+Query OK, 10000 rows affected (0.06 sec)</p>
+</li>
+<li><code>mysql&gt; truncate table mytest;</code>
+Query OK, 0 rows affected (0.02 sec)</li>
+<li>&#x901A;&#x8FC7;&#x6BD4;&#x8F83;&#x5F97;&#x77E5;, truncate&#x5220;&#x9664;&#x6570;&#x636E;&#x6240;&#x7528;&#x7684;&#x65F6;&#x95F4;&#x8F83;&#x77ED;, &#x6548;&#x7387;&#x9AD8;.</li>
+<li>&#x4F46;&#x662F;, &#x6211;&#x4EEC;&#x4E0D;&#x63D0;&#x5021;&#x4F7F;&#x7528;truncate&#x5220;&#x9664;&#x6570;&#x636E;, &#x56E0;&#x4E3A;&#x4E00;&#x65E6;&#x5220;&#x9664;&#x65E0;&#x6CD5;&#x6062;&#x590D;.</li>
+</ol>
+<h1 id="&#x8868;&#x7684;&#x7EA6;&#x675F;"><a name="&#x8868;&#x7684;&#x7EA6;&#x675F;" class="anchor-navigation-ex-anchor" href="#&#x8868;&#x7684;&#x7EA6;&#x675F;"><i class="fa fa-link" aria-hidden="true"></i></a>11. &#x8868;&#x7684;&#x7EA6;&#x675F;:</h1>
+<ul>
+<li>&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x7EA6;&#x675F;&#x3000;<code>primary key</code>:    &#x4E0D;&#x5141;&#x8BB8;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E0D;&#x5141;&#x8BB8;&#x91CD;&#x590D;</li>
+<li>&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x81EA;&#x52A8;&#x589E;&#x957F;&#x3000;<code>auto_increment</code></li>
+<li>&#x5B9A;&#x4E49;&#x552F;&#x4E00;&#x7EA6;&#x675F;&#x3000;<code>unique</code></li>
+<li>&#x5B9A;&#x4E49;&#x975E;&#x7A7A;&#x7EA6;&#x675F;&#x3000;<code>not null</code></li>
+<li>&#x5B9A;&#x4E49;&#x5916;&#x952E;&#x7EA6;&#x675F;&#x3000;<code>constraint ordersid_FK foreign key(ordersid) references orders(id)</code></li>
+<li>&#x5220;&#x9664;&#x4E3B;&#x952E;&#xFF1A;<code>alter table tablename drop primary key ;</code></li>
+</ul>
+<p>&#x51C6;&#x5907;&#x4E24;&#x4E2A;&#x8868;:</p>
+<p>(&#x4E0B;&#x9762;&#x7684;&#x5EFA;&#x8868;&#x8BED;&#x53E5;&#x5728;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x82E5;&#x4E0D;&#x80FD;&#x6B63;&#x5E38;&#x6267;&#x884C;, &#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x628A;tab&#x53BB;&#x6389;)</p>
+<pre class="language-"><code>create table class (
+    id INT(11) primary key auto_increment,
+    name varchar(20) unique
+);
+</code></pre><pre class="language-"><code>create table student (
+    id INT(11) primary key auto_increment, 
+    name varchar(20) unique,
+    passwd varchar(15) not null,
+    classid INT(11),
+    constraint stu_classid_FK foreign key(classid) references class(id)
+);
+</code></pre><p>&#x5411;myclass&#x8868;&#x4E2D;&#x63D2;&#x5165;&#x4E24;&#x6761;&#x6570;&#x636E;:</p>
+<pre class="language-"><code>insert into class(name) values(&apos;music&apos;);
+insert into class(name) values(&apos;PE&apos;);
+insert into class(id, name) values(14, &apos;art&apos;);
+insert into class(name) values(&apos;culture&apos;);
+</code></pre><p>&#x6CE8;&#x610F;: &#x8981;&#x63D2;&#x5165;&#x7684;&#x662F;&#x90E8;&#x5206;&#x5217;, &#x4E00;&#x5B9A;&#x8981;&#x5728;class&#x8868;&#x540D;&#x540E;&#x9762;&#x5199;&#x4E0A;&#x5217;&#x540D;, &#x8868;&#x793A;&#x8981;&#x63D2;&#x5165;&#x54EA;&#x4E9B;&#x5217;&#x7531;&#x4E8E;class&#x8868;&#x7684;id&#x662F;&#x4E3B;&#x952E;, &#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x663E;&#x793A;&#x7684;&#x63D2;&#x5165;&#x4E3B;&#x952E;&#x7684;&#x503C;, mysql&#x4F1A;&#x81EA;&#x52A8;&#x63D2;&#x5165;,&#x800C;&#x4E14;&#x4F1A;&#x81EA;&#x52A8;&#x589E;&#x957F;,&#x786E;&#x4FDD;&#x4E0D;&#x4F1A;&#x91CD;&#x590D;.</p>
+<p>&#x5411;student&#x8868;&#x4E2D;&#x63D2;&#x5165;&#x6570;&#x636E;:    </p>
+<p>&#x6B63;&#x5E38;&#x63D2;&#x5165;&#x4E00;&#x6761;&#x8BB0;&#x5F55;:</p>
+<pre class="language-"><code>insert into student(name, passwd, classid) values(&apos;xiaohong&apos;, &apos;xxxxxx&apos;, 1);
+</code></pre><ol>
+<li><p>&#x6D4B;&#x8BD5;&#x4E3B;&#x952E;&#x7684;&#x975E;&#x7A7A;&#x6027;</p>
+<pre class="language-"><code> insert into student(id, name, passwd, classid) values(null, &apos;xiaowen&apos;, &apos;xxxxxx&apos;, 1);
+</code></pre><p> &#x6CE8;&#x610F;: &#x82E5;&#x7ED9;&#x4E3B;&#x952E;&#x63D2;&#x5165;&#x4E00;&#x4E2A;null, mysql&#x4F1A;&#x81EA;&#x52A8;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x7684;&#x503C;, &#x6240;&#x4EE5;mysql&#x7684;&#x4E3B;&#x952E;&#x80AF;&#x5B9A;&#x4E0D;&#x4F1A;&#x4E3A;&#x7A7A;</p>
+</li>
+<li><p>&#x6D4B;&#x8BD5;&#x4E3B;&#x952E;&#x7684;&#x552F;&#x4E00;&#x6027;&#x7EA6;&#x675F;</p>
+<pre class="language-"><code> insert into student(id, name, passwd, classid) values(1, &apos;xiaoliu&apos;, &apos;xxxxxx&apos;, 1);
+ -----&gt;ERROR 1062 (23000): Duplicate entry &apos;1&apos; for key &apos;PRIMARY&apos;
+</code></pre></li>
+<li><p>&#x6D4B;&#x8BD5;name&#x5217;&#x7684;&#x552F;&#x4E00;&#x6027;</p>
+<pre class="language-"><code> insert into student(name, passwd, classid) values(&apos;xiaohong&apos;, &apos;xxxxxx&apos;, 2);
+ -----&gt; ERROR 1062 (23000): Duplicate entry &apos;xiaohong&apos; for key &apos;name&apos;
+</code></pre><pre class="language-"><code> insert into student(name, passwd, classid) values(null, &apos;xxxxxx&apos;, 2);
+ &#x6CE8;&#x610F;: name&#x4E3A;unique&#x7EA6;&#x675F;, &#x53EA;&#x662F;&#x4E0D;&#x80FD;&#x91CD;&#x590D;, &#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x4E3A;&#x7A7A;
+</code></pre></li>
+<li><p>&#x6D4B;&#x8BD5;passwd&#x7684;&#x975E;&#x7A7A;&#x7EA6;&#x675F;</p>
+<pre class="language-"><code> insert into student(name, passwd, classid) values(&apos;xiaohua&apos;, null, 2);
+ -----&gt; ERROR 1048 (23000): Column &apos;passwd&apos; cannot be null
+</code></pre></li>
+<li><p>&#x6D4B;&#x8BD5;classid&#x7684;&#x5916;&#x952E;&#x7EA6;&#x675F;</p>
+<pre class="language-"><code> insert into student(name, passwd, classid) values(&apos;meizi&apos;, &apos;mmmm&apos;, 10);
+ -----&gt;OREIGN KEY (`classid`) REFERENCES `class` (`id`))
+</code></pre><p> &#x5728;class&#x8868;&#x4E2D;&#x6CA1;&#x6709;id&#x4E3A;10&#x7684;&#x5217;&#x7684;&#x503C;.</p>
+</li>
+</ol>
+<h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>11.1. &#x603B;&#x7ED3;:</h2>
+<p>&#x5173;&#x4E8E;mysql&#x7684;&#x4E3B;&#x952E;&#x7EA6;&#x675F;, &#x5728;&#x63D2;&#x5165;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x4E0D;&#x7528;&#x7406;&#x4F1A;&#x4E3B;&#x952E;, &#x56E0;&#x4E3A;&#x4E3B;&#x952E;&#x4F1A;&#x81EA;&#x52A8;&#x63D2;&#x5165;,&#x800C;&#x4E14;&#x4FDD;&#x8BC1;&#x4E0D;&#x91CD;&#x590D;.    </p>
+<h1 id="&#x7D22;&#x5F15;"><a name="&#x7D22;&#x5F15;" class="anchor-navigation-ex-anchor" href="#&#x7D22;&#x5F15;"><i class="fa fa-link" aria-hidden="true"></i></a>12. &#x7D22;&#x5F15;:</h1>
+<p><strong>&#x4F7F;&#x7528;&#x662F;&#x7D22;&#x5F15;&#x7684;&#x76EE;&#x7684;&#x662F;&#x63D0;&#x9AD8;&#x67E5;&#x8BE2;&#x7684;&#x6548;&#x7387;.</strong></p>
+<p>&#x7D22;&#x5F15;&#x7528;&#x4E8E;&#x5FEB;&#x901F;&#x627E;&#x51FA;&#x5728;&#x67D0;&#x4E2A;&#x5217;&#x4E2D;&#x6709;&#x4E00;&#x7279;&#x5B9A;&#x503C;&#x7684;&#x884C;&#xFF0C;&#x4E0D;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#xFF0C;MySQL&#x5FC5;&#x987B;&#x4ECE;&#x7B2C;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x5F00;&#x59CB;&#x8BFB;&#x5B8C;&#x6574;&#x4E2A;&#x8868;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x51FA;&#x76F8;&#x5173;&#x7684;&#x884C;&#xFF0C;&#x8868;&#x8D8A;&#x5927;&#xFF0C;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x6240;&#x82B1;&#x8D39;&#x7684;&#x65F6;&#x95F4;&#x5C31;&#x8D8A;&#x591A;&#xFF0C;&#x5982;&#x679C;&#x8868;&#x4E2D;&#x67E5;&#x8BE2;&#x7684;&#x5217;&#x6709;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#xFF0C;MySQL&#x80FD;&#x591F;&#x5FEB;&#x901F;&#x5230;&#x8FBE;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x53BB;&#x641C;&#x7D22;&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4E0D;&#x5FC5;&#x67E5;&#x770B;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x4F1A;&#x8282;&#x7701;&#x5F88;&#x5927;&#x4E00;&#x90E8;&#x5206;&#x65F6;&#x95F4;&#x3002;</p>
+<ol>
+<li><p>&#x5982;&#x4F55;&#x521B;&#x5EFA;?</p>
+<pre class="language-"><code> create index idx_emp on emp(empno);
+ create unique index idx_emp on emp(empno);
+</code></pre></li>
+<li><p>&#x5982;&#x4F55;&#x5220;&#x9664;</p>
+<pre class="language-"><code> drop index index_name on table_name ;
+ alter table table_name drop index index_name ;
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x521B;&#x5EFA;&#x7684;&#x7D22;&#x5F15;?</p>
+<pre class="language-"><code> show index from table_name;
+</code></pre></li>
+<li><p>&#x6CE8;&#x610F;&#x70B9;:</p>
+<pre class="language-"><code> &#x521B;&#x5EFA;&#x7D22;&#x5F15;&#x7684;&#x5217;&#x6700;&#x540E;&#x662F;&#x503C;&#x7684;&#x5206;&#x5E03;&#x5F88;&#x5E7F;&#x6CDB;&#x4E14;&#x91CD;&#x590D;&#x7684;&#x6982;&#x7387;&#x5F88;&#x4F4E;.
+</code></pre></li>
+</ol>
+<p>&#x5173;&#x4E8E;mysql&#x521B;&#x5EFA;&#x8868;&#x7684;&#x7C7B;&#x7684;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x624B;&#x518C;:<br>&#x591A;&#x8868;&#x7684;&#x8868;&#x5173;&#x7CFB;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E3B;&#x952E;&#x548C;&#x5916;&#x952E;&#x7684;&#x5173;&#x7CFB;: &#x5373;&#x4E00;&#x4E2A;&#x8868;&#x7684;&#x67D0;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x53D6;&#x503C;&#x662F;&#x4F9D;&#x8D56;&#x4E8E;&#x53E6;&#x4E00;&#x4E2A;&#x8868;&#x7684;&#x4E3B;&#x952E;, &#x6BD4;&#x5982;emp&#x8868;&#x7684;deptno&#x5B57;&#x6BB5;&#x5C31;&#x662F;&#x8868;dept&#x7684;deptno&#x5B57;&#x6BB5;&#x7684;&#x503C;.</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="014练习.html" class="navigation navigation-prev " aria-label="Previous page: 14. 练习">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="016事务.html" class="navigation navigation-next " aria-label="Next page: 16. 事务">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"15. 拓展","level":"1.3.15","depth":2,"next":{"title":"16. 事务","level":"1.3.16","depth":2,"path":"Database/016事务.md","ref":"Database/016事务.md","articles":[]},"previous":{"title":"14. 练习","level":"1.3.14","depth":2,"path":"Database/014练习.md","ref":"Database/014练习.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","emphasize","-highlight","prism","prism-themes","copy-code-button","splitter","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"shortName":"introducetogitbook"},"emphasize":{},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"Database/015拓展.md","mtime":"2018-09-13T14:13:09.950Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-14T11:57:34.872Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
