@@ -53,6 +53,7 @@
 	- [第三个项目orm操作数据库](blockchain-learning-note/Go/beego_note/004第二个项目orm.md)
 	- [第四个项目注册登录](blockchain-learning-note/Go/beego_note/005第四个项目注册登录.md)
 	- [第五个项目文章论坛](blockchain-learning-note/Go/beego_note/006第五个项目文章发布系统.md)
+	- [知识点](blockchain-learning-note/Go/beego_note/007知识点.md)
 * [数据库](blockchain-learning-note/Database/001Mysql介绍与安装.md)
 	- [1. Mysql介绍与安装](blockchain-learning-note/Database/001Mysql介绍与安装.md)
 	- [2. Mysql断开与连接](blockchain-learning-note/Database/002Mysql断开与连接.md)
