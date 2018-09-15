@@ -34,3 +34,4 @@
 	- [第四个项目注册登录](beego_note/005第四个项目注册登录.md)
 	- [第五个项目文章论坛](beego_note/006第五个项目文章发布系统.md)
 	- [知识点](beego_note/007知识点.md)
+	- [GoWeb之template包](beego_note/008Go语言学习之template包.md)
