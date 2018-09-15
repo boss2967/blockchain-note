@@ -1,0 +1,974 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>知识点 · go语言学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Junling Zheng <me@chengweiyang.cn>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="008Go语言学习之template包.html" />
+    
+    
+    <link rel="prev" href="006第五个项目文章发布系统.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://juejin.im/user/58fb6268a22b9d0065995827" target="_blank" class="custom-link">Zhengjunling's Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Go语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../001指针.html">
+            
+                <a href="../001指针.html">
+            
+                    
+                    语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../001指针.html">
+            
+                <a href="../001指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../002new.html">
+            
+                <a href="../002new.html">
+            
+                    
+                    new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../003slice.html">
+            
+                <a href="../003slice.html">
+            
+                    
+                    slice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../004map.html">
+            
+                <a href="../004map.html">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../005结构体.html">
+            
+                <a href="../005结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../006字符串.html">
+            
+                <a href="../006字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../007文件操作.html">
+            
+                <a href="../007文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../008并发编程.html">
+            
+                <a href="../008并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../008并发编程.html">
+            
+                <a href="../008并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../009goroutine.html">
+            
+                <a href="../009goroutine.html">
+            
+                    
+                    goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../010channel.html">
+            
+                <a href="../010channel.html">
+            
+                    
+                    channel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../011生产者消费者.html">
+            
+                <a href="../011生产者消费者.html">
+            
+                    
+                    生产者消费者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../012定时器.html">
+            
+                <a href="../012定时器.html">
+            
+                    
+                    定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../013select.html">
+            
+                <a href="../013select.html">
+            
+                    
+                    select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../014锁.html">
+            
+                <a href="../014锁.html">
+            
+                    
+                    锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../015条件变量.html">
+            
+                <a href="../015条件变量.html">
+            
+                    
+                    条件变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0016网络编程.html">
+            
+                <a href="../0016网络编程.html">
+            
+                    
+                    Go网络编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../0016网络编程.html">
+            
+                <a href="../0016网络编程.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../0017Socket编程.html">
+            
+                <a href="../0017Socket编程.html">
+            
+                    
+                    Socket编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../0018网络应用程序设计模式.html">
+            
+                <a href="../0018网络应用程序设计模式.html">
+            
+                    
+                    网络应用程序设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../019TCPUDP.html">
+            
+                <a href="../019TCPUDP.html">
+            
+                    
+                    TCPUDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../020文件传输.html">
+            
+                <a href="../020文件传输.html">
+            
+                    
+                    文件传输（案例）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../021聊天室.html">
+            
+                <a href="../021聊天室.html">
+            
+                    
+                    聊天室（案例）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../022HTTP编程.html">
+            
+                <a href="../022HTTP编程.html">
+            
+                    
+                    HTTP编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../023正则表达式.md">
+            
+                <span>
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../024爬虫.html">
+            
+                <a href="../024爬虫.html">
+            
+                    
+                    爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="001beego入门.html">
+            
+                <a href="001beego入门.html">
+            
+                    
+                    Beego
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="001beego入门.html">
+            
+                <a href="001beego入门.html">
+            
+                    
+                    Beego入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="002beego第一个项目.html">
+            
+                <a href="002beego第一个项目.html">
+            
+                    
+                    第一个项目Post案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="003第二个项目mysql.html">
+            
+                <a href="003第二个项目mysql.html">
+            
+                    
+                    第二个项目mysql案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="004第三个项目orm.html">
+            
+                <a href="004第三个项目orm.html">
+            
+                    
+                    第三个项目orm操作数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="005第四个项目注册登录.html">
+            
+                <a href="005第四个项目注册登录.html">
+            
+                    
+                    第四个项目注册登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="006第五个项目文章发布系统.html">
+            
+                <a href="006第五个项目文章发布系统.html">
+            
+                    
+                    第五个项目文章论坛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.7" data-path="007知识点.html">
+            
+                <a href="007知识点.html">
+            
+                    
+                    知识点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="008Go语言学习之template包.html">
+            
+                <a href="008Go语言学习之template包.html">
+            
+                    
+                    GoWeb之template包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >知识点</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x91CD;&#x5B9A;&#x5411;&#x548C;&#x8F6C;&#x53D1;&#x7684;&#x533A;&#x522B;"><b>1. </b>&#x91CD;&#x5B9A;&#x5411;&#x548C;&#x8F6C;&#x53D1;&#x7684;&#x533A;&#x522B;</a></li><li><span class="title-icon "></span><a href="#gestring&#x80FD;&#x83B7;&#x53D6;3&#x79CD;&#x6570;&#x636E;"><b>2. </b>Gestring&#x80FD;&#x83B7;&#x53D6;3&#x79CD;&#x6570;&#x636E;</a></li><li><span class="title-icon "></span><a href="#form&#x4E0A;&#x4F20;&#x6587;&#x4EF6;"><b>3. </b>form&#x4E0A;&#x4F20;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x6B63;&#x5219;&#x8DEF;&#x7531;&#x8BBE;&#x7F6E;"><b>4. </b>&#x6B63;&#x5219;&#x8DEF;&#x7531;&#x8BBE;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#&#x9ED8;&#x8BA4;&#x5339;&#x914D;"><b>4.1. </b>&#x9ED8;&#x8BA4;&#x5339;&#x914D;</a></li><li><span class="title-icon "></span><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x6B63;&#x5219;&#x5339;&#x914D;&#xFF1A;"><b>4.2. </b>&#x81EA;&#x5B9A;&#x4E49;&#x6B63;&#x5219;&#x5339;&#x914D;&#xFF1A;</a></li><li><span class="title-icon "></span><a href="#path&#x548C;ext&#x548C;splat"><b>4.3. </b>path&#x548C;ext&#x548C;splat:</a></li></ul><li><span class="title-icon "></span><a href="#orm&#x64CD;&#x4F5C;&#xFF1A;"><b>5. </b>ORM&#x64CD;&#x4F5C;&#xFF1A;</a></li><li><span class="title-icon "></span><a href="#&#x5217;&#x8868;&#x6570;&#x636E;&#x662F;&#x89C6;&#x56FE;&#x4E2D;&#x7684;&#x5C55;&#x793A;"><b>6. </b>&#x5217;&#x8868;&#x6570;&#x636E;&#x662F;&#x89C6;&#x56FE;&#x4E2D;&#x7684;&#x5C55;&#x793A;</a></li><li><span class="title-icon "></span><a href="#&#x8868;&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;"><b>7. </b>&#x8868;&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x63A7;&#x4EF6;&#x9690;&#x85CF;"><b>8. </b>&#x63A7;&#x4EF6;&#x9690;&#x85CF;</a></li><li><span class="title-icon "></span><a href="#&#x5206;&#x9875;&#x529F;&#x80FD;"><b>9. </b>&#x5206;&#x9875;&#x529F;&#x80FD;</a></li><li><span class="title-icon "></span><a href="#&#x8FC7;&#x6EE4;&#x5668;&#x51FD;&#x6570;"><b>10. </b>&#x8FC7;&#x6EE4;&#x5668;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#cookie"><b>11. </b>Cookie</a></li><li><span class="title-icon "></span><a href="#&#x89C6;&#x56FE;&#x51FD;&#x6570;"><b>12. </b>&#x89C6;&#x56FE;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;&#x4E8C;"><b>13. </b>&#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;&#x4E8C;</a></li><ul><li><span class="title-icon "></span><a href="#limit&#x51FD;&#x6570;&#xFF1A;"><b>13.1. </b>Limit&#x51FD;&#x6570;&#xFF1A;</a></li><li><span class="title-icon "></span><a href="#count&#x51FD;&#x6570;&#xFF1A;"><b>13.2. </b>Count&#x51FD;&#x6570;&#xFF1A;</a></li></ul><li><span class="title-icon "></span><a href="#&#x8868;&#x5173;&#x7CFB;&#x8BBE;&#x7F6E;"><b>14. </b>&#x8868;&#x5173;&#x7CFB;&#x8BBE;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x6CE8;&#x610F;"><b>15. </b>&#x6CE8;&#x610F;</a></li></ul></div><a href="#&#x91CD;&#x5B9A;&#x5411;&#x548C;&#x8F6C;&#x53D1;&#x7684;&#x533A;&#x522B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x91CD;&#x5B9A;&#x5411;&#x548C;&#x8F6C;&#x53D1;&#x7684;&#x533A;&#x522B;"><a name="&#x91CD;&#x5B9A;&#x5411;&#x548C;&#x8F6C;&#x53D1;&#x7684;&#x533A;&#x522B;" class="anchor-navigation-ex-anchor" href="#&#x91CD;&#x5B9A;&#x5411;&#x548C;&#x8F6C;&#x53D1;&#x7684;&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x91CD;&#x5B9A;&#x5411;&#x548C;&#x8F6C;&#x53D1;&#x7684;&#x533A;&#x522B;</h1>
+<table>
+<thead>
+<tr>
+<th>redirect</th>
+<th>tplname</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x7684;&#x529F;&#x80FD;</td>
+</tr>
+<tr>
+<td>&#x6D4F;&#x89C8;&#x5668;&#x518D;&#x6B21;&#x53D1;&#x9001;&#x8BF7;&#x6C42;</td>
+<td>&#x6D4F;&#x89C8;&#x5668;&#x6CA1;&#x6709;&#x518D;&#x6B21;&#x53D1;&#x9001;&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td>&#x5730;&#x5740;&#x6539;&#x53D8;</td>
+<td>&#x5730;&#x5740;&#x4E0D;&#x53D8;</td>
+</tr>
+<tr>
+<td>&#x4E0D;&#x80FD;&#x4F20;&#x9012;&#x6570;&#x636E;</td>
+<td>&#x4F20;&#x9012;&#x6570;&#x636E;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5047;&#x8BBE;&#x4F60;&#x53BB;&#x529E;&#x7406;&#x67D0;&#x4E2A;&#x6267;&#x7167;:</p>
+<p><strong>&#x91CD;&#x5B9A;&#x5411;&#xFF1A;</strong>&#x4F60;&#x5148;&#x53BB;&#x4E86;A&#x5C40;&#xFF0C;A&#x5C40;&#x7684;&#x4EBA;&#x8BF4;&#xFF1A;&#x201C;&#x8FD9;&#x4E2A;&#x4E8B;&#x60C5;&#x4E0D;&#x5F52;&#x6211;&#x4EEC;&#x7BA1;&#xFF0C;&#x53BB;B&#x5C40;&#x201D;&#xFF0C;&#x7136;&#x540E;&#xFF0C;&#x4F60;&#x5C31;&#x4ECE;A&#x9000;&#x4E86;&#x51FA;&#x6765;&#xFF0C;&#x81EA;&#x5DF1;&#x4E58;&#x8F66;&#x53BB;&#x4E86;B&#x5C40;&#x3002; </p>
+<p><strong>&#x8F6C;&#x53D1;&#xFF1A;</strong>&#x4F60;&#x5148;&#x53BB;&#x4E86;A&#x5C40;&#xFF0C;A&#x5C40;&#x770B;&#x4E86;&#x4EE5;&#x540E;&#xFF0C;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;&#x4E8B;&#x60C5;&#x5176;&#x5B9E;&#x5E94;&#x8BE5;B&#x5C40;&#x6765;&#x7BA1;&#xFF0C;&#x4F46;&#x662F;&#x4ED6;&#x6CA1;&#x6709;&#x628A;&#x4F60;&#x9000;&#x56DE;&#x6765;&#xFF0C;&#x800C;&#x662F;&#x8BA9;&#x4F60;&#x5750;&#x4E00;&#x4F1A;&#x513F;&#xFF0C;&#x81EA;&#x5DF1;&#x5230;&#x540E;&#x9762;&#x529E;&#x516C;&#x5BA4;&#x8054;&#x7CFB;&#x4E86;B&#x7684;&#x4EBA;&#xFF0C;&#x8BA9;&#x4ED6;&#x4EEC;&#x529E;&#x597D;&#x540E;&#xFF0C;&#x9001;&#x4E86;&#x8FC7;&#x6765;&#x3002;</p>
+<h1 id="gestring&#x80FD;&#x83B7;&#x53D6;3&#x79CD;&#x6570;&#x636E;"><a name="gestring&#x80FD;&#x83B7;&#x53D6;3&#x79CD;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#gestring&#x80FD;&#x83B7;&#x53D6;3&#x79CD;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>2. Gestring&#x80FD;&#x83B7;&#x53D6;3&#x79CD;&#x6570;&#x636E;</h1>
+<ol>
+<li>&#x6B63;&#x5219;&#x8DEF;&#x7531;&#x4F20;&#x9012;&#x7684;&#x6570;&#x636E;</li>
+<li>post</li>
+<li>get</li>
+</ol>
+<h1 id="form&#x4E0A;&#x4F20;&#x6587;&#x4EF6;"><a name="form&#x4E0A;&#x4F20;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#form&#x4E0A;&#x4F20;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>3. form&#x4E0A;&#x4F20;&#x6587;&#x4EF6;</h1>
+<p><code>enctype=&quot;multipart/form-data</code>
+&#x7ED9;form&#x52A0;&#x4E0A;&#x8FD9;&#x53E5;&#x8BDD;&#x624D;&#x662F;&#x771F;&#x4E0A;&#x4F20;</p>
+<h1 id="&#x6B63;&#x5219;&#x8DEF;&#x7531;&#x8BBE;&#x7F6E;"><a name="&#x6B63;&#x5219;&#x8DEF;&#x7531;&#x8BBE;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x6B63;&#x5219;&#x8DEF;&#x7531;&#x8BBE;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x6B63;&#x5219;&#x8DEF;&#x7531;&#x8BBE;&#x7F6E;</h1>
+<p>&#x4E3A;&#x4E86;&#x7528;&#x6237;&#x66F4;&#x52A0;&#x65B9;&#x4FBF;&#x7684;&#x8DEF;&#x7531;&#x8BBE;&#x7F6E;&#xFF0C;beego&#x652F;&#x6301;&#x591A;&#x79CD;&#x65B9;&#x5F0F;&#x7684;&#x8DEF;&#x7531;</p>
+<h2 id="&#x9ED8;&#x8BA4;&#x5339;&#x914D;"><a name="&#x9ED8;&#x8BA4;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x9ED8;&#x8BA4;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. &#x9ED8;&#x8BA4;&#x5339;&#x914D;</h2>
+<pre class="language-"><code>beego.Router(&#x201C;/api/?:id&#x201D;, &amp;controllers.RController{})
+beego.Router(&#x201C;/api/:id&#x201D;, &amp;controllers.RController{})//&#x5339;&#x914D;/api/&#x5931;&#x8D25;
+</code></pre><h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x6B63;&#x5219;&#x5339;&#x914D;&#xFF1A;"><a name="&#x81EA;&#x5B9A;&#x4E49;&#x6B63;&#x5219;&#x5339;&#x914D;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x81EA;&#x5B9A;&#x4E49;&#x6B63;&#x5219;&#x5339;&#x914D;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. &#x81EA;&#x5B9A;&#x4E49;&#x6B63;&#x5219;&#x5339;&#x914D;&#xFF1A;</h2>
+<pre class="language-"><code>beego.Router(&#x201C;/api/:id([0-9]+)&#x201C;, &amp;controllers.RController{})//&#x6570;&#x5B57;
+beego.Router(&#x201C;/user/:username([\\w]+)&#x201C;, &amp;controllers.RController{})//&#x5B57;&#x6BCD;
+beego.Router(&#x201C;/download/*.*&#x201D;, &amp;controllers.RController{})//&#x5339;&#x914D;&#x6587;&#x4EF6;
+</code></pre><h2 id="path&#x548C;ext&#x548C;splat"><a name="path&#x548C;ext&#x548C;splat" class="anchor-navigation-ex-anchor" href="#path&#x548C;ext&#x548C;splat"><i class="fa fa-link" aria-hidden="true"></i></a>4.3. path&#x548C;ext&#x548C;splat:</h2>
+<p><code>/download/file/api.xml</code>&#x5339;&#x914D;&#x51FA;&#x6765;: <code>path</code>&#x503C;&#x4E3A;<code>file/api</code>,:<code>ext</code>&#x503C;&#x4E3A;<code>xml</code>, : <code>path</code>&#x548C;:<code>ext</code>&#x540D;&#x79F0;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#x4E0D;&#x80FD;&#x6539;&#x53D8;</p>
+<pre class="language-"><code>beego.Router(&#x201C;/download/ceshi/*&#x201C;, &amp;controllers.RController{})//&#x5168;&#x5339;&#x914D;&#x65B9;&#x5F0F;
+</code></pre><p>&#x4F8B;&#x5982;<code>/download/ceshi/file/api.json</code>&#x5339;&#x914D;&#x51FA;&#x6765;:<code>splat</code>&#x503C;&#x4E3A;&#x201D;file/api.json&#x201D; :<code>splat</code>&#x540D;&#x79F0;&#x4E5F;&#x4E0D;&#x80FD;&#x53D8;</p>
+<h1 id="orm&#x64CD;&#x4F5C;&#xFF1A;"><a name="orm&#x64CD;&#x4F5C;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#orm&#x64CD;&#x4F5C;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>5. ORM&#x64CD;&#x4F5C;&#xFF1A;</h1>
+<p>&#x5B89;&#x88C5;Orm</p>
+<pre class="language-"><code>go get github.com/astaxie/beego/orm
+</code></pre><ul>
+<li><p>&#x8FDE;&#x63A5;</p>
+<pre class="language-"><code>// &#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x57FA;&#x672C;&#x4FE1;&#x606F;
+orm.RegisterDataBase(&quot;default&quot;, &quot;mysql&quot;, &quot;root:123456@tcp(127.0.0.1:3306)/test1?charset=utf8&quot;)     
+// &#x6620;&#x5C04;model&#x6570;&#x636E;
+orm.RegisterModel(new(Book))
+// &#x751F;&#x6210;&#x8868;
+orm.RunSyncdb(&quot;default&quot;, false, true)
+</code></pre></li>
+<li><p>&#x589E;</p>
+<pre class="language-"><code>id, err := o.Insert(&amp;user)
+</code></pre></li>
+<li><p>&#x5220;</p>
+<pre class="language-"><code>num, err := o.Delete(&amp;User{Id: 1});
+</code></pre></li>
+<li><p>&#x6539;</p>
+<pre class="language-"><code>num, err := o.Update(&amp;user);
+</code></pre></li>
+<li><p>&#x67E5;</p>
+<pre class="language-"><code>user := User{Id: 1}
+err := o.Read(&amp;user)
+</code></pre><p>&#x6216;&#x8005;</p>
+<pre class="language-"><code>user := User{Name: &quot;slene&quot;}
+err = o.Read(&amp;user, &quot;Name&quot;)
+</code></pre><p>All &#x65B9;&#x6CD5;&#xFF1A;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7684;&#x7ED3;&#x679C;&#x96C6;&#x5BF9;&#x8C61;</p>
+<pre class="language-"><code>var users []*User
+num, err := o.QueryTable(&quot;user&quot;).All(&amp;users)
+</code></pre><p>One&#xFF1A;&#x5C1D;&#x8BD5;&#x8FD4;&#x56DE;&#x5355;&#x6761;&#x8BB0;&#x5F55;</p>
+<pre class="language-"><code>err := o.QueryTable(&quot;user&quot;).One(&amp;user)
+if err == orm.ErrMultiRows {
+ // &#x591A;&#x6761;&#x7684;&#x65F6;&#x5019;&#x62A5;&#x9519;
+ fmt.Printf(&quot;Returned Multi Rows Not One&quot;)
+}
+if err == orm.ErrNoRows {
+ // &#x6CA1;&#x6709;&#x627E;&#x5230;&#x8BB0;&#x5F55;
+ fmt.Printf(&quot;Not row found&quot;)
+}
+</code></pre><p>OrderBy&#xFF1A;&#x6839;&#x636E;&#x67D0;&#x4E00;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x6392;&#x5E8F;,&#x9ED8;&#x8BA4;&#x9012;&#x589E;&#xFF0C;&#x52A0;&#x4E0A;-&#x540E;&#x662F;&#x9012;&#x51CF;</p>
+<pre class="language-"><code>var users []*User
+num, err := o.QueryTable(&quot;user&quot;).OrderBy(&quot;id&quot;, &quot;-profile__age&quot;).All(&amp;users)
+fmt.Printf(&quot;Returned Rows Num: %s, %s&quot;, num, err)
+</code></pre></li>
+</ul>
+<h1 id="&#x5217;&#x8868;&#x6570;&#x636E;&#x662F;&#x89C6;&#x56FE;&#x4E2D;&#x7684;&#x5C55;&#x793A;"><a name="&#x5217;&#x8868;&#x6570;&#x636E;&#x662F;&#x89C6;&#x56FE;&#x4E2D;&#x7684;&#x5C55;&#x793A;" class="anchor-navigation-ex-anchor" href="#&#x5217;&#x8868;&#x6570;&#x636E;&#x662F;&#x89C6;&#x56FE;&#x4E2D;&#x7684;&#x5C55;&#x793A;"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x5217;&#x8868;&#x6570;&#x636E;&#x662F;&#x89C6;&#x56FE;&#x4E2D;&#x7684;&#x5C55;&#x793A;</h1>
+<ul>
+<li><p>&#x5FAA;&#x73AF;&#x4E00;</p>
+<pre class="language-"><code>{{range .Pages}}
+      {{.Num}} of {{$.Total}}
+{{end}}
+</code></pre><p>&#x4F7F;&#x7528; .Num &#x8F93;&#x51FA;&#x5B50;&#x5143;&#x7D20;&#x7684; Num &#x5C5E;&#x6027;&#xFF0C;&#x4F7F;&#x7528; $. &#x5F15;&#x7528;&#x6A21;&#x677F;&#x4E2D;&#x7684;&#x6839;&#x7EA7;&#x4E0A;&#x4E0B;&#x6587;</p>
+</li>
+<li><p>&#x5FAA;&#x73AF;&#x4E8C;</p>
+<pre class="language-"><code>{{range $index, $elem := .Pages}}
+   {{$index}} - {{$elem.Num}} - {{.Num}} of {{$.Total}}
+</code></pre><p>range &#x5FAA;&#x73AF;&#x5185;&#x90E8;&#x7684; .  &#x4E3A;&#x4EE5;&#x4E0A;&#x7C7B;&#x578B;&#x7684;&#x5B50;&#x5143;&#x7D20;
+&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x957F;&#x5EA6;&#x4E3A; 0 &#x65F6;&#xFF0C;range &#x4E0D;&#x4F1A;&#x6267;&#x884C;&#xFF0C; . &#x4E0D;&#x4F1A;&#x6539;&#x53D8;</p>
+</li>
+</ul>
+<h1 id="&#x8868;&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;"><a name="&#x8868;&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x8868;&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>7. &#x8868;&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;</h1>
+<pre class="language-"><code>type Article struct {
+    Id int `orm:&quot;pk;auto&quot;`
+    ArtiName string `orm:&quot;size(20)&quot;`
+    Atime time.Time `orm:&quot;auto_now&quot;`
+    Acount int `orm:&quot;default(0);null&quot;`
+    Acontent string `orm:&quot;size(500)&quot;`
+    Aimg string  `orm:&quot;size(100)&quot;`
+}
+</code></pre><ul>
+<li><code>pk</code>&#xFF1A;&#x8BBE;&#x7F6E;&#x4E3B;&#x952E;</li>
+<li><code>auto</code>&#xFF1A;&#x8BBE;&#x7F6E;&#x81EA;&#x589E;
+&#x5F53; Field &#x7C7B;&#x578B;&#x4E3A; int, int32, int64, uint, uint32, uint64 &#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5B57;&#x6BB5;&#x4E3A;&#x81EA;&#x589E;&#x5065;,&#x5F53;&#x6A21;&#x578B;&#x5B9A;&#x4E49;&#x91CC;&#x6CA1;&#x6709;&#x4E3B;&#x952E;&#x65F6;&#xFF0C;&#x7B26;&#x5408;&#x4E0A;&#x8FF0;&#x7C7B;&#x578B;&#x4E14;&#x540D;&#x79F0;&#x4E3A; Id &#x7684; Field &#x5C06;&#x88AB;&#x89C6;&#x4E3A;&#x81EA;&#x589E;&#x5065;.</li>
+<li><code>default(11)</code>&#xFF1A;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x503C; </li>
+<li><code>orm:size(100)</code>&#xFF1A;&#x8BBE;&#x7F6E;&#x957F;&#x5EA6;</li>
+<li><code>null</code>&#xFF1A;&#x8BBE;&#x7F6E;&#x5141;&#x8BB8;&#x4E3A;&#x7A7A;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x9ED8;&#x8BA4;&#x662F;&#x975E;&#x7A7A;</li>
+<li><code>orm:&#x201D;unique&#x201D;</code>&#xFF1A;&#x8BBE;&#x7F6E;&#x552F;&#x4E00;</li>
+<li><code>orm:&quot;digits(12);decimals(4)&quot;</code>&#xFF1A;&#x8BBE;&#x7F6E;&#x6D6E;&#x70B9;&#x6570;&#x7CBE;&#x5EA6;  &#x603B;&#x5171;12&#x4F4D;&#xFF0C;&#x56DB;&#x4F4D;&#x662F;&#x5C0F;&#x6570;&#x4F4D;
+&#x8BBE;&#x7F6E;&#x65F6;&#x95F4;&#xFF1A; </li>
+<li><code>orm:&quot;auto_now_add;type(datetime)&quot;</code></li>
+<li><code>orm:&quot;auto_now;type(date)&quot;</code></li>
+<li><code>auto_now</code> &#x6BCF;&#x6B21; model &#x4FDD;&#x5B58;&#x65F6;&#x90FD;&#x4F1A;&#x5BF9;&#x65F6;&#x95F4;&#x81EA;&#x52A8;&#x66F4;&#x65B0;</li>
+<li><code>auto_now_add</code> &#x7B2C;&#x4E00;&#x6B21;&#x4FDD;&#x5B58;&#x65F6;&#x624D;&#x8BBE;&#x7F6E;&#x65F6;&#x95F4;
+&#x8BBE;&#x7F6E;&#x65F6;&#x95F4;&#x7684;&#x683C;&#x5F0F;&#xFF1A;type</li>
+</ul>
+<h1 id="&#x63A7;&#x4EF6;&#x9690;&#x85CF;"><a name="&#x63A7;&#x4EF6;&#x9690;&#x85CF;" class="anchor-navigation-ex-anchor" href="#&#x63A7;&#x4EF6;&#x9690;&#x85CF;"><i class="fa fa-link" aria-hidden="true"></i></a>8. &#x63A7;&#x4EF6;&#x9690;&#x85CF;</h1>
+<p>&#x53EF;&#x7528;&#x6765;&#x4F20;&#x503C;</p>
+<pre class="language-"><code>&lt;input name=&quot;id&quot; value=&quot;{{.acticle.Id2}}&quot;hidden=&quot;hidden&quot;&gt;
+</code></pre><h1 id="&#x5206;&#x9875;&#x529F;&#x80FD;"><a name="&#x5206;&#x9875;&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x9875;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>9. &#x5206;&#x9875;&#x529F;&#x80FD;</h1>
+<p>&#x597D;&#x5904;&#xFF1A;</p>
+<ul>
+<li>&#x6570;&#x636E;&#x90FD;&#x8981;&#x8BFB;&#x5230;&#x7F13;&#x5B58;&#xFF0C;&#x52A0;&#x8F7D;&#x7F13;&#x6162;&#xFF0C;&#x63D0;&#x5347;&#x7F51;&#x9875;&#x8BBF;&#x95EE;&#x901F;&#x5EA6;</li>
+<li><p>&#x51CF;&#x5C11;&#x9875;&#x9762;&#x6761;&#x76EE;&#x6570;</p>
+</li>
+<li><p>&#x603B;&#x6570;&#x636E;&#x6761;&#x6570;</p>
+<pre class="language-"><code> count,err:=qs.Count()
+</code></pre></li>
+<li><p>&#x5171;&#x51E0;&#x9875;</p>
+<ul>
+<li>ceil &#x5C0F;&#x6570;&#x4F4D;&#x4E0D;&#x4E3A;0&#x65F6;&#x5411;&#x4E0A;&#x53D6;&#x6574;</li>
+<li><p>floor &#x5C0F;&#x6570;&#x4F4D;&#x4E0D;&#x4E3A;0&#x65F6;&#x5411;&#x4E0B;&#x53D6;&#x6574;</p>
+<pre class="language-"><code>pageSize:=2
+pageCount := math.Ceil(float64(count)/float64(pageSize))
+</code></pre></li>
+</ul>
+</li>
+<li><p>&#x5F53;&#x524D;&#x9875;&#x6570;</p>
+<pre class="language-"><code> pageIndex:=1
+ start := pageSize*(pageIndex-1)
+qs.Limit(pageSize,start).All(&amp;articles)//1.pagesize&#x4E00;&#x9875;&#x663E;&#x793A;&#x591A;&#x5C11; 2.start
+</code></pre></li>
+<li><p>&#x9996;&#x9875;&#x548C;&#x672B;&#x9875;</p>
+</li>
+<li><p>&#x4E0A;&#x4E00;&#x9875;&#x548C;&#x4E0B;&#x4E00;&#x9875;</p>
+<ul>
+<li><p>&#x89C6;&#x56FE;&#x51FD;&#x6570;</p>
+<ol>
+<li><p>&#x5728;html&#x4E2D;&#xFF0C;&#x7ED9;&#x51FD;&#x6570;&#x4F20;&#x53C2;</p>
+<pre class="language-"><code>{&#x8F6C;{&#x4E49;.&#x5B57;Content|&#x7B26;FuncName}}
+</code></pre></li>
+<li><p>&#x540E;&#x53F0;&#x5B9E;&#x73B0;&#x51FD;&#x6570;</p>
+<pre class="language-"><code>func hello(){
+
+}
+</code></pre></li>
+<li><p>&#x6620;&#x5C04;</p>
+<pre class="language-"><code>beego.AddFuncMap(&quot;FuncName&quot;,hello)
+</code></pre></li>
+</ol>
+</li>
+<li><p>&#x5C4F;&#x853D;&#x6309;&#x94AE;</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="&#x8FC7;&#x6EE4;&#x5668;&#x51FD;&#x6570;"><a name="&#x8FC7;&#x6EE4;&#x5668;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x8FC7;&#x6EE4;&#x5668;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>10. &#x8FC7;&#x6EE4;&#x5668;&#x51FD;&#x6570;</h1>
+<p>Fifter()&#x4F5C;&#x7528;&#xFF1A;&#x76F8;&#x5F53;&#x4E8E;sql&#x4E2D;&#x7684;where</p>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;Fifter(&#x201C;&#x8868;&#x540D;__Name&#x201D;,NameValue)</li>
+<li>&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x503C;</li>
+</ul>
+<p>orm&#x662F;&#x60F0;&#x6027;&#x67E5;&#x8BE2;&#x8981;&#x5173;&#x8054;&#x8868;&#xFF0C;&#x4E0D;&#x5173;&#x8054;&#x67E5;&#x4E0D;&#x5230;</p>
+<p><code>.RelateSel(ArticleTYpe)</code></p>
+<h1 id="cookie"><a name="cookie" class="anchor-navigation-ex-anchor" href="#cookie"><i class="fa fa-link" aria-hidden="true"></i></a>11. Cookie</h1>
+<ul>
+<li><p>&#x8BBE;&#x7F6E;cookie</p>
+<pre class="language-"><code>this.Ctx.SetCookie(&quot;key&quot;,&quot;value&quot;,time)
+</code></pre></li>
+<li><p>&#x83B7;&#x53D6;cookie</p>
+<pre class="language-"><code>this.Ctx.GetCookie(&quot;key&quot;)
+</code></pre></li>
+<li><p>&#x5220;&#x9664;cookie</p>
+<pre class="language-"><code>this.Ctx.SetCookie(&quot;key&quot;,&quot;value&quot;,-1)
+</code></pre></li>
+</ul>
+<h1 id="&#x89C6;&#x56FE;&#x51FD;&#x6570;"><a name="&#x89C6;&#x56FE;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x89C6;&#x56FE;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>12. &#x89C6;&#x56FE;&#x51FD;&#x6570;</h1>
+<p>beego &#x652F;&#x6301;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x89C6;&#x56FE;&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x5FC5;&#x987B;&#x5728; beego.Run() &#x8C03;&#x7528;&#x4E4B;&#x524D;&#xFF0C;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>func hello(in string)(out string){
+    out = in + &quot;world&quot;
+    return
+}
+
+beego.AddFuncMap(&quot;hi&quot;,hello)
+</code></pre><p>&#x5B9A;&#x4E49;&#x4E4B;&#x540E;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x89C6;&#x56FE;&#x4E2D;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#x4E86;&#xFF1A;</p>
+<pre class="language-"><code>{&#x8F6C;{&#x4E49;.&#x5B57;Content|&#x7B26;hi}}//.Content&#x4E3A;&#x540E;&#x53F0;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F5C;&#x4E3A;&#x89C6;&#x56FE;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;
+</code></pre><h1 id="&#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;&#x4E8C;"><a name="&#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>13. &#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;&#x4E8C;</h1>
+<h2 id="limit&#x51FD;&#x6570;&#xFF1A;"><a name="limit&#x51FD;&#x6570;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#limit&#x51FD;&#x6570;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>13.1. Limit&#x51FD;&#x6570;&#xFF1A;</h2>
+<p>&#x83B7;&#x53D6;&#x90E8;&#x5206;&#x6570;&#x636E;</p>
+<pre class="language-"><code>qs.Limit(10, 20)//&#x83B7;&#x53D6;&#x7B2C;10&#x5230;20&#x6761;&#x6570;&#x636E;
+</code></pre><h2 id="count&#x51FD;&#x6570;&#xFF1A;"><a name="count&#x51FD;&#x6570;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#count&#x51FD;&#x6570;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>13.2. Count&#x51FD;&#x6570;&#xFF1A;</h2>
+<p>&#x4F9D;&#x636E;&#x5F53;&#x524D;&#x7684;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x884C;&#x6570;</p>
+<pre class="language-"><code>cnt, err := o.QueryTable(&quot;user&quot;).Count() // SELECT COUNT(*) FROM USER
+</code></pre><h1 id="&#x8868;&#x5173;&#x7CFB;&#x8BBE;&#x7F6E;"><a name="&#x8868;&#x5173;&#x7CFB;&#x8BBE;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x8868;&#x5173;&#x7CFB;&#x8BBE;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>14. &#x8868;&#x5173;&#x7CFB;&#x8BBE;&#x7F6E;</h1>
+<ul>
+<li><p>&#x4E00;&#x5BF9;&#x4E00;</p>
+<pre class="language-"><code>rel(one)
+reverse(one)
+</code></pre></li>
+<li><p>&#x4E00;&#x5BF9;&#x591A;</p>
+<pre class="language-"><code>rel(fk)   //forign  key
+reverse(many)
+</code></pre></li>
+<li><p>&#x591A;&#x5BF9;&#x591A;</p>
+<pre class="language-"><code>rel(m2m)
+reverse(many)
+</code></pre><h1 id="&#x6CE8;&#x610F;"><a name="&#x6CE8;&#x610F;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x610F;"><i class="fa fa-link" aria-hidden="true"></i></a>15. &#x6CE8;&#x610F;</h1>
+</li>
+</ul>
+<p>&#x64CD;&#x4F5C;orm&#x65F6;&#xFF0C;&#x7ED3;&#x6784;&#x4F53;&#x5B57;&#x6BB5;&#x547D;&#x540D;
+<code>ArticleType</code>&#x5728;&#x6570;&#x636E;&#x5E93;&#x751F;&#x6210;<code>article_type</code>
+<code>Article_Type</code>&#x5728;&#x6570;&#x636E;&#x5E93;&#x751F;&#x6210;<code>article__type</code>
+<code>__</code>&#x540E;&#x8FB9;&#x4EE3;&#x8868;&#x7279;&#x6B8A;&#x542B;&#x4E49;&#x6709;&#x95EE;&#x9898;&#x3002;</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="006第五个项目文章发布系统.html" class="navigation navigation-prev " aria-label="Previous page: 第五个项目文章论坛">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="008Go语言学习之template包.html" class="navigation navigation-next " aria-label="Next page: GoWeb之template包">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"知识点","level":"1.5.7","depth":2,"next":{"title":"GoWeb之template包","level":"1.5.8","depth":2,"path":"beego_note/008Go语言学习之template包.md","ref":"beego_note/008Go语言学习之template包.md","articles":[]},"previous":{"title":"第五个项目文章论坛","level":"1.5.6","depth":2,"path":"beego_note/006第五个项目文章发布系统.md","ref":"beego_note/006第五个项目文章发布系统.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","emphasize","-highlight","prism","prism-themes","copy-code-button","splitter","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"shortName":"introducetogitbook"},"emphasize":{},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"beego_note/007知识点.md","mtime":"2018-09-14T13:48:54.133Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-15T10:53:21.979Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

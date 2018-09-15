@@ -1,0 +1,945 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第五个项目文章论坛 · go语言学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Junling Zheng <me@chengweiyang.cn>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="007知识点.html" />
+    
+    
+    <link rel="prev" href="005第四个项目注册登录.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://juejin.im/user/58fb6268a22b9d0065995827" target="_blank" class="custom-link">Zhengjunling's Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Go语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../001指针.html">
+            
+                <a href="../001指针.html">
+            
+                    
+                    语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../001指针.html">
+            
+                <a href="../001指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../002new.html">
+            
+                <a href="../002new.html">
+            
+                    
+                    new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../003slice.html">
+            
+                <a href="../003slice.html">
+            
+                    
+                    slice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../004map.html">
+            
+                <a href="../004map.html">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../005结构体.html">
+            
+                <a href="../005结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../006字符串.html">
+            
+                <a href="../006字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../007文件操作.html">
+            
+                <a href="../007文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../008并发编程.html">
+            
+                <a href="../008并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../008并发编程.html">
+            
+                <a href="../008并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../009goroutine.html">
+            
+                <a href="../009goroutine.html">
+            
+                    
+                    goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../010channel.html">
+            
+                <a href="../010channel.html">
+            
+                    
+                    channel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../011生产者消费者.html">
+            
+                <a href="../011生产者消费者.html">
+            
+                    
+                    生产者消费者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../012定时器.html">
+            
+                <a href="../012定时器.html">
+            
+                    
+                    定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../013select.html">
+            
+                <a href="../013select.html">
+            
+                    
+                    select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../014锁.html">
+            
+                <a href="../014锁.html">
+            
+                    
+                    锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../015条件变量.html">
+            
+                <a href="../015条件变量.html">
+            
+                    
+                    条件变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0016网络编程.html">
+            
+                <a href="../0016网络编程.html">
+            
+                    
+                    Go网络编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../0016网络编程.html">
+            
+                <a href="../0016网络编程.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../0017Socket编程.html">
+            
+                <a href="../0017Socket编程.html">
+            
+                    
+                    Socket编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../0018网络应用程序设计模式.html">
+            
+                <a href="../0018网络应用程序设计模式.html">
+            
+                    
+                    网络应用程序设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../019TCPUDP.html">
+            
+                <a href="../019TCPUDP.html">
+            
+                    
+                    TCPUDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../020文件传输.html">
+            
+                <a href="../020文件传输.html">
+            
+                    
+                    文件传输（案例）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../021聊天室.html">
+            
+                <a href="../021聊天室.html">
+            
+                    
+                    聊天室（案例）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../022HTTP编程.html">
+            
+                <a href="../022HTTP编程.html">
+            
+                    
+                    HTTP编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../023正则表达式.md">
+            
+                <span>
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../024爬虫.html">
+            
+                <a href="../024爬虫.html">
+            
+                    
+                    爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="001beego入门.html">
+            
+                <a href="001beego入门.html">
+            
+                    
+                    Beego
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="001beego入门.html">
+            
+                <a href="001beego入门.html">
+            
+                    
+                    Beego入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="002beego第一个项目.html">
+            
+                <a href="002beego第一个项目.html">
+            
+                    
+                    第一个项目Post案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="003第二个项目mysql.html">
+            
+                <a href="003第二个项目mysql.html">
+            
+                    
+                    第二个项目mysql案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="004第三个项目orm.html">
+            
+                <a href="004第三个项目orm.html">
+            
+                    
+                    第三个项目orm操作数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="005第四个项目注册登录.html">
+            
+                <a href="005第四个项目注册登录.html">
+            
+                    
+                    第四个项目注册登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.6" data-path="006第五个项目文章发布系统.html">
+            
+                <a href="006第五个项目文章发布系统.html">
+            
+                    
+                    第五个项目文章论坛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="007知识点.html">
+            
+                <a href="007知识点.html">
+            
+                    
+                    知识点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="008Go语言学习之template包.html">
+            
+                <a href="008Go语言学习之template包.html">
+            
+                    
+                    GoWeb之template包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第五个项目文章论坛</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x6587;&#x7AE0;&#x53D1;&#x5E03;&#x7CFB;&#x7EDF;"><b>1. </b>&#x6587;&#x7AE0;&#x53D1;&#x5E03;&#x7CFB;&#x7EDF;</a></li></ul></div><a href="#&#x6587;&#x7AE0;&#x53D1;&#x5E03;&#x7CFB;&#x7EDF;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6587;&#x7AE0;&#x53D1;&#x5E03;&#x7CFB;&#x7EDF;"><a name="&#x6587;&#x7AE0;&#x53D1;&#x5E03;&#x7CFB;&#x7EDF;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x7AE0;&#x53D1;&#x5E03;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6587;&#x7AE0;&#x53D1;&#x5E03;&#x7CFB;&#x7EDF;</h1>
+<p><img src="../images/&#x6587;&#x7AE0;&#x540E;&#x53F0;.png" alt=""></p>
+<ul>
+<li>&#x6587;&#x7AE0;&#x5217;&#x8868;&#xFF08;&#x67E5;&#x8BE2;&#xFF09;</li>
+<li>&#x6587;&#x7AE0;&#x8BE6;&#x60C5;&#xFF08;&#x67E5;&#x8BE2;&#xFF09;</li>
+<li>&#x6DFB;&#x52A0;&#x6587;&#x7AE0;&#xFF08;&#x589E;&#x52A0;&#xFF09;</li>
+<li>&#x66F4;&#x65B0;&#x6587;&#x7AE0;&#xFF08;&#x4FEE;&#x6539;&#xFF09;</li>
+<li><p>&#x5220;&#x9664;&#x6587;&#x7AE0;&#xFF08;&#x5220;&#x9664;&#xFF09;</p>
+</li>
+<li><p>&#x8DEF;&#x7531; router.go</p>
+<pre class="language-"><code> func init() {
+     beego.Router(&quot;/showArticle&quot;, &amp;controllers.ArticleController{},&quot;get:ShowArticleList&quot;)
+     beego.Router(&quot;/addArticle&quot;, &amp;controllers.ArticleController{},&quot;get:ShowAddArticle;post:HandleAddArticle&quot;)
+     beego.Router(&quot;/articleContent&quot;, &amp;controllers.ArticleController{},&quot;get:ShowContent&quot;)
+     beego.Router(&quot;/deleteArticle&quot;, &amp;controllers.ArticleController{},&quot;get:HandleDeleteArticle&quot;)
+     beego.Router(&quot;/updateArticle&quot;, &amp;controllers.ArticleController{},&quot;get:ShowUpdateArticle;post:HandleUpdateArticle&quot;)
+ }
+</code></pre></li>
+<li><p>models models.go</p>
+<pre class="language-"><code> type Article struct {
+     Id2 int `orm:&quot;pk;auto&quot;`//&#x624B;&#x52A8;&#x8BBE;&#x7F6E;&#x4E3A;&#x4E3B;&#x952E;&#xFF0C;&#x81EA;&#x589E;&#x957F;
+     Title string `orm:&quot;size(30)&quot;`//&#x4E0D;&#x4E3A;&#x7A7A;
+     Content string `orm:&quot;size(500)&quot;`
+     Img string `orm:&quot;size(500);null&quot;`
+     //Type string
+     Time time.Time `orm:&quot;auto_now;type(date)&quot;`
+     Count int
+ }
+
+ func init()  {
+     beego.Info(&quot;---------------init-------------------&quot;)
+     orm.RegisterDataBase(&quot;default&quot;,&quot;mysql&quot;,&quot;root:123456@tcp(127.0.0.1:3306)/newweb?charset=utf8&quot;)
+     orm.RegisterModel(new(Article))
+     orm.RunSyncdb(&quot;default&quot;,false,true)
+ }
+</code></pre></li>
+<li><p>controllers article</p>
+</li>
+<li><p>ShowArticleList</p>
+<pre class="language-"><code> func (this *ArticleController)ShowArticleList(){
+     //new &#x4E00;&#x4E2A;orm
+     o:=orm.NewOrm()
+     //&#x7528;QueryTable&#x67E5;&#x8BE2;&#x6240;&#x6709;article&#x6570;&#x636E;
+     qs:=o.QueryTable(&quot;article&quot;)
+     var articles[]models.Article
+     //&#x7528;articles&#x5207;&#x7247;&#x53BB;&#x63A5;&#x53D7;
+     qs.All(&amp;articles)
+     beego.Info(articles)
+     //&#x4F20;&#x7ED9;&#x524D;&#x7AEF;&#x9875;&#x9762;
+     this.Data[&quot;article&quot;]=articles
+     this.TplName=&quot;index.html&quot;
+ }
+</code></pre><p> &#x524D;&#x7AEF;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x63A5;&#x6536;&#x6570;&#x636E;</p>
+<pre class="language-"><code> {{range $index ,$val := .article}}
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>{{$val.Title}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/articleContent?id={{$val.Id2}}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x67E5;&#x770B;&#x8BE6;&#x60C5;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>{{$val.Time.Format &quot;2006-01-02 15:04:05&quot;}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>{{$val.Count}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/deleteArticle?id={{$val.Id2}}<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>dels<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x5220;&#x9664;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/updateArticle?id={{$val.Id2}}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x7F16;&#x8F91;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>&#x8D22;&#x7ECF;&#x65B0;&#x95FB;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+ {{end}
+</code></pre></li>
+<li><p>ShowAddArticle</p>
+<pre class="language-"><code> func (this *ArticleController)ShowAddArticle(){
+     this.TplName = &quot;add.html&quot;
+}
+</code></pre></li>
+<li><p>HandleAddArticle</p>
+<pre class="language-"><code> func (this *ArticleController)HandleAddArticle(){
+ articleName:=this.GetString(&quot;articleName&quot;)
+ artiContent:=this.GetString(&quot;content&quot;)
+ beego.Info(articleName,artiContent)
+ f,h,err:=this.GetFile(&quot;uploadname&quot;)
+ var fileName string
+ if err != nil {
+     beego.Info(&quot;&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x5931;&#x8D25;err:&quot;,err)
+ }else {
+     beego.Info(h.Filename)
+     defer f.Close()
+     //1.&#x683C;&#x5F0F;
+     ext := path.Ext(h.Filename)
+     if path.Ext(h.Filename) != &quot;.jpg&quot; &amp;&amp; path.Ext(h.Filename) != &quot;.png&quot; &amp;&amp; path.Ext(h.Filename) != &quot;.jepg&quot; {
+         beego.Info(&quot;&#x683C;&#x5F0F;&#x4E0D;&#x6B63;&#x786E;&quot;)
+         return
+     }
+     //2.&#x5927;&#x5C0F;
+     if h.Size&gt;1024*1024*10{
+         beego.Info(&quot;&#x6587;&#x4EF6;&#x8FC7;&#x5927;&quot;)
+         return
+     }
+     //3.&#x4E0D;&#x91CD;&#x540D;
+     fileName = time.Now().Format(&quot;2006-01-02 15:04:05&quot;)+ext
+     err = this.SaveToFile(&quot;uploadname&quot;, &quot;./static/img/&quot;+fileName+ext)
+     if err != nil {
+         beego.Info(&quot;&#x4E0A;&#x4F20;&#x5931;&#x8D25;&quot;, err)
+         return
+     }
+     beego.Info(&quot;&#x4E0A;&#x4F20;&#x6210;&#x529F;&quot;)
+ }
+ o:=orm.NewOrm()
+ article:=models.Article{}
+ article.Img=&quot;./static/img/&quot;+fileName
+ article.Title = articleName
+ article.Content = artiContent
+ _,err=o.Insert(&amp;article)
+ if err != nil {
+     beego.Info(&quot;insert err:&quot;,err)
+     return
+ }
+ beego.Info(&quot;&#x63D2;&#x5165;&#x6210;&#x529F;&quot;)
+ this.Redirect(&quot;showArticle&quot;,302)
+</code></pre></li>
+<li><p>ShowContent</p>
+<pre class="language-"><code> func (this *ArticleController)ShowContent(){
+ //    &#x83B7;&#x53D6;id
+     id:=this.GetString(&quot;id&quot;)
+ //    &#x67E5;&#x8BE2;&#x6570;&#x636E;
+     o:=orm.NewOrm()
+     article:=models.Article{}
+     article.Id2,_= strconv.Atoi(id)
+     err:=o.Read(&amp;article)
+     if err != nil {
+         beego.Info(&quot;&#x6570;&#x636E;&#x4E3A;&#x7A7A;&quot;)
+         return
+     }
+     article.Count+=1
+     o.Update(&amp;article)
+ //    &#x4F20;&#x9012;&#x7ED9;&#x89C6;&#x56FE;
+     this.Data[&quot;article&quot;] = article
+     this.TplName = &quot;content.html&quot;
+ }
+</code></pre></li>
+<li><p>HandleDeleteArticle</p>
+<pre class="language-"><code> func (this *ArticleController)HandleDeleteArticle(){
+ //    1,&#x83B7;&#x53D6;id
+ //    2&#xFF0C;&#x65B0;&#x5EFA;article&#xFF0C;
+ //    3&#xFF0C;delete
+     id,err:=this.GetInt(&quot;id&quot;)
+     if err != nil {
+         beego.Info(err)
+         return
+     }
+     o:=orm.NewOrm()
+     article:= models.Article{Id2:id}
+     _,err=o.Delete(&amp;article)
+     if err != nil {
+         beego.Info(&quot;&#x5220;&#x9664;&#x5931;&#x8D25;&quot;)
+     }
+     this.Redirect(&quot;/showArticle&quot;,302)
+ }
+</code></pre></li>
+<li><p>ShowUpdateArticle</p>
+<pre class="language-"><code> func (this *ArticleController)ShowUpdateArticle(){
+     id,err:=this.GetInt(&quot;id&quot;)
+     if err != nil {
+         beego.Info(&quot;&#x83B7;&#x53D6;id&#x5931;&#x8D25;&quot;,err)
+         return
+     }
+     beego.Info(&quot;&#x7528;&#x6237;id&#x4E3A;&#xFF1A;&quot;,id)
+     o:=orm.NewOrm()
+     article:=models.Article{}
+     article.Id2 = id
+     o.Read(&amp;article)
+     this.Data[&quot;article&quot;] = article
+     this.TplName = &quot;update.html&quot;
+ }
+</code></pre></li>
+<li><p>HandleUpdateArticle</p>
+<pre class="language-"><code>func (this *ArticleController)HandleUpdateArticle(){
+    title:=this.GetString(&quot;articleName&quot;)
+    content:=this.GetString(&quot;content&quot;)
+    id:= this.GetString(&quot;articleId&quot;)
+    beego.Info(&quot;title&quot;,title)
+    beego.Info(&quot;content&quot;,content)
+    beego.Info(&quot;id&quot;,id)
+    var fileName string
+    f,h,err:=this.GetFile(&quot;uploadname&quot;)
+    if err!=nil{
+        beego.Info(&quot;&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x5931;&#x8D25;err:&quot;,err)
+    }else {
+        defer f.Close()
+        ext:=path.Ext(h.Filename)
+        if ext!=&quot;.jpg&quot;&amp;&amp;ext!=&quot;.png&quot;&amp;&amp;ext!=&quot;jepg&quot;{
+            beego.Info(&quot;&#x683C;&#x5F0F;&#x4E0D;&#x6B63;&#x786E;&quot;)
+            return
+        }
+        if h.Size&gt;1024*1024*10{
+            beego.Info(&quot;&#x6587;&#x4EF6;&#x8FC7;&#x5927;&quot;)
+            return
+        }
+        fileName=time.Now().Format(&quot;2006-01-02 15:04:05&quot;)+ext
+        err=this.SaveToFile(&quot;uploadname&quot;,&quot;./static/img/&quot;+fileName)
+        if err != nil {
+            beego.Info(&quot;&#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#x5931;&#x8D25;&quot;)
+            return
+        }
+    }
+
+    o := orm.NewOrm()
+    article := models.Article{}
+    article.Id2,_ = strconv.Atoi(id)
+    article.Title = title
+    article.Content = content
+    article.Img = fileName
+    _,err=o.Update(&amp;article)
+    if err != nil {
+        beego.Info(&quot;err:&quot;,err)
+        return
+    }
+    this.Redirect(&quot;showArticle&quot;,302)
+}
+</code></pre></li>
+</ul>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="005第四个项目注册登录.html" class="navigation navigation-prev " aria-label="Previous page: 第四个项目注册登录">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="007知识点.html" class="navigation navigation-next " aria-label="Next page: 知识点">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第五个项目文章论坛","level":"1.5.6","depth":2,"next":{"title":"知识点","level":"1.5.7","depth":2,"path":"beego_note/007知识点.md","ref":"beego_note/007知识点.md","articles":[]},"previous":{"title":"第四个项目注册登录","level":"1.5.5","depth":2,"path":"beego_note/005第四个项目注册登录.md","ref":"beego_note/005第四个项目注册登录.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","emphasize","-highlight","prism","prism-themes","copy-code-button","splitter","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"shortName":"introducetogitbook"},"emphasize":{},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"beego_note/006第五个项目文章发布系统.md","mtime":"2018-09-14T01:28:06.900Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-15T10:53:21.979Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

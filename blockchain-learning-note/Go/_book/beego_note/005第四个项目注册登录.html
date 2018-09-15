@@ -1,0 +1,841 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第四个项目注册登录 · go语言学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Junling Zheng <me@chengweiyang.cn>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="006第五个项目文章发布系统.html" />
+    
+    
+    <link rel="prev" href="004第三个项目orm.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://juejin.im/user/58fb6268a22b9d0065995827" target="_blank" class="custom-link">Zhengjunling's Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Go语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../001指针.html">
+            
+                <a href="../001指针.html">
+            
+                    
+                    语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../001指针.html">
+            
+                <a href="../001指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../002new.html">
+            
+                <a href="../002new.html">
+            
+                    
+                    new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../003slice.html">
+            
+                <a href="../003slice.html">
+            
+                    
+                    slice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../004map.html">
+            
+                <a href="../004map.html">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../005结构体.html">
+            
+                <a href="../005结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../006字符串.html">
+            
+                <a href="../006字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../007文件操作.html">
+            
+                <a href="../007文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../008并发编程.html">
+            
+                <a href="../008并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../008并发编程.html">
+            
+                <a href="../008并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../009goroutine.html">
+            
+                <a href="../009goroutine.html">
+            
+                    
+                    goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../010channel.html">
+            
+                <a href="../010channel.html">
+            
+                    
+                    channel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../011生产者消费者.html">
+            
+                <a href="../011生产者消费者.html">
+            
+                    
+                    生产者消费者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../012定时器.html">
+            
+                <a href="../012定时器.html">
+            
+                    
+                    定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../013select.html">
+            
+                <a href="../013select.html">
+            
+                    
+                    select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../014锁.html">
+            
+                <a href="../014锁.html">
+            
+                    
+                    锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../015条件变量.html">
+            
+                <a href="../015条件变量.html">
+            
+                    
+                    条件变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0016网络编程.html">
+            
+                <a href="../0016网络编程.html">
+            
+                    
+                    Go网络编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../0016网络编程.html">
+            
+                <a href="../0016网络编程.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../0017Socket编程.html">
+            
+                <a href="../0017Socket编程.html">
+            
+                    
+                    Socket编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../0018网络应用程序设计模式.html">
+            
+                <a href="../0018网络应用程序设计模式.html">
+            
+                    
+                    网络应用程序设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../019TCPUDP.html">
+            
+                <a href="../019TCPUDP.html">
+            
+                    
+                    TCPUDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../020文件传输.html">
+            
+                <a href="../020文件传输.html">
+            
+                    
+                    文件传输（案例）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../021聊天室.html">
+            
+                <a href="../021聊天室.html">
+            
+                    
+                    聊天室（案例）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../022HTTP编程.html">
+            
+                <a href="../022HTTP编程.html">
+            
+                    
+                    HTTP编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../023正则表达式.md">
+            
+                <span>
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../024爬虫.html">
+            
+                <a href="../024爬虫.html">
+            
+                    
+                    爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="001beego入门.html">
+            
+                <a href="001beego入门.html">
+            
+                    
+                    Beego
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="001beego入门.html">
+            
+                <a href="001beego入门.html">
+            
+                    
+                    Beego入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="002beego第一个项目.html">
+            
+                <a href="002beego第一个项目.html">
+            
+                    
+                    第一个项目Post案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="003第二个项目mysql.html">
+            
+                <a href="003第二个项目mysql.html">
+            
+                    
+                    第二个项目mysql案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="004第三个项目orm.html">
+            
+                <a href="004第三个项目orm.html">
+            
+                    
+                    第三个项目orm操作数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.5" data-path="005第四个项目注册登录.html">
+            
+                <a href="005第四个项目注册登录.html">
+            
+                    
+                    第四个项目注册登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="006第五个项目文章发布系统.html">
+            
+                <a href="006第五个项目文章发布系统.html">
+            
+                    
+                    第五个项目文章论坛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="007知识点.html">
+            
+                <a href="007知识点.html">
+            
+                    
+                    知识点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="008Go语言学习之template包.html">
+            
+                <a href="008Go语言学习之template包.html">
+            
+                    
+                    GoWeb之template包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第四个项目注册登录</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x6CE8;&#x518C;&#x767B;&#x5F55;"><b>1. </b>&#x6CE8;&#x518C;&#x767B;&#x5F55;</a></li><ul><li><span class="title-icon "></span><a href="#1-&#x6CE8;&#x518C;&#x767B;&#x5F55;&#x8DEF;&#x7531;routergo"><b>1.1. </b>1. &#x6CE8;&#x518C;&#x767B;&#x5F55;&#x8DEF;&#x7531;router.go</a></li><li><span class="title-icon "></span><a href="#2-&#x5728;models&#x4E2D;&#x521B;&#x5EFA;modelsgo"><b>1.2. </b>2. &#x5728;models&#x4E2D;&#x521B;&#x5EFA;models.go</a></li><li><span class="title-icon "></span><a href="#3-controllers&#x6587;&#x4EF6;&#x5B9A;&#x4E49;usergo&#xFF0C;&#x5B58;&#x653E;user&#x76F8;&#x5173;&#x7684;&#x63A7;&#x5236;&#x5668;&#x3002;"><b>1.3. </b>3. controllers&#x6587;&#x4EF6;&#x5B9A;&#x4E49;User.go&#xFF0C;&#x5B58;&#x653E;user&#x76F8;&#x5173;&#x7684;&#x63A7;&#x5236;&#x5668;&#x3002;</a></li><ul><li><span class="title-icon "></span><a href="#1&#x521B;&#x5EFA;&#x6CE8;&#x518C;&#x7684;&#x63A7;&#x5236;&#x5668;"><b>1.3.1. </b>1.&#x521B;&#x5EFA;&#x6CE8;&#x518C;&#x7684;&#x63A7;&#x5236;&#x5668;</a></li><li><span class="title-icon "></span><a href="#2&#x521B;&#x5EFA;&#x767B;&#x5F55;&#x7684;&#x63A7;&#x5236;&#x5668;"><b>1.3.2. </b>2.&#x521B;&#x5EFA;&#x767B;&#x5F55;&#x7684;&#x63A7;&#x5236;&#x5668;</a></li><li><span class="title-icon "></span><a href="#3-showlogin"><b>1.3.3. </b>3. ShowLogin</a></li><li><span class="title-icon "></span><a href="#4-showreg"><b>1.3.4. </b>4. ShowReg</a></li><li><span class="title-icon "></span><a href="#5-handlereg"><b>1.3.5. </b>5. HandleReg</a></li><li><span class="title-icon "></span><a href="#6-handlelogin"><b>1.3.6. </b>6. HandleLogin</a></li></ul></ul></ul></div><a href="#&#x6CE8;&#x518C;&#x767B;&#x5F55;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6CE8;&#x518C;&#x767B;&#x5F55;"><a name="&#x6CE8;&#x518C;&#x767B;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x518C;&#x767B;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6CE8;&#x518C;&#x767B;&#x5F55;</h1>
+<h2 id="1-&#x6CE8;&#x518C;&#x767B;&#x5F55;&#x8DEF;&#x7531;routergo"><a name="1-&#x6CE8;&#x518C;&#x767B;&#x5F55;&#x8DEF;&#x7531;routergo" class="anchor-navigation-ex-anchor" href="#1-&#x6CE8;&#x518C;&#x767B;&#x5F55;&#x8DEF;&#x7531;routergo"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 1. &#x6CE8;&#x518C;&#x767B;&#x5F55;&#x8DEF;&#x7531;router.go</h2>
+<p>&#x4E00;&#x822C;&#x547D;&#x540D;&#x89C4;&#x8303;&#xFF0C;&#x8DEF;&#x7531;&#x5730;&#x5740;&#x9996;&#x5B57;&#x6BCD;&#x4E0D;&#x5927;&#x4E9B;&#xFF0C;&#x65B9;&#x6CD5;&#x5927;&#x4E9B;&#xFF0C;&#x5C55;&#x793A;&#x7684;&#x65B9;&#x6CD5;Show&#x5F00;&#x5934;&#xFF0C;&#x64CD;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;Handle&#x5F00;&#x5934;&#x3002;</p>
+<pre class="language-"><code>func init() {
+    beego.Router(&quot;/&quot;,&amp;controllers.LoginController{},&quot;get:ShowLogin&quot;)
+    beego.Router(&quot;/register&quot;, &amp;controllers.RegController{},&quot;get:ShowReg;post:HandleReg&quot;)
+    beego.Router(&quot;/login&quot;, &amp;controllers.LoginController{},&quot;get:ShowLogin;post:HandleLogin&quot;)
+}
+</code></pre><h2 id="2-&#x5728;models&#x4E2D;&#x521B;&#x5EFA;modelsgo"><a name="2-&#x5728;models&#x4E2D;&#x521B;&#x5EFA;modelsgo" class="anchor-navigation-ex-anchor" href="#2-&#x5728;models&#x4E2D;&#x521B;&#x5EFA;modelsgo"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. 2. &#x5728;models&#x4E2D;&#x521B;&#x5EFA;models.go</h2>
+<p>&#x521B;&#x5EFA;&#x7ED3;&#x6784;&#x4F53;User&#xFF0C;&#x5E76;&#x5728;init&#x4E2D;&#x6CE8;&#x518C;&#x6570;&#x636E;&#x5E93;&#xFF08;init&#x53EA;&#x4F1A;&#x6267;&#x884C;&#x4E00;&#x6B21;&#xFF09;&#xFF0C;&#x8FD9;&#x662F;beego&#x5B98;&#x65B9;&#x5EFA;&#x8BAE;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x4E0D;&#x4E3B;&#x52A8;&#x8C03;&#x7528;&#x4E5F;&#x4F1A;&#x8D70;init&#x65B9;&#x6CD5;&#x3002;</p>
+<pre class="language-"><code>type User struct {
+    Id int
+    UserName string
+    Passwd string
+}
+</code></pre><pre class="language-"><code>func init()  {
+    beego.Info(&quot;---------------init-------------------&quot;)
+    orm.RegisterDataBase(&quot;default&quot;,&quot;mysql&quot;,&quot;root:123456@tcp(127.0.0.1:3306)/newweb?charset=utf8&quot;)
+    orm.RegisterModel(new(User))
+    orm.RunSyncdb(&quot;default&quot;,false,true)
+}
+</code></pre><h2 id="3-controllers&#x6587;&#x4EF6;&#x5B9A;&#x4E49;usergo&#xFF0C;&#x5B58;&#x653E;user&#x76F8;&#x5173;&#x7684;&#x63A7;&#x5236;&#x5668;&#x3002;"><a name="3-controllers&#x6587;&#x4EF6;&#x5B9A;&#x4E49;usergo&#xFF0C;&#x5B58;&#x653E;user&#x76F8;&#x5173;&#x7684;&#x63A7;&#x5236;&#x5668;&#x3002;" class="anchor-navigation-ex-anchor" href="#3-controllers&#x6587;&#x4EF6;&#x5B9A;&#x4E49;usergo&#xFF0C;&#x5B58;&#x653E;user&#x76F8;&#x5173;&#x7684;&#x63A7;&#x5236;&#x5668;&#x3002;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. 3. controllers&#x6587;&#x4EF6;&#x5B9A;&#x4E49;User.go&#xFF0C;&#x5B58;&#x653E;user&#x76F8;&#x5173;&#x7684;&#x63A7;&#x5236;&#x5668;&#x3002;</h2>
+<h3 id="1&#x521B;&#x5EFA;&#x6CE8;&#x518C;&#x7684;&#x63A7;&#x5236;&#x5668;"><a name="1&#x521B;&#x5EFA;&#x6CE8;&#x518C;&#x7684;&#x63A7;&#x5236;&#x5668;" class="anchor-navigation-ex-anchor" href="#1&#x521B;&#x5EFA;&#x6CE8;&#x518C;&#x7684;&#x63A7;&#x5236;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. 1.&#x521B;&#x5EFA;&#x6CE8;&#x518C;&#x7684;&#x63A7;&#x5236;&#x5668;</h3>
+<pre class="language-"><code>type RegController struct {
+    beego.Controller
+}
+</code></pre><h3 id="2&#x521B;&#x5EFA;&#x767B;&#x5F55;&#x7684;&#x63A7;&#x5236;&#x5668;"><a name="2&#x521B;&#x5EFA;&#x767B;&#x5F55;&#x7684;&#x63A7;&#x5236;&#x5668;" class="anchor-navigation-ex-anchor" href="#2&#x521B;&#x5EFA;&#x767B;&#x5F55;&#x7684;&#x63A7;&#x5236;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. 2.&#x521B;&#x5EFA;&#x767B;&#x5F55;&#x7684;&#x63A7;&#x5236;&#x5668;</h3>
+<pre class="language-"><code>type LoginController struct {
+    beego.Controller
+}
+</code></pre><h3 id="3-showlogin"><a name="3-showlogin" class="anchor-navigation-ex-anchor" href="#3-showlogin"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.3. 3. ShowLogin</h3>
+<p>&#x53EA;&#x662F;&#x5C55;&#x793A;&#x767B;&#x5F55;&#x9875;&#x9762;&#x5C31;&#x884C;</p>
+<pre class="language-"><code>func (this *LoginController)ShowLogin(){
+    this.TplName=&quot;login.html&quot;
+}
+</code></pre><h3 id="4-showreg"><a name="4-showreg" class="anchor-navigation-ex-anchor" href="#4-showreg"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.4. 4. ShowReg</h3>
+<p>get&#x65F6;&#xFF0C;&#x53EA;&#x662F;&#x5C55;&#x793A;&#x6CE8;&#x518C;&#x9875;&#x9762;</p>
+<pre class="language-"><code>func (this *RegController)ShowReg(){
+    this.TplName=&quot;register.html&quot;
+}
+</code></pre><h3 id="5-handlereg"><a name="5-handlereg" class="anchor-navigation-ex-anchor" href="#5-handlereg"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.5. 5. HandleReg</h3>
+<p>post&#x65F6;&#xFF0C;&#x83B7;&#x53D6;&#x524D;&#x7AEF;&#x6570;&#x636E;&#x53BB;&#x5904;&#x7406;&#x6CE8;&#x518C;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code>//1&#xFF0C;&#x83B7;&#x53D6;&#x524D;&#x7AEF;&#x6570;&#x636E;
+//2&#xFF0C;&#x5904;&#x7406;&#x5224;&#x65AD;&#x6570;&#x636E;
+//3&#xFF0C;&#x63D2;&#x5165;&#x6570;&#x636E;&#x5E93;
+//4&#xFF0C;&#x6CE8;&#x518C;&#x6210;&#x529F;
+
+//1
+//key&#x662F;input&#x7684;name
+    username:=this.GetString(&quot;username&quot;)
+    password:=this.GetString(&quot;password&quot;)
+//2
+    if username==&quot;&quot;||password==&quot;&quot;{
+        beego.Info(&quot;&#x7528;&#x6237;&#x540D;&#x5BC6;&#x7801;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;)
+//&#x4E0D;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#xFF0C;&#x8FD4;&#x56DE;&#x6CE8;&#x518C;&#x9875;&#x9762;
+        this.TplName = &quot;register.html&quot;
+        return
+    }
+//3
+    //1 new&#x4E00;&#x4E2A;orm
+    o:=orm.NewOrm()
+    //2 new&#x4E00;&#x4E2A;&#x8981;&#x67E5;&#x8BE2;&#x6216;&#x63D2;&#x5165;&#x7684;&#x5BF9;&#x8C61;
+    user:=models.User{}
+    user.UserName = username
+    err:=o.Read(&amp;user,&quot;user_name&quot;)
+    if err == nil {
+        beego.Info(&quot;&#x7528;&#x6237;&#x5DF2;&#x5B58;&#x5728;&quot;)
+//&#x7528;&#x6237;&#x5DF2;&#x5B58;&#x5728;&#x8FD4;&#x56DE;&#x6CE8;&#x518C;&#x9875;&#x9762;
+        this.TplName=&quot;register.html&quot;
+        return
+    }
+    user.UserName = username
+    user.Passwd = password
+    _,err=o.Insert(&amp;user)
+    if err != nil {
+        beego.Info(&quot;&#x63D2;&#x5165;&#x5931;&#x8D25;&quot;,err)
+//&#x63D2;&#x5165;&#x5931;&#x8D25;&#x5373;&#x6CE8;&#x518C;&#x5931;&#x8D25;&#x8FD4;&#x56DE;&#x6CE8;&#x518C;&#x9875;&#x9762;
+        this.TplName=&quot;register.html&quot;
+        return
+    }
+//3
+//&#x6CE8;&#x518C;&#x6210;&#x529F;&#xFF0C;&#x91CD;&#x5B9A;&#x5411;&#x53BB;&#x767B;&#x5F55;&#x9875;&#x9762;
+    this.Redirect(&quot;/login&quot;,302)
+</code></pre><h3 id="6-handlelogin"><a name="6-handlelogin" class="anchor-navigation-ex-anchor" href="#6-handlelogin"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.6. 6. HandleLogin</h3>
+<pre class="language-"><code>//1. &#x83B7;&#x53D6;&#x524D;&#x7AEF;&#x4F20;&#x8FC7;&#x6765;&#x7684;&#x6570;&#x636E;
+//2. &#x901A;&#x8FC7;&#x7528;&#x6237;&#x540D;&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x5BC6;&#x7801;
+//3. &#x8F93;&#x5165;&#x7684;&#x5BC6;&#x7801;&#x8DDF;&#x7528;&#x6237;&#x5BC6;&#x7801;&#x6BD4;&#x8F83;
+//4. &#x767B;&#x5F55;&#x6210;&#x529F;
+func (this *LoginController)HandleLogin(){
+    username:=this.GetString(&quot;username&quot;)
+    password:=this.GetString(&quot;password&quot;)
+    if username==&quot;&quot;||password==&quot;&quot;{
+        beego.Info(&quot;&#x7528;&#x6237;&#x540D;&#x5BC6;&#x7801;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;)
+        this.TplName = &quot;register.html&quot;
+        return
+    }
+    o:=orm.NewOrm()
+    user:=models.User{}
+    user.UserName = username
+    err:=o.Read(&amp;user,&quot;user_name&quot;)
+    if err != nil {
+        beego.Info(&quot;&#x7528;&#x6237;&#x540D;&#x9519;&#x8BEF;&quot;)
+        this.TplName = &quot;login.html&quot;
+        return
+    }
+    if password!=user.Passwd{
+        beego.Info(&quot;&#x5BC6;&#x7801;&#x9519;&#x8BEF;&quot;)
+        this.TplName = &quot;login.html&quot;
+        return
+    }
+    this.Ctx.WriteString(&quot;&#x767B;&#x5F55;&#x6210;&#x529F;&quot;)
+}
+</code></pre>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="004第三个项目orm.html" class="navigation navigation-prev " aria-label="Previous page: 第三个项目orm操作数据库">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="006第五个项目文章发布系统.html" class="navigation navigation-next " aria-label="Next page: 第五个项目文章论坛">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第四个项目注册登录","level":"1.5.5","depth":2,"next":{"title":"第五个项目文章论坛","level":"1.5.6","depth":2,"path":"beego_note/006第五个项目文章发布系统.md","ref":"beego_note/006第五个项目文章发布系统.md","articles":[]},"previous":{"title":"第三个项目orm操作数据库","level":"1.5.4","depth":2,"path":"beego_note/004第三个项目orm.md","ref":"beego_note/004第三个项目orm.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","emphasize","-highlight","prism","prism-themes","copy-code-button","splitter","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"shortName":"introducetogitbook"},"emphasize":{},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"beego_note/005第四个项目注册登录.md","mtime":"2018-09-13T05:49:14.103Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-15T10:53:21.979Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
