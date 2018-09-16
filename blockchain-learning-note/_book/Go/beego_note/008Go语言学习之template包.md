@@ -1,12 +1,3 @@
-# Go语言学习之html/template包
-
->	官方介绍： 
-Package template (html/template) implements data-driven templates for generating HTML output safe against code injection. It provides the same interface as package text/template and should be used instead of text/template whenever the output is HTML.
-
->	template包（html/template）实现了数据驱动的模板，用于生成可对抗代码注入的安全HTML输出。本包提供了和text/template包相同的接口，无论何时当输出是HTML的时候都应使用本包。
-
-## 字段操作 
-Go语言的模板通过{{}}来包含需要在渲染时被替换的字段，{{.}}表示当前的对象。
 
 ```
 <title>{{ .Title }}</title>
@@ -14,15 +5,15 @@ Go语言的模板通过{{}}来包含需要在渲染时被替换的字段，{{.}}
 
 ## 输出嵌套字段内容
 
-那么如果字段里面还有对象，我们可以使用{{with …}}…{{end}}和{{range …}}{{end}}来进行数据的输出。
+那么如果字段里面还有对象，我们可以使用{转义{with …}转义}…{转义{end}转义}和{转义{range …}转义}{转义{end}转义}来进行数据的输出。
 
 ```
-{{ range array }}
-    {{ . }}
-{{ end }}
+{ { range array } }
+    { { . } }
+{ { end } }
 ```
 ```
-{{range $index, $element := array}}
+{ {range $index, $element := array}转义}
     {{ $index }}
     {{ $element }}
 {{ end }}
@@ -35,47 +26,47 @@ Go语言的模板通过{{}}来包含需要在渲染时被替换的字段，{{.}}
 *	if:
 
 	```
-	{{ if isset .Params "title" }}<h4>{{ index .Params "title" }}</h4>{{ end }}
+	{转义{ if isset .Params "title" } }<h4>{ { index .Params "title" } }</h4>{ { end } }
 	```
 	```
-	{{ if isset .Params1 .Params2 }}<h4>{{ index .Params "title" }}</h4>{{ end }}
+	{ { if isset .Params1 .Params2 } }<h4>{{ index .Params "title" }}</h4>{{ end }}
 	```
 *	if …else:
 
 	```
-	{{ if isset .Params "alt" }}
-    {{ index .Params "alt" }}
+	{ { if isset .Params "alt" } }
+    { { index .Params "alt" } }
 {{else}}
-    {{ index .Params "caption" }}
+    { { index .Params "caption" } }
 {{ end }}
 	```
 *	and & or:
 
 	```
-	{{ if and (or (isset .Params "title") (isset .Params "caption")) (isset .Params "attr")}}
+	{ { if and (or (isset .Params "title") (isset .Params "caption")) (isset .Params "attr")} }
 	```
 *	with:
 	
 	```
-	{{ with .Params.title }}<h4>{{ . }}</h4>{{ end }}
+	{ { with .Params.title } }<h4>{ { . } }</h4>{ { end } }
 	```
 
 # 支持pipe数据
 	
 ```
-{{. | html}}
+{ {. | html} }
 ```
 
 ```
-{{ if isset .Params "caption" | or isset .Params "title" | or isset .Params "attr" }}
+{ { if isset .Params "caption" | or isset .Params "title" | or isset .Params "attr" } }
 Stuff Here
-{{ end }}
+{ { end } }
 ```
 
 # 模板变量
 
 ```
-{{with $x := "output" | printf "%q"}}{{$x}}{{end}}
+{ {with $x := "output" | printf "%q"} }{{$x}}{{end}}
 ```
 局部变量的作用域在end前。
 
@@ -95,7 +86,7 @@ func (t *Template) Parse(text string) (*Template, error)
 ```
 进行解析 
 
-Parse parses text as a template body for t. Named template definitions ({{define …}} or {{block …}} statements) in text define additional templates associated with t and are removed from the definition of t itself.
+Parse parses text as a template body for t. Named template definitions ( { {define …} } or { {block …} } statements) in text define additional templates associated with t and are removed from the definition of t itself.
 
 ## func (*Template) Execute
 
@@ -173,10 +164,10 @@ func main() {
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{{.Title}}</title>
+        <title>{ {.Title}}</title>
     </head>
     <body>
-        {{range .Items}}<div>{{ . }}</div>{{else}}<div><strong>no rows</strong></div>{{end}}
+        { {range .Items}}<div>{{ . }}</div>{{else}}<div><strong>no rows</strong></div>{{end}}
     </body>
 </html>`
 
@@ -224,13 +215,13 @@ func main() {
 ```
 <h1>Todos</h1>
 <ul>
-    {{range .Todos}}
-        {{if .Done}}
+    { {range .Todos}}
+        { {if .Done}}
             <li><s>{{.Task}}</s></li>
-        {{else}}
+        { {else}}
             <li>{{.Task}}</li>
-        {{end}}
-    {{end}}
+        { {end}}
+    { {end}}
 </ul>
 ```
 

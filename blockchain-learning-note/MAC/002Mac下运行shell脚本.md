@@ -13,6 +13,3 @@
 4. 	 解决办法：修改该文件aa.sh 的权限 ：使用命令： `chmod 777 aa.sh`
 5.  `./insert.sh`
 
-
-![a](./images/git22.png)
-![b](./images/markdown操作.gif)

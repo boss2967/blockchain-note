@@ -132,3 +132,7 @@
 * [MAC](MAC/001Mac设置环境变量.md)
 	- [1. 设置环境变量](MAC/001Mac设置环境变量.md)
 	- [2. Mac下运行shell脚本](MAC/002Mac下运行shell脚本.md)
+* [Git](MAC/001git基本操作.md)
+	- [git基本操作](MAC/001git基本操作.md)
+	- [git工作区和暂存区](MAC/002git工作区和暂存区.md)
+	- [git分支管理](MAC/003git分支管理.md)

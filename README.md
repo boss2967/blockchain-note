@@ -20,6 +20,8 @@
 [<img src="blockchain-learning-note/images/kotlin.jpg" width="70" height="70">](blockchain-learning-note/Kotlin)[Kotlin](blockchain-learning-note/Kotlin)
 
 ****
+
+![](blockchain-learning-note/images/github.gif)
 # 文章总览
 * [介绍](README.md)
 * [Go语言](blockchain-learning-note/Go/001指针.md)

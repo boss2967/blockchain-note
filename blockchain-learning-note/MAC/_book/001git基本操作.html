@@ -1,0 +1,419 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2. Git · go语言学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Junling Zheng <me@chengweiyang.cn>">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="001git基本操作.html" />
+    
+    
+    <link rel="prev" href="002Mac下运行shell脚本.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://juejin.im/user/58fb6268a22b9d0065995827" target="_blank" class="custom-link">Zhengjunling's Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="001Mac设置环境变量.html">
+            
+                <a href="001Mac设置环境变量.html">
+            
+                    
+                    1. Mac
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="001Mac设置环境变量.html">
+            
+                <a href="001Mac设置环境变量.html">
+            
+                    
+                    1.1 Mac设置环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="002Mac下运行shell脚本.html">
+            
+                <a href="002Mac下运行shell脚本.html">
+            
+                    
+                    2.1 Mac下运行shell脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="001git基本操作.html">
+            
+                <a href="001git基本操作.html">
+            
+                    
+                    2. Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="001git基本操作.html">
+            
+                <a href="001git基本操作.html">
+            
+                    
+                    2.1 git基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="002git工作区和暂存区.html">
+            
+                <a href="002git工作区和暂存区.html">
+            
+                    
+                    2.2 git工作区和暂存区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="003git分支管理.html">
+            
+                <a href="003git分支管理.html">
+            
+                    
+                    2.3 git分支管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="001gitbook静态加载.html">
+            
+                <a href="001gitbook静态加载.html">
+            
+                    
+                    3. Gitbook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="001gitbook静态加载.html">
+            
+                <a href="001gitbook静态加载.html">
+            
+                    
+                    3.1 Gitbook 静态加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >2. Git</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#git&#x7684;&#x4E24;&#x5927;&#x7279;&#x70B9;"><b>1. </b>git&#x7684;&#x4E24;&#x5927;&#x7279;&#x70B9;</a></li><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;&#x4E0E;&#x914D;&#x7F6E;"><b>2. </b>&#x5B89;&#x88C5;&#x4E0E;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x5E93;"><b>3. </b>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x5E93;</a></li><li><span class="title-icon "></span><a href="#&#x7248;&#x672C;&#x521B;&#x5EFA;&#x4E0E;&#x56DE;&#x9000;"><b>4. </b>&#x7248;&#x672C;&#x521B;&#x5EFA;&#x4E0E;&#x56DE;&#x9000;</a></li><ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x7248;&#x672C;"><b>4.1. </b>&#x521B;&#x5EFA;&#x7248;&#x672C;</a></li><li><span class="title-icon "></span><a href="#&#x6DFB;&#x52A0;&#x8EAB;&#x4EFD;&#x6807;&#x8BC6;&#xFF08;git&#x4E0D;&#x505A;&#x68C0;&#x67E5;&#xFF09;"><b>4.2. </b>&#x6DFB;&#x52A0;&#x8EAB;&#x4EFD;&#x6807;&#x8BC6;&#xFF08;git&#x4E0D;&#x505A;&#x68C0;&#x67E5;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x7248;&#x672C;&#x8BB0;&#x5F55;"><b>4.3. </b>&#x67E5;&#x770B;&#x7248;&#x672C;&#x8BB0;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x56DE;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x7248;&#x672C;"><b>4.4. </b>&#x56DE;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x7248;&#x672C;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x6211;&#x4EEC;&#x7684;&#x64CD;&#x4F5C;&#x8BB0;&#x5F55;"><b>4.5. </b>&#x67E5;&#x770B;&#x6211;&#x4EEC;&#x7684;&#x64CD;&#x4F5C;&#x8BB0;&#x5F55;</a></li></ul></ul></div><a href="#git&#x7684;&#x4E24;&#x5927;&#x7279;&#x70B9;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="git&#x7684;&#x4E24;&#x5927;&#x7279;&#x70B9;"><a name="git&#x7684;&#x4E24;&#x5927;&#x7279;&#x70B9;" class="anchor-navigation-ex-anchor" href="#git&#x7684;&#x4E24;&#x5927;&#x7279;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>1. git&#x7684;&#x4E24;&#x5927;&#x7279;&#x70B9;</h1>
+<ul>
+<li>&#x7248;&#x672C;&#x63A7;&#x5236;&#xFF1A;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x591A;&#x4EBA;&#x540C;&#x65F6;&#x5F00;&#x53D1;&#x7684;&#x4EE3;&#x7801;&#x95EE;&#x9898;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x627E;&#x56DE;&#x5386;&#x53F2;&#x4EE3;&#x7801;&#x7684;&#x95EE;&#x9898;&#x3002;</li>
+<li>&#x5206;&#x5E03;&#x5F0F;&#xFF1A;Git&#x662F;&#x5206;&#x5E03;&#x5F0F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;Git&#x4ED3;&#x5E93;&#xFF0C;&#x53EF;&#x4EE5;&#x5206;&#x5E03;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x673A;&#x5668;&#x4E0A;&#x3002;&#x9996;&#x5148;&#x627E;&#x4E00;&#x53F0;&#x7535;&#x8111;&#x5145;&#x5F53;&#x670D;&#x52A1;&#x5668;&#x7684;&#x89D2;&#x8272;&#xFF0C;&#x6BCF;&#x5929;24&#x5C0F;&#x65F6;&#x5F00;&#x673A;&#xFF0C;&#x5176;&#x4ED6;&#x6BCF;&#x4E2A;&#x4EBA;&#x90FD;&#x4ECE;&#x8FD9;&#x4E2A;&#x201C;&#x670D;&#x52A1;&#x5668;&#x201D;&#x4ED3;&#x5E93;&#x514B;&#x9686;&#x4E00;&#x4EFD;&#x5230;&#x81EA;&#x5DF1;&#x7684;&#x7535;&#x8111;&#x4E0A;&#xFF0C;&#x5E76;&#x4E14;&#x5404;&#x81EA;&#x628A;&#x5404;&#x81EA;&#x7684;&#x63D0;&#x4EA4;&#x63A8;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4ED3;&#x5E93;&#x91CC;&#xFF0C;&#x4E5F;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x4ED3;&#x5E93;&#x4E2D;&#x62C9;&#x53D6;&#x522B;&#x4EBA;&#x7684;&#x63D0;&#x4EA4;&#x3002;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x642D;&#x5EFA;&#x8FD9;&#x53F0;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;GitHub&#x7F51;&#x7AD9;&#x3002;</li>
+</ul>
+<h1 id="&#x5B89;&#x88C5;&#x4E0E;&#x914D;&#x7F6E;"><a name="&#x5B89;&#x88C5;&#x4E0E;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;&#x4E0E;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x5B89;&#x88C5;&#x4E0E;&#x914D;&#x7F6E;</h1>
+<pre class="language-"><code>sudo apt-get install git
+</code></pre><h1 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x5E93;"><a name="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x5E93;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x5E93;</h1>
+<p>&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x76EE;&#x5F55;git_test &#xFF0C;&#x5728;git_test&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x5E93;</p>
+<pre class="language-"><code>git init
+</code></pre><p>git_test&#x76EE;&#x5F55;&#x4E0B;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;.git&#x9690;&#x85CF;&#x76EE;&#x5F55;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x7248;&#x672C;&#x5E93;&#x76EE;&#x5F55;</p>
+<h1 id="&#x7248;&#x672C;&#x521B;&#x5EFA;&#x4E0E;&#x56DE;&#x9000;"><a name="&#x7248;&#x672C;&#x521B;&#x5EFA;&#x4E0E;&#x56DE;&#x9000;" class="anchor-navigation-ex-anchor" href="#&#x7248;&#x672C;&#x521B;&#x5EFA;&#x4E0E;&#x56DE;&#x9000;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x7248;&#x672C;&#x521B;&#x5EFA;&#x4E0E;&#x56DE;&#x9000;</h1>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;code.txt &#x6587;&#x4EF6;</p>
+<p><img src="images/git01.png" alt=""></p>
+<h2 id="&#x521B;&#x5EFA;&#x7248;&#x672C;"><a name="&#x521B;&#x5EFA;&#x7248;&#x672C;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x7248;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. &#x521B;&#x5EFA;&#x7248;&#x672C;</h2>
+<pre class="language-"><code>git add code.txt
+git commit -m &quot;&#x7248;&#x672C;1&quot;
+</code></pre><p><img src="images/git02.png" alt=""></p>
+<h2 id="&#x6DFB;&#x52A0;&#x8EAB;&#x4EFD;&#x6807;&#x8BC6;&#xFF08;git&#x4E0D;&#x505A;&#x68C0;&#x67E5;&#xFF09;"><a name="&#x6DFB;&#x52A0;&#x8EAB;&#x4EFD;&#x6807;&#x8BC6;&#xFF08;git&#x4E0D;&#x505A;&#x68C0;&#x67E5;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x6DFB;&#x52A0;&#x8EAB;&#x4EFD;&#x6807;&#x8BC6;&#xFF08;git&#x4E0D;&#x505A;&#x68C0;&#x67E5;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. &#x6DFB;&#x52A0;&#x8EAB;&#x4EFD;&#x6807;&#x8BC6;&#xFF08;git&#x4E0D;&#x505A;&#x68C0;&#x67E5;&#xFF09;</h2>
+<pre class="language-"><code>git config --global user.email &quot;you@example.com&quot;
+git config --global user.name &quot;Your Name&quot;
+</code></pre><h2 id="&#x67E5;&#x770B;&#x7248;&#x672C;&#x8BB0;&#x5F55;"><a name="&#x67E5;&#x770B;&#x7248;&#x672C;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x7248;&#x672C;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>4.3. &#x67E5;&#x770B;&#x7248;&#x672C;&#x8BB0;&#x5F55;</h2>
+<pre class="language-"><code>git log
+</code></pre><p><img src="images/git03.png" alt=""></p>
+<p>&#x7EE7;&#x7EED;&#x7F16;&#x8F91;code.txt&#xFF0C;&#x5728;&#x91CC;&#x9762;&#x589E;&#x52A0;&#x4E00;&#x884C;&#x3002;</p>
+<p><img src="images/git04.png" alt=""></p>
+<p>&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x518D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x5E76;&#x67E5;&#x770B;&#x7248;&#x672C;&#x8BB0;&#x5F55;&#xFF1A;</p>
+<p><img src="images/git05.png" alt=""></p>
+<p><code>git log</code></p>
+<p><img src="images/git06.png" alt=""></p>
+<h2 id="&#x56DE;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x7248;&#x672C;"><a name="&#x56DE;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x7248;&#x672C;" class="anchor-navigation-ex-anchor" href="#&#x56DE;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x7248;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a>4.4. &#x56DE;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x7248;&#x672C;</h2>
+<pre class="language-"><code>git reset --hard HEAD^
+</code></pre><ul>
+<li>&#x5176;&#x4E2D;HEAD&#x8868;&#x793A;&#x5F53;&#x524D;&#x6700;&#x65B0;&#x7248;&#x672C;</li>
+<li>HEAD^&#x8868;&#x793A;&#x5F53;&#x524D;&#x7248;&#x672C;&#x7684;&#x524D;&#x4E00;&#x4E2A;&#x7248;&#x672C;</li>
+<li>HEAD^^&#x8868;&#x793A;&#x5F53;&#x524D;&#x7248;&#x672C;&#x7684;&#x524D;&#x524D;&#x4E2A;&#x7248;&#x672C;</li>
+<li>HEAD~1&#x8868;&#x793A;&#x5F53;&#x524D;&#x7248;&#x672C;&#x7684;&#x524D;&#x4E00;&#x4E2A;&#x7248;&#x672C;</li>
+<li>HEAD~100&#x8868;&#x793A;&#x5F53;&#x524D;&#x7248;&#x672C;&#x7684;&#x524D;100&#x7248;&#x672C;&#x3002;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x56DE;&#x5230;&#x7248;&#x672C;1&#xFF1A;</p>
+<p><img src="images/git07.png" alt="">
+&#x4F46;&#x662F;&#x6B64;&#x65F6;git log &#x53EA;&#x80FD;&#x67E5;&#x770B;&#x7248;&#x672C;1&#x7684;&#x8BB0;&#x5F55;</p>
+<h2 id="&#x67E5;&#x770B;&#x6211;&#x4EEC;&#x7684;&#x64CD;&#x4F5C;&#x8BB0;&#x5F55;"><a name="&#x67E5;&#x770B;&#x6211;&#x4EEC;&#x7684;&#x64CD;&#x4F5C;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x6211;&#x4EEC;&#x7684;&#x64CD;&#x4F5C;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>4.5. &#x67E5;&#x770B;&#x6211;&#x4EEC;&#x7684;&#x64CD;&#x4F5C;&#x8BB0;&#x5F55;</h2>
+<pre class="language-"><code>git reflog
+</code></pre><p><img src="images/git08.png" alt=""></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7248;&#x672C;2&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x6211;&#x4EEC;&#x518D;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x7248;&#x672C;&#x56DE;&#x9000;&#xFF0C;&#x7248;&#x672C;&#x91CD;&#x65B0;&#x56DE;&#x5230;&#x4E86;&#x7248;&#x672C;2&#x3002;</p>
+<p><img src="images/git09.png" alt=""></p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="002Mac下运行shell脚本.html" class="navigation navigation-prev " aria-label="Previous page: 2.1 Mac下运行shell脚本">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="001git基本操作.html" class="navigation navigation-next " aria-label="Next page: 2.1 git基本操作">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2. Git","level":"1.3","depth":1,"next":{"title":"2.1 git基本操作","level":"1.3.1","depth":2,"path":"001git基本操作.md","ref":"001git基本操作.md","articles":[]},"previous":{"title":"2.1 Mac下运行shell脚本","level":"1.2.2","depth":2,"path":"002Mac下运行shell脚本.md","ref":"002Mac下运行shell脚本.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-disqus","github","anchor-navigation-ex","toggle-chapters","emphasize","-highlight","prism","prism-themes","copy-code-button","splitter","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"shortName":"introducetogitbook"},"emphasize":{},"github":{"url":"https://github.com/Coder-zheng"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Junling Zheng <me@chengweiyang.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"go语言学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Zhengjunling's Blog":"https://juejin.im/user/58fb6268a22b9d0065995827"}},"gitbook":"*","description":"记录go语言学习过程中的各种","extension":null},"file":{"path":"001git基本操作.md","mtime":"2018-09-15T12:44:30.436Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-16T03:37:26.427Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
